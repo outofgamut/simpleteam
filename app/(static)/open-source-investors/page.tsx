@@ -65,19 +65,27 @@ export type Fields = {
   checkSize: "Unknown" | "$5k - $50k" | "$50k+" | "$100k+" | "$250k+";
 };
 
+// ORIGINAL METHOD FROM PAPERMARK, USING AIRTABLE
+// const getInvestors = async () => {
+//   const response = await fetch(
+//     "https://api.airtable.com/v0/appAxYMTCbZ1hGTmg/tblvBs5aqTt8qkb6h?fields%5B%5D=name&fields%5B%5D=title&fields%5B%5D=company&fields%5B%5D=checkSize&fields%5B%5D=openSourceInvestments&fields%5B%5D=twitterUrl&fields%5B%5D=websiteUrl&fields%5B%5D=twitterImageUrl&filterByFormula=AND(%7Bpublished%7D%3D1%2C%7Btype%7D%3D%22Angel%22)",
+//     {
+//       headers: {
+//         Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
+//       },
+//     },
+//   );
+//   if (!response.ok) {
+//     throw new Error("Network response was not ok " + response.statusText);
+//   }
+//   const data = await response.json();
+//   return data;
+// };
+
 const getInvestors = async () => {
-  const response = await fetch(
-    "https://api.airtable.com/v0/appAxYMTCbZ1hGTmg/tblvBs5aqTt8qkb6h?fields%5B%5D=name&fields%5B%5D=title&fields%5B%5D=company&fields%5B%5D=checkSize&fields%5B%5D=openSourceInvestments&fields%5B%5D=twitterUrl&fields%5B%5D=websiteUrl&fields%5B%5D=twitterImageUrl&filterByFormula=AND(%7Bpublished%7D%3D1%2C%7Btype%7D%3D%22Angel%22)",
-    {
-      headers: {
-        Authorization: `Bearer ${process.env.AIRTABLE_API_KEY}`,
-      },
-    },
-  );
-  if (!response.ok) {
-    throw new Error("Network response was not ok " + response.statusText);
-  }
-  const data = await response.json();
+  const response: Investor[] = [];
+
+  const data = await response;
   return data;
 };
 
@@ -131,7 +139,8 @@ const InvestorFallback = ({ allInvestors }: { allInvestors: Investor[] }) => {
 
 export default async function HomePage() {
   const data = await getInvestors();
-  const { records: allInvestors } = data as { records: Investor[] };
+  const { records: allInvestors } = data as unknown as { records: Investor[] };
+  // const { records: allInvestors } = data as { records: Investor[] };
 
   return (
     <>

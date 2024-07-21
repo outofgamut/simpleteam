@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Head>
-        <title>Papermark | The Open Source DocSend Alternative</title>
+        <title>Simpleteam | The Open Source DocSend Alternative</title>
       </Head>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <main className={inter.className}>

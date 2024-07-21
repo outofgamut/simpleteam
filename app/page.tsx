@@ -51,7 +51,7 @@ const features = [
   },
   {
     name: "Self-host",
-    description: "Papermark is open-source. Run it on your own infrastructure.",
+    description: "Simpleteam is open-source. Run it on your own infrastructure.",
     icon: ServerIcon,
   },
 ];
@@ -68,7 +68,7 @@ export default function Home() {
               The Open-Source DocSend Alternative
             </h1>
             <p className="mt-8 max-w-3xl text-balance text-2xl">
-              Papermark is a modern document sharing infrastructure with
+              Simpleteam is a modern document sharing infrastructure with
               built-in page analytics and full white-labeling
             </p>
             <div className="space-x-2 pt-8">
