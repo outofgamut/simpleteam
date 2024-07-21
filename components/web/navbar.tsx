@@ -4,10 +4,8 @@ import Link from "next/link";
 import PapermarkLogo from "@/public/_static/simpleteam-logo.svg";
 
 import GitHubIcon from "@/components/shared/icons/github";
-import { useSession } from "next-auth/react";
 
 export default function Navbar() {
-  const { data: session } = useSession()
 
   return (
     <>
