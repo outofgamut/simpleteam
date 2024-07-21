@@ -238,7 +238,7 @@ export default function DataroomTrial() {
               plan. <br /> */}
               After the trial, upgrade to{" "}
               <UpgradePlanModal clickedPlan="Business">
-                <button className="underline">Papermark Business</button>
+                <button className="underline">Simpleteam Business</button>
               </UpgradePlanModal>{" "}
               to continue using data rooms.
             </div>

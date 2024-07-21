@@ -26,7 +26,7 @@ const features = [
   {
     name: "Secure Document Sharing",
     description:
-      "Papermark provides a secure platform to share your documents. ",
+      "Simpleteam provides a secure platform to share your documents. ",
     icon: LockClosedIcon,
   },
   {
@@ -43,13 +43,13 @@ const features = [
   {
     name: "AI-powered",
     description:
-      "Papermark leverages artificial intelligence to enhance its document sharing and tracking.",
+      "Simpleteam leverages artificial intelligence to enhance its document sharing and tracking.",
     icon: Cog6ToothIcon,
   },
   {
     name: "Community Support",
     description:
-      "Being an open-source project, Papermark is backed by a community of developers  ",
+      "Being an open-source project, Simpleteam is backed by a community of developers  ",
     icon: ServerIcon,
   },
 ];
@@ -58,32 +58,32 @@ const faqs = [
   {
     question: "What is Papermark?",
     answer:
-      "Papermark is an innovative platform designed to extend the capabilities of Notion pages. It allows users to share Notion documents or pages with custom domain support, password protection, email capture, and comprehensive analytics tracking.",
+      "Simpleteam is an innovative platform designed to extend the capabilities of Notion pages. It allows users to share Notion documents or pages with custom domain support, password protection, email capture, and comprehensive analytics tracking.",
   },
   {
-    question: "How can I use Papermark for Notion?",
+    question: "How can I use Simpleteam for Notion?",
     answer:
-      "Using Papermark is straightforward. Set up your Notion page, then use Papermark to share it with enhanced features like custom domains, password protection, and more. It's perfect for professionals who need secure and trackable document sharing.",
+      "Using Simpleteam is straightforward. Set up your Notion page, then use Simpleteam to share it with enhanced features like custom domains, password protection, and more. It's perfect for professionals who need secure and trackable document sharing.",
   },
   {
-    question: "Is Papermark free to use?",
+    question: "Is Simpleteam free to use?",
     answer:
-      "Papermark offers both free and premium options. The open-source nature of Papermark allows for flexibility and customization, with advanced features available in our premium plans.",
+      "Simpleteam offers both free and premium options. The open-source nature of Simpleteam allows for flexibility and customization, with advanced features available in our premium plans.",
   },
   {
     question: "Can I add my custom domain to Papermark?",
     answer:
-      "Absolutely! Papermark supports custom domains, enabling you to maintain your brand's identity while sharing your Notion pages or documents.",
+      "Absolutely! Simpleteam supports custom domains, enabling you to maintain your brand's identity while sharing your Notion pages or documents.",
   },
   {
     question: "How can I track visitor engagement on my shared Notion pages?",
     answer:
-      "Papermark provides detailed analytics for your shared Notion pages, including visitor insights, engagement metrics, and more, helping you understand your audience better.",
+      "Simpleteam provides detailed analytics for your shared Notion pages, including visitor insights, engagement metrics, and more, helping you understand your audience better.",
   },
   {
     question: "Can I secure my Notion pages with Papermark?",
     answer:
-      "Yes, Papermark offers robust password protection for your Notion pages, ensuring that your shared documents are accessed only by intended recipients.",
+      "Yes, Simpleteam offers robust password protection for your Notion pages, ensuring that your shared documents are accessed only by intended recipients.",
   },
   {
     question: "Can I contribute to improving Papermark?",
@@ -140,7 +140,7 @@ export default function Home() {
             <div className="mx-auto max-w-2xl py-12 sm:py-12 lg:py-32 ">
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-black ring-1 ring-black/10 hover:ring-white/20 dark:text-white dark:ring-white/10">
-                  Papermark for Notion ✍️
+                  Simpleteam for Notion ✍️
                 </div>
               </div>
               <div className="text-center">

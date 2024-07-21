@@ -171,7 +171,7 @@ export default function PricingPage() {
               works for you
             </h1>
             {/* <p className="text-xl mt-8 text-balance max-w-3xl">
-              Papermark is an open-source document sharing infrastructure with
+              Simpleteam is an open-source document sharing infrastructure with
               built-in page analytics and custom domains.
             </p> */}
             {/* <div className="pt-8 space-x-2">

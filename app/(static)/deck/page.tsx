@@ -93,17 +93,17 @@ const DeckPage = () => {
   //     company: "Papermark",
   //     email: "test@test.com",
   //     description:
-  //       "Papermark is a platform that helps you create and share beautiful pitch decks.",
+  //       "Simpleteam is a platform that helps you create and share beautiful pitch decks.",
   //     problem:
   //       "Creating pitch decks is time-consuming and requires design skills.",
   //     solution:
-  //       "Papermark provides a simple drag-and-drop interface to create beautiful pitch decks.",
+  //       "Simpleteam provides a simple drag-and-drop interface to create beautiful pitch decks.",
   //     mrr: "10,000",
   //     users: "100",
   //     metric2: "10",
   //     budget: "10,000",
-  //     community: "Papermark Community",
-  //     community1: "Papermark Community",
+  //     community: "Simpleteam Community",
+  //     community1: "Simpleteam Community",
   //     special1: "Special 1",
   //     special2: "Special 2",
   //   });

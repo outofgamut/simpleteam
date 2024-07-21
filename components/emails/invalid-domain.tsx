@@ -38,7 +38,7 @@ export default function InvalidDomain({
             </Text>
             <Text className="text-sm leading-6 text-black">
               Your domain <code className="text-purple-600">{domain}</code> for
-              your Papermark account{" "}
+              your Simpleteam account{" "}
               {invalidDays >= 14
                 ? `has been invalid for ${invalidDays} days.`
                 : `is still unconfigured.`}

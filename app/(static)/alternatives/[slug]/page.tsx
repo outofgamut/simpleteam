@@ -103,7 +103,7 @@ export default async function AlternativePage({
         <div className="bg-white py-16">
           <div className="mx-auto max-w-5xl">
             <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black md:grid-cols-2">
-              {/* Column 1 - Papermark */}
+              {/* Column 1 - Simpleteam */}
               <div className="flex flex-col justify-between border-r-0 border-black md:odd:border-r xl:last:!border-r-0 xl:even:border-r">
                 <div>
                   <div className="border-b border-black bg-gray-100 p-6">
@@ -113,7 +113,7 @@ export default async function AlternativePage({
                   </div>
                   <div className="p-6">
                     <p className="mt-4 text-balance text-sm leading-6 text-gray-500">
-                      Papermark plans start from freemium
+                      Simpleteam plans start from freemium
                     </p>
                     <div className="flex flex-col justify-between"></div>
 

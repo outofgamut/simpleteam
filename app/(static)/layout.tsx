@@ -5,8 +5,8 @@ import Navbar from "@/components/web/navbar";
 
 const data = {
   description:
-    "Papermark is an open-source document infrastructure for sharing and collaboration. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics.",
-  title: "Papermark | The Open Source DocSend Alternative",
+    "Simpleteam is an open-source document infrastructure for sharing and collaboration. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics.",
+  title: "Simpleteam | The Open Source DocSend Alternative",
   url: "/",
 };
 

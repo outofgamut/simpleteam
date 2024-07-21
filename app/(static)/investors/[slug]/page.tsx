@@ -276,7 +276,7 @@ export default async function InvestorPage({
                     </svg>
                     <blockquote className="text-balance text-xl font-medium leading-8 text-black text-gray-800 sm:text-2xl sm:leading-9">
                       <p>
-                        Papermark solved a big pain point for me. DocSend
+                        Simpleteam solved a big pain point for me. DocSend
                         monopoly will end soon!
                       </p>
                     </blockquote>

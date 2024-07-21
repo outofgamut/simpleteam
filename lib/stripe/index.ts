@@ -25,7 +25,7 @@ export async function cancelSubscription(customer?: string) {
     return await stripe.subscriptions.update(subscriptionId, {
       cancel_at_period_end: true,
       cancellation_details: {
-        comment: "Customer deleted their Papermark instance.",
+        comment: "Customer deleted their Simpleteam instance.",
       },
     });
   } catch (error) {

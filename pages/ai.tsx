@@ -32,13 +32,13 @@ const features = [
   {
     name: "AI-Powered Document Assistant",
     description:
-      "Papermark AI is your personal AI document assistant for interacting with various documents like pitch decks, sales decks, and PDFs, enhancing your document management and sharing experience.",
+      "Simpleteam AI is your personal AI document assistant for interacting with various documents like pitch decks, sales decks, and PDFs, enhancing your document management and sharing experience.",
     icon: Cog6ToothIcon,
   },
   {
     name: "Secure Document Sharing",
     description:
-      "With Papermark AI, securely share and manage your documents, ensuring confidential information remains protected.",
+      "With Simpleteam AI, securely share and manage your documents, ensuring confidential information remains protected.",
     icon: LockClosedIcon,
   },
   {
@@ -50,63 +50,63 @@ const features = [
   {
     name: "Custom Link Sharing",
     description:
-      "Papermark AI allows you to create custom links for your documents, making it easier and more professional when sharing with clients or investors.",
+      "Simpleteam AI allows you to create custom links for your documents, making it easier and more professional when sharing with clients or investors.",
     icon: FingerPrintIcon,
   },
   {
     name: "Community Support",
     description:
-      "Leverage the strength of a community that continuously contributes to improving and evolving Papermark AI.",
+      "Leverage the strength of a community that continuously contributes to improving and evolving Simpleteam AI.",
     icon: ServerIcon,
   },
   {
     name: "Open Source",
     description:
-      "Enjoy the flexibility of an open-source platform, allowing you to tailor Papermark AI to your specific document interaction needs.",
+      "Enjoy the flexibility of an open-source platform, allowing you to tailor Simpleteam AI to your specific document interaction needs.",
     icon: CloudArrowUpIcon,
   },
 ];
 
 const faqs = [
   {
-    question: "What is Papermark AI?",
+    question: "What is Simpleteam AI?",
     answer:
-      "Papermark AI is an innovative AI document assistant that enables users to interact with a variety of documents, such as pitch decks, sales decks, and PDFs, in a more efficient and secure manner.",
+      "Simpleteam AI is an innovative AI document assistant that enables users to interact with a variety of documents, such as pitch decks, sales decks, and PDFs, in a more efficient and secure manner.",
   },
   {
-    question: "How can I use Papermark AI?",
+    question: "How can I use Simpleteam AI?",
     answer:
       "You can use it on shared with you document and on received. You can chat with the document, ask question, find information without checking whole document.",
   },
   {
-    question: "Is Papermark AI free?",
+    question: "Is Simpleteam AI free?",
     answer:
-      "Yes, Papermark AI offers an open-source version, giving you the freedom to use and modify it according to your needs, under the terms of our license.",
+      "Yes, Simpleteam AI offers an open-source version, giving you the freedom to use and modify it according to your needs, under the terms of our license.",
   },
   {
-    question: "How can Papermark AI help me reach more investors?",
+    question: "How can Simpleteam AI help me reach more investors?",
     answer:
-      "Papermark AI provides recommendations and analytics to help you fine-tune your pitch decks, increasing your chances of making a successful connection with potential investors.",
+      "Simpleteam AI provides recommendations and analytics to help you fine-tune your pitch decks, increasing your chances of making a successful connection with potential investors.",
   },
   {
-    question: "How I as an investor can use Papermark AI?",
+    question: "How I as an investor can use Simpleteam AI?",
     answer:
-      "VCs can utilize Papermark AI to efficiently analyze and summarize data from various pitch decks, streamlining their investment decision-making process. Search inside the pitch deck, summarise and turn it into Memo.",
+      "VCs can utilize Simpleteam AI to efficiently analyze and summarize data from various pitch decks, streamlining their investment decision-making process. Search inside the pitch deck, summarise and turn it into Memo.",
   },
   {
-    question: "Can I contribute to the Papermark AI project?",
+    question: "Can I contribute to the Simpleteam AI project?",
     answer:
-      "Definitely! We welcome contributions to Papermark AI. Whether it's improving the code, adding new features, or reporting bugs, your input is highly valued.",
+      "Definitely! We welcome contributions to Simpleteam AI. Whether it's improving the code, adding new features, or reporting bugs, your input is highly valued.",
   },
   {
-    question: "How to summarise document with Papermark AI?",
+    question: "How to summarise document with Simpleteam AI?",
     answer:
       "You can use one of the starting commands and get the summary of received docuement. If you want that documents shared with you.",
   },
   {
     question: "How to turn Pitch Deck into Memo?",
     answer:
-      "You can use Papermark AI and ask it to create Memo from Pitch Deck received. You can also uplaod your own Pitch deck there.",
+      "You can use Simpleteam AI and ask it to create Memo from Pitch Deck received. You can also uplaod your own Pitch deck there.",
   },
 
   // More questions...
@@ -154,20 +154,20 @@ export default function Home() {
     <div>
       <Head>
         <title>
-          Papermark AI: First AI document assistant to chat with shared and
+          Simpleteam AI: First AI document assistant to chat with shared and
           received documents
         </title>
         <meta
           name="description"
-          content="Transform the way you interact with documents using Papermark AI document assistant, the ultimate AI docuemnt assistant to chat with your documents, like pitch decks and sales materials."
+          content="Transform the way you interact with documents using Simpleteam AI document assistant, the ultimate AI docuemnt assistant to chat with your documents, like pitch decks and sales materials."
         />
         <meta
           property="og:title"
-          content="Papermark AI: Your AI-Powered Document Assistant"
+          content="Simpleteam AI: Your AI-Powered Document Assistant"
         />
         <meta
           property="og:description"
-          content="Discover Papermark AI, an advanced AI document assistant for document sharing and chatting with your documents. Enhance your documents with AI-driven insights, secure sharing, and real-time analytics. Get insights on shared with you documents and pitch decks"
+          content="Discover Simpleteam AI, an advanced AI document assistant for document sharing and chatting with your documents. Enhance your documents with AI-driven insights, secure sharing, and real-time analytics. Get insights on shared with you documents and pitch decks"
         />
         <meta
           property="og:image"
@@ -198,7 +198,7 @@ export default function Home() {
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div className="relative flex items-center rounded-full px-3 py-1 text-sm leading-6 text-black ring-1 ring-black/10 hover:ring-white/20 dark:text-white dark:ring-white/10">
                   <PapermarkSparkle className="mr-1 h-4 w-4" />
-                  Papermark AI
+                  Simpleteam AI
                 </div>
               </div>
               <div className="text-center">
@@ -229,7 +229,7 @@ export default function Home() {
                 href="/login"
                 target="_blank"
               >
-                Sign up to use Papermark AI
+                Sign up to use Simpleteam AI
               </Link>
             </div>
 
@@ -331,7 +331,7 @@ export default function Home() {
                         "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold",
                       )}
                     >
-                      Use Papermark AI
+                      Use Simpleteam AI
                     </Link>
                   </div>
                 ))}

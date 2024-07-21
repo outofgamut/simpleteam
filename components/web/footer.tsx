@@ -177,7 +177,7 @@ export default function Footer() {
               src={PapermarkLogo}
               width={119}
               height={32}
-              alt="Papermark Logo"
+              alt="Simpleteam Logo"
             />
             <p className="leading-6 text-gray-500">
               Sharing documents, securely and on brand.
@@ -238,7 +238,7 @@ export default function Footer() {
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="font-semibold leading-6 text-black">
-                  Papermark for
+                  Simpleteam for
                 </h3>
                 <ul role="list" className="mt-6 space-y-4">
                   {navigation.cases.map((item) => (

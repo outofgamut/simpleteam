@@ -7,7 +7,7 @@ interface ToolFeature {
 
 const tools: ToolFeature[] = [
   {
-    name: "Papermark Business Plan",
+    name: "Simpleteam Business Plan",
     features: {
       docs: "✔️",
       folders: "✔️",
@@ -34,7 +34,7 @@ const tools: ToolFeature[] = [
   },
 
   {
-    name: "Papermark Data Rooms Plan",
+    name: "Simpleteam Data Rooms Plan",
     features: {
       docs: "✔️",
       folders: "✔️",
@@ -62,7 +62,7 @@ const tools: ToolFeature[] = [
 
   // data room,whitelabelling
   {
-    name: "Papermark Custom Plan",
+    name: "Simpleteam Custom Plan",
     features: {
       docs: "✔️",
       folders: "✔️",
@@ -88,7 +88,7 @@ const tools: ToolFeature[] = [
     },
   },
   {
-    name: "Papermark Self-Hosted Plan",
+    name: "Simpleteam Self-Hosted Plan",
 
     features: {
       docs: "✔️",

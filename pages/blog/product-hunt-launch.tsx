@@ -8,7 +8,7 @@ function BlogPost() {
     <>
       <Head>
         <title>
-          Papermark | How to launch Open Source project on Product Hunt?
+          Simpleteam | How to launch Open Source project on Product Hunt?
         </title>
         <meta
           name="description"
@@ -459,7 +459,7 @@ function BlogPost() {
           </ul>
           <img
             src="https://dev-to-uploads.s3.amazonaws.com/uploads/articles/qorzurj4rfj32f3nbtjl.png"
-            alt="Papermark launch"
+            alt="Simpleteam launch"
           />
           <p>
             I think it is best if you connect with people in advance and build
@@ -523,13 +523,13 @@ function BlogPost() {
             good old days :))
           </p>
           <p>
-            If you want to know how Papermark started, check this cool article
+            If you want to know how Simpleteam started, check this cool article
             on Dev.to, with all the coding journey:
             <a
               href="https://dev.to/papermark/from-tweet-to-launch-my-open-source-journey-199l"
               className="text-blue-600 underline"
             >
-              &quot;Papermark journey from tweet to launch&quot;
+              &quot;Simpleteam journey from tweet to launch&quot;
             </a>
           </p>
           <p className="mb-4">
@@ -538,7 +538,7 @@ function BlogPost() {
               href="https://iuliia2.marbleflows.com/flows/7838/link"
               className="text-blue-600 underline"
             >
-              Papermark checklist
+              Simpleteam checklist
             </a>{" "}
             with all todos and places where to post.
           </p>

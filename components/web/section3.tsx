@@ -8,7 +8,7 @@ export default function Section3() {
             <br />
           </h2>
           <p className="mx-auto mt-6 max-w-xl text-lg leading-8 text-gray-600">
-            See Papermark in action
+            See Simpleteam in action
           </p>
         </div>
         {/* Video added below */}

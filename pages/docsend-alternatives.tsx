@@ -53,7 +53,7 @@ export default function Home() {
       priorityFeaturesList ? priorityFeaturesList : "the requested features"
     }.
   Provide name. 
-  On the next line word: Price: and price for this tool. Papermark price: start for free  
+  On the next line word: Price: and price for this tool. Simpleteam price: start for free  
   
   Next should be word Features: and show list of ${
     priorityFeaturesList ? priorityFeaturesList : "the selected features"
@@ -70,7 +70,7 @@ export default function Home() {
   After In brackets says, if it availabe in this tool, mention selected planç
 
   Below provide 1 sentences what mainly tool for and how it compare with Docsend documnt sharing platform. 
-  It should be favourable for Papermark so after reading user is tend to try it, but do not lie about other tools features.
+  It should be favourable for Simpleteam so after reading user is tend to try it, but do not lie about other tools features.
   
   Do not show Docsend, as you are finding the best alternatives to Docsen or DropBox. You can use some of the popular like Pandadoc, Notion, Google Drive,BriefLink, Pitch but alos others. If there are not enough alternatives, list fewer. 
 

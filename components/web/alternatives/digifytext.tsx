@@ -147,7 +147,7 @@ const DigifyAlternatives = () => {
                 </ol>
 
                 <h2 id="papermark-digify-alternative">
-                  Papermark - Digify Alternative for Data Rooms
+                  Simpleteam - Digify Alternative for Data Rooms
                 </h2>
                 <p>
                   Website:{" "}
@@ -164,12 +164,12 @@ const DigifyAlternatives = () => {
                 </p>
                 <p>
                   <span style={{ color: "rgb(19, 52, 59)" }}>
-                    Papermark - Open-Source and Secure Document Sharing
+                    Simpleteam - Open-Source and Secure Document Sharing
                     Infrastructure
                   </span>
                 </p>
 
-                <h3 id="papermark-features">Papermark Features</h3>
+                <h3 id="papermark-features">Simpleteam Features</h3>
                 <ul>
                   <li>
                     <p>Secure document sharing with access controls</p>
@@ -203,10 +203,10 @@ const DigifyAlternatives = () => {
                 <p>
                   {" "}
                   <a target="_blank" rel="nofollow" href="/pricing">
-                    All Papermark features
+                    All Simpleteam features
                   </a>
                 </p>
-                <h3 id="papermark-pricing">Papermark Pricing</h3>
+                <h3 id="papermark-pricing">Simpleteam Pricing</h3>
                 <ul>
                   <li>
                     <p>Free: $0</p>
@@ -240,10 +240,10 @@ const DigifyAlternatives = () => {
                   </li>
                 </ul>
                 <h3 id="papermark-ratings-and-reviews">
-                  Papermark Ratings and Reviews
+                  Simpleteam Ratings and Reviews
                 </h3>
                 <p>
-                  Papermark loved by over 5000 customers and users, who actively
+                  Simpleteam loved by over 5000 customers and users, who actively
                   use it for:
                 </p>
                 {/* <ul>
@@ -682,15 +682,15 @@ const DigifyAlternatives = () => {
                   Start with Digify alternative for free
                 </Button>
               </Link>
-              <h2>Why Choose Papermark as a Digify Alternative?</h2>
+              <h2>Why Choose Simpleteam as a Digify Alternative?</h2>
               <ul>
                 <p>
-                  Papermark is a leading open-source alternative to Digify,
+                  Simpleteam is a leading open-source alternative to Digify,
                   offering secure document sharing and data room creation with
                   additional benefits tailored for modern venture teams.
                 </p>
                 <li>
-                  <strong>Open Source:</strong> Papermark is an open-source
+                  <strong>Open Source:</strong> Simpleteam is an open-source
                   platform, which means it is continuously improved by a
                   community of developers. This ensures that the software
                   remains secure, up-to-date, and customizable to meet specific
@@ -698,7 +698,7 @@ const DigifyAlternatives = () => {
                 </li>
                 <li>
                   <strong>Cost-Effective:</strong> Unlike Digify, which may
-                  require a subscription, Papermark is free to use. This makes
+                  require a subscription, Simpleteam is free to use. This makes
                   it an excellent option for individuals and businesses looking
                   to reduce costs while maintaining high security and
                   functionality.
@@ -711,14 +711,14 @@ const DigifyAlternatives = () => {
                   data.
                 </li>
                 <li>
-                  <strong>Built-in Analytics:</strong> Papermark includes
+                  <strong>Built-in Analytics:</strong> Simpleteam includes
                   built-in page-to-page analytics, enabling users to track
                   document engagement and gain valuable insights into how
                   documents are being used and viewed.
                 </li>
                 <li>
                   <strong>Highly Rated:</strong> Supported by over 5000
-                  customers and users, Papermark is a trusted solution for
+                  customers and users, Simpleteam is a trusted solution for
                   secure document sharing and data room management.
                 </li>
               </ul>

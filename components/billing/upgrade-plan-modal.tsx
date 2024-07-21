@@ -283,7 +283,7 @@ export function UpgradePlanModal({
                   target="_blank"
                   className="text-center text-xs text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
                 >
-                  Looking for Papermark Enterprise?
+                  Looking for Simpleteam Enterprise?
                 </a>
               )}
             </div>

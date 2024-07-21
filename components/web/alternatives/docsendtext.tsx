@@ -154,7 +154,7 @@ const DocSendAlternatives = () => {
                   </a>
                 </p>
                 <h2 id="papermark-docsend-alternative">
-                  Papermark - Docsend Alternative
+                  Simpleteam - Docsend Alternative
                 </h2>
                 <p>
                   Website:{" "}
@@ -171,12 +171,12 @@ const DocSendAlternatives = () => {
                 </p>
                 <p>
                   <span style={{ color: "rgb(19, 52, 59)" }}>
-                    Papermark - Open-Source DocSend Alternative Papermark is an
+                    Simpleteam - Open-Source DocSend Alternative Simpleteam is an
                     open-source document sharing platform offering:
                   </span>
                 </p>
 
-                <h3 id="papermark-features">Papermark Features</h3>
+                <h3 id="papermark-features">Simpleteam Features</h3>
                 <ul>
                   <li>
                     <p>Secure document sharing with access controls</p>
@@ -207,10 +207,10 @@ const DocSendAlternatives = () => {
                 <p>
                   {" "}
                   <a target="_blank" rel="nofollow" href="/pricing">
-                    All Papermark features
+                    All Simpleteam features
                   </a>
                 </p>
-                <h3 id="papermark-pricing">Papermark Pricing</h3>
+                <h3 id="papermark-pricing">Simpleteam Pricing</h3>
                 <ul>
                   <li>
                     <p>Free: $0</p>
@@ -244,10 +244,10 @@ const DocSendAlternatives = () => {
                   </li>
                 </ul>
                 <h3 id="papermark-ratings-and-reviews">
-                  Papermark Ratings and Reviews
+                  Simpleteam Ratings and Reviews
                 </h3>
                 <p>
-                  Papermark loved by over 5000 customers and users, who actively
+                  Simpleteam loved by over 5000 customers and users, who actively
                   use it for:
                 </p>
                 <ul>
@@ -1351,7 +1351,7 @@ const DocSendAlternatives = () => {
               <h2>What is better than Docsend?</h2>
               <ul>
                 <p>
-                  Papermark is a modern alternative to DocSend, offering much
+                  Simpleteam is a modern alternative to DocSend, offering much
                   more flexibility, control, and cost savings and custom
                   branding.
                 </p>
@@ -1374,7 +1374,7 @@ const DocSendAlternatives = () => {
                   ones, and integrate it seamlessly into your workflow.
                 </li>
                 <li>
-                  <strong>User-Friendly:</strong> Papermark is designed to be
+                  <strong>User-Friendly:</strong> Simpleteam is designed to be
                   intuitive and easy to use, by founders and investors who focus
                   on UX first products. Its clean interface ensures that you can
                   manage your documents efficiently without any hassle.
@@ -1529,7 +1529,7 @@ const DocSendAlternatives = () => {
               </p>
               <h2 className="text-4xl font-bold ">DocSend vs Papermark</h2>
               <p className="mb-4">
-                Papermark emphasizes security and user interface, offering
+                Simpleteam emphasizes security and user interface, offering
                 features like watermarking, password protection, and custom
                 branding.
               </p>
@@ -1552,7 +1552,7 @@ const DocSendAlternatives = () => {
                   for free
                 </Link>
               </p>
-              <h2 className="text-2xl font-bold mt-4">Papermark reviews</h2>
+              <h2 className="text-2xl font-bold mt-4">Simpleteam reviews</h2>
 
               <p>⭐️⭐️⭐️⭐️⭐️</p>
 
@@ -1561,15 +1561,15 @@ const DocSendAlternatives = () => {
               </h3>
               <img
                 src="https://assets.papermark.io/alterantives/ptam9dpuu627c1hmsttz.png"
-                alt="Papermark reviews"
+                alt="Simpleteam reviews"
                 className="my-4"
               />
               <h3 className="text-xl font-semi-bold mt-4">
-                Papermark focuses on UI and core features
+                Simpleteam focuses on UI and core features
               </h3>
               <img
                 src="https://assets.papermark.io/alterantives/rukw13d22o50hfrdqa1y.png"
-                alt="Papermark reviews"
+                alt="Simpleteam reviews"
                 className="my-4"
               />
               <h3 className="text-xl font-semi-bold mt-4">
@@ -1577,28 +1577,28 @@ const DocSendAlternatives = () => {
               </h3>
               <img
                 src="https://assets.papermark.io/alterantives/6gsr6kfo84srtzgu6nhe.png"
-                alt="Papermark reviews"
+                alt="Simpleteam reviews"
                 className="my-4"
               />
               <h2 className="text-2xl font-bold mt-4">
-                Papermark plans and pricing
+                Simpleteam plans and pricing
               </h2>
               <p>
-                Papermark has a simple pricing structure. You can use Papermark
+                Simpleteam has a simple pricing structure. You can use Papermark
                 for free or get the the subscribtion to your team for more
                 advanced features. Including custom domain. We also respond on
-                custom requests. As Papermark is open source first you can host
+                custom requests. As Simpleteam is open source first you can host
                 it yourself.
               </p>
 
               <img
                 src="https://assets.papermark.io/alterantives/fibyns1yrayocc2pkydk.png"
-                alt="Papermark plans and pricing"
+                alt="Simpleteam plans and pricing"
                 className="my-4"
               />
 
               <p>
-                Papermark is a founder frinedly alternative to Docsend. Our team
+                Simpleteam is a founder frinedly alternative to Docsend. Our team
                 focuses on delivering value fast and supporting each customer.
               </p> */}
             </div>

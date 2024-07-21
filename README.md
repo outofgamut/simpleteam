@@ -2,7 +2,7 @@
   <h1 align="center">Papermark</h1>
   <h3>The open-source DocSend alternative.</h3>
 
-<a target="_blank" href="https://www.producthunt.com/posts/papermark-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-papermark"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=411605&amp;theme=light&amp;period=daily" alt="Papermark - The open-source DocSend alternative | Product Hunt" style="width:250px;height:40px"></a>
+<a target="_blank" href="https://www.producthunt.com/posts/papermark-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-papermark"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=411605&amp;theme=light&amp;period=daily" alt="Simpleteam - The open-source DocSend alternative | Product Hunt" style="width:250px;height:40px"></a>
 
 </div>
 
@@ -20,7 +20,7 @@
 
 <br/>
 
-Papermark is the open-source document sharing alternative to DocSend with built-in analytics and custom domains.
+Simpleteam is the open-source document sharing alternative to DocSend with built-in analytics and custom domains.
 
 ## Features
 
@@ -31,7 +31,7 @@ Papermark is the open-source document sharing alternative to DocSend with built-
 
 ## Demo
 
-![Papermark Welcome GIF](.github/images/papermark-welcome.gif)
+![Simpleteam Welcome GIF](.github/images/papermark-welcome.gif)
 
 ## Tech Stack
 
@@ -127,7 +127,7 @@ pipenv update tinybird-cli
 
 ## Contributing
 
-Papermark is an open-source project and we welcome contributions from the community.
+Simpleteam is an open-source project and we welcome contributions from the community.
 
 If you'd like to contribute, please fork the repository and make changes as you'd like. Pull requests are warmly welcome.
 

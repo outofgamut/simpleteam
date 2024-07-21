@@ -22,7 +22,7 @@ export default function Navbar() {
                     src={PapermarkLogo}
                     width={119}
                     height={32}
-                    alt="Papermark Logo"
+                    alt="Simpleteam Logo"
                   />
                 </div>
               </Link>

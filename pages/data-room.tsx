@@ -37,16 +37,16 @@ export default function Home() {
 
         <meta
           name="description"
-          content="Secure and manage your business documents with Papermark Virtual Data Room. Designed for optimal security and collaboration, our solution adapts to your unique needs."
+          content="Secure and manage your business documents with Simpleteam Virtual Data Room. Designed for optimal security and collaboration, our solution adapts to your unique needs."
         />
 
         <meta
           property="og:description"
-          content="Papermark Virtual Data Room offers a secure platform for your business’s document storage and collaboration needs. Enhance your operational efficiency with tailored features."
+          content="Simpleteam Virtual Data Room offers a secure platform for your business’s document storage and collaboration needs. Enhance your operational efficiency with tailored features."
         />
         <meta
           property="og:title"
-          content="Virtual Data Room Powered by Papermark | Tailored for Your Business"
+          content="Virtual Data Room Powered by Simpleteam | Tailored for Your Business"
         />
 
         <meta
@@ -82,7 +82,7 @@ export default function Home() {
                     </div>
 
                     <p className="text-m my-4 text-balance text-gray-500 sm:text-xl">
-                      Learn more about Papermark Data Room and all available
+                      Learn more about Simpleteam Data Room and all available
                       features on 4 core plans including custom domains,
                       branding and self-hosting
                     </p>
@@ -157,7 +157,7 @@ export default function Home() {
                             Track activity in your data room
                           </h2>
                           <p className="mt-6 text-balance text-lg leading-8 text-gray-600">
-                            Papermark let you share your data room from a link,
+                            Simpleteam let you share your data room from a link,
                             but track activity on each document insight the Data
                             Room. Including time and views per each page.
                           </p>
@@ -194,7 +194,7 @@ export default function Home() {
                             Share branded data room via link
                           </h2>
                           <p className="mt-6 text-balance text-lg leading-8 text-gray-600">
-                            With Papermark you can have unlimited branded data
+                            With Simpleteam you can have unlimited branded data
                             rooms for your business. Customize the design of
                             each data room and create white-labelling.
                           </p>
@@ -282,7 +282,7 @@ export default function Home() {
                           Share branded data room
                         </h2>
                         <p className="mt-6 text-balance text-lg leading-8 text-gray-600">
-                          With Papermark you can have unlimited branded data
+                          With Simpleteam you can have unlimited branded data
                           rooms for your business. Customize the design of each
                           data room and create white-labelling.
                         </p>

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 
 const data = {
   description:
-    "Meet our fellow open source projects. Papermark is an open-source document infrastructure for sharing and collaboration.",
+    "Meet our fellow open source projects. Simpleteam is an open-source document infrastructure for sharing and collaboration.",
   title: "Open Source Friends | Papermark",
   url: "/oss-friends",
 };

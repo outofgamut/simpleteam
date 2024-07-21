@@ -17,7 +17,7 @@ const features = [
   {
     name: "Secure Document Sharing",
     description:
-      "Papermark provides a secure platform to share your documents. ",
+      "Simpleteam provides a secure platform to share your documents. ",
     icon: LockClosedIcon,
   },
   {
@@ -34,13 +34,13 @@ const features = [
   {
     name: "AI-powered",
     description:
-      "Papermark leverages artificial intelligence to enhance its document sharing and tracking.",
+      "Simpleteam leverages artificial intelligence to enhance its document sharing and tracking.",
     icon: Cog6ToothIcon,
   },
   {
     name: "Community Support",
     description:
-      "Being an open-source project, Papermark is backed by a community of developers  ",
+      "Being an open-source project, Simpleteam is backed by a community of developers  ",
     icon: ServerIcon,
   },
 ];

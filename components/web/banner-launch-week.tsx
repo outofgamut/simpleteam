@@ -27,7 +27,7 @@ export default function Banner() {
       </div>
       <div className="flex items-center  justify-center gap-x-4 gap-y-2">
         <p className="text-sm leading-6 text-white">
-          <strong className="font-semibold">Papermark AI</strong> on Product
+          <strong className="font-semibold">Simpleteam AI</strong> on Product
           Hunt
           {/* <svg
             viewBox="0 0 2 2"

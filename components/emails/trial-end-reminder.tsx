@@ -18,7 +18,7 @@ interface TrialEndReminderEmail {
 }
 
 const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
-  const previewText = `Upgrade to Papermark Pro`;
+  const previewText = `Upgrade to Simpleteam Pro`;
 
   return (
     <Html>
@@ -37,7 +37,7 @@ const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
               Hey{name && ` ${name}`}!
             </Text>
             <Text className="text-sm leading-6 text-black">
-              Your Papermark Pro trial is almost over. If you want to continue
+              Your Simpleteam Pro trial is almost over. If you want to continue
               enjoying the Pro features, please consider upgrading your plan.
             </Text>
             <Text className="text-sm leading-6 text-black">

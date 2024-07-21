@@ -34,7 +34,7 @@ export default function Testimonials() {
                     <div className="p-8">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          Papermark team listens to their users. Thanks for
+                          Simpleteam team listens to their users. Thanks for
                           solving a big pain. DocSend monopoly will end soon!
                         </p>
                       </blockquote>
@@ -62,7 +62,7 @@ export default function Testimonials() {
                     <div className="p-8">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          We actively use Papermark to create many links and
+                          We actively use Simpleteam to create many links and
                           track analytics for our branded data room!
                         </p>
                       </blockquote>
@@ -87,7 +87,7 @@ export default function Testimonials() {
                     <div className="p-8">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          Our transition to Papermark was smooth. We love the
+                          Our transition to Simpleteam was smooth. We love the
                           product and data rooms with custom domains.
                         </p>
                       </blockquote>
@@ -111,7 +111,7 @@ export default function Testimonials() {
                     <div className="p-8">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          I am using Papermark daily sharing documents to LPs
+                          I am using Simpleteam daily sharing documents to LPs
                           and viewing the pitch decks from founders.
                         </p>
                       </blockquote>

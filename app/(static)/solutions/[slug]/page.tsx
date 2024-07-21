@@ -238,7 +238,7 @@ export default async function PagePage({
         </div>
         <div className="mx-auto w-full max-w-7xl py-20" id="features">
           <h2 className="max-w-7xl text-balance pb-20 pt-12 text-4xl">
-            Papermark features <br />
+            Simpleteam features <br />
             <span className="text-gray-500">For {page.title}</span>
           </h2>
           <Features />

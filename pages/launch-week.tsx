@@ -13,12 +13,12 @@ export default function LaunchWeek() {
       <Head>
         <meta
           name="description"
-          content="Papermark is an open-source document infrastructure for sharing and collaboration. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics."
+          content="Simpleteam is an open-source document infrastructure for sharing and collaboration. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics."
         />
         <meta property="og:title" content="Launch Week | Papermark" />
         <meta
           property="og:description"
-          content="Papermark is an open-source document infrastructure for sharing and collaboration. Manage secure document sharing with real-time analytics. It is a free alternative to DocSend."
+          content="Simpleteam is an open-source document infrastructure for sharing and collaboration. Manage secure document sharing with real-time analytics. It is a free alternative to DocSend."
         />
         <meta
           property="og:image"

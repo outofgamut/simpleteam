@@ -25,7 +25,7 @@ export default function Testimonial() {
             <blockquote className="text-xl font-semibold leading-8 text-gray-900 sm:text-2xl sm:leading-9">
               <p>
                 I am an active user. Very happy that we made a transition to
-                Papermark document sharing and data rooms. I recommend it to
+                Simpleteam document sharing and data rooms. I recommend it to
                 every founder and fund I know.
               </p>
             </blockquote>

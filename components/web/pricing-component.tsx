@@ -277,7 +277,7 @@ const featureGroups: {
         },
       },
       {
-        name: "Remove Papermark branding",
+        name: "Remove Simpleteam branding",
         id: "feature-user",
         tiers: {
           free: false,

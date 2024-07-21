@@ -49,7 +49,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "We self-host Papermark at Rubric Labs for doc-sharing. Brilliantly-simple alternative to Docsend. Features are well-executed, so I can't wait to try new stuff!",
+    body: "We self-host Simpleteam at Rubric Labs for doc-sharing. Brilliantly-simple alternative to Docsend. Features are well-executed, so I can't wait to try new stuff!",
     author: {
       name: "Ted Spare",
       handle: "TedSpare",

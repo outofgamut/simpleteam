@@ -9,7 +9,7 @@ export default async function BlogIndex() {
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
         <div className="mx-auto max-w-2xl lg:mx-0">
           <h2 className="text-balance text-6xl text-gray-900 sm:text-6xl">
-            Papermark Blog DE
+            Simpleteam Blog DE
           </h2>
           <p className="mt-2 text-balance text-lg leading-8 text-gray-500">
             All insights on secure document sharing in 2024

@@ -224,7 +224,7 @@ export default function Home() {
         <div className="bg-[#fb7a00]">
           <div className="mx-auto w-full max-w-7xl px-4 py-32 md:px-8">
             <h2 className="text-balance text-4xl">
-              Sharing with Papermark is secure, fast, and free.
+              Sharing with Simpleteam is secure, fast, and free.
             </h2>
             <div className="space-x-2 pt-8">
               <Link
