@@ -1,11 +1,14 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import PapermarkLogo from "@/public/_static/papermark-logo.svg";
+import PapermarkLogo from "@/public/_static/simpleteam-logo.svg";
 
 import GitHubIcon from "@/components/shared/icons/github";
+import { useSession } from "next-auth/react";
 
 export default function Navbar() {
+  const { data: session } = useSession()
+
   return (
     <>
       <div className="sticky top-0 z-50">
@@ -59,6 +62,7 @@ export default function Navbar() {
                 href="/login"
               >
                 <span className="relative z-[2] flex items-center gap-1">
+                  {/* TODO: Change to "dashboard" if logged in */}
                   <span>Log in</span>
                 </span>
               </Link>

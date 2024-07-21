@@ -35,7 +35,7 @@ export const generateMetadata = async ({
   const { title, summary: description, image } = article?.data || {};
 
   return constructMetadata({
-    title: `${title} - Papermark`,
+    title: `${title} - Simpleteam`,
     description,
     image,
   });

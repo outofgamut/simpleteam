@@ -7,13 +7,13 @@ export default function TermsPage() {
 
         <p>
           These Terms of Service (“Terms”) constitute an agreement between
-          Simpleteam (“Papermark,” “us,” “we” or “our”) and the party agreeing to
+          Simpleteam (“Simpleteam,” “us,” “we” or “our”) and the party agreeing to
           these terms (“Customer,” “you,” or “your”). These Terms govern your
           access to and use of the Services. By accessing or using the Services,
           you accept these Terms, acknowledge that you have read and understand
           these Terms, and agree to be bound by these Terms. Please note that
           the Simpleteam Terms of Service, Simpleteam Business Agreement, the
-          Simpleteam Privacy Policy, and any other terms found on the Papermark
+          Simpleteam Privacy Policy, and any other terms found on the Simpleteam
           website do not apply to the Simpleteam Services.
         </p>
         <p>
@@ -31,7 +31,7 @@ export default function TermsPage() {
         </p>
         <h3>1.2 Modifications</h3>
         <p>
-          Simpleteam may update the Services from time to time. If Papermark
+          Simpleteam may update the Services from time to time. If Simpleteam
           changes the Services in a manner that materially reduces their
           functionality, Simpleteam will notify Customer at the email address
           associated with the account, and Customer may provide notice within
@@ -150,7 +150,7 @@ export default function TermsPage() {
           Customers are responsible for maintaining the confidentiality of the
           authentication methods they use to access the Services, including
           their Authentication Credentials. Customer and its End Users may not
-          share the Authentication Credentials or, without Papermark’s
+          share the Authentication Credentials or, without Simpleteam’s
           permission, give others access to or transfer Customer’s account or
           any End User Account.
         </p>
@@ -199,7 +199,7 @@ export default function TermsPage() {
           owns or has sufficient rights to upload Customer Data on or through
           the Services; (b) will not copy, upload, download, or share Customer
           Data unless it has the legal right to do so; (c) will not upload
-          content that violates Papermark’s rights or any third party’s rights,
+          content that violates Simpleteam’s rights or any third party’s rights,
           including rights of privacy or publicity, Intellectual Property
           Rights, or contract rights; (d) will fully comply with any third-party
           licenses relating to Customer Data, including paying all royalties,
@@ -222,7 +222,7 @@ export default function TermsPage() {
           consent signed by a Simpleteam authorized signatory; (g) will not
           upload or submit content that constitutes, contains, installs or
           attempts to install or promotes spyware, malware or other computer
-          code, whether on Papermark’s or others’ computers or equipment,
+          code, whether on Simpleteam’s or others’ computers or equipment,
           designated to enable you or others to gather information about or
           monitor the on-line or other activities of another party; (h) will not
           transmit chain letters, bulk or junk email or interfere with, disrupt,
@@ -238,7 +238,7 @@ export default function TermsPage() {
         <h3>3.1 Limitations</h3>
         <p>
           These Terms constitute Customer’s instructions to Simpleteam to process
-          Customer Data. Papermark, Simpleteam personnel and its Subcontractors
+          Customer Data. Simpleteam, Simpleteam personnel and its Subcontractors
           will only process, access, use, store, and transfer Customer Data as
           Customer instructs in order to deliver the Services and as specified
           in these Terms.
@@ -252,7 +252,7 @@ export default function TermsPage() {
           it bears sole responsibility for adequate backup and retention of
           Customer Data, and that it is Customer’s sole responsibility to use a
           secure encrypted connection to communicate with the Services if it
-          wishes to protect transmission of data or files to Papermark.
+          wishes to protect transmission of data or files to Simpleteam.
           Simpleteam will have no liability to you for any corruption, deletion,
           destruction or loss of any of Customer Data.
         </p>
@@ -265,7 +265,7 @@ export default function TermsPage() {
           development; development of tools, methodologies, algorithms and
           processes; machine learning; risk management; fraud prevention;
           enhancing products, services and features; developing new products,
-          services and features; and conducting and furthering Papermark
+          services and features; and conducting and furthering Simpleteam
           business.
         </p>
         <h3>3.4 Compliance</h3>
@@ -289,9 +289,9 @@ export default function TermsPage() {
         <h2>4. Intellectual Property</h2>
         <h3>4.1 Reservation of Rights</h3>
         <p>
-          Except as set forth herein, these Terms do not grant: (a) Papermark
+          Except as set forth herein, these Terms do not grant: (a) Simpleteam
           any Intellectual Property Rights in Customer Data; or (b) Customer any
-          Intellectual Property Rights in the Services, Materials, or Papermark
+          Intellectual Property Rights in the Services, Materials, or Simpleteam
           trademarks and brand features. Customer acknowledges that it is
           obtaining only a limited right to use the Services and that
           irrespective of any use of the words “purchase”, “sale” or similar
@@ -311,7 +311,7 @@ export default function TermsPage() {
           any manner without any obligation to Customer. By submitting Feedback
           to us, Customer: (i) assigns to Simpleteam all of its right, title and
           interest in and to all such Feedback; and (ii) agrees to provide any
-          reasonable assistance necessary to document and maintain Papermark’s
+          reasonable assistance necessary to document and maintain Simpleteam’s
           rights in the Feedback. In the event that such assignment is not
           valid, Customer agrees and grants to Simpleteam a royalty-free,
           worldwide, perpetual license to use or incorporate into the Services
@@ -324,7 +324,7 @@ export default function TermsPage() {
           Customer will pay Simpleteam or Customer’s reseller all applicable Fees
           in the currency and pursuant to the payment terms indicated on the
           Order Form or in the applicable agreement between Customer and
-          Customer’s reseller. Customer authorizes Papermark, or Customer’s
+          Customer’s reseller. Customer authorizes Simpleteam, or Customer’s
           reseller, to charge Customer for all applicable Fees using Customer’s
           selected payment method, and Customer will issue the required
           purchasing documentation, if any. Fees are non-refundable except as
@@ -340,7 +340,7 @@ export default function TermsPage() {
         <h3>6.3 Taxes</h3>
         <p>
           Fees are exclusive of taxes and Customer is responsible for all Taxes.
-          Papermark, or Customer’s reseller, will charge Taxes when required to
+          Simpleteam, or Customer’s reseller, will charge Taxes when required to
           do so. If Customer provides Simpleteam or its reseller with a valid
           exemption certificate, Simpleteam will not collect the taxes covered by
           that certificate.
@@ -348,7 +348,7 @@ export default function TermsPage() {
         <h3>6.4 Withholding Taxes</h3>
         <p>
           Customer will pay Simpleteam or its reseller net of any applicable
-          Withholding Taxes. Customer and Papermark, or Customer’s reseller if
+          Withholding Taxes. Customer and Simpleteam, or Customer’s reseller if
           applicable, will work together to avoid any Withholding Tax if
           exemptions, or a reduced treaty withholding rate, are available. If
           Simpleteam or Customer’s reseller qualifies for a tax exemption, or a
@@ -429,7 +429,7 @@ export default function TermsPage() {
           effect after Simpleteam processes the cancellation at the conclusion of
           the then-current Services Term.
         </p>
-        <h3>8.3 Termination by Papermark</h3>
+        <h3>8.3 Termination by Simpleteam</h3>
         <p>
           Simpleteam may, in its sole discretion, immediately terminate these
           Terms and suspend Customer’s access to the Services if required to do
@@ -519,15 +519,15 @@ export default function TermsPage() {
         </p>
         <h4>10.3.3 Confidential</h4>
         <p>
-          Beta Services are confidential until officially launched by Papermark.
+          Beta Services are confidential until officially launched by Simpleteam.
           Customer will take reasonable measures to keep information regarding
           the Beta Services confidential, including at least those measures
           Customer takes to protect its own confidential information of a
           similar nature. Customer will not disclose information regarding Beta
           Services to any third parties, and will keep new features and
-          functionality confidential until officially launched by Papermark.
+          functionality confidential until officially launched by Simpleteam.
           Customer may disclose information regarding Beta Services to the
-          extent required by law or regulation if Customer gives Papermark
+          extent required by law or regulation if Customer gives Simpleteam
           reasonable advance written notice, to the extent permitted, so
           Simpleteam can seek to prevent or limit the disclosure.
         </p>
@@ -572,7 +572,7 @@ export default function TermsPage() {
           warranties set forth above; (b) Customer Data; or (c) Customer’s other
           access, contribution to, use or misuse of the Services, including,
           without limitation the Materials. Customer will cooperate with any
-          reasonable requests to assist Papermark’s defense of such claim, suit
+          reasonable requests to assist Simpleteam’s defense of such claim, suit
           or demand.
         </p>
         <h2>13. Copyright</h2>
@@ -602,7 +602,7 @@ export default function TermsPage() {
           revocability, or validity. The arbitration will be held in a location
           both parties agree to in writing. The arbitrator may award relief only
           individually and only to the extent necessary to redress Customer’s or
-          Papermark’s individual claim(s); the arbitrator may not award relief
+          Simpleteam’s individual claim(s); the arbitrator may not award relief
           on behalf of others or the general public. Our past, present and
           future affiliates and agents may invoke our rights under this
           “Disputes” Section in the event they become involved in a dispute with
@@ -653,7 +653,7 @@ export default function TermsPage() {
         <h3>16.2 Assignment</h3>
         <p>
           Customer may not assign these Terms without the prior written consent
-          of Papermark. Simpleteam may assign or transfer these Terms, in whole
+          of Simpleteam. Simpleteam may assign or transfer these Terms, in whole
           or in part, without restriction.
         </p>
         <h3>16.3 Notices</h3>
@@ -686,7 +686,7 @@ export default function TermsPage() {
         </p>
         <h3>16.7 No Third Party Beneficiaries</h3>
         <p>
-          These Terms create no third party beneficiary rights to the Papermark
+          These Terms create no third party beneficiary rights to the Simpleteam
           product or to any third party product made available through the
           Service.
         </p>
@@ -695,7 +695,7 @@ export default function TermsPage() {
         <h3>16.9 Customer Reference</h3>
         <p>
           Simpleteam reserves the right to use Customer’s name and logo for
-          marketing or promotional purposes on Papermark’s website and in other
+          marketing or promotional purposes on Simpleteam’s website and in other
           communication with existing or potential Simpleteam customers.
         </p>
         <h3>16.10 Governing Law</h3>
@@ -713,7 +713,7 @@ export default function TermsPage() {
         <p>
           Customer acknowledges that information you share with us may be
           collected, used, and disclosed as described in the Privacy Policy.
-          Please carefully review our Privacy Policy to understand how Papermark
+          Please carefully review our Privacy Policy to understand how Simpleteam
           collects and uses personal information.
         </p>
         <h3>16.12 Entire Agreement</h3>
@@ -814,7 +814,7 @@ export default function TermsPage() {
           comments, suggestions, error reports, and analysis.
         </p>
         <p>
-          “Fees” means the amounts invoiced to Customer or charged by Papermark
+          “Fees” means the amounts invoiced to Customer or charged by Simpleteam
           in accordance with the Order Form.
         </p>
         <p>
@@ -881,14 +881,14 @@ export default function TermsPage() {
         </p>
         <p>
           “Sub-processor” means an entity who agrees to process Customer Data on
-          Papermark’s behalf, or on behalf of another Simpleteam sub-processor,
+          Simpleteam’s behalf, or on behalf of another Simpleteam sub-processor,
           in order to deliver the Services.
         </p>
         <p>
           “Taxes” means any sales, use, value added, goods and services,
           consumption, excise, local stamp, or other tax, (including but not
           limited to ISS, CIDE, PIS, CONFINS), duty or other charge of any kind
-          or nature excluding tax that is based on Papermark’s net income,
+          or nature excluding tax that is based on Simpleteam’s net income,
           associated with the Services or Software, including any related
           penalties or interest.
         </p>

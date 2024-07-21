@@ -21,25 +21,25 @@ import Testimonials from "@/components/web/testimonials/testimonials2";
 
 const features = [
   {
-    name: "Fine-tune access control",
+    name: "Performance reviews",
     description:
       "Control who can view your documents and for how long. Revoke access at any time.",
     icon: SlidersIcon,
   },
   {
-    name: "Real-time insights",
+    name: "Employee resumes",
     description:
       "Receive page-by-page analytics on your visitors and get notified in real-time.",
     icon: ArrowPathIcon,
   },
   {
-    name: "Total brand customization",
+    name: "Team optimizer",
     description:
       "Connect your domain and bring your own brand to customize your viewers' experience.",
     icon: PaletteIcon,
   },
   {
-    name: "Rich analytics",
+    name: "Skills classifier",
     description:
       "Dive into detailed analytics and understand how your documents are being viewed.",
     icon: BarChart3Icon,
@@ -65,11 +65,10 @@ export default function Home() {
         <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
           <div className="pt-24">
             <h1 className="text-balance text-6xl md:text-8xl">
-              The Open-Source DocSend Alternative
+              Team management for skills workers
             </h1>
             <p className="mt-8 max-w-3xl text-balance text-2xl">
-              Simpleteam is a modern document sharing infrastructure with
-              built-in page analytics and full white-labeling
+              Simpleteam is a modern performance and growth management platform for professional services firms
             </p>
             <div className="space-x-2 pt-8">
               <Link
@@ -85,7 +84,7 @@ export default function Home() {
                 </Button>
               </Link>
               <Link href="/login">
-                <Button className="rounded-3xl text-base">Send document</Button>
+                <Button className="rounded-3xl text-base">Grow my team</Button>
               </Link>
             </div>
             {/* <div className="mx-auto mt-24 w-full">

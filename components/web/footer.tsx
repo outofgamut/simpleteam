@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-import PapermarkLogo from "@/public/_static/papermark-logo.svg";
+import SimpleteamLogo from "@/public/_static/simpleteam-logo.svg";
 
 import GitHubIcon from "@/components/shared/icons/github";
 import LinkedinIcon from "@/components/shared/icons/linkedin";
@@ -174,7 +174,7 @@ export default function Footer() {
         <div className="xl:grid xl:grid-cols-4 xl:gap-8">
           <div className="space-y-4">
             <Image
-              src={PapermarkLogo}
+              src={SimpleteamLogo}
               width={119}
               height={32}
               alt="Simpleteam Logo"

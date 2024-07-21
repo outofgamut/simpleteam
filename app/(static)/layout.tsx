@@ -11,14 +11,14 @@ const data = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.papermark.io"),
+  metadataBase: new URL("https://www.simpleteam.co"),
   title: data.title,
   description: data.description,
   openGraph: {
     title: data.title,
     description: data.description,
     url: data.url,
-    siteName: "Papermark",
+    siteName: "Simpleteam",
     images: [
       {
         url: "/_static/meta-image.png",
