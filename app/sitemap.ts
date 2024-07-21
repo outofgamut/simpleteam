@@ -47,10 +47,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date().toISOString().split("T")[0],
     },
     {
-      url: "https://www.papermark.io/open-source-investors",
-      lastModified: new Date().toISOString().split("T")[0],
-    },
-    {
       url: "https://www.papermark.io/docsend-alternatives",
       lastModified: new Date().toISOString().split("T")[0],
     },

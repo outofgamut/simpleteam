@@ -61,7 +61,6 @@ export const EXCLUDED_PATHS = [
   "/pricing",
   "/docsend-alternatives",
   "/launch-week",
-  "/open-source-investors",
   "/investors",
   "/ai",
   "/share-notion-page",
