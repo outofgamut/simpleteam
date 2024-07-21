@@ -33,13 +33,13 @@ export const sendEmail = async ({
   try {
     const { data, error } = await resend.emails.send({
       from: marketing
-        ? "Marc from Papermark <marc@ship.papermark.io>"
+        ? "John from Simpleteam <john@simpleteam.co>"
         : system
-          ? "Papermark <system@papermark.io>"
-          : "Marc from Papermark <marc@papermark.io>",
+          ? "Simpleteam <system@simpleteam.co>"
+          : "John from Simpleteam <john@simpleteam.co>",
       to: test ? "delivered@resend.dev" : to,
       cc: cc,
-      reply_to: marketing ? "marc@papermark.io" : undefined,
+      reply_to: marketing ? "john@simpleteam.co" : undefined,
       subject,
       react,
       headers: {
