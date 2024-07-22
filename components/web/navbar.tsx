@@ -1,9 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-import PapermarkLogo from "@/public/_static/simpleteam-logo.svg";
-
-import GitHubIcon from "@/components/shared/icons/github";
+import SimpleteamLogo from "@/public/_static/simpleteam-logo.svg";
 
 export default function Navbar() {
 
@@ -20,7 +18,7 @@ export default function Navbar() {
               >
                 <div className="flex items-center space-x-2">
                   <Image
-                    src={PapermarkLogo}
+                    src={SimpleteamLogo}
                     width={119}
                     height={32}
                     alt="Simpleteam Logo"
@@ -47,14 +45,7 @@ export default function Navbar() {
               </div>
             </div>
             <div className="flex items-center gap-2 justify-self-end">
-              <Link
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group inline-flex h-10 w-max items-center justify-center rounded-md px-2.5 py-1 font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
-                href="https://github.com/mfts/papermark"
-              >
-                <GitHubIcon className="mr-2 h-6 w-6" /> 2.9k
-              </Link>
+    
               <Link
                 className="group inline-flex h-10 w-max items-center justify-center rounded-md px-2.5 py-1 font-medium transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground focus:outline-none disabled:pointer-events-none disabled:opacity-50 data-[active]:bg-accent/50 data-[state=open]:bg-accent/50"
                 href="/login"
