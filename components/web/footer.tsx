@@ -39,12 +39,11 @@ const navigation = {
     },
   ],
   alternatives: [
-    { name: "DocSend", href: "/alternatives/docsend" },
-    { name: "BriefLink", href: "/alternatives/brieflink" },
-    { name: "PandaDoc", href: "/alternatives/pandadoc" },
-    { name: "Digify", href: "/alternatives/digify" },
-    { name: "FirmRoom", href: "/alternatives/firmroom" },
-    { name: "Google-Drive", href: "/alternatives/google-drive" },
+    { name: "AssessTeam", href: "/alternatives/assessteam" },
+    { name: "PerformYard", href: "/alternatives/performyard" },
+    { name: "15five", href: "/alternatives/15five" },
+    { name: "Lattice", href: "/alternatives/lattice" },
+    { name: "Workday", href: "/alternatives/workday" },
     {
       name: "DocSend Alternatives",
       href: "/docsend-alternatives",
