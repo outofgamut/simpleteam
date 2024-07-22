@@ -179,7 +179,7 @@ export default function Footer() {
               alt="Simpleteam Logo"
             />
             <p className="leading-6 text-gray-500">
-              Sharing documents, securely and on brand.
+              AI-first platform for managing knowledge workers and skills.
             </p>
             <div className="flex space-x-2">
               {navigation.social.map((item) => (

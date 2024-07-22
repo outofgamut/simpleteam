@@ -72,7 +72,7 @@ export function StatusWidget() {
   return (
     <a
       className="flex w-full items-center justify-between space-x-2 rounded-md border border-border px-3 py-1"
-      href="https://papermark.openstatus.dev"
+      href="https://simpleteam.openstatus.dev"
       target="_blank"
       rel="noreferrer"
     >

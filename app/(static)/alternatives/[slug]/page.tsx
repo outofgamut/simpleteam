@@ -301,7 +301,7 @@ export default async function AlternativePage({
           <div className="space-x-2 pt-8">
             <Link href="/login">
               <Button className="text-balance rounded-3xl">
-                Start sending documents for free
+                Start improving your team today
               </Button>
             </Link>
           </div>
