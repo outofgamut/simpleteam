@@ -101,7 +101,7 @@ export default function Billing() {
       id: "tier-free",
       href: "/login",
       currentPlan: plan && plan == "free" ? true : false,
-      price: { monthly: "€0", annually: "€0" },
+      price: { monthly: "$0", annually: "$0" },
       description: "The essentials to start sharing documents securely.",
       featureIntro: "What's included:",
       features: [
@@ -123,7 +123,7 @@ export default function Billing() {
       id: "tier-pro",
       href: "/login",
       currentPlan: plan && plan == "pro" ? true : false,
-      price: { monthly: "€39", annually: "€25" },
+      price: { monthly: "$39", annually: "$25" },
       description: "The branded experience for your documents.",
       featureIntro: "Everything in Free, plus:",
       features: [
@@ -143,7 +143,7 @@ export default function Billing() {
       id: "tier-business",
       href: "/login",
       currentPlan: plan && plan == "business" ? true : false,
-      price: { monthly: "€79", annually: "€45" },
+      price: { monthly: "$79", annually: "$45" },
       description:
         "The one for more control, data room, and multi-file sharing.",
       featureIntro: "Everything in Pro, plus:",
@@ -170,7 +170,7 @@ export default function Billing() {
       id: "tier-datarooms",
       href: "/login",
       currentPlan: plan && plan == "datarooms" ? true : false,
-      price: { monthly: "€199", annually: "€99" },
+      price: { monthly: "$199", annually: "$99" },
       description:
         "The one for more control, data room, and multi-file sharing.",
       featureIntro: "Everything in Business, plus:",

@@ -43,7 +43,7 @@ const tiers: {
     name: "Free",
     id: "tier-free",
     href: "/login",
-    price: { monthly: "€0", annually: "€0" },
+    price: { monthly: "$0", annually: "$0" },
     description: "The essentials to start sharing documents securely.",
     featureIntro: "What's included:",
     features: [
@@ -64,7 +64,7 @@ const tiers: {
     name: "Pro",
     id: "tier-pro",
     href: "/login",
-    price: { monthly: "€39", annually: "€25" },
+    price: { monthly: "$39", annually: "$25" },
     description: "The branded experience for your documents.",
     featureIntro: "Everything in Free, plus:",
     features: [
@@ -83,7 +83,7 @@ const tiers: {
     name: "Business",
     id: "tier-business",
     href: "/login",
-    price: { monthly: "€79", annually: "€45" },
+    price: { monthly: "$79", annually: "$45" },
     description: "The one for more control, data room, and multi-file sharing.",
     featureIntro: "Everything in Pro, plus:",
     features: [
@@ -107,7 +107,7 @@ const tiers: {
     name: "Data Rooms",
     id: "tier-datarooms",
     href: "/login",
-    price: { monthly: "€199", annually: "€99" },
+    price: { monthly: "$199", annually: "$99" },
     description: "Advanced data rooms infrastructure for your company.",
     featureIntro: "Everything in Business, plus:",
     features: [

@@ -8,9 +8,9 @@ const tools: ToolFeature[] = [
     name: "Papermark",
     features: {
       plan1: "Free",
-      plan2: "€39/month (2 users)",
-      plan3: "€79/month (3 users)",
-      plan4: "€149/month (5 users)",
+      plan2: "$39/month (2 users)",
+      plan3: "$79/month (3 users)",
+      plan4: "$149/month (5 users)",
       opensource: "Yes",
     },
   },

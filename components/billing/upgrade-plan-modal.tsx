@@ -181,7 +181,7 @@ export function UpgradePlanModal({
                     variant="outline"
                     className="text-sm font-normal normal-case"
                   >
-                    {`€${
+                    {`$${
                       PLANS.find((p) => p.name === plan)!.price[period].amount
                     }/month`}{" "}
                     {period === "yearly" ? (
