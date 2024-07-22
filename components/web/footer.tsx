@@ -43,7 +43,7 @@ const navigation = {
     { name: "PerformYard", href: "/alternatives/performyard" },
     { name: "15five", href: "/alternatives/15five" },
     { name: "Lattice", href: "/alternatives/lattice" },
-    { name: "Workday", href: "/alternatives/workday" },
+    { name: "Leapsome", href: "/alternatives/leapsome" },
     {
       name: "DocSend Alternatives",
       href: "/docsend-alternatives",
