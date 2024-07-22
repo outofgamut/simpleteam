@@ -5,14 +5,14 @@ import { Minus as MinusSmallIcon, Plus as PlusSmallIcon } from "lucide-react";
 
 const faqs = [
   {
-    question: "What is Papermark?",
+    question: "What is Simpleteam?",
     answer:
       "Simpleteam is a dynamic, open-source alternative to DocSend. It enables secure document sharing, tracking, and storage, providing users with real-time analytics. Like your Pitchdeck.",
   },
   {
-    question: "How can I use Papermark?",
+    question: "How can I use Simpleteam?",
     answer:
-      "You can subscribe to one of our plans or use it for free and host it yourself. Simply visit our GitHub page, clone the repository, follow the setup instructions and start using Papermark. You can customize it according to your specific needs as it is open-source. https://github.com/mfts/papermark",
+      "You can subscribe to one of our plans or use it for free and host it yourself. Simply visit our GitHub page, clone the repository, follow the setup instructions and start using Simpleteam. You can customize it according to your specific needs as it is open-source.",
   },
   {
     question: "Is Simpleteam free?",
@@ -25,7 +25,7 @@ const faqs = [
       "Yes, with Simpleteam you can connect your custom domain and send your Pitchdeck or document via it. While continue tracking the analytics",
   },
   {
-    question: "How I can reach more investors with Papermark?",
+    question: "How I can reach more investors with Simpleteam?",
     answer:
       "Simpleteam has recommendations for more similar investors for your specific startup build in.",
   },
@@ -37,7 +37,7 @@ const faqs = [
   {
     question: "Can I contribute to the Simpleteam project?",
     answer:
-      "Yes, contributions are welcome! Please visit our GitHub repository to learn about how you can contribute. Whether it&apos;s by improving the code, adding new features, or even reporting bugs, all contributions are appreciated. https://github.com/mfts/papermark",
+      "Yes, contributions are welcome! Please visit our GitHub repository to learn about how you can contribute. Whether it&apos;s by improving the code, adding new features, or even reporting bugs, all contributions are appreciated. https://github.com/mfts/simpleteam",
   },
 ];
 

@@ -13,7 +13,7 @@ export const PoweredBy = ({ linkId }: { linkId: string }) => {
             style={{ paddingInlineStart: "12px", paddingInlineEnd: "12px" }}
           >
             Share docs via{" "}
-            <span className="font-semibold tracking-tighter">Papermark</span>
+            <span className="font-semibold tracking-tighter">Simpleteam</span>
           </a>
         </div>
       </div>

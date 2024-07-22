@@ -157,7 +157,7 @@ export default function AccessForm({
         <p className="text-sm leading-9 tracking-tight text-gray-500">
           <a href="/" target="_blank" rel="noopener noreferrer">
             This document is securely shared with you using{" "}
-            <span className="font-semibold">Papermark</span>
+            <span className="font-semibold">Simpleteam</span>
           </a>
         </p>
       </div>

@@ -30,7 +30,7 @@ export const generateMetadata = async ({
   const { metatitle, metadescription } = alternative || {};
 
   return constructMetadata({
-    title: metatitle ? `${metatitle} - Papermark` : undefined,
+    title: metatitle ? `${metatitle} - Simpleteam` : undefined,
     description: metadescription ?? undefined,
   });
 };

@@ -223,7 +223,7 @@ export default function ViewPage({
             enableBranding={meta.enableCustomMetatag ?? false}
             title={
               meta.metaTitle ??
-              `${link?.document?.name} | Powered by Papermark` ??
+              `${link?.document?.name} | Powered by Simpleteam` ??
               "Document powered by Papermark"
             }
             description={meta.metaDescription ?? null}
@@ -268,7 +268,7 @@ export default function ViewPage({
             enableBranding={meta.enableCustomMetatag ?? false}
             title={
               meta.metaTitle ??
-              `${link?.document?.name} | Powered by Papermark` ??
+              `${link?.document?.name} | Powered by Simpleteam` ??
               "Document powered by Papermark"
             }
             description={meta.metaDescription ?? null}
@@ -299,7 +299,7 @@ export default function ViewPage({
           enableBranding={meta.enableCustomMetatag ?? false}
           title={
             meta.metaTitle ??
-            `${link?.document?.name} | Powered by Papermark` ??
+            `${link?.document?.name} | Powered by Simpleteam` ??
             "Document powered by Papermark"
           }
           description={meta.metaDescription ?? null}
@@ -331,7 +331,7 @@ export default function ViewPage({
             enableBranding={meta.enableCustomMetatag ?? false}
             title={
               meta.metaTitle ??
-              `${link?.dataroom?.name} | Powered by Papermark` ??
+              `${link?.dataroom?.name} | Powered by Simpleteam` ??
               "Dataroom powered by Papermark"
             }
             description={meta.metaDescription ?? null}
@@ -376,7 +376,7 @@ export default function ViewPage({
             enableBranding={meta.enableCustomMetatag ?? false}
             title={
               meta.metaTitle ??
-              `${link?.dataroom?.name} | Powered by Papermark` ??
+              `${link?.dataroom?.name} | Powered by Simpleteam` ??
               "Dataroom powered by Papermark"
             }
             description={meta.metaDescription ?? null}
@@ -404,7 +404,7 @@ export default function ViewPage({
           enableBranding={meta.enableCustomMetatag ?? false}
           title={
             meta.metaTitle ??
-            `${link?.dataroom?.name} | Powered by Papermark` ??
+            `${link?.dataroom?.name} | Powered by Simpleteam` ??
             "Dataroom powered by Papermark"
           }
           description={meta.metaDescription ?? null}

@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 const data = {
   description:
     "Meet our fellow open source projects. Simpleteam is an open-source document infrastructure for sharing and collaboration.",
-  title: "Open Source Friends | Papermark",
+  title: "Open Source Friends | Simpleteam",
   url: "/oss-friends",
 };
 

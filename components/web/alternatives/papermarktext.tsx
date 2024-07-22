@@ -5,7 +5,7 @@ const PapermarkText = () => {
     <>
       <div className="mt-16 bg-gray-100 p-8">
         <div className="mx-auto max-w-3xl space-y-6 rounded-lg bg-white p-6 text-black shadow-sm">
-          <h1 className="text-4xl font-bold ">DocSend vs Papermark</h1>
+          <h1 className="text-4xl font-bold ">DocSend vs Simpleteam</h1>
           <p className="mb-4">
             Simpleteam emphasizes security and user interface, offering features
             like watermarking, password protection, and custom branding.

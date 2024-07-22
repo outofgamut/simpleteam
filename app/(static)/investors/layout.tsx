@@ -4,7 +4,7 @@ import Script from "next/script";
 const data = {
   description:
     "The largest investors database. This list of investors includes ten thousand of different venture funds based on stage, sector and location.",
-  title: "Investor Search | Papermark",
+  title: "Investor Search | Simpleteam",
   url: "/investors",
 };
 

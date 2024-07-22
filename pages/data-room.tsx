@@ -32,7 +32,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Virtual Data Room | Powered by Papermark</title>
+        <title>Virtual Data Room | Powered by Simpleteam</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta

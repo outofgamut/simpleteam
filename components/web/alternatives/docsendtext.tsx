@@ -1402,7 +1402,7 @@ const DocSendAlternatives = () => {
               </h1>
 
               <ul className="list-disc list-inside mb-4">
-                <li className="">Papermark</li>
+                <li className="">Simpleteam</li>
                 <li className="">Brieflink</li>
                 <li className="">PandaDoc</li>
                 <li className="">Google Drive</li>
@@ -1527,7 +1527,7 @@ const DocSendAlternatives = () => {
               <p>
                 <strong>Enterprise Plan</strong> - contact the team for pricing
               </p>
-              <h2 className="text-4xl font-bold ">DocSend vs Papermark</h2>
+              <h2 className="text-4xl font-bold ">DocSend vs Simpleteam</h2>
               <p className="mb-4">
                 Simpleteam emphasizes security and user interface, offering
                 features like watermarking, password protection, and custom
