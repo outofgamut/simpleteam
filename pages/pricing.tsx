@@ -304,7 +304,7 @@ export default function PricingPage() {
           <div className="mx-auto my-4 rounded-xl bg-primary px-6 py-12">
             <div className="item-center flex flex-col justify-between space-y-10 lg:flex-row lg:space-y-0">
               <h2 className="text-balance text-3xl">
-                Looking to grow your team's potential?
+                Looking to grow your team&apos;s potential?
               </h2>
               <div className="flex items-center space-x-2">
                 <Link
