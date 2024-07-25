@@ -9,7 +9,6 @@ import {
   Users2Icon,
 } from "lucide-react";
 
-import NotionIcon from "@/components/shared/icons/notion";
 
 import { STAGGER_CHILD_VARIANTS } from "@/lib/constants";
 
@@ -104,7 +103,7 @@ export default function Next() {
             })
           }
         >
-          Looking to share your team's skills and experiences with others?
+          Looking to share your team&apos;s skills and experiences with others?
         </button>
       </motion.div>
     </motion.div>

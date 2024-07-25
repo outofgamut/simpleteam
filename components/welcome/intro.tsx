@@ -38,11 +38,11 @@ export default function Intro() {
           className="max-w-md text-accent-foreground/80 transition-colors sm:text-lg"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          Simpleteam gives you the power to manage your team's unique skills like never before.
+          Simpleteam gives you the power to manage your team&apos;s unique skills like never before.
         </motion.p>
         <motion.div
           variants={STAGGER_CHILD_VARIANTS}
-          // className="rounded  px-10 py-2 font-medium transition-colors text-gray-900 bg-gray-100 hover:text-gray-100 hover:bg-gray-500"
+        // className="rounded  px-10 py-2 font-medium transition-colors text-gray-900 bg-gray-100 hover:text-gray-100 hover:bg-gray-500"
         >
           <Button
             className="px-10 text-base font-medium"
