@@ -55,31 +55,31 @@ const ImageSwitcher = () => {
       <div className="mb-8 mt-4 flex w-full justify-center">
         <div className="hidden flex-wrap justify-center rounded-3xl border bg-black px-2 py-1 text-sm md:flex">
           <button
-            className={`m-2 rounded-full px-4 py-1 ${isActive("image1") ? "bg-[#fb7a00]" : "bg-transparent text-white hover:bg-[#fb7a00]"}`}
+            className={`m-2 rounded-full px-4 py-1 ${isActive("image1") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image1")}
           >
             Upload documents
           </button>
           <button
-            className={`m-2 rounded-full px-4 py-1 ${isActive("image2") ? "bg-[#fb7a00]" : "bg-transparent text-white hover:bg-[#fb7a00]"}`}
+            className={`m-2 rounded-full px-4 py-1 ${isActive("image2") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image2")}
           >
             Set link permissions
           </button>
           <button
-            className={`m-2 rounded-full px-4 py-1 ${isActive("image3") ? "bg-[#fb7a00]" : "bg-transparent text-white hover:bg-[#fb7a00]"}`}
+            className={`m-2 rounded-full px-4 py-1 ${isActive("image3") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image3")}
           >
             Track time on each page
           </button>
           <button
-            className={`m-2 rounded-full px-4 py-1 ${isActive("image4") ? "bg-[#fb7a00]" : "bg-transparent text-white hover:bg-[#fb7a00]"}`}
+            className={`m-2 rounded-full px-4 py-1 ${isActive("image4") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image4")}
           >
             Create data room
           </button>
           <button
-            className={`m-2 rounded-full px-4 py-1 ${isActive("image5") ? "bg-[#fb7a00]" : "bg-transparent text-white hover:bg-[#fb7a00]"}`}
+            className={`m-2 rounded-full px-4 py-1 ${isActive("image5") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image5")}
           >
             Set up custom brand and domain

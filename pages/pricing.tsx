@@ -61,7 +61,7 @@ const tiers: {
       mostPopular: false,
     },
     {
-      name: "Pro",
+      name: "Professional",
       id: "tier-pro",
       href: "/login",
       price: { monthly: "$39", annually: "$25" },
@@ -102,31 +102,7 @@ const tiers: {
       textColor: "#black",
       buttonText: "Choose Business",
       mostPopular: true,
-    },
-    {
-      name: "Data Rooms",
-      id: "tier-datarooms",
-      href: "/login",
-      price: { monthly: "$199", annually: "$99" },
-      description: "Advanced data rooms infrastructure for your company.",
-      featureIntro: "Everything in Business, plus:",
-      features: [
-        "5 users included",
-        "Unlimited data rooms",
-        "Custom domain for data rooms",
-        "Unlimited documents",
-        "Unlimited folders and subfolders",
-        "Advanced data rooms analytics",
-        "NDA agreements",
-        "24h priority support",
-        "Custom onboarding",
-      ],
-      bgColor: "bg-gray-200",
-      borderColor: "#bg-gray-800",
-      textColor: "#bg-gray-800",
-      buttonText: "Create Data Rooms",
-      mostPopular: true,
-    },
+    }
   ];
 
 export default function PricingPage() {
@@ -173,7 +149,7 @@ export default function PricingPage() {
                 </Button>
               </Link>
               <Link href="/login">
-                <Button className="text-base bg-[#fb7a00] rounded-3xl">
+                <Button className="text-base bg-primary rounded-3xl">
                   Start free
                 </Button>
               </Link>
@@ -192,7 +168,7 @@ export default function PricingPage() {
         </div>
         <div className="bg-white py-16">
           <div className="mx-auto max-w-7xl px-4 md:px-8">
-            <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black md:grid-cols-2 xl:grid-cols-4">
+            <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black md:grid-cols-2 xl:grid-cols-3">
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
@@ -218,7 +194,7 @@ export default function PricingPage() {
                         ) : null}
                         {tier.id === "tier-pro" ? (
                           <div className="min-h-4">
-           
+
                             <div
                               className={cn(
                                 "relative w-fit rounded-3xl border border-gray-900 px-1.5 py-0.5 text-xs uppercase text-gray-900",
@@ -258,27 +234,6 @@ export default function PricingPage() {
                             </div>
                           </div>
                         ) : null}
-                        {tier.id === "tier-datarooms" ? (
-                          <div className="min-h-4">
-                
-                            <div
-                              className={cn(
-                                "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
-                                !toggleYear &&
-                                "border-gray-400 text-gray-400 opacity-40",
-                              )}
-                            >
-                              <span
-                                className={cn(
-                                  !toggleYear
-                                    ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
-                                    : "hidden",
-                                )}
-                              />
-                              50% Saving
-                            </div>
-                          </div>
-                        ) : null}
                       </div>
                       <p className="mt-6 flex items-baseline gap-x-1">
                         <span
@@ -289,9 +244,8 @@ export default function PricingPage() {
                             ? tier.price[frequency.value]
                             : tier.id === "tier-business"
                               ? tier.price[frequency.value]
-                              : tier.id === "tier-datarooms"
-                                ? tier.price[frequency.value]
-                                : tier.price[frequency.value]}
+                              : tier.price[frequency.value]
+                          }
                         </span>
                         <span className="text-sm">
                           {toggleYear ? "/ year" : "/ month"}
@@ -347,10 +301,10 @@ export default function PricingPage() {
         </div>
 
         <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
-          <div className="mx-auto my-4 rounded-xl bg-[#fb7a00] px-6 py-12">
+          <div className="mx-auto my-4 rounded-xl bg-primary px-6 py-12">
             <div className="item-center flex flex-col justify-between space-y-10 lg:flex-row lg:space-y-0">
               <h2 className="text-balance text-3xl">
-                Looking for enterprise plan or self-hosted version?
+                Looking to grow your team's potential?
               </h2>
               <div className="flex items-center space-x-2">
                 <Link
@@ -362,8 +316,7 @@ export default function PricingPage() {
                     variant="outline"
                     className="rounded-3xl border-black bg-transparent text-base hover:bg-gray-200 hover:text-black"
                   >
-                    <GitHubIcon className="mr-2 h-6 w-6" />
-                    View Github
+                    Read Our Guide
                   </Button>
                 </Link>
                 <Link

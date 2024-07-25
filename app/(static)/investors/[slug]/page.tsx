@@ -203,7 +203,7 @@ export default async function InvestorPage({
           </div>
 
           <div className="mx-auto w-full max-w-5xl px-4 md:px-8 ">
-            <div className="mx-auto rounded-3xl bg-[#fb7a00] px-6 py-12">
+            <div className="mx-auto rounded-3xl bg-primary px-6 py-12">
               <div className="item-center flex flex-col justify-between space-y-10 lg:flex-row lg:space-y-0">
                 <h2 className="text-nowrap text-3xl">
                   Looking for more investors? <br />
@@ -288,7 +288,7 @@ export default async function InvestorPage({
                     </figcaption>
                   </figure>
                   <Link href="/login" target="_blank" rel="noopener noreferrer">
-                    <Button className="rounded-3xl bg-[#fb7a00] text-base text-gray-800 hover:bg-gray-200">
+                    <Button className="rounded-3xl bg-primary text-base text-gray-800 hover:bg-gray-200">
                       Join Jaski now
                     </Button>
                   </Link>

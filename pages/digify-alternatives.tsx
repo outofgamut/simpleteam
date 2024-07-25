@@ -172,7 +172,7 @@ export default function Home() {
             </div> */}
 
             <Testimonials />
-            <div className="bg-[#fb7a00]">
+            <div className="bg-primary">
               <div className="mx-auto w-full max-w-7xl px-4 py-32 md:px-8">
                 <h2 className="text-balance text-4xl">
                   Sharing with Simpleteam is secure, fast, and free.

@@ -272,7 +272,7 @@ export default function Dashboard({ data }: any) {
                         <a
                           href={`/investors/${encodeURIComponent(investor.slug)}`}
                         >
-                          <Button className="hover:bg-[#fb7a00]] rounded-3xl bg-gray-200 text-xs text-gray-800">
+                          <Button className="hover:bg-primary] rounded-3xl bg-gray-200 text-xs text-gray-800">
                             Learn more
                           </Button>
                         </a>

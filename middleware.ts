@@ -63,8 +63,8 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     path !== "/skills-map" &&
     path !== "/launch-week" &&
     path !== "/investors" &&
-    path !== "/ai" &&
-    path !== "/share-notion-page" &&
+    path !== "/resume-builder" &&
+    path !== "/career-hub" &&
     !path.startsWith("/ai-pitch-deck-generator") &&
     !path.startsWith("/alternatives") &&
     !path.startsWith("/solutions") &&

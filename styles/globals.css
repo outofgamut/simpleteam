@@ -19,14 +19,14 @@
     --border: 220 13% 91%; /* gray-200 */
     --input: 216 12.2% 83.9%; /* gray-300 */
 
-    --primary: 220.9 39.3% 11%; /* gray-900 */
-    --primary-foreground: 210 20% 98%; /* gray-50 */
+    --primary: 40 100% 50%; /* yellow-500 */
+    --primary-foreground: 40 100% 10%; /* yellow-500 */
 
     --secondary: 220 14.3% 95.9%; /* gray-100 */
     --secondary-foreground: 220.9 39.3% 11%; /* gray-900 */
 
-    --accent: 220 14.3% 95.9%; /* gray-100 */
-    --accent-foreground: 220.9 39.3% 11%; /* gray-900 */
+    --accent: 220 14.3% 95.9%; /* emerald-100 */
+    --accent-foreground: 220.9 39.3% 11%; /* emerald-900 */
 
     --destructive: 0 84.2% 60.2%; /* red-500 */
     --destructive-foreground: 210 20% 98%; /* gray-50 */

@@ -176,7 +176,7 @@ export default async function AlternativePage({
                 >
                   <Button
                     variant="outline"
-                    className="text-balance rounded-3xl bg-[#fb7a00] bg-transparent hover:bg-gray-500"
+                    className="text-balance rounded-3xl bg-primary bg-transparent hover:bg-gray-500"
                   >
                     Start for free
                   </Button>
@@ -294,7 +294,7 @@ export default async function AlternativePage({
       </div>
 
       {/* CTA */}
-      <div className="bg-[#fb7a00]">
+      <div className="bg-primary">
         <div className="mx-auto w-full max-w-5xl px-4 py-32 md:px-8">
           <h2 className="text-balance text-4xl">{alternative.subtitlecta}</h2>
 

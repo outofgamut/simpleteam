@@ -212,7 +212,7 @@ export default async function PagePage({
           </div>
         </div>
 
-        <div className="mx-auto my-4 rounded-xl bg-[#fb7a00] px-6 py-12">
+        <div className="mx-auto my-4 rounded-xl bg-primary px-6 py-12">
           <div className="item-center flex flex-col justify-between space-y-10 lg:flex-row lg:space-y-0">
             <h2 className="text-nowrap text-3xl">{page.cta}</h2>
             <div className="flex items-center space-x-2">
@@ -271,7 +271,7 @@ export default async function PagePage({
       {/* Testimonial section */}
       <Testimonials />
       {/* CTA */}
-      <div className="bg-[#fb7a00]">
+      <div className="bg-primary">
         <div className="mx-auto w-full max-w-7xl px-4 py-32 md:px-8">
           <h2 className="text-balance text-4xl">{page.cta}</h2>
           <div className="space-x-2 pt-8">

@@ -114,7 +114,7 @@ export default function Home() {
               </div>
 
               <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
-                <div className="mx-auto my-4 rounded-xl bg-[#fb7a00] px-6 py-12">
+                <div className="mx-auto my-4 rounded-xl bg-primary px-6 py-12">
                   <div className="item-center flex flex-col justify-between space-y-10 lg:flex-row lg:space-y-0">
                     <h2 className="text-nowrap text-3xl">
                       Create skills map on Simpleteam
@@ -323,7 +323,7 @@ export default function Home() {
             {/* <CTA /> */}
           </section>
         </main>
-        <div className="bg-[#fb7a00]">
+        <div className="bg-primary">
           <div className="mx-auto w-full max-w-7xl px-4 py-32 md:px-8">
             <h2 className="text-balance text-4xl">
               Create a modern skills map

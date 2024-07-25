@@ -1,62 +1,57 @@
-import { CheckCircle2Icon, MinusIcon } from "lucide-react";
+import { CheckCircle2Icon, MinusIcon, TimerReset } from "lucide-react";
 
-interface ToolFeature {
+interface OfferingFeature {
   name: string;
-  features: { [feature: string]: string };
+  features: { [feature: string]: boolean };
 }
 
-const tools: ToolFeature[] = [
+const offerings: OfferingFeature[] = [
   {
-    name: "Simpleteam Business Plan",
+    name: "Papermark",
     features: {
-      docs: "✔️",
-      folders: "✔️",
-      linksettings: "✔️",
-      advancedanalytics: "✔️",
-      timerecorded: "✔️",
-      blocklist: "✔️",
-      verifications: "✔️",
-      branding: "✔️",
-      upload: "✔️",
-      screenshot: "✔️",
-      support: "✔️",
-      nda: "⛌",
-      domains: "⛌",
-      notifications: "⛌",
-      rooms: "⛌",
-      users: "⛌",
-      sso: "⛌",
-      migration: "⛌",
-      support2: "⛌",
-      self: "⛌",
-      white: "⛌",
+      docs: true,
+      folders: true,
+      linksettings: true,
+      advancedanalytics: true,
+      timerecorded: true,
+      blocklist: true,
+      verifications: true,
+      branding: true,
+      upload: true,
+      screenshot: true,
+      support: true,
+      nda: false,
+      domains: false,
+      support2: false,
+      self: false,
+      white: false,
     },
   },
 
   {
     name: "Simpleteam Data Rooms Plan",
     features: {
-      docs: "✔️",
-      folders: "✔️",
-      linksettings: "✔️",
-      advancedanalytics: "✔️",
-      timerecorded: "✔️",
-      blocklist: "✔️",
-      verifications: "✔️",
-      branding: "✔️",
-      domains: "✔️",
-      support: "✔️",
-      notifications: "✔️",
-      rooms: "✔️",
-      users: "⛌",
-      sso: "⛌",
-      upload: "✔️",
-      migration: "⛌",
-      support2: "⛌",
-      self: "⛌",
-      white: "⛌",
-      nda: "✔️",
-      screenshot: "✔️",
+      docs: true,
+      folders: true,
+      linksettings: true,
+      advancedanalytics: true,
+      timerecorded: true,
+      blocklist: true,
+      verifications: true,
+      branding: true,
+      domains: true,
+      support: true,
+      notifications: true,
+      rooms: true,
+      users: false,
+      sso: false,
+      upload: true,
+      migration: false,
+      support2: false,
+      self: false,
+      white: false,
+      nda: true,
+      screenshot: true,
     },
   },
 
@@ -64,59 +59,36 @@ const tools: ToolFeature[] = [
   {
     name: "Simpleteam Custom Plan",
     features: {
-      docs: "✔️",
-      folders: "✔️",
-      linksettings: "✔️",
-      advancedanalytics: "✔️",
-      timerecorded: "✔️",
-      blocklist: "✔️",
-      verifications: "✔️",
-      branding: "✔️",
-      domains: "✔️",
-      support: "✔️",
-      notifications: "✔️",
-      rooms: "✔️",
-      users: "✔️",
-      migration: "✔️",
-      support2: "✔️",
-      sso: "✔️",
-      upload: "✔️",
-      self: "⛌",
-      white: "⛌",
-      nda: "✔️",
-      screenshot: "✔️",
-    },
-  },
-  {
-    name: "Simpleteam Self-Hosted Plan",
-
-    features: {
-      docs: "✔️",
-      folders: "✔️",
-      linksettings: "✔️",
-      advancedanalytics: "✔️",
-      timerecorded: "✔️",
-      blocklist: "✔️",
-      verifications: "✔️",
-      branding: "✔️",
-      domains: "✔️",
-      support: "✔️",
-      notifications: "✔️",
-      rooms: "✔️",
-      users: "✔️",
-      migration: "✔️",
-      support2: "✔️",
-      sso: "✔️",
-      upload: "✔️",
-      self: "✔️",
-      white: "✔️",
-      nda: "✔️",
-      screenshot: "✔️",
+      docs: true,
+      folders: true,
+      linksettings: true,
+      advancedanalytics: true,
+      timerecorded: true,
+      blocklist: true,
+      verifications: true,
+      branding: true,
+      domains: true,
+      support: true,
+      notifications: true,
+      rooms: true,
+      users: true,
+      migration: true,
+      support2: true,
+      sso: true,
+      upload: true,
+      self: false,
+      white: false,
+      nda: true,
+      screenshot: true,
     },
   },
 
   // Add other tools in a similar format
 ];
+
+// create an optimal data structure for me to easily manage a feature comparison table for different product tiers
+// create a list of features that are common across all product tiers
+
 
 const featureDisplayNames: { [key: string]: string } = {
   docs: "Unlimited documents",
@@ -166,7 +138,7 @@ export default function ComparisonTable() {
       );
     }
   };
-  const featuresList = Object.keys(tools[0].features);
+  const featuresList = Object.keys(offerings[0].features);
 
   return (
     <div className="">
@@ -190,7 +162,7 @@ export default function ComparisonTable() {
                   <th className="text-balance px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
                     Data Room Feature
                   </th>
-                  {tools.map((tool) => (
+                  {offerings.map((tool) => (
                     <th
                       key={tool.name}
                       className="text-balance px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
@@ -206,16 +178,15 @@ export default function ComparisonTable() {
                     <td className="text-balance border border-gray-300 px-3 py-4 text-sm font-semibold text-gray-900">
                       {featureDisplayNames[feature]}
                     </td>
-                    {tools.map((tool) => (
+                    {offerings.map((tool) => (
                       <td
                         key={tool.name}
-                        className={`px-3 py-4 text-sm ${
-                          tool.name === "Papermark"
-                            ? "text-balance bg-green-50 font-semibold text-green-700"
-                            : ""
-                        }`} // Consistent text color, conditional background color
+                        className={`px-3 py-4 text-sm ${tool.name === "Simpleteam"
+                          ? "text-balance bg-green-50 font-semibold text-green-700"
+                          : ""
+                          }`} // Consistent text color, conditional background color
                       >
-                        {tool.features[feature]}
+                        {tool.features[feature] ? 'Yes' : 'No'}
                       </td>
                     ))}
                   </tr>

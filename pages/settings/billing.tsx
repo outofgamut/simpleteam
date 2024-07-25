@@ -23,9 +23,9 @@ const frequencies: {
   label: "Monthly" | "Annually";
   priceSuffix: "/month" | "/month";
 }[] = [
-  { value: "monthly", label: "Monthly", priceSuffix: "/month" },
-  { value: "annually", label: "Annually", priceSuffix: "/month" },
-];
+    { value: "monthly", label: "Monthly", priceSuffix: "/month" },
+    { value: "annually", label: "Annually", priceSuffix: "/month" },
+  ];
 
 export default function Billing() {
   const router = useRouter();
@@ -96,102 +96,75 @@ export default function Billing() {
     buttonText: string;
     mostPopular: boolean;
   }[] = [
-    {
-      name: "Free",
-      id: "tier-free",
-      href: "/login",
-      currentPlan: plan && plan == "free" ? true : false,
-      price: { monthly: "$0", annually: "$0" },
-      description: "The essentials to start sharing documents securely.",
-      featureIntro: "What's included:",
-      features: [
-        "1 user",
-        "Unlimited links",
-        "Page-by-page analytics",
-        "30-day analytics retention",
-        "Document sharing controls",
-      ],
+      {
+        name: "Free",
+        id: "tier-free",
+        href: "/login",
+        currentPlan: plan && plan == "free" ? true : false,
+        price: { monthly: "$0", annually: "$0" },
+        description: "The essentials to start sharing documents securely.",
+        featureIntro: "What's included:",
+        features: [
+          "1 user",
+          "Unlimited links",
+          "Page-by-page analytics",
+          "30-day analytics retention",
+          "Document sharing controls",
+        ],
 
-      bgColor: "bg-gray-200",
-      borderColor: "#bg-gray-800",
-      textColor: "text-foreground ",
-      buttonText: "Start for free",
-      mostPopular: false,
-    },
-    {
-      name: "Pro",
-      id: "tier-pro",
-      href: "/login",
-      currentPlan: plan && plan == "pro" ? true : false,
-      price: { monthly: "$39", annually: "$25" },
-      description: "The branded experience for your documents.",
-      featureIntro: "Everything in Free, plus:",
-      features: [
-        "2 users included",
-        "Custom branding",
-        "1-year analytics retention",
-        "Folder organization",
-      ],
-      bgColor: "bg-gray-200",
-      borderColor: "#bg-gray-800",
-      textColor: "#bg-gray-500",
-      buttonText: "Upgrade to Pro",
-      mostPopular: false,
-    },
-    {
-      name: "Business",
-      id: "tier-business",
-      href: "/login",
-      currentPlan: plan && plan == "business" ? true : false,
-      price: { monthly: "$79", annually: "$45" },
-      description:
-        "The one for more control, data room, and multi-file sharing.",
-      featureIntro: "Everything in Pro, plus:",
-      features: [
-        "3 users included",
-        "1 dataroom",
-        "Multi-file sharing",
-        "Advanced link controls",
-        "Custom domain for documents",
-        "Unlimited documents",
-        "Unlimited subfolder levels",
-        "Large file uploads",
-        "48h priority support",
-      ],
-      bgColor: "#bg-gray-500",
-      borderColor: "#fb7a00",
-      textColor: "#bg-gray-500",
-      buttonText: "Upgrade to Business",
-      mostPopular: true,
-    },
-
-    {
-      name: "Data Rooms",
-      id: "tier-datarooms",
-      href: "/login",
-      currentPlan: plan && plan == "datarooms" ? true : false,
-      price: { monthly: "$199", annually: "$99" },
-      description:
-        "The one for more control, data room, and multi-file sharing.",
-      featureIntro: "Everything in Business, plus:",
-      features: [
-        "3 users included",
-        "Unlimited data rooms",
-        "Custom domain for data rooms",
-        "Unlimited documents",
-        "Unlimited folders and subfolders",
-        "NDA agreements",
-        "Advanced data rooms analytics",
-        "24h priority support",
-        "Custom onboarding",
-      ],
-      bgColor: "#fb7a00",
-      borderColor: "#fb7a00",
-      textColor: "#black",
-      buttonText: "Upgrade to Data Rooms",
-      mostPopular: true,
-    },
-  ];
+        bgColor: "bg-gray-200",
+        borderColor: "#bg-gray-800",
+        textColor: "text-foreground ",
+        buttonText: "Start for free",
+        mostPopular: false,
+      },
+      {
+        name: "Pro",
+        id: "tier-pro",
+        href: "/login",
+        currentPlan: plan && plan == "pro" ? true : false,
+        price: { monthly: "$39", annually: "$25" },
+        description: "The branded experience for your documents.",
+        featureIntro: "Everything in Free, plus:",
+        features: [
+          "2 users included",
+          "Custom branding",
+          "1-year analytics retention",
+          "Folder organization",
+        ],
+        bgColor: "bg-gray-200",
+        borderColor: "#bg-gray-800",
+        textColor: "#bg-gray-500",
+        buttonText: "Upgrade to Pro",
+        mostPopular: false,
+      },
+      {
+        name: "Business",
+        id: "tier-business",
+        href: "/login",
+        currentPlan: plan && plan == "business" ? true : false,
+        price: { monthly: "$79", annually: "$45" },
+        description:
+          "The one for more control, data room, and multi-file sharing.",
+        featureIntro: "Everything in Pro, plus:",
+        features: [
+          "3 users included",
+          "1 dataroom",
+          "Multi-file sharing",
+          "Advanced link controls",
+          "Custom domain for documents",
+          "Unlimited documents",
+          "Unlimited subfolder levels",
+          "Large file uploads",
+          "48h priority support",
+        ],
+        bgColor: "#bg-gray-500",
+        borderColor: "#fb7a00",
+        textColor: "#bg-gray-500",
+        buttonText: "Upgrade to Business",
+        mostPopular: true,
+      },
+    ];
 
   const enterpriseFeatures = [
     "Self-hosted version",
@@ -224,7 +197,7 @@ export default function Billing() {
 
           <div className="bg-white dark:bg-gray-900">
             <div className="mx-auto space-y-8">
-              <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black dark:border-muted-foreground md:grid-cols-4">
+              <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black dark:border-muted-foreground md:grid-cols-3">
                 {tiers.map((tier) => (
                   <div
                     key={tier.id}
@@ -286,7 +259,7 @@ export default function Billing() {
                                 className={cn(
                                   "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
                                   !toggleProYear &&
-                                    "border-gray-400 text-gray-400 opacity-40",
+                                  "border-gray-400 text-gray-400 opacity-40",
                                 )}
                               >
                                 <span
@@ -334,7 +307,7 @@ export default function Billing() {
                                 className={cn(
                                   "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
                                   !toggleBusinessYear &&
-                                    "border-gray-400 text-gray-400 opacity-40",
+                                  "border-gray-400 text-gray-400 opacity-40",
                                 )}
                               >
                                 <span
@@ -345,54 +318,6 @@ export default function Billing() {
                                   )}
                                 />
                                 43% Saving
-                              </div>
-                            </div>
-                          ) : null}
-                          {tier.id === "tier-datarooms" ? (
-                            <div className="min-h-12">
-                              <Switch
-                                className="h-5 w-10 *:size-4"
-                                checked={toggleDataroomsYear}
-                                onCheckedChange={() =>
-                                  setToggleDataroomsYear(!toggleDataroomsYear)
-                                }
-                              />
-                              <div className="mb-1 flex items-center gap-x-1 text-sm">
-                                <span
-                                  className={cn(
-                                    toggleDataroomsYear
-                                      ? "text-gray-400"
-                                      : "text-foreground",
-                                  )}
-                                >
-                                  Monthly
-                                </span>
-                                <span>|</span>
-                                <span
-                                  className={cn(
-                                    toggleDataroomsYear
-                                      ? "text-foreground"
-                                      : "text-gray-400",
-                                  )}
-                                >
-                                  Annually
-                                </span>
-                              </div>
-                              <div
-                                className={cn(
-                                  "relative w-fit rounded-3xl border border-[#fb7a00] px-1.5 py-0.5 text-xs uppercase text-[#fb7a00]",
-                                  !toggleDataroomsYear &&
-                                    "border-gray-400 text-gray-400 opacity-40",
-                                )}
-                              >
-                                <span
-                                  className={cn(
-                                    !toggleDataroomsYear
-                                      ? "absolute top-1/2 h-px w-[90%] bg-gray-400"
-                                      : "hidden",
-                                  )}
-                                />
-                                50% Saving
                               </div>
                             </div>
                           ) : null}
@@ -453,7 +378,7 @@ export default function Billing() {
                     </div>
                     <div className="p-6">
                       {tier.id !==
-                      "tier-free" /** hide button on free tier */ ? (
+                        "tier-free" /** hide button on free tier */ ? (
                         tier.currentPlan ? (
                           <Button
                             className="rounded-3xl"

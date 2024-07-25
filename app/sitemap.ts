@@ -67,11 +67,11 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date().toISOString().split("T")[0],
     },
     {
-      url: "https://www.simpleteam.co/share-notion-page",
+      url: "https://www.simpleteam.co/career-hub",
       lastModified: new Date().toISOString().split("T")[0],
     },
     {
-      url: "https://www.simpleteam.co/ai",
+      url: "https://www.simpleteam.co/resume-builder",
       lastModified: new Date().toISOString().split("T")[0],
     },
     {

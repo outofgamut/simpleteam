@@ -11,8 +11,8 @@ import { StatusWidget } from "./status-widget";
 const navigation = {
   product: [
     { name: "Skills Map", href: "/skills-map" },
-    { name: "Resume Builder", href: "/ai" },
-    { name: "Notion sharing", href: "/share-notion-page" },
+    { name: "Resume Builder", href: "/resume-builder" },
+    { name: "Career Hub", href: "/career-hub" },
     { name: "Pricing", href: "/pricing" },
   ],
   resources: [
@@ -100,12 +100,12 @@ const navigation = {
   ],
   room: [
     {
-      name: "Data Room for investors",
-      href: "/solutions/data-room-for-investors",
+      name: "Consulting",
+      href: "/solutions/consulting",
     },
     {
-      name: "Data Room for fundraising",
-      href: "/solutions/data-room-for-startups",
+      name: "Tech",
+      href: "/solutions/engineering",
     },
     {
       name: "VC portfolio management ",
@@ -346,7 +346,7 @@ export default function Footer() {
         </div>
         <div className="mt-16 border-t border-black/10 pt-4 sm:mt-20 lg:mt-24">
           <p className="text-sm leading-5 text-gray-500">
-            &copy; 2024 Papermark. All rights reserved.
+            &copy; 2024 Simpleteam. All rights reserved.
           </p>
         </div>
       </div>

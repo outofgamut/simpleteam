@@ -580,7 +580,7 @@ export function PricingComparison() {
                 Choose Pro <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </li>
-            <li className="col-span-3 list-none border-r border-black bg-white px-6 py-4 text-sm hover:bg-[#fb7a00] ">
+            <li className="col-span-3 list-none border-r border-black bg-white px-6 py-4 text-sm hover:bg-primary ">
               <Link
                 href="/login?next=/settings/billing"
                 className="group flex items-center gap-x-1"
