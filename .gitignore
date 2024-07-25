@@ -33,6 +33,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# venv
+.venv
+
 # vercel
 .vercel
 
@@ -53,5 +56,3 @@ pages/api/scripts
 components/emails/marketing
 lib/emails/marketing
 
-# vscode configs
-.vscode
