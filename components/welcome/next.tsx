@@ -53,7 +53,7 @@ export default function Next() {
             router.push({
               pathname: "/welcome",
               query: {
-                type: "pitchdeck",
+                type: "skills",
               },
             })
           }

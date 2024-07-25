@@ -8,6 +8,7 @@ import Dataroom from "@/components/welcome/dataroom";
 import DataroomTrial from "@/components/welcome/dataroom-trial";
 import Intro from "@/components/welcome/intro";
 import Next from "@/components/welcome/next";
+import Skills from "@/components/welcome/skills";
 import NotionForm from "@/components/welcome/notion-form";
 import Upload from "@/components/welcome/upload";
 
@@ -53,6 +54,7 @@ export default function Welcome() {
         {router.query.type === "pitchdeck" && <Upload key="pitchdeck" />}
         {router.query.type === "document" && <Upload key="document" />}
         {router.query.type === "notion" && <NotionForm key="notion" />}
+        {router.query.type === "skills" && <Skills key="skills" />}
         {router.query.type === "dataroom" && <Dataroom key="dataroom" />}
         {router.query.type === "dataroom-trial" && (
           <DataroomTrial key="dataroom-trial" />
