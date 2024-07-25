@@ -221,8 +221,8 @@ const DocSendAlternatives = () => {
                   <li>
                     <p>
                       Business: $59/month (
-                      <a target="_blank" rel="nofollow" href="/data-room">
-                        data room
+                      <a target="_blank" rel="nofollow" href="/skills-map">
+                        skills map
                       </a>{" "}
                       included)
                     </p>
@@ -230,8 +230,8 @@ const DocSendAlternatives = () => {
                   <li>
                     <p>
                       Data Rooms: $149/month (
-                      <a target="_blank" rel="nofollow" href="/data-room">
-                        unlimited data rooms
+                      <a target="_blank" rel="nofollow" href="/skills-map">
+                        unlimited skills mapping
                       </a>{" "}
                       included)
                     </p>

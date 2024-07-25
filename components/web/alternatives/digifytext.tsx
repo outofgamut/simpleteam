@@ -92,7 +92,7 @@ const DigifyAlternatives = () => {
                       <a
                         target="_blank"
                         rel="nofollow"
-                        href="https://www.papermark.io/data-room"
+                        href="https://www.simpleteam.co/skills-map"
                       >
                         included in the plan. In addition, to all custom
                         branding
@@ -217,8 +217,8 @@ const DigifyAlternatives = () => {
                   <li>
                     <p>
                       Business: $59/month (
-                      <a target="_blank" rel="nofollow" href="/data-room">
-                        data room
+                      <a target="_blank" rel="nofollow" href="/skills-map">
+                        skills map
                       </a>{" "}
                       included)
                     </p>
@@ -226,8 +226,8 @@ const DigifyAlternatives = () => {
                   <li>
                     <p>
                       Data Rooms: $149/month (
-                      <a target="_blank" rel="nofollow" href="/data-room">
-                        Unlimited data rooms
+                      <a target="_blank" rel="nofollow" href="/skills-map">
+                        Unlimited skills mapping
                       </a>{" "}
                       included)
                     </p>

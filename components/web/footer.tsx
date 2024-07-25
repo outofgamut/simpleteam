@@ -10,8 +10,8 @@ import { StatusWidget } from "./status-widget";
 
 const navigation = {
   product: [
-    { name: "Data Room", href: "/data-room" },
-    { name: "AI Document Assistant", href: "/ai" },
+    { name: "Skills Map", href: "/skills-map" },
+    { name: "Resume Builder", href: "/ai" },
     { name: "Notion sharing", href: "/share-notion-page" },
     { name: "Pricing", href: "/pricing" },
   ],

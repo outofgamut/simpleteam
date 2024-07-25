@@ -63,7 +63,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date().toISOString().split("T")[0],
     },
     {
-      url: "https://www.simpleteam.co/data-room",
+      url: "https://www.simpleteam.co/skills-map",
       lastModified: new Date().toISOString().split("T")[0],
     },
     {

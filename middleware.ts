@@ -60,7 +60,7 @@ export default async function middleware(req: NextRequest, ev: NextFetchEvent) {
     path !== "/pricing" &&
     path !== "/docsend-alternatives" &&
     path !== "/digify-alternatives" &&
-    path !== "/data-room" &&
+    path !== "/skills-map" &&
     path !== "/launch-week" &&
     path !== "/investors" &&
     path !== "/ai" &&

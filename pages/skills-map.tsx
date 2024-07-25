@@ -10,12 +10,9 @@ import Navbar from "@/components/web/navbar";
 import Testimonials from "@/components/web/testimonials/testimonials2";
 
 const features = [
-  "send unlimited documents",
-  "email capture",
-  "analytics on each page",
-  "custom domain",
-  "team access",
-  "large files upload",
+  "Personalized skill development plans",
+  "Real-time skill tracking and analytics",
+  "Seamless integration with existing tools",
 ];
 
 export default function Home() {
@@ -32,26 +29,26 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Virtual Data Room | Powered by Simpleteam</title>
+        <title>Skills Map | Powered by Simpleteam</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
 
         <meta
           name="description"
-          content="Secure and manage your business documents with Simpleteam Virtual Data Room. Designed for optimal security and collaboration, our solution adapts to your unique needs."
+          content="Simpleteam Skills Map unlocks the potential of your workforce with tailored skill development and knowledge management solutions."
         />
 
         <meta
           property="og:description"
-          content="Simpleteam Virtual Data Room offers a secure platform for your business’s document storage and collaboration needs. Enhance your operational efficiency with tailored features."
+          content="Simpleteam Skills Map unlocks the potential of your workforce with tailored skill development and knowledge management solutions."
         />
         <meta
           property="og:title"
-          content="Virtual Data Room Powered by Simpleteam | Tailored for Your Business"
+          content="Skills Map Powered by Simpleteam | Tailored for Your Business"
         />
 
         <meta
           property="og:image"
-          content="https://www.papermark.io/cover.png"
+          content="https://www.simpleteam.co/cover.png"
         />
       </Head>
 
@@ -77,12 +74,12 @@ export default function Home() {
                     </span> */}
                     <div className="my-6 text-balance text-black lg:text-7xl">
                       <h1 className="mb-1 text-5xl lg:text-7xl">
-                        Virtual Data Room
+                        Skills Map
                       </h1>
                     </div>
 
                     <p className="text-m my-4 text-balance text-gray-500 sm:text-xl">
-                      Learn more about Simpleteam Data Room and all available
+                      Learn more about Simpleteam Skills Map and all available
                       features on 4 core plans including custom domains,
                       branding and self-hosting
                     </p>
@@ -90,7 +87,7 @@ export default function Home() {
                   <div className="space-x-2 pt-8">
                     <Link href="/login">
                       <Button className="rounded-3xl bg-black text-base text-white hover:bg-black/90">
-                        Create Data Room
+                        Create Skills Map
                       </Button>
                     </Link>
                     <Link
@@ -120,7 +117,7 @@ export default function Home() {
                 <div className="mx-auto my-4 rounded-xl bg-[#fb7a00] px-6 py-12">
                   <div className="item-center flex flex-col justify-between space-y-10 lg:flex-row lg:space-y-0">
                     <h2 className="text-nowrap text-3xl">
-                      Create secure data room on Papermark
+                      Create skills map on Simpleteam
                     </h2>
                     <div className="flex items-center space-x-2">
                       <Link
@@ -132,7 +129,7 @@ export default function Home() {
                           variant="outline"
                           className="rounded-3xl border-black bg-transparent text-base hover:bg-gray-200 hover:text-black"
                         >
-                          Create Data Room
+                          Create Skills Map
                         </Button>
                       </Link>
                       <Link
@@ -154,12 +151,11 @@ export default function Home() {
                       <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
                         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                           <h2 className="mt-2 text-balance text-3xl text-gray-900 sm:text-4xl">
-                            Track activity in your data room
+                            Personalized skill development plans
                           </h2>
                           <p className="mt-6 text-balance text-lg leading-8 text-gray-600">
-                            Simpleteam let you share your data room from a link,
-                            but track activity on each document insight the Data
-                            Room. Including time and views per each page.
+                            Simpleteam let you support both formally managed skills and
+                            ad-hoc skills that associate with your team members.
                           </p>
                         </div>
                         <div className="space-x-2 pt-8">
@@ -191,18 +187,17 @@ export default function Home() {
                       <div className="px-6 lg:px-0 lg:pr-4 lg:pt-4">
                         <div className="mx-auto max-w-2xl lg:mx-0 lg:max-w-lg">
                           <h2 className="mt-2 text-balance text-3xl text-gray-900 sm:text-4xl">
-                            Share branded data room via link
+                            Validate skillsets with easy wizards
                           </h2>
                           <p className="mt-6 text-balance text-lg leading-8 text-gray-600">
-                            With Simpleteam you can have unlimited branded data
-                            rooms for your business. Customize the design of
-                            each data room and create white-labelling.
+                            Identify current skill levels and gaps with our intuitive assessment tools.
+                            Create customized learning journeys based on individual needs and goals.
                           </p>
                         </div>
                         <div className="space-x-2 pt-8">
                           <Link href="/login">
                             <Button className="justify-center text-balance rounded-3xl bg-gray-900 text-white hover:bg-gray-800">
-                              Create branded data room
+                              Create tailored industry skills
                             </Button>
                           </Link>
                         </div>
@@ -300,7 +295,7 @@ export default function Home() {
 
                 <div className="mx-auto w-full max-w-7xl">
                   <h2 className="text-balance py-12 text-4xl">
-                    Secure data room with a modern UI
+                    Intelligent skills management, tailored to your industry
                     <br />
                     <span className="text-gray-500">See the demo below</span>
                   </h2>
@@ -331,7 +326,7 @@ export default function Home() {
         <div className="bg-[#fb7a00]">
           <div className="mx-auto w-full max-w-7xl px-4 py-32 md:px-8">
             <h2 className="text-balance text-4xl">
-              Create secure and modern data room
+              Create a modern skills map
             </h2>
             <div className="space-x-2 pt-8">
               <Link
