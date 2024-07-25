@@ -2,8 +2,11 @@ import { useRouter } from "next/router";
 
 import { motion } from "framer-motion";
 import {
+  CheckCircleIcon,
   File as DocumentIcon,
+  GraduationCapIcon,
   Presentation as PresentationChartBarIcon,
+  Users2Icon,
 } from "lucide-react";
 
 import NotionIcon from "@/components/shared/icons/notion";
@@ -35,10 +38,10 @@ export default function Next() {
         className="flex flex-col items-center space-y-10 text-center"
       >
         <p className="text-2xl font-bold tracking-tighter text-foreground">
-          Papermark
+          Simpleteam
         </p>
         <h1 className="font-display max-w-md text-3xl font-semibold transition-colors sm:text-4xl">
-          Which document do you want to share today?
+          What is your primary goal for getting started?
         </h1>
       </motion.div>
       <motion.div
@@ -56,8 +59,8 @@ export default function Next() {
           }
           className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
-          <PresentationChartBarIcon className="pointer-events-none h-auto w-12 sm:w-12" />
-          <p>Pitchdeck</p>
+          <CheckCircleIcon className="pointer-events-none h-auto w-12 sm:w-12" />
+          <p>Track and manage skills</p>
         </button>
         <button
           onClick={() =>
@@ -70,8 +73,8 @@ export default function Next() {
           }
           className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
-          <DocumentIcon className="pointer-events-none h-auto w-12 sm:w-12" />
-          <p>Another document</p>
+          <GraduationCapIcon className="pointer-events-none h-auto w-12 sm:w-12" />
+          <p>Develop personalized learning paths</p>
         </button>
         <button
           onClick={() =>
@@ -84,8 +87,8 @@ export default function Next() {
           }
           className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
         >
-          <NotionIcon className="pointer-events-none h-auto w-12 sm:w-12" />
-          <p>Notion Page</p>
+          <Users2Icon className="pointer-events-none h-auto w-12 sm:w-12" />
+          <p>Enhance team collaboration</p>
         </button>
       </motion.div>
 
@@ -101,7 +104,7 @@ export default function Next() {
             })
           }
         >
-          Looking to create and share a full dataroom?
+          Looking to share your team's skills and experiences with others?
         </button>
       </motion.div>
     </motion.div>

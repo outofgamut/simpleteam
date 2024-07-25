@@ -38,8 +38,7 @@ export default function Intro() {
           className="max-w-md text-accent-foreground/80 transition-colors sm:text-lg"
           variants={STAGGER_CHILD_VARIANTS}
         >
-          Simpleteam gives you the power to securely share your documents with an
-          impression that lasts.
+          Simpleteam gives you the power to manage your team's unique skills like never before.
         </motion.p>
         <motion.div
           variants={STAGGER_CHILD_VARIANTS}
