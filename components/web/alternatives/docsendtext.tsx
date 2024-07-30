@@ -166,7 +166,7 @@ const DocSendAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/papermark_b36392fc-dec4-4146-95e6-fac4c397cfbc.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>

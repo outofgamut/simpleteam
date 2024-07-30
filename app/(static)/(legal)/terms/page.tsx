@@ -165,7 +165,7 @@ export default function TermsPage() {
           responsible for any activity using its account, whether or not
           Customer authorized that activity. You should immediately notify
           Simpleteam in writing of any unauthorized use of your account by
-          sending an email to support@papermark.io.
+          sending an email to support@simpleteam.co.
         </p>
         <h3>2.5 Restrictions</h3>
         <p>
@@ -359,11 +359,11 @@ export default function TermsPage() {
         </p>
         <h3>6.5 Auto-renewals and Trials</h3>
         <p>
-          IF CUSTOMER HAS ALREADY PROVIDED A PAYMENT METHOD TO PAPERMARK FOR
+          IF CUSTOMER HAS ALREADY PROVIDED A PAYMENT METHOD TO SIMPLETEAM FOR
           RECURRING CHARGES AND CUSTOMER’S ACCOUNT IS SET TO AUTO-RENEWAL OR IS
-          IN A TRIAL PERIOD, PAPERMARK (OR CUSTOMER’S RESELLER) MAY CHARGE
+          IN A TRIAL PERIOD, SIMPLETEAM (OR CUSTOMER’S RESELLER) MAY CHARGE
           AUTOMATICALLY AT THE END OF THE TRIAL OR FOR THE RENEWAL, UNLESS
-          CUSTOMER NOTIFIES PAPERMARK (OR CUSTOMER’S RESELLER, AS APPLICABLE)
+          CUSTOMER NOTIFIES SIMPLETEAM (OR CUSTOMER’S RESELLER, AS APPLICABLE)
           THAT CUSTOMER WANTS TO DISABLE AUTO-RENEWAL OR CANCEL THE SERVICES IN
           ACCORDANCE WITH SECTION 7.2. Simpleteam may revise Services rates by
           providing the Customer at least thirty days’ notice prior to the next
@@ -397,7 +397,7 @@ export default function TermsPage() {
           subscription to the Services will automatically renew for a Renewal
           Term at the then-current quantity, unless either party gives the other
           written notice of termination to the other (in the case of Customer,
-          via email to support@papermark.io) at least thirty days prior to the
+          via email to support@simpleteam.co) at least thirty days prior to the
           expiration of the then-current Services Term for subscriptions less
           than one year and at least sixty days prior to the expiration of the
           then-current Services Term for subscriptions of one year or more. If
@@ -423,7 +423,7 @@ export default function TermsPage() {
         <h3>8.2 Termination by Customer</h3>
         <p>
           You may terminate your account by sending a cancellation request to
-          support@papermark.io or by following the notice procedures for
+          support@simpleteam.co or by following the notice procedures for
           Subscription Services provided in Section 6.5 or Section 7.2, as
           applicable. Termination of your Account and these Terms will take
           effect after Simpleteam processes the cancellation at the conclusion of
@@ -481,18 +481,18 @@ export default function TermsPage() {
         <p>
           THE SERVICES, SOFTWARE, MATERIALS, AND ANY RELATED DOCUMENTATION ARE
           PROVIDED “AS IS” AND ON AN “AS AVAILABLE” BASIS. TO THE FULLEST EXTENT
-          PERMITTED BY LAW, EXCEPT AS EXPRESSLY STATED IN THE TERMS, PAPERMARK
+          PERMITTED BY LAW, EXCEPT AS EXPRESSLY STATED IN THE TERMS, SIMPLETEAM
           AND ITS AFFILIATES, SUPPLIERS, AND DISTRIBUTORS MAKE NO WARRANTY OF
           ANY KIND, WHETHER EXPRESS, IMPLIED, STATUTORY OR OTHERWISE, INCLUDING
           WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR USE, OR
-          NON-INFRINGEMENT. PAPERMARK MAKES NO REPRESENTATION, WARRANTY OR
+          NON-INFRINGEMENT. SIMPLETEAM MAKES NO REPRESENTATION, WARRANTY OR
           GUARANTEE THAT SERVICES WILL MEET CUSTOMER’S REQUIREMENTS OR
           EXPECTATIONS, THAT CUSTOMER DATA WILL BE ACCURATE, COMPLETE, OR
           PRESERVED WITHOUT LOSS, OR THAT THE SERVICES WILL BE TIMELY,
-          UNINTERRUPTED OR ERROR-FREE. PAPERMARK WILL NOT BE RESPONSIBLE OR
+          UNINTERRUPTED OR ERROR-FREE. SIMPLETEAM WILL NOT BE RESPONSIBLE OR
           LIABLE IN ANY MANNER FOR ANY CUSTOMER DATA, THIRD-PARTY SERVICES,
           THIRD-PARTY MATERIALS, ANY CONTENT UPLOADED TO THE SERVICES BY ANY
-          THIRD PARTY, OR NON-PAPERMARK SERVICES (INCLUDING FOR ANY DELAYS,
+          THIRD PARTY, OR NON-SIMPLETEAM SERVICES (INCLUDING FOR ANY DELAYS,
           INTERRUPTIONS, TRANSMISSION ERRORS, SECURITY FAILURES, AND OTHER
           PROBLEMS CAUSED BY THESE ITEMS). CUSTOMER IS RESPONSIBLE FOR USING THE
           SERVICES OR SOFTWARE IN ACCORDANCE WITH THE TERMS SET FORTH HEREIN AND
@@ -506,7 +506,7 @@ export default function TermsPage() {
           be supported and may be changed at any time without notice; (c) Beta
           Services may not be as reliable or available as the Services; (d) Beta
           Services have not been subjected to the same Security Measures and
-          auditing to which the Services have been subjected; and (e) PAPERMARK
+          auditing to which the Services have been subjected; and (e) SIMPLETEAM
           WILL HAVE NO LIABILITY ARISING OUT OF OR IN CONNECTION WITH BETA
           SERVICES – USE AT YOUR OWN RISK.
         </p>
@@ -534,8 +534,8 @@ export default function TermsPage() {
         <h2>11. Limitation of Liability</h2>
         <h3>11.1 Limitation on Indirect Liability</h3>
         <p>
-          TO THE FULLEST EXTENT PERMITTED BY LAW, EXCEPT FOR PAPERMARK OR
-          CUSTOMER’S INDEMNIFICATION OBLIGATIONS, NEITHER CUSTOMER NOR PAPERMARK
+          TO THE FULLEST EXTENT PERMITTED BY LAW, EXCEPT FOR SIMPLETEAM OR
+          CUSTOMER’S INDEMNIFICATION OBLIGATIONS, NEITHER CUSTOMER NOR SIMPLETEAM
           AND ITS AFFILIATES, SUPPLIERS, AND DISTRIBUTORS WILL BE LIABLE UNDER
           THE TERMS FOR (I) INDIRECT, SPECIAL, INCIDENTAL, CONSEQUENTIAL,
           EXEMPLARY, OR PUNITIVE DAMAGES, OR (II) LOSS OF USE, DATA, BUSINESS,
@@ -545,11 +545,11 @@ export default function TermsPage() {
         </p>
         <h3>11.2 Limitation on Amount of Liability</h3>
         <p>
-          TO THE FULLEST EXTENT PERMITTED BY LAW, PAPERMARK’S AGGREGATE
+          TO THE FULLEST EXTENT PERMITTED BY LAW, SIMPLETEAM’S AGGREGATE
           LIABILITY UNDER THE TERMS WILL NOT EXCEED THE AMOUNT PAID BY CUSTOMER
-          TO PAPERMARK HEREUNDER DURING THE TWELVE MONTHS PRIOR TO THE EVENT
+          TO SIMPLETEAM HEREUNDER DURING THE TWELVE MONTHS PRIOR TO THE EVENT
           GIVING RISE TO LIABILITY. FOR FREE ACCESS SUBSCRIPTIONS OR BETA
-          SERVICES, PAPERMARK’S TOTAL LIABILITY WILL NOT EXCEED, IN AGGREGATE,
+          SERVICES, SIMPLETEAM’S TOTAL LIABILITY WILL NOT EXCEED, IN AGGREGATE,
           FIFTY U.S. DOLLARS ($50).
         </p>
         <h3>11.3 Failure of Essential Purpose</h3>
@@ -557,7 +557,7 @@ export default function TermsPage() {
           EACH PARTY ACKNOWLEDGES AND AGREES THAT THIS SECTION 11 IS A
           FUNDAMENTAL BASIS OF THE BARGAIN AND A REASONABLE ALLOCATION OF RISK
           BETWEEN THE PARTIES AND WILL SURVIVE AND APPLY TO ANY CLAIMS ARISING
-          OUT OF OR RELATED TO THESE TERMS, ANY PAPERMARK SERVICES OR ANY
+          OUT OF OR RELATED TO THESE TERMS, ANY SIMPLETEAM SERVICES OR ANY
           RELATED SERVICES, REGARDLESS OF THE THEORY OF LIABILITY (CONTRACT,
           TORT, STRICT LIABILITY OR OTHERWISE), EVEN IF ANY LIMITED REMEDY IN
           THESE TERMS IS FOUND TO HAVE FAILED OF ITS ESSENTIAL PURPOSE.
@@ -582,7 +582,7 @@ export default function TermsPage() {
           copyright owner or the legal agent of a copyright owner, and you
           believe that any content on the Service infringes upon your
           copyrights, you may send us an email pursuant to our Digital
-          Millennium Copyright Act Notice at dmca@papermark.io.
+          Millennium Copyright Act Notice at dmca@simpleteam.co.
         </p>
         <h2>14. Disputes</h2>
         <h3>14.1 Informal Resolution</h3>
@@ -645,7 +645,7 @@ export default function TermsPage() {
         <p>
           Simpleteam may change these Terms from time to time. Customers can
           review the most current version of these Terms at any time at
-          https://www.papermark.io/terms. The revised provisions will become
+          https://www.simpleteam.co/terms. The revised provisions will become
           effective once posted or on any effective date indicated in the
           posting, and you accept the revised provisions by accessing or using
           the Service after that date.
@@ -659,7 +659,7 @@ export default function TermsPage() {
         <h3>16.3 Notices</h3>
         <p>
           Notices must be sent via email. Notices to Simpleteam must be sent to
-          Simpleteam at support@papermark.io.
+          Simpleteam at support@simpleteam.co.
         </p>
         <h3>16.4 Force Majeure</h3>
         <p>
@@ -840,7 +840,7 @@ export default function TermsPage() {
         </p>
         <p>
           “Privacy Policy” means the Simpleteam Privacy Policy available at
-          https://www.papermark.io/privacy.
+          https://www.simpleteam.co/privacy.
         </p>
         <p>
           “Provisioning Date” is the date upon which Simpleteam makes the
@@ -859,7 +859,7 @@ export default function TermsPage() {
         </p>
         <p>
           “Services” means the Simpleteam services, which include: (a) the
-          Simpleteam website (https://www.papermark.io); (b) the communication
+          Simpleteam website (https://www.simpleteam.co); (b) the communication
           and information sharing services and related technologies, including
           the interactive features and features for communication with others,
           available through the website; (c) other services we make available to

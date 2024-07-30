@@ -15,7 +15,7 @@ import {
 } from "@react-email/components";
 
 export default function InvalidDomain({
-  domain = "papermark.io",
+  domain = "simpleteam.co",
   invalidDays = 14,
 }: {
   domain: string;
@@ -45,13 +45,13 @@ export default function InvalidDomain({
             </Text>
             <Text className="text-sm leading-6 text-black">
               If your domain remains unconfigured for 30 days, it will be
-              automatically deleted from Papermark. Please click the link below
+              automatically deleted from Simpleteam. Please click the link below
               to configure your domain.
             </Text>
             <Section className="my-8 text-center">
               <Button
                 className="rounded bg-black text-center text-xs font-semibold text-white no-underline"
-                href={`https://www.papermark.io/settings/domains`}
+                href={`https://www.simpleteam.co/settings/domains`}
                 style={{ padding: "12px 20px" }}
               >
                 Configure domain
@@ -60,7 +60,7 @@ export default function InvalidDomain({
             <Text className="text-sm leading-6 text-black">
               If you do not want to keep this domain on Papermark, you can{" "}
               <Link
-                href={`https://www.papermark.io/settings/domains`}
+                href={`https://www.simpleteam.co/settings/domains`}
                 className="font-medium text-blue-600 no-underline"
               >
                 delete it
@@ -68,13 +68,11 @@ export default function InvalidDomain({
               or simply ignore this email.{" "}
               {invalidDays >= 14
                 ? `To respect your inbox,${" "} 
-                  ${
-                    invalidDays < 28
-                      ? `we will only send you one more email about this in ${
-                          28 - invalidDays
-                        } days.`
-                      : `this will be the last time we will email you about this.`
-                  }`
+                  ${invalidDays < 28
+                  ? `we will only send you one more email about this in ${28 - invalidDays
+                  } days.`
+                  : `this will be the last time we will email you about this.`
+                }`
                 : ""}
             </Text>
             <Hr />
@@ -82,11 +80,11 @@ export default function InvalidDomain({
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">

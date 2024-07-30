@@ -46,30 +46,30 @@ export default function ViewedDataroom({
             </Text>
             <Text className="text-sm leading-6 text-black">
               You can get the detailed engagement analytics like time-spent per
-              document page and total duration for this dataroom on Papermark.
+              document page and total duration for this dataroom on Simpleteam.
             </Text>
             <Section className="my-8 text-center">
               <Button
                 className="rounded bg-black text-center text-xs font-semibold text-white no-underline"
-                href={`https://www.papermark.io/datarooms/${dataroomId}`}
+                href={`https://www.simpleteam.co/datarooms/${dataroomId}`}
                 style={{ padding: "12px 20px" }}
               >
                 See my dataroom insights
               </Button>
             </Section>
             <Text className="text-sm leading-6 text-black">
-              Stay informed, stay ahead with Papermark.
+              Stay informed, stay ahead with Simpleteam.
             </Text>
             <Hr />
             <Section className="mt-8 text-gray-400">
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">

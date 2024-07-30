@@ -58,7 +58,7 @@ const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
             <Section className="mb-[32px] mt-[32px] text-center">
               <Button
                 className="rounded bg-black text-center text-xs font-semibold text-white no-underline"
-                href={`https://www.papermark.io/settings/billing`}
+                href={`https://www.simpleteam.co/settings/billing`}
                 style={{ padding: "12px 20px" }}
               >
                 Upgrade your plan
@@ -75,11 +75,11 @@ const TrialEndReminderEmail = ({ name }: TrialEndReminderEmail) => {
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">

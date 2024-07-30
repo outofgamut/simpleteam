@@ -13,7 +13,7 @@ import {
 } from "@react-email/components";
 
 const VerificationLinkEmail = ({
-  url = "https://www.papermark.io",
+  url = "https://www.simpleteam.co",
 }: {
   url: string;
 }) => {
@@ -32,7 +32,7 @@ const VerificationLinkEmail = ({
             </Text>
 
             <Text className="text-sm leading-6 text-black">
-              Welcome to Papermark!
+              Welcome to Simpleteam!
             </Text>
             <Text className="text-sm leading-6 text-black">
               Please click the magic link below to sign in to your account.

@@ -131,7 +131,7 @@ export function UpgradePlanModal({
         >
           <motion.div variants={STAGGER_CHILD_VARIANTS}>
             <p className="text-2xl font-bold tracking-tighter text-foreground">
-              Papermark
+              Simpleteam
             </p>
           </motion.div>
           <motion.h3
@@ -181,9 +181,8 @@ export function UpgradePlanModal({
                     variant="outline"
                     className="text-sm font-normal normal-case"
                   >
-                    {`$${
-                      PLANS.find((p) => p.name === plan)!.price[period].amount
-                    }/month`}{" "}
+                    {`$${PLANS.find((p) => p.name === plan)!.price[period].amount
+                      }/month`}{" "}
                     {period === "yearly" ? (
                       <span className="ml-1 text-xs">(billed yearly)</span>
                     ) : null}
@@ -239,14 +238,12 @@ export function UpgradePlanModal({
                 // prettier-ignore
 
                 fetch(
-                  `/api/teams/${
-                    teamInfo?.currentTeam?.id
-                  }/billing/upgrade?priceId=${
-                    PLANS.find((p) => p.name === plan)!.price[period].priceIds[
-                      process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
-                        ? "production"
-                        : "test"
-                    ]
+                  `/api/teams/${teamInfo?.currentTeam?.id
+                  }/billing/upgrade?priceId=${PLANS.find((p) => p.name === plan)!.price[period].priceIds[
+                  process.env.NEXT_PUBLIC_VERCEL_ENV === "production"
+                    ? "production"
+                    : "test"
+                  ]
                   }`,
                   {
                     method: "POST",

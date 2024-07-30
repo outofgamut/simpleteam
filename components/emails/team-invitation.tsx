@@ -57,17 +57,17 @@ export default function TeamInvitation({
               or copy and paste this URL into your browser: <br />
               {`${url}`}
             </Text>
-            <Text className="text-sm text-gray-400">Marc from Simpleteam</Text>
+            <Text className="text-sm text-gray-400">John from Simpleteam</Text>
             <Hr />
             <Section className="mt-8 text-gray-400">
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">

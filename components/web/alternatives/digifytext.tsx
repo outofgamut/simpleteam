@@ -159,7 +159,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://assets.papermark.io/upload/file_SDAeSGJGaG9VYsFEW4u2cW-Screenshot-2024-05-18-at-1.19.30-PM.png"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -307,7 +307,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/idealsvdr_65acc50f-56bd-4018-b384-7c73db170fac.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -350,7 +350,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/idealsvdr_65acc50f-56bd-4018-b384-7c73db170fac.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -393,7 +393,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/securedocs_f9657c5f-6882-447e-aa7f-8afb0c350346.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -436,7 +436,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/ansarada_c36f0e6f-3d01-4ee3-b63e-16a3ed836994.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -479,7 +479,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/firmroom_e4ec3cbf-b1c9-4535-95ec-b7e319ce7401.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -524,7 +524,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/idealsvdr_65acc50f-56bd-4018-b384-7c73db170fac.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -592,7 +592,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/idealsvdr_65acc50f-56bd-4018-b384-7c73db170fac.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>
@@ -635,7 +635,7 @@ const DigifyAlternatives = () => {
                   <img
                     style={{ maxWidth: "100%" }}
                     src="https://aicontentfy-customer-images.s3.eu-central-1.amazonaws.com/idealsvdr_65acc50f-56bd-4018-b384-7c73db170fac.jpeg"
-                    alt="papermark.io website"
+                    alt="simpleteam.co website"
                   />
                 </p>
                 <p>

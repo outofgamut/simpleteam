@@ -63,21 +63,21 @@ const UpgradePlanEmail = ({
               Hey{name && ` ${name}`}!
             </Text>
             <Text className="text-sm">
-              My name is Marc, and I&apos;m the creator of Papermark. I wanted
-              to personally reach out to thank you for upgrading to Papermark{" "}
+              My name is Marc, and I&apos;m the creator of Simpleteam. I wanted
+              to personally reach out to thank you for upgrading to Simpleteam{" "}
               {planType}!
             </Text>
             <Text className="text-sm leading-6 text-black">
               As you might already know, we are a bootstrapped and{" "}
               <Link
-                href="https://github.com/mfts/papermark"
+                href="https://github.com/mfts/simpleteam"
                 target="_blank"
                 className="font-medium text-emerald-500 no-underline"
               >
                 open-source
               </Link>{" "}
               business. Your support means the world to us and helps us continue
-              to build and improve Papermark.
+              to build and improve Simpleteam.
             </Text>
             <Text className="text-sm leading-6 text-black">
               On the {planType} plan, you now have access to:
@@ -104,18 +104,18 @@ const UpgradePlanEmail = ({
                 Let me know if you have any questions or feedback. I&apos;m
                 always happy to help!
               </Text>
-              <Text className="text-sm text-gray-400">Marc from Simpleteam</Text>
+              <Text className="text-sm text-gray-400">John from Simpleteam</Text>
             </Section>
             <Hr />
             <Section className="mt-8 text-gray-400">
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">
