@@ -9,7 +9,7 @@ const data = {
 };
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.papermark.io"),
+  metadataBase: new URL("https://www.simpleteam.co"),
   title: data.title,
   description: data.description,
   openGraph: {

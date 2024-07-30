@@ -86,7 +86,7 @@ const DocSendAlternatives = () => {
                       <a
                         target="_blank"
                         rel="nofollow"
-                        href="https://www.papermark.io/pricing"
+                        href="https://www.simpleteam.co/pricing"
                       >
                         {" "}
                         included in the plan. In addition, all custom
@@ -148,7 +148,7 @@ const DocSendAlternatives = () => {
                   <a
                     target="_blank"
                     rel="nofollow"
-                    href="papermark.io/docsend-pricing"
+                    href="simpleteam.co/docsend-pricing"
                   >
                     article
                   </a>
@@ -158,8 +158,8 @@ const DocSendAlternatives = () => {
                 </h2>
                 <p>
                   Website:{" "}
-                  <a target="_blank" rel="nofollow" href="https://papermark.io">
-                    papermark.io
+                  <a target="_blank" rel="nofollow" href="https://simpleteam.co">
+                    simpleteam.co
                   </a>
                 </p>
                 <p>
@@ -297,7 +297,7 @@ const DocSendAlternatives = () => {
                 </p>
 
                 <Link
-                  href="https://papermark.io/login"
+                  href="https://simpleteam.co/login"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -363,7 +363,7 @@ const DocSendAlternatives = () => {
                   <a
                     target="_blank"
                     rel="nofollow"
-                    href="https://www.papermark.io/blog/docsend"
+                    href="https://www.simpleteam.co/blog/docsend"
                   >
                     <span style={{ color: "rgb(55, 65, 81)" }}>DocSend</span>
                   </a>
@@ -1340,7 +1340,7 @@ const DocSendAlternatives = () => {
               </>
 
               <Link
-                href="https://papermark.io/login"
+                href="https://simpleteam.co/login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1388,7 +1388,7 @@ const DocSendAlternatives = () => {
               </ul>
 
               <Link
-                href="https://papermark.io/login"
+                href="https://simpleteam.co/login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1447,7 +1447,7 @@ const DocSendAlternatives = () => {
                 focuses primarily on enterprise clients.
               </p>
               <img
-                src="https://assets.papermark.io/alterantives/bqyxrz1jry4mjnk1kimo-1.png"
+                src="https://assets.simpleteam.co/alterantives/bqyxrz1jry4mjnk1kimo-1.png"
                 alt="DocSend Product"
                 className="my-4"
               />
@@ -1474,14 +1474,14 @@ const DocSendAlternatives = () => {
                 cheap for essential features.
               </p>
               <img
-                src="https://assets.papermark.io/alterantives/znexk7slb43uv0cmeqzw-2.png"
+                src="https://assets.simpleteam.co/alterantives/znexk7slb43uv0cmeqzw-2.png"
                 alt="DocSend Review #1"
                 className="my-4"
               />
               <p>
                 Disclaimer: Currently Jaski supports
                 <a
-                  href="http://papermark.io/login"
+                  href="http://simpleteam.co/login"
                   className="text-orange-600 underline px-2"
                 >
                   Papermark
@@ -1491,7 +1491,7 @@ const DocSendAlternatives = () => {
               <h3 className="text-1xl font-bold mb-4">Confusing UI</h3>
               <p> Customers find the Docsend UI confusing and outdated.</p>
               <img
-                src="https://assets.papermark.io/alterantives/n0id8nfbhq0geo7feqqu-3.png"
+                src="https://assets.simpleteam.co/alterantives/n0id8nfbhq0geo7feqqu-3.png"
                 alt="DocSend Review #2"
                 className="my-4"
               />
@@ -1501,7 +1501,7 @@ const DocSendAlternatives = () => {
                 support with waiting time over two weeks.
               </p>
               <img
-                src="https://assets.papermark.io/alterantives/9rg8uwwz7t3vpkz55qfc-4.png"
+                src="https://assets.simpleteam.co/alterantives/9rg8uwwz7t3vpkz55qfc-4.png"
                 alt="DocSend Review #3"
                 className="my-4"
               />
@@ -1510,7 +1510,7 @@ const DocSendAlternatives = () => {
                 DocSend Plans and Pricing
               </h2>
               <img
-                src="https://assets.papermark.io/alterantives/1afc866si8948vjbhhye-5.png"
+                src="https://assets.simpleteam.co/alterantives/1afc866si8948vjbhhye-5.png"
                 alt="DocSend Pricing"
                 className="my-4"
               />
@@ -1560,7 +1560,7 @@ const DocSendAlternatives = () => {
                 Users love our customer support
               </h3>
               <img
-                src="https://assets.papermark.io/alterantives/ptam9dpuu627c1hmsttz.png"
+                src="https://assets.simpleteam.co/alterantives/ptam9dpuu627c1hmsttz.png"
                 alt="Simpleteam reviews"
                 className="my-4"
               />
@@ -1568,7 +1568,7 @@ const DocSendAlternatives = () => {
                 Simpleteam focuses on UI and core features
               </h3>
               <img
-                src="https://assets.papermark.io/alterantives/rukw13d22o50hfrdqa1y.png"
+                src="https://assets.simpleteam.co/alterantives/rukw13d22o50hfrdqa1y.png"
                 alt="Simpleteam reviews"
                 className="my-4"
               />
@@ -1576,7 +1576,7 @@ const DocSendAlternatives = () => {
                 Actively used by founders, VC funds and developers
               </h3>
               <img
-                src="https://assets.papermark.io/alterantives/6gsr6kfo84srtzgu6nhe.png"
+                src="https://assets.simpleteam.co/alterantives/6gsr6kfo84srtzgu6nhe.png"
                 alt="Simpleteam reviews"
                 className="my-4"
               />
@@ -1592,7 +1592,7 @@ const DocSendAlternatives = () => {
               </p>
 
               <img
-                src="https://assets.papermark.io/alterantives/fibyns1yrayocc2pkydk.png"
+                src="https://assets.simpleteam.co/alterantives/fibyns1yrayocc2pkydk.png"
                 alt="Simpleteam plans and pricing"
                 className="my-4"
               />
@@ -1629,7 +1629,7 @@ const DocSendAlternatives = () => {
                 </div>
               </Link>
               <Link
-                href="https://papermark.io/login"
+                href="https://simpleteam.co/login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -1641,7 +1641,7 @@ const DocSendAlternatives = () => {
                 </Button>
               </Link>
               <Link
-                href="https://papermark.io/pricing"
+                href="https://simpleteam.co/pricing"
                 target="_blank"
                 rel="noopener noreferrer"
               >

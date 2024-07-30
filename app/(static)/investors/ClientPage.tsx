@@ -236,7 +236,7 @@ export default function Dashboard({ data }: any) {
                               {investor.website && (
                                 <a
                                   className="text-black"
-                                  href={`${investor.website}?ref=papermark.io`}
+                                  href={`${investor.website}?ref=simpleteam.co`}
                                   target="_blank"
                                   rel="noopener"
                                 >
@@ -245,7 +245,7 @@ export default function Dashboard({ data }: any) {
                                 </a>
                               )}
                               <Link
-                                href={`https://www.papermark.io?ref=investors-list`}
+                                href={`https://www.simpleteam.co?ref=investors-list`}
                               >
                                 <Image
                                   src={PapermarkPImg}

@@ -84,7 +84,7 @@ export default async function PagePage({
                   src={
                     page.imageUrl && page.imageUrl !== ""
                       ? page.imageUrl
-                      : "https://assets.papermark.io/upload/file_6yutnL8q4gEc1iJxMbMiaZ-Screenshot-2024-05-18-at-1.02.30-PM.png"
+                      : "https://assets.simpleteam.co/upload/file_6yutnL8q4gEc1iJxMbMiaZ-Screenshot-2024-05-18-at-1.02.30-PM.png"
                   }
                   width={2432}
                   height={1442}
@@ -149,10 +149,10 @@ export default async function PagePage({
                   <img
                     // src={
                     //   page.image1 ??
-                    //   "https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+                    //   "https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
                     // }
                     src={
-                      "https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+                      "https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
                     }
                     alt="Product screenshot"
                     width={2432}
@@ -196,10 +196,10 @@ export default async function PagePage({
                   <img
                     src={
                       page.image2 ??
-                      "https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+                      "https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
                     }
                     // src={
-                    //   "https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+                    //   "https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
                     // }
                     alt="Product screenshot"
                     width={2432}
@@ -262,7 +262,7 @@ export default async function PagePage({
             controls
           >
             <source
-              src="https://assets.papermark.io/upload/file_A4qNV68jr3MAUayMNi3WmY-Data-Room-demo-2.mp4"
+              src="https://assets.simpleteam.co/upload/file_A4qNV68jr3MAUayMNi3WmY-Data-Room-demo-2.mp4"
               type="video/mp4"
             />
           </video>

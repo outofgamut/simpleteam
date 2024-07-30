@@ -55,7 +55,7 @@ const DeckPage = () => {
   const setItem = (key: string, value: string) => {
     iframeRef.current?.contentWindow?.postMessage(
       { type: "set", key, value },
-      "https://shared.papermark.io",
+      "https://shared.simpleteam.co",
     );
   };
 
@@ -83,7 +83,7 @@ const DeckPage = () => {
     setTimeout(() => {
       setLoading(false);
 
-      window.location.href = "https://deck.papermark.io/loading";
+      window.location.href = "https://deck.simpleteam.co/loading";
     }, 2000);
   };
 
@@ -114,7 +114,7 @@ const DeckPage = () => {
     <>
       <iframe
         ref={iframeRef}
-        src="https://shared.papermark.io"
+        src="https://shared.simpleteam.co"
         style={{
           width: 0,
           height: 0,
@@ -180,9 +180,8 @@ const DeckPage = () => {
                         {Array.from({ length: 5 }).map((_, index) => (
                           <div
                             key={index}
-                            className={`w-1/4 h-2 mx-1 rounded-full overflow-hidden ${
-                              index < step ? "bg-orange-500" : "bg-gray-300"
-                            }`}
+                            className={`w-1/4 h-2 mx-1 rounded-full overflow-hidden ${index < step ? "bg-orange-500" : "bg-gray-300"
+                              }`}
                           />
                         ))}
                       </div>

@@ -16,7 +16,7 @@ const ImageSwitcher = () => {
         <div className="flex h-full max-h-[100vh] w-full overflow-hidden rounded-3xl">
           {currentImage === "image1" && (
             <img
-              src="https://assets.papermark.io/upload/file_CDitomftzRxJt82S8uhBta-Screenshot-2024-05-18-at-12.51.59-PM.png"
+              src="https://assets.simpleteam.co/upload/file_CDitomftzRxJt82S8uhBta-Screenshot-2024-05-18-at-12.51.59-PM.png"
               alt="Image 1"
               className="h-full w-full object-cover"
               style={{ boxShadow: "none" }}
@@ -24,28 +24,28 @@ const ImageSwitcher = () => {
           )}
           {currentImage === "image2" && (
             <img
-              src="https://assets.papermark.io/upload/file_Lmm6NZRt9ReP8WRc74p6w9-Screenshot-2024-05-18-at-12.56.53-PM.png"
+              src="https://assets.simpleteam.co/upload/file_Lmm6NZRt9ReP8WRc74p6w9-Screenshot-2024-05-18-at-12.56.53-PM.png"
               alt="Image 2"
               className="h-full w-full object-cover"
             />
           )}
           {currentImage === "image3" && (
             <img
-              src="https://assets.papermark.io/upload/file_6yutnL8q4gEc1iJxMbMiaZ-Screenshot-2024-05-18-at-1.02.30-PM.png"
+              src="https://assets.simpleteam.co/upload/file_6yutnL8q4gEc1iJxMbMiaZ-Screenshot-2024-05-18-at-1.02.30-PM.png"
               alt="Image 3"
               className="h-full w-full object-cover"
             />
           )}
           {currentImage === "image4" && (
             <img
-              src="https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+              src="https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
               alt="Image 4"
               className="h-full w-full object-cover"
             />
           )}
           {currentImage === "image5" && (
             <img
-              src="https://assets.papermark.io/upload/file_7bRAcyf4H3FmSQ74Rh6rMN-Screenshot-2024-05-18-at-1.02.03-PM.png"
+              src="https://assets.simpleteam.co/upload/file_7bRAcyf4H3FmSQ74Rh6rMN-Screenshot-2024-05-18-at-1.02.03-PM.png"
               alt="Image 5"
               className="h-full w-full object-cover"
             />

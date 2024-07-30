@@ -8,19 +8,19 @@ const files = [
   {
     title: "Google Drive",
     size: "Document hosting platform",
-    source: "https://assets.papermark.io/alterantives/google-drive.jpg",
+    source: "https://assets.simpleteam.co/alterantives/google-drive.jpg",
     link: "/alternatives/google-drive",
   },
   {
     title: "Pitch",
     size: "Presentation creation platform",
-    source: "https://assets.papermark.io/alterantives/pitch.webp",
+    source: "https://assets.simpleteam.co/alterantives/pitch.webp",
     link: "/alternatives/pitch",
   },
   {
     title: "PandaDoc",
     size: "Optimization of agreements and workflows",
-    source: "https://assets.papermark.io/alterantives/pandadoc.png",
+    source: "https://assets.simpleteam.co/alterantives/pandadoc.png",
     link: "/alternatives/pandadoc",
   },
   {

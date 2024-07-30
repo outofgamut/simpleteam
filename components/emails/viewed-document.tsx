@@ -51,7 +51,7 @@ export default function ViewedDocument({
             <Section className="my-8 text-center">
               <Button
                 className="rounded bg-black text-center text-xs font-semibold text-white no-underline"
-                href={`https://www.papermark.io/documents/${documentId}`}
+                href={`https://www.simpleteam.co/documents/${documentId}`}
                 style={{ padding: "12px 20px" }}
               >
                 See my document insights
@@ -65,11 +65,11 @@ export default function ViewedDocument({
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">

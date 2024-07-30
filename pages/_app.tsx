@@ -51,7 +51,7 @@ export default function App({
         />
         <meta
           property="og:url"
-          content="https://www.papermark.io"
+          content="https://www.simpleteam.co"
           key="og-url"
         />
         <meta property="og:type" content="website" />
@@ -75,7 +75,7 @@ export default function App({
         <PostHogCustomProvider>
           <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             <PlausibleProvider
-              domain="papermark.io"
+              domain="simpleteam.co"
               enabled={process.env.NEXT_PUBLIC_VERCEL_ENV === "production"}
             >
               <main className={inter.className}>

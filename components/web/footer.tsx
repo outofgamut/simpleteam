@@ -35,7 +35,7 @@ const navigation = {
 
     {
       name: "AI Pitch Deck Generator",
-      href: "https://deck.papermark.io",
+      href: "https://deck.simpleteam.co",
     },
   ],
   alternatives: [
@@ -118,7 +118,7 @@ const navigation = {
     // },
     {
       name: "Virtual sales data room",
-      href: "https://www.papermark.io/solutions/virtual-sales-room",
+      href: "https://www.simpleteam.co/solutions/virtual-sales-room",
     },
   ],
   support: [

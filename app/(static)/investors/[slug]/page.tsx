@@ -54,7 +54,7 @@ export default async function InvestorPage({
             property="og:image"
             content="https://www.simpleteam.co/_static/meta-image.png"
           />
-          <meta property="og:url" content="https://www.papermark.io" />
+          <meta property="og:url" content="https://www.simpleteam.co" />
           <meta name="twitter:card" content="summary_large_image" />
         </Head>
 

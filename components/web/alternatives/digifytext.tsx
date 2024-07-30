@@ -151,14 +151,14 @@ const DigifyAlternatives = () => {
                 </h2>
                 <p>
                   Website:{" "}
-                  <a target="_blank" rel="nofollow" href="https://papermark.io">
-                    papermark.io
+                  <a target="_blank" rel="nofollow" href="https://simpleteam.co">
+                    simpleteam.co
                   </a>
                 </p>
                 <p>
                   <img
                     style={{ maxWidth: "100%" }}
-                    src="https://assets.papermark.io/upload/file_SDAeSGJGaG9VYsFEW4u2cW-Screenshot-2024-05-18-at-1.19.30-PM.png"
+                    src="https://assets.simpleteam.co/upload/file_SDAeSGJGaG9VYsFEW4u2cW-Screenshot-2024-05-18-at-1.19.30-PM.png"
                     alt="simpleteam.co website"
                   />
                 </p>
@@ -293,7 +293,7 @@ const DigifyAlternatives = () => {
                 </p>
 
                 <Link
-                  href="https://papermark.io/login"
+                  href="https://simpleteam.co/login"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -674,7 +674,7 @@ const DigifyAlternatives = () => {
                 </ul>
               </>
               <Link
-                href="https://papermark.io/login"
+                href="https://simpleteam.co/login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -724,7 +724,7 @@ const DigifyAlternatives = () => {
               </ul>
 
               <Link
-                href="https://papermark.io/login"
+                href="https://simpleteam.co/login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -759,7 +759,7 @@ const DigifyAlternatives = () => {
               </Link>
 
               <Link
-                href="https://papermark.io/login"
+                href="https://simpleteam.co/login"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -771,7 +771,7 @@ const DigifyAlternatives = () => {
                 </Button>
               </Link>
               <Link
-                href="https://papermark.io/data-room"
+                href="https://simpleteam.co/data-room"
                 target="_blank"
                 rel="noopener noreferrer"
               >

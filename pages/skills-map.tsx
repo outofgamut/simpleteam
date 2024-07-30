@@ -169,7 +169,7 @@ export default function Home() {
                       <div className="sm:px-6 lg:px-0">
                         <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                           <img
-                            src="https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+                            src="https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
                             alt="Product screenshot"
                             width={2432}
                             height={1442}
@@ -209,7 +209,7 @@ export default function Home() {
                         />
                         <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                           <img
-                            src="https://assets.papermark.io/upload/file_7bRAcyf4H3FmSQ74Rh6rMN-Screenshot-2024-05-18-at-1.02.03-PM.png"
+                            src="https://assets.simpleteam.co/upload/file_7bRAcyf4H3FmSQ74Rh6rMN-Screenshot-2024-05-18-at-1.02.03-PM.png"
                             alt="Product screenshot"
                             width={2432}
                             height={1442}
@@ -235,7 +235,7 @@ export default function Home() {
                       />
                       <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                         <img
-                          src="https://assets.papermark.io/upload/file_7bRAcyf4H3FmSQ74Rh6rMN-Screenshot-2024-05-18-at-1.02.03-PM.png"
+                          src="https://assets.simpleteam.co/upload/file_7bRAcyf4H3FmSQ74Rh6rMN-Screenshot-2024-05-18-at-1.02.03-PM.png"
                           alt="Product screenshot"
                           width={2432}
                           height={1442}
@@ -255,7 +255,7 @@ export default function Home() {
                       />
                       <div className="mx-auto max-w-2xl sm:mx-0 sm:max-w-none">
                         <img
-                          src="https://assets.papermark.io/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
+                          src="https://assets.simpleteam.co/upload/file_Y1UuAt51v17QtBKTuP9Rj5-Screenshot-2024-05-18-at-12.56.35-PM.png"
                           alt="Product screenshot"
                           width={2432}
                           height={1442}
@@ -311,7 +311,7 @@ export default function Home() {
                     controls
                   >
                     <source
-                      src="https://assets.papermark.io/upload/file_A4qNV68jr3MAUayMNi3WmY-Data-Room-demo-2.mp4"
+                      src="https://assets.simpleteam.co/upload/file_A4qNV68jr3MAUayMNi3WmY-Data-Room-demo-2.mp4"
                       type="video/mp4"
                     />
                   </video>

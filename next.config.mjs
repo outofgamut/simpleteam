@@ -27,7 +27,7 @@ const nextConfig = {
     return [
       {
         source: "/ai-pitch-deck-generator/:path*",
-        destination: "https://deck.papermark.io/:path*",
+        destination: "https://deck.simpleteam.co/:path*",
       },
     ];
   },
@@ -36,7 +36,7 @@ const nextConfig = {
 function prepareRemotePatterns() {
   let patterns = [
     // static images and videos
-    { protocol: "https", hostname: "assets.papermark.io" },
+    { protocol: "https", hostname: "assets.simpleteam.co" },
     // twitter img
     { protocol: "https", hostname: "pbs.twimg.com" },
     // linkedin img
@@ -44,7 +44,7 @@ function prepareRemotePatterns() {
     // google img
     { protocol: "https", hostname: "lh3.googleusercontent.com" },
     // papermark img
-    { protocol: "https", hostname: "www.papermark.io" },
+    { protocol: "https", hostname: "www.simpleteam.co" },
     // useragent img
     { protocol: "https", hostname: "faisalman.github.io" },
     // special document pages

@@ -227,20 +227,17 @@ export default function Branding() {
                             }}
                           />
                           <div
-                            className={`${
-                              dragActive
+                            className={`${dragActive
                                 ? "cursor-copy border-2 border-black bg-gray-50 opacity-100"
                                 : ""
-                            } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${
-                              logo
+                              } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${logo
                                 ? "opacity-0 group-hover:opacity-100"
                                 : "group-hover:bg-gray-50"
-                            }`}
+                              }`}
                           >
                             <PlusIcon
-                              className={`${
-                                dragActive ? "scale-110" : "scale-100"
-                              } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
+                              className={`${dragActive ? "scale-110" : "scale-100"
+                                } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
                             />
                             <span className="sr-only">OG image upload</span>
                           </div>
@@ -387,7 +384,7 @@ export default function Branding() {
                                 </svg>
                               </div>
                               <span className="whitespace-normal text-xs text-muted-foreground">
-                                papermark.io/view/...
+                                simpleteam.co/view/...
                               </span>
                             </div>
                           </div>
@@ -461,7 +458,7 @@ export default function Branding() {
                                 </svg>
                               </div>
                               <span className="whitespace-normal text-xs text-muted-foreground">
-                                papermark.io/view/...
+                                simpleteam.co/view/...
                               </span>
                             </div>
                           </div>

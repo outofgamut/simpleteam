@@ -141,7 +141,7 @@ export default function Home() {
                 controls
               >
                 <source
-                  src="https://assets.papermark.io/short-video.mp4"
+                  src="https://assets.simpleteam.co/short-video.mp4"
                   type="video/mp4"
                 />
               </video>

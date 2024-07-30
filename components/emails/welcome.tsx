@@ -46,7 +46,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             <Text className="text-sm">
               <ul className="list-inside list-disc text-sm">
                 <li>Upload a document</li>
-                 <li>Create a virtual data room</li>
+                <li>Create a virtual data room</li>
                 <li>
                   Share a link{" "}
                   <span className="italic">(with your custom domain)✨</span>
@@ -84,7 +84,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                       Twitter
                     </Link>
                   </li>
-                     <li>
+                  <li>
                     Have a call to talk enterprise{" "}
                     <Link href="https://cal.com/marcseitz/papermark" target="_blank">
                       Book
@@ -105,11 +105,11 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
               <Text className="text-xs">
                 © {new Date().getFullYear()}{" "}
                 <a
-                  href="https://www.papermark.io"
+                  href="https://www.simpleteam.co"
                   className="text-gray-400 no-underline visited:text-gray-400 hover:text-gray-400"
                   target="_blank"
                 >
-                  papermark.io
+                  simpleteam.co
                 </a>
               </Text>
               <Text className="text-xs">

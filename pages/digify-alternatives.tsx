@@ -80,7 +80,7 @@ export default function Home() {
                 <div className="flex w-full flex-col items-center">
                   <div className="pb-1">
                     <img
-                      src="https://assets.papermark.io/upload/file_AS7Wf6aZ7Xp4gphvo6JeCH-Digify_Logo_Horizontal__big.png"
+                      src="https://assets.simpleteam.co/upload/file_AS7Wf6aZ7Xp4gphvo6JeCH-Digify_Logo_Horizontal__big.png"
                       alt="App screenshot"
                       className="mx-auto"
                       width={120}

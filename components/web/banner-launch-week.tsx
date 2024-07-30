@@ -39,7 +39,7 @@ export default function Banner() {
           {/* 04.12-08.12 */}
         </p>
         {/* <a
-          href="https://www.papermark.io/launch-week"
+          href="https://www.simpleteam.co/launch-week"
           className="flex-none rounded-md bg-green-600 px-3.5 py-1 text-sm font-semibold text-white shadow-sm hover:bg-green-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gray-900"
         >
           Follow this madness <span aria-hidden="true"></span>

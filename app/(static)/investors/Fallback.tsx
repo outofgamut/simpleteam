@@ -134,7 +134,7 @@ export const FallbackInvestors = async ({
                               {investor.website && (
                                 <a
                                   className="text-black"
-                                  href={`${investor.website}?ref=papermark.io`}
+                                  href={`${investor.website}?ref=simpleteam.co`}
                                   target="_blank"
                                   rel="noopener"
                                 >
@@ -143,7 +143,7 @@ export const FallbackInvestors = async ({
                                 </a>
                               )}
                               <Link
-                                href={`https://www.papermark.io?ref=investors-list`}
+                                href={`https://www.simpleteam.co?ref=investors-list`}
                               >
                                 <Image
                                   src={PapermarkPImg}

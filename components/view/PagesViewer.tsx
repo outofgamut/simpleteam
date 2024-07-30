@@ -308,7 +308,7 @@ export default function PagesViewer({
             (pages && loadedImages[pageNumber - 1] ? (
               pages.map((page, index) => {
                 // served from cloudfront, then use img tag otherwise use next/image
-                if (page.file.toLowerCase().includes("files.papermark.io")) {
+                if (page.file.toLowerCase().includes("files.simpleteam.co")) {
                   return (
                     <img
                       key={index}

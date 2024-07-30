@@ -90,7 +90,7 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
             metaTitle: link.metaTitle,
             metaDescription: link.metaDescription,
             metaImage: link.metaImage,
-            metaUrl: `https://www.papermark.io/view/${linkId}`,
+            metaUrl: `https://www.simpleteam.co/view/${linkId}`,
           },
           showPoweredByBanner: teamPlan === "free",
           showAccountCreationSlide:
@@ -144,7 +144,7 @@ export const getStaticProps = async (context: GetStaticPropsContext) => {
             metaTitle: link.metaTitle,
             metaDescription: link.metaDescription,
             metaImage: link.metaImage,
-            metaUrl: `https://www.papermark.io/view/${linkId}`,
+            metaUrl: `https://www.simpleteam.co/view/${linkId}`,
           },
           showPoweredByBanner: false,
           showAccountCreationSlide: false,

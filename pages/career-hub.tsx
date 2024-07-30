@@ -116,7 +116,7 @@ export default function Home() {
           property="og:image"
           content="https://www.simpleteam.co/_static/notion.png"
         />
-        <meta property="og:url" content="https://www.papermark.io" />
+        <meta property="og:url" content="https://www.simpleteam.co" />
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <Navbar />
@@ -173,7 +173,7 @@ export default function Home() {
                 loop
               >
                 <source
-                  src="https://assets.papermark.io/papermark-notion-video.mp4"
+                  src="https://assets.simpleteam.co/papermark-notion-video.mp4"
                   type="video/mp4"
                 />
               </video>

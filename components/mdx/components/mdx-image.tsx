@@ -11,7 +11,7 @@ export function MDXImage({
   alt: string;
 }) {
   let widthFromSrc, heightFromSrc;
-  const url = new URL(src, "https://www.papermark.io");
+  const url = new URL(src, "https://www.simpleteam.co");
   const widthParam = url.searchParams.get("w") || url.searchParams.get("width");
   const heightParam =
     url.searchParams.get("h") || url.searchParams.get("height");

@@ -77,7 +77,7 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
                 <ModeToggle />
 
                 <a
-                  href="mailto:support@papermark.io"
+                  href="mailto:support@simpleteam.co"
                   className="my-1 flex items-center px-3 py-2 text-sm duration-200 hover:bg-gray-200 dark:hover:bg-muted"
                 >
                   <HelpCircle className="mr-2 h-4 w-4" />
