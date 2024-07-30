@@ -100,9 +100,8 @@ export default function Login() {
             <Button
               type="submit"
               loading={isLoginWithEmail}
-              className={`${
-                isLoginWithEmail ? "bg-black" : "bg-gray-800 hover:bg-gray-900 "
-              } focus:shadow-outline transform rounded px-4 py-2 text-white transition-colors duration-300 ease-in-out focus:outline-none`}
+              className={`${isLoginWithEmail ? "bg-black" : "bg-gray-800 hover:bg-gray-900 "
+                } focus:shadow-outline transform rounded px-4 py-2 text-white transition-colors duration-300 ease-in-out focus:outline-none`}
             >
               {emailButtonText}
             </Button>
@@ -189,8 +188,8 @@ export default function Login() {
               <div className="mb-4 h-64 w-64">
                 <img
                   className="h-full w-full rounded-2xl object-cover shadow-2xl"
-                  src="https://www.papermark.io/_static/testimonials/jaski.jpeg"
-                  alt="Jaski"
+                  src="https://www.papermark.io/_static/testimonials/lori.webp"
+                  alt="Lori"
                 />
               </div>
               {/* Text content */}
@@ -204,7 +203,7 @@ export default function Login() {
                 </blockquote>
                 <figcaption className="mt-4">
                   <div className="text-balance font-semibold text-white ">
-                    Jaski
+                    Lori
                   </div>
                   <div className="text-balance text-gray-400 ">
                     Founder, Townhall Network

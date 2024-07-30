@@ -129,7 +129,7 @@ export default function PricingPage() {
             <h1 className="text-balance text-4xl md:text-6xl">
               Find the plan that
               <br />
-              works for you
+              works for your team
             </h1>
             {/* <p className="text-xl mt-8 text-balance max-w-3xl">
               Simpleteam is an open-source document sharing infrastructure with

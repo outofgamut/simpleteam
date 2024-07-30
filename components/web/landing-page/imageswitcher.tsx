@@ -58,31 +58,31 @@ const ImageSwitcher = () => {
             className={`m-2 rounded-full px-4 py-1 ${isActive("image1") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image1")}
           >
-            Upload documents
+            Skills Manager
           </button>
           <button
             className={`m-2 rounded-full px-4 py-1 ${isActive("image2") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image2")}
           >
-            Set link permissions
+            Career Hub
           </button>
           <button
             className={`m-2 rounded-full px-4 py-1 ${isActive("image3") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image3")}
           >
-            Track time on each page
+            Performance Management
           </button>
           <button
             className={`m-2 rounded-full px-4 py-1 ${isActive("image4") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image4")}
           >
-            Create data room
+            Employee Profiles
           </button>
           <button
             className={`m-2 rounded-full px-4 py-1 ${isActive("image5") ? "bg-primary" : "bg-transparent text-white hover:bg-primary"}`}
             onClick={() => handleImageChange("image5")}
           >
-            Set up custom brand and domain
+            Rich Customization
           </button>
         </div>
       </div>

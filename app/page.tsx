@@ -18,6 +18,8 @@ import ImageSwitcher from "@/components/web/landing-page/imageswitcher";
 import { LogoCloud } from "@/components/web/landing-page/logo-cloud";
 import Navbar from "@/components/web/navbar";
 import Testimonials from "@/components/web/testimonials/testimonials2";
+import { cn } from "@/lib/utils";
+import { it } from "node:test";
 
 const features = [
   {
@@ -56,11 +58,50 @@ const features = [
   },
 ];
 
+interface IndustryStatement {
+  industry: string;
+  statement: string;
+}
+
+const industryStatements: IndustryStatement[] = [
+  {
+    industry: "Consulting",
+    statement: "Centralize and showcase your team's expertise and skills",
+  },
+  {
+    industry: "Engineering",
+    statement: "Track and manage certifications and technical proficiencies",
+  },
+  {
+    industry: "Education",
+    statement: "Organize and highlight faculty skills and teaching credentials",
+  },
+  {
+    industry: "IT Services",
+    statement: "Ensure your team’s skills are up-to-date and match project requirements",
+  },
+  {
+    industry: "Healthcare",
+    statement: "Manage and track staff qualifications and training records",
+  },
+  {
+    industry: "Legal",
+    statement: "Organize and display attorney specializations and experience",
+  },
+];
+
+const firstRowIndustryStatements = // take first three from industryStatements
+  industryStatements.slice(0, 3);
+
+const secondRowIndustryStatements = // take last three from industryStatements
+  industryStatements.slice(3, 6);
+
+
 export default function Home() {
   return (
     <>
+      <Navbar />
       <div className="flex flex-1 flex-col bg-white text-black">
-        <Navbar />
 
         <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
           <div className="pt-24">
@@ -130,56 +171,32 @@ export default function Home() {
             </h2>
           </div>
           <div className="mx-4 mb-6 gap-6 text-balance sm:mx-0 sm:flex sm:translate-x-[-30px] sm:flex-nowrap lg:mb-10 lg:gap-10">
-            <div className="mb-6 flex-none rounded-xl bg-gray-200 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
-              <p className="font-380 text-base leading-none tracking-tight text-black/90 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
-                Real Estate
-              </p>
-              <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-black/90 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
-                Securely share property documents with clients
-              </p>
-            </div>
-            <div className="mb-6 flex-none rounded-xl bg-black/80 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
-              <p className="font-380 text-base leading-none tracking-tight text-gray-50 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
-                Startups
-              </p>
-              <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-gray-50 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
-                Take ownership of your fundraising process
-              </p>
-            </div>
-            <div className="mb-6 flex-none rounded-xl bg-gray-200 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
-              <p className="font-380 text-base leading-none tracking-tight text-black/90 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
-                Growth
-              </p>
-              <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-black/90 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
-                Capture marketing-qualified leads on social media
-              </p>
-            </div>
+            {
+              firstRowIndustryStatements.map((item, index) => (
+                <div key={index} className="mb-6 flex-none rounded-xl bg-gray-200 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
+                  <p className="font-380 text-base leading-none tracking-tight text-black/90 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
+                    {item.industry}
+                  </p>
+                  <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-black/90 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
+                    {item.statement}
+                  </p>
+                </div>
+              ))
+            }
           </div>
           <div className="mx-4 mb-6 gap-6 text-balance sm:mx-0 sm:flex sm:translate-x-[50px] sm:flex-nowrap lg:mb-10 lg:gap-10">
-            <div className="mb-6 flex-none rounded-xl bg-black/80 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
-              <p className="font-380 text-base leading-none tracking-tight text-gray-50 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
-                Sales
-              </p>
-              <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-gray-50 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
-                Spend time on only engaged prospects
-              </p>
-            </div>
-            <div className="mb-6 flex-none rounded-xl bg-gray-200 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
-              <p className="font-380 text-base leading-none tracking-tight text-black/90 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
-                Investors
-              </p>
-              <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-black/90 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
-                Take the guess-work out of LP updates
-              </p>
-            </div>
-            <div className="mb-6 flex-none rounded-xl bg-black/80 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
-              <p className="font-380 text-base leading-none tracking-tight text-gray-50 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
-                Non-Profits
-              </p>
-              <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-gray-50 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
-                Securely share and track grant applications
-              </p>
-            </div>
+            {
+              secondRowIndustryStatements.map((item, index) => (
+                <div key={index} className="mb-6 flex-none rounded-xl bg-black/80 p-6 sm:mb-0 sm:max-w-[300px] sm:p-6 md:max-w-[360px] lg:max-w-[500px] lg:p-8 xl:max-w-[560px] xl:p-10 2xl:max-w-[640px]">
+                  <p className="font-380 text-base leading-none tracking-tight text-gray-50 lg:text-base xl:text-base 2xl:-ml-0.5 2xl:text-lg">
+                    {item.industry}
+                  </p>
+                  <p className="font-380 -ml-0.5 text-xl leading-tight tracking-tighter text-gray-50 md:-ml-0.5 md:text-2xl md:leading-none lg:-ml-0.5 lg:text-4xl xl:-ml-0.5 xl:text-4xl">
+                    {item.statement}
+                  </p>
+                </div>
+              ))
+            }
           </div>
         </div>
 
@@ -190,7 +207,7 @@ export default function Home() {
           <h2 className="max-w-3xl text-balance pb-20 pt-12 text-4xl">
             Built for modern teams.{" "}
             <span className="text-gray-500">
-              Share your documents with an impression that lasts.
+              Share your teams&apos; skills and experience with confidence and ease.
             </span>
           </h2>
           <div className="">

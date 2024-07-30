@@ -251,7 +251,7 @@ export default async function InvestorPage({
                     {" "}
                     <img
                       className="absolute inset-0 rounded-2xl bg-gray-800 object-cover  shadow-2xl"
-                      src="https://www.papermark.io/_static/testimonials/jaski.jpeg"
+                      src="https://www.papermark.io/_static/testimonials/lori.webp"
                       alt=""
                     />
                   </div>
@@ -281,7 +281,7 @@ export default async function InvestorPage({
                       </p>
                     </blockquote>
                     <figcaption className="mt-8 text-balance ">
-                      <div className="font-semibold text-black ">Jaski</div>
+                      <div className="font-semibold text-black ">Lori</div>
                       <div className="my-6 mt-1 text-gray-500 ">
                         Founder in web3 space
                       </div>
@@ -289,7 +289,7 @@ export default async function InvestorPage({
                   </figure>
                   <Link href="/login" target="_blank" rel="noopener noreferrer">
                     <Button className="rounded-3xl bg-primary text-base text-gray-800 hover:bg-gray-200">
-                      Join Jaski now
+                      Join Lori now
                     </Button>
                   </Link>
                 </div>

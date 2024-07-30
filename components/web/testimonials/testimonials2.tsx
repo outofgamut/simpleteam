@@ -1,8 +1,9 @@
 import Image from "next/image";
 
 import aleximage from "@/public/testimonials/alex.jpeg";
-import dominikimage from "@/public/testimonials/dominik.jpg";
-import jaskiimage from "@/public/testimonials/jaski.jpeg";
+import loriimage from "@/public/testimonials/lori.webp";
+import chloeimage from "@/public/testimonials/chloe.jpg";
+import mikeimage from "@/public/testimonials/mike.jpg";
 import vatanyutaimage from "@/public/testimonials/vatanyuta.png";
 
 export default function Testimonials() {
@@ -10,7 +11,7 @@ export default function Testimonials() {
     <div className="bg-white py-24">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
         <h2 className="text-balance text-4xl">
-          Loved by over our users
+          Trusted by our users.
           <br />
           <span className="text-gray-500">
             Here&apos;s what some of our customers have to say about us.
@@ -23,15 +24,15 @@ export default function Testimonials() {
                 {/* Column 1 */}
                 <div className="flex flex-col items-center">
                   {/* Image container */}
-                  <div className="flex flex-col items-center overflow-hidden rounded-3xl bg-white shadow-xl">
+                  <div className="flex flex-col items-center overflow-hidden rounded-3xl bg-white border shadow-sm">
                     {/* Image container */}
                     <Image
                       className="h-80 w-full object-cover"
-                      src={jaskiimage}
+                      src={chloeimage}
                       alt="Testimonial 1"
                     />
                     {/* Text content */}
-                    <div className="p-8">
+                    <div className="p-8 border-t">
                       <blockquote className="text-lg text-gray-700">
                         <p>
                           Simpleteam team listens to their users. Thanks for
@@ -51,15 +52,15 @@ export default function Testimonials() {
                 <div className="flex flex-col items-center">
                   {/* Image container */}
                   {/* Image container */}
-                  <div className="flex flex-col items-center overflow-hidden rounded-3xl bg-white shadow-xl">
+                  <div className="flex flex-col items-center overflow-hidden rounded-3xl bg-white border shadow-sm">
                     {/* Image container */}
                     <Image
                       className="h-80 w-full object-cover"
-                      src={vatanyutaimage}
+                      src={loriimage}
                       alt="Testimonial 1"
                     />
                     {/* Text content */}
-                    <div className="p-8">
+                    <div className="p-8 border-t">
                       <blockquote className="text-lg text-gray-700">
                         <p>
                           We actively use Simpleteam to create many links and
@@ -77,14 +78,14 @@ export default function Testimonials() {
                 </div>
                 {/* Column 3 (duplicate of Column 1) */}
                 <div className="flex flex-col items-center">
-                  <div className="flex flex-col items-center overflow-hidden rounded-3xl bg-white shadow-xl">
+                  <div className="flex flex-col items-center overflow-hidden rounded-3xl bg-white border shadow-sm">
                     <Image
                       className="h-80 w-full object-cover"
-                      src={aleximage}
+                      src={mikeimage}
                       alt="Testimonial 1"
                     />
 
-                    <div className="p-8">
+                    <div className="p-8 border-t">
                       <blockquote className="text-lg text-gray-700">
                         <p>
                           Our transition to Simpleteam was smooth. We love the
