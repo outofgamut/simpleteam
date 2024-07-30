@@ -77,10 +77,10 @@ export default function Testimonials() {
     <div className="bg-white py-24">
       <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
         <h2 className="text-balance text-4xl">
-          Loved by over 7000 companies and employees
+          Loved by our customers and their employees
           <br />
           <span className="text-gray-500">
-            Here&apos;s what they have to say about us.
+            Here&apos;s what some of them have to say about us.
           </span>
         </h2>
         <div className="mx-auto mt-8 max-w-2xl lg:max-w-none">
