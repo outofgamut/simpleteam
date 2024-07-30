@@ -46,7 +46,7 @@ export default function App({
         />
         <meta
           property="og:image"
-          content="https://www.papermark.io/_static/meta-image.png"
+          content="https://www.simpleteam.co/_static/meta-image.png"
           key="og-image"
         />
         <meta
@@ -66,7 +66,7 @@ export default function App({
         />
         <meta
           name="twitter:image"
-          content="https://www.papermark.io/_static/meta-image.png"
+          content="https://www.simpleteam.co/_static/meta-image.png"
           key="tw-image"
         />
         <link rel="icon" href="/favicon.ico" />

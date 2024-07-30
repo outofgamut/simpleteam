@@ -52,7 +52,7 @@ export default async function InvestorPage({
           />
           <meta
             property="og:image"
-            content="https://www.papermark.io/_static/meta-image.png"
+            content="https://www.simpleteam.co/_static/meta-image.png"
           />
           <meta property="og:url" content="https://www.papermark.io" />
           <meta name="twitter:card" content="summary_large_image" />
@@ -251,7 +251,7 @@ export default async function InvestorPage({
                     {" "}
                     <img
                       className="absolute inset-0 rounded-2xl bg-gray-800 object-cover  shadow-2xl"
-                      src="https://www.papermark.io/_static/testimonials/lori.webp"
+                      src="https://www.simpleteam.co/_static/testimonials/lori.webp"
                       alt=""
                     />
                   </div>

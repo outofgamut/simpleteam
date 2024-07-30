@@ -22,7 +22,7 @@ export default function LaunchWeek() {
         />
         <meta
           property="og:image"
-          content="https://www.papermark.io/_static/meta-image.png"
+          content="https://www.simpleteam.co/_static/meta-image.png"
         />
         <meta property="og:url" content="https://www.papermark.io" />
         <meta name="twitter:card" content="summary_large_image" />

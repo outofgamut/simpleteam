@@ -102,7 +102,7 @@ export const log = async ({
         ],
       }),
     });
-  } catch (e) {}
+  } catch (e) { }
 };
 
 export function bytesToSize(bytes: number) {
@@ -262,7 +262,7 @@ export const formatDate = (dateString: string, updateDate?: boolean) => {
     month: "long",
     year:
       updateDate &&
-      new Date(dateString).getFullYear() === new Date().getFullYear()
+        new Date(dateString).getFullYear() === new Date().getFullYear()
         ? undefined
         : "numeric",
     timeZone: "UTC",
@@ -351,7 +351,7 @@ export const convertThreadMessagesToMessages = (
 export function constructMetadata({
   title = "Simpleteam | The Open Source DocSend Alternative",
   description = "Simpleteam is an open-source document sharing alternative to DocSend with built-in engagement analytics and 100% white-labeling.",
-  image = "https://www.papermark.io/_static/meta-image.png",
+  image = "https://www.simpleteam.co/_static/meta-image.png",
   favicon = "/favicon.ico",
   noIndex = false,
 }: {

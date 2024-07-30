@@ -188,7 +188,7 @@ export default function Login() {
               <div className="mb-4 h-64 w-64">
                 <img
                   className="h-full w-full rounded-2xl object-cover shadow-2xl"
-                  src="https://www.papermark.io/_static/testimonials/lori.webp"
+                  src="https://www.simpleteam.co/_static/testimonials/lori.webp"
                   alt="Lori"
                 />
               </div>

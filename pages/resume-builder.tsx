@@ -171,7 +171,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.papermark.io/_static/papermarkai.png"
+          content="https://www.simpleteam.co/_static/papermarkai.png"
         />
         <meta property="og:url" content="https://www.papermark.io" />
         <meta name="twitter:card" content="summary_large_image" />
@@ -358,7 +358,7 @@ export default function Home() {
               <div className="relative overflow-hidden pt-16">
                 <div className="mx-auto max-w-2xl px-6 lg:px-8">
                   <img
-                    src="https://www.papermark.io/_static/upload2.png"
+                    src="https://www.simpleteam.co/_static/upload2.png"
                     alt="App screenshot"
                     className="mb-[-12%] rounded-xl shadow-2xl ring-1 ring-gray-900/10"
                     width={2432}

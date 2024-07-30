@@ -2,7 +2,7 @@ const files = [
   {
     title: "Papermark",
     size: "Open Source Docsend alternative",
-    source: "https://www.papermark.io/_static/meta-image.png",
+    source: "https://www.simpleteam.co/_static/meta-image.png",
     link: "/login",
   },
   {

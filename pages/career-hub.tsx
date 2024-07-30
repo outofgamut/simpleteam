@@ -114,7 +114,7 @@ export default function Home() {
         />
         <meta
           property="og:image"
-          content="https://www.papermark.io/_static/notion.png"
+          content="https://www.simpleteam.co/_static/notion.png"
         />
         <meta property="og:url" content="https://www.papermark.io" />
         <meta name="twitter:card" content="summary_large_image" />

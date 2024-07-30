@@ -33,7 +33,7 @@ export default function Section2() {
           {/* Image added below */}
           <div className="mx-auto mt-10 w-full max-w-md">
             <img
-              src="https://www.papermark.io/_static/image2.png"
+              src="https://www.simpleteam.co/_static/image2.png"
               alt="Description of Image"
               className="mx-auto h-auto w-full rounded-md object-cover "
             />

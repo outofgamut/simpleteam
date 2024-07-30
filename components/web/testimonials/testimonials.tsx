@@ -43,7 +43,7 @@ const testimonials = [
       name: "Lukas Lunzmann",
       handle: "lucaslunzmann",
       imageUrl:
-        "https://www.papermark.io/_static/testimonials/chloe.jpg",
+        "https://www.simpleteam.co/_static/testimonials/chloe.jpg",
       link: "https://twitter.com/lucaslunzmann/status/1673052992541523968",
     },
     producthunt: false,
@@ -54,7 +54,7 @@ const testimonials = [
       name: "Ted Spare",
       handle: "TedSpare",
       imageUrl:
-        "https://www.papermark.io/_static/testimonials/mike.jpg",
+        "https://www.simpleteam.co/_static/testimonials/mike.jpg",
       link: "https://www.producthunt.com/products/papermark-2#papermark-3",
     },
     producthunt: true,
@@ -64,7 +64,7 @@ const testimonials = [
     author: {
       name: "Jaski",
       handle: "Jas_Jaski",
-      imageUrl: "https://www.papermark.io/_static/testimonials/lori.webp",
+      imageUrl: "https://www.simpleteam.co/_static/testimonials/lori.webp",
       link: "https://twitter.com/Jas_Jaski/status/1731957497487868390",
     },
     producthunt: false,
