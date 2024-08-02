@@ -93,7 +93,7 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       href: "/documents",
       icon:
         router.pathname.includes("documents") &&
-        !router.pathname.includes("datarooms")
+          !router.pathname.includes("datarooms")
           ? FolderOpenIcon
           : FolderLucideIcon,
       current:
@@ -106,6 +106,14 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       disabled: false,
     },
     {
+      name: "Skills",
+      href: "/skills",
+      icon: ServerIcon,
+      current: router.pathname.includes("skills"),
+      active: false,
+      disabled: false,
+    },
+    {
       name: "Datarooms",
       href: "/datarooms",
       icon: ServerIcon,
@@ -113,8 +121,8 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       active: false,
       disabled:
         userPlan === "business" ||
-        userPlan === "datarooms" ||
-        userTrial === "drtrial"
+          userPlan === "datarooms" ||
+          userTrial === "drtrial"
           ? false
           : true,
     },
@@ -165,7 +173,7 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
           currentTeam={currentTeam}
           teams={teams}
           isLoading={isLoading}
-          setCurrentTeam={() => {}}
+          setCurrentTeam={() => { }}
         />
 
         {/* <div className="flex items-center gap-x-1">
