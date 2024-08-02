@@ -10,7 +10,7 @@ export const sendWelcomeEmail = async (params: CreateUserEmailProps) => {
   try {
     await sendEmail({
       to: email as string,
-      subject: "Welcome to Papermark.io!",
+      subject: "Welcome to Simpleteam!",
       react: emailTemplate,
       test: process.env.NODE_ENV === "development",
     });

@@ -36,7 +36,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
               Thanks for signing up{name && `, ${name}`}!
             </Text>
             <Text className="text-sm">
-              My name is Marc, and I&apos;m the creator of Simpleteam – the
+              My name is John, and I&apos;m the creator of Simpleteam – the
               open-source DocSend alternative! I&apos;m excited to have you on
               board!
             </Text>
@@ -46,7 +46,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
             <Text className="text-sm">
               <ul className="list-inside list-disc text-sm">
                 <li>Upload a document</li>
-                <li>Create a virtual data room</li>
+                <li>Invite team members</li>
                 <li>
                   Share a link{" "}
                   <span className="italic">(with your custom domain)✨</span>
@@ -98,7 +98,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                 If you have any questions or feedback just respond to this email. I&apos;m
                 always happy to help!
               </Text>
-              <Text className="text-sm text-gray-400">Marc from Simpleteam</Text>
+              <Text className="text-sm text-gray-400">John from Simpleteam</Text>
             </Section>
             <Hr />
             <Section className="mt-8 text-gray-400">
@@ -113,7 +113,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                 </a>
               </Text>
               <Text className="text-xs">
-                You will shortly receive the intro to Papermark. Stay tuned.
+                You will shortly receive the intro to Simpleteam. Stay tuned.
               </Text>
             </Section>
           </Container>
