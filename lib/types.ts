@@ -8,6 +8,7 @@ import {
   Feedback,
   Link,
   User as PrismaUser,
+  Skill,
   View,
 } from "@prisma/client";
 import { User as NextAuthUser } from "next-auth";
@@ -28,6 +29,10 @@ export interface DocumentWithLinksAndLinkCountAndViewCount extends Document {
     versions: number;
   };
   links: Link[];
+}
+
+export interface SkillWithTags extends Skill {
+  // TODO LATER
 }
 
 export interface DocumentWithVersion extends Document {
@@ -164,57 +169,57 @@ export interface DomainVerificationResponse {
 
 export type AnalyticsEvents =
   | {
-      event: "User Signed Up";
-      userId: string;
-      email: string | null | undefined;
-    }
+    event: "User Signed Up";
+    userId: string;
+    email: string | null | undefined;
+  }
   | {
-      event: "Document Added";
-      documentId: string;
-      name: string;
-      fileSize: string | null | undefined;
-      path: string | null | undefined;
-    }
+    event: "Document Added";
+    documentId: string;
+    name: string;
+    fileSize: string | null | undefined;
+    path: string | null | undefined;
+  }
   | {
-      event: "Link Added";
-      linkId: string;
-      documentId: string;
-      customDomain: string | null | undefined;
-    }
+    event: "Link Added";
+    linkId: string;
+    documentId: string;
+    customDomain: string | null | undefined;
+  }
   | { event: "User Upgraded"; email: string | null | undefined }
   | {
-      event: "User Signed In";
-      email: string | null | undefined;
-    }
+    event: "User Signed In";
+    email: string | null | undefined;
+  }
   | {
-      event: "Link Viewed";
-      documentId: string;
-      linkId: string;
-      viewerId: string;
-      viewerEmail: string | null | undefined;
-    }
+    event: "Link Viewed";
+    documentId: string;
+    linkId: string;
+    viewerId: string;
+    viewerEmail: string | null | undefined;
+  }
   | {
-      event: "Domain Added";
-      slug: string;
-    }
+    event: "Domain Added";
+    slug: string;
+  }
   | {
-      event: "Domain Verified";
-      slug: string;
-    }
+    event: "Domain Verified";
+    slug: string;
+  }
   | {
-      event: "Domain Deleted";
-      slug: string;
-    }
+    event: "Domain Deleted";
+    slug: string;
+  }
   | {
-      event: "Team Member Invitation Accepted";
-      teamId: string;
-    }
+    event: "Team Member Invitation Accepted";
+    teamId: string;
+  }
   | {
-      event: "Stripe Checkout Clicked";
-      teamId: string;
-      priceId: string;
-      referral: boolean | undefined;
-    };
+    event: "Stripe Checkout Clicked";
+    teamId: string;
+    priceId: string;
+    referral: boolean | undefined;
+  };
 
 export interface Team {
   id: string;

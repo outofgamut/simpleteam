@@ -8,7 +8,7 @@ import { parsePageId } from "notion-utils";
 import { errorhandler } from "@/lib/errorHandler";
 import notion from "@/lib/notion";
 import prisma from "@/lib/prisma";
-import { getTeamWithUsersAndDocument } from "@/lib/team/helper";
+import { getTeamWithUsersAndDocument, getTeamWithUsersAndSkills } from "@/lib/team/helper";
 import { CustomUser } from "@/lib/types";
 import { getExtension, log } from "@/lib/utils";
 
@@ -30,31 +30,31 @@ export default async function handle(
     const userId = (session.user as CustomUser).id;
 
     try {
-      const { team } = await getTeamWithUsersAndDocument({
+      const { team } = await getTeamWithUsersAndSkills({
         teamId,
         userId,
         options: {
-          where: {
-            folderId: null,
-          },
+          // where: {
+          //   folderId: null,
+          // },
           orderBy: {
             createdAt: "desc",
           },
-          include: {
-            _count: {
-              select: { links: true, views: true, versions: true },
-            },
-            links: {
-              take: 1,
-              select: { id: true },
-            },
-          },
+          // include: {
+          //   _count: {
+          //     select: { links: true, views: true, versions: true },
+          //   },
+          //   links: {
+          //     take: 1,
+          //     select: { id: true },
+          //   },
+          // },
         },
       });
 
-      const documents = team.documents;
+      const skills = team.skills;
 
-      return res.status(200).json(documents);
+      return res.status(200).json(skills);
     } catch (error) {
       errorhandler(error, res);
     }
@@ -73,18 +73,10 @@ export default async function handle(
     // Assuming data is an object with `name` and `description` properties
     const {
       name,
-      url: fileUrl,
-      storageType,
-      numPages,
-      type: fileType,
-      folderPathName,
+      description,
     } = req.body as {
       name: string;
-      url: string;
-      storageType: DocumentStorageType;
-      numPages?: number;
-      type?: string;
-      folderPathName?: string;
+      description?: string;
     };
 
     try {
@@ -93,57 +85,20 @@ export default async function handle(
         userId,
       });
 
-      // Get passed type property or alternatively, the file extension and save it as the type
-      const type = fileType || getExtension(name);
-
-
-      const folder = await prisma.folder.findUnique({
-        where: {
-          teamId_path: {
-            teamId,
-            path: "/" + folderPathName,
-          },
-        },
-        select: {
-          id: true,
-        },
-      });
-
       // Save data to the database
-      const document = await prisma.document.create({
+      const skill = await prisma.skill.create({
         data: {
           name: name,
-          numPages: numPages,
-          file: fileUrl,
-          type: type,
-          storageType,
-          ownerId: (session.user as CustomUser).id,
+          description: description,
+          // ownerId: (session.user as CustomUser).id,
           teamId: teamId,
-          links: {
-            create: {},
-          },
-          versions: {
-            create: {
-              file: fileUrl,
-              type: type,
-              storageType,
-              numPages: numPages,
-              isPrimary: true,
-              versionNumber: 1,
-            },
-          },
-          folderId: folder?.id ? folder.id : null,
-        },
-        include: {
-          links: true,
-          versions: true,
         },
       });
 
       return res.status(201).json(document);
     } catch (error) {
       log({
-        message: `Failed to create skill. \n\n*teamId*: _${teamId}_, \n\n*file*: ${fileUrl} \n\n ${error}`,
+        message: `Failed to create skill. \n\n*teamId*: _${teamId}_, \n\n ${error}`,
         type: "error",
       });
       errorhandler(error, res);

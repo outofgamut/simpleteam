@@ -9,11 +9,13 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 import useDocuments, { useRootFolders } from "@/lib/swr/use-documents";
+import useSkills from "@/lib/swr/use-skills";
 import { SkillsList } from "@/components/skills/skills-list";
 import { AddSkillModal } from "@/components/skills/add-skill-modal";
 
 export default function Skills() {
     const { documents } = useDocuments();
+    const { skills } = useSkills();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
 
@@ -74,10 +76,10 @@ export default function Skills() {
                             <span>{folders.length} folders</span>
                         </p>
                     ) : null}
-                    {documents && documents.length > 0 ? (
+                    {skills && skills.length > 0 ? (
                         <p className="flex items-center gap-x-1 text-sm text-gray-400">
                             <FileIcon className="h-4 w-4" />
-                            <span>{documents.length} documents</span>
+                            <span>{skills.length} skill{'s'}</span>
                         </p>
                     ) : null}
                 </section>

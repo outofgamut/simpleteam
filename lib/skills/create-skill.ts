@@ -19,7 +19,7 @@ export const createSkill = async ({
     folderPathName?: string;
 }) => {
     // create a document in the database with the blob url
-    const response = await fetch(`/api/teams/${teamId}/documents`, {
+    const response = await fetch(`/api/teams/${teamId}/skills`, {
         method: "POST",
         headers: {
             "Content-Type": "application/json",

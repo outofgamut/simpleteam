@@ -48,7 +48,7 @@ export function AddSkillModal({
   const [uploading, setUploading] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean | undefined>(undefined);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
-  const [notionLink, setNotionLink] = useState<string | null>(null);
+  const [skillName, setSkillName] = useState<string | null>(null);
   const teamInfo = useTeam();
 
   const teamId = teamInfo?.currentTeam?.id as string;
@@ -236,7 +236,7 @@ export function AddSkillModal({
 
   const createNotionFileName = () => {
     // Extract Notion file name from the URL
-    const urlSegments = (notionLink as string).split("/")[3];
+    const urlSegments = (skillName as string).split("/")[3];
     // Remove the last hyphen along with the Notion ID
     const extractName = urlSegments.replace(/-([^/-]+)$/, "");
     const notionFileName = extractName.replaceAll("-", " ") || "Notion Link";
@@ -244,21 +244,90 @@ export function AddSkillModal({
     return notionFileName;
   };
 
+  const handleSkillAdd = async (
+    event: FormEvent<HTMLFormElement>,
+  ): Promise<void> => {
+    event.preventDefault();
+
+    // Check if the field is empty or not
+    if (!skillName) {
+      toast.error("Please enter a valid skill name to proceed.");
+      return; // prevent form from submitting
+    }
+
+    try {
+      setUploading(true);
+
+      const response = await fetch(
+        `/api/teams/${teamInfo?.currentTeam?.id}/skills`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            name: skillName,
+            description: 'No description yet',
+          }),
+        },
+      );
+
+      if (response) {
+        const skill = await response.json();
+
+        if (!newVersion) {
+          // copy the link to the clipboard
+          copyToClipboard(
+            `${process.env.NEXT_PUBLIC_BASE_URL}/view/${document.links[0].id}`,
+            "Skill added! Redirecting to skill page...",
+          );
+
+          // track the event
+          plausible("documentUploaded");
+          plausible("notionDocumentUploaded");
+          analytics.capture("Skill Added", {
+            documentId: skill.id,
+            name: skill.name,
+            fileSize: null,
+            path: router.asPath,
+            type: "notion",
+            teamId: teamId,
+          });
+
+          // redirect to the document page
+          router.push("/skills/" + skill.id);
+        }
+      }
+    } catch (error) {
+      setUploading(false);
+      toast.error(
+        "Oops! Can't access the Skill page. Please double-check it's set to 'Public'.",
+      );
+      console.error(
+        "An error occurred while processing the Notion link: ",
+        error,
+      );
+    } finally {
+      setUploading(false);
+      setIsOpen(false);
+    }
+  };
+
   const handleNotionUpload = async (
     event: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     event.preventDefault();
-    const validateNotionPageURL = parsePageId(notionLink);
+    const validateNotionPageURL = parsePageId(skillName);
     // Check if it's a valid URL or not by Regx
     const isValidURL =
       /^(https?:\/\/)?([a-zA-Z0-9-]+\.){1,}[a-zA-Z]{2,}([a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]+)?$/;
 
     // Check if the field is empty or not
-    if (!notionLink) {
+    if (!skillName) {
       toast.error("Please enter a Notion link to proceed.");
       return; // prevent form from submitting
     }
-    if (validateNotionPageURL === null || !isValidURL.test(notionLink)) {
+    if (validateNotionPageURL === null || !isValidURL.test(skillName)) {
       toast.error("Please enter a valid Notion link to proceed.");
       return;
     }
@@ -275,7 +344,7 @@ export function AddSkillModal({
           },
           body: JSON.stringify({
             name: createNotionFileName(),
-            url: notionLink,
+            url: skillName,
             numPages: 1,
             type: "notion",
           }),
@@ -352,7 +421,7 @@ export function AddSkillModal({
 
   const clearModelStates = () => {
     currentFile !== null && setCurrentFile(null);
-    notionLink !== null && setNotionLink(null);
+    skillName !== null && setSkillName(null);
     setIsOpen(!isOpen);
   };
 
@@ -436,44 +505,42 @@ export function AddSkillModal({
             <TabsContent value="notion">
               <Card>
                 <CardHeader className="space-y-3">
-                  <CardTitle>Share a Notion Page</CardTitle>
+                  <CardTitle>Add a Skill</CardTitle>
                   <CardDescription>
-                    After you submit the Notion link, a shareable link will be
-                    generated and copied to your clipboard. Just like with a PDF
-                    document.
+                    After you add a skill, it will be available for your
+                    team to use.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <form
-                    encType="multipart/form-data"
-                    onSubmit={handleNotionUpload}
+                    onSubmit={handleSkillAdd}
                     className="flex flex-col"
                   >
                     <div className="space-y-1 pb-8">
-                      <Label htmlFor="notion-link">Notion Page Link</Label>
+                      <Label htmlFor="skill-name">Skill Name</Label>
                       <div className="mt-2">
                         <input
                           type="text"
-                          name="notion-link"
-                          id="notion-link"
-                          placeholder="notion.site/..."
+                          name="skill-name"
+                          id="skill-name"
+                          placeholder="Skill name..."
                           className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
-                          value={notionLink || ""}
-                          onChange={(e) => setNotionLink(e.target.value)}
+                          value={skillName || ""}
+                          onChange={(e) => setSkillName(e.target.value)}
                         />
                       </div>
                       <small className="text-xs text-muted-foreground">
-                        Your Notion page needs to be shared publicly.
+                        Skill names must be unique.
                       </small>
                     </div>
                     <div className="flex justify-center">
                       <Button
                         type="submit"
                         className="w-full lg:w-1/2"
-                        disabled={uploading || !notionLink}
+                        disabled={uploading || !skillName}
                         loading={uploading}
                       >
-                        {uploading ? "Saving..." : "Save Notion Link"}
+                        {uploading ? "Saving..." : "Save Skill"}
                       </Button>
                     </div>
                   </form>
