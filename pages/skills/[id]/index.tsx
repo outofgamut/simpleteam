@@ -42,7 +42,7 @@ export default function SkillPage() {
                                     className="flex h-8 whitespace-nowrap text-xs lg:h-9 lg:text-sm"
                                     onClick={() => setIsLinkSheetOpen(true)}
                                 >
-                                    Create Link
+                                    Create Tag
                                 </Button>,
                             ]}
                         />
