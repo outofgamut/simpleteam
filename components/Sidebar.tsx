@@ -5,11 +5,14 @@ import { useEffect, useState } from "react";
 import { TeamContextType, initialState, useTeam } from "@/context/team-context";
 import Cookies from "js-cookie";
 import {
+  BadgeIcon,
   CogIcon,
   FolderIcon as FolderLucideIcon,
   FolderOpenIcon,
   PaletteIcon,
+  PocketKnifeIcon,
   ServerIcon,
+  UsersIcon,
 } from "lucide-react";
 import { useSession } from "next-auth/react";
 
@@ -88,6 +91,31 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
     //   current: router.pathname.includes("overview"),
     //   disabled: true,
     // },
+
+    {
+      name: "Skills",
+      href: "/skills",
+      icon: PocketKnifeIcon,
+      current: router.pathname.includes("skills"),
+      active: false,
+      disabled: false,
+    },
+    {
+      name: "People",
+      href: "/datarooms",
+      icon: UsersIcon,
+      current: router.pathname.includes("people"),
+      active: false,
+      disabled: false,
+    },
+    {
+      name: "Roles",
+      href: "/datarooms",
+      icon: BadgeIcon,
+      current: router.pathname.includes("roles"),
+      active: false,
+      disabled: false,
+    },
     {
       name: "Documents",
       href: "/documents",
@@ -103,14 +131,6 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       active:
         router.pathname.includes("documents") &&
         !router.pathname.includes("datarooms"),
-      disabled: false,
-    },
-    {
-      name: "Skills",
-      href: "/skills",
-      icon: ServerIcon,
-      current: router.pathname.includes("skills"),
-      active: false,
       disabled: false,
     },
     {
