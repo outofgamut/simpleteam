@@ -79,7 +79,7 @@ export async function getTeamWithUsersAndDocument({
   if (docId) {
     document = team.documents.find((doc) => doc.id === docId);
     if (!document) {
-      throw new TeamError("Document doesn't exists in the team");
+      throw new TeamError("Document doesn't exist in the team");
     }
   }
   if (document && document?.links) {
@@ -146,7 +146,7 @@ export async function getTeamWithUsersAndSkills({
   if (skillId) {
     skill = team.skills.find((skill) => skill.id === skillId);
     if (!skill) {
-      throw new TeamError("Skill doesn't exists in the team");
+      throw new TeamError("Skill doesn't exist in the team");
     }
   }
 
@@ -199,7 +199,7 @@ export async function getTeamWithDomain({
   if (domainSlug) {
     domain = team.domains.find((_domain) => _domain.slug === domainSlug);
     if (!domain) {
-      throw new TeamError("Domain doesn't exists in the team");
+      throw new TeamError("Domain doesn't exist in the team");
     }
   }
 

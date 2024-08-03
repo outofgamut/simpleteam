@@ -5,7 +5,7 @@ import { getServerSession } from "next-auth/next";
 import { errorhandler } from "@/lib/errorHandler";
 import { deleteFile } from "@/lib/files/delete-file-server";
 import prisma from "@/lib/prisma";
-import { getTeamWithUsersAndDocument } from "@/lib/team/helper";
+import { getTeamWithUsersAndDocument, getTeamWithUsersAndSkills } from "@/lib/team/helper";
 import { CustomUser } from "@/lib/types";
 
 import { authOptions } from "../../../../auth/[...nextauth]";
@@ -15,29 +15,29 @@ export default async function handle(
   res: NextApiResponse,
 ) {
   if (req.method === "GET") {
-    // GET /api/teams/:teamId/documents/:id
+    // GET /api/teams/:teamId/skills/:id
     const session = await getServerSession(req, res, authOptions);
     if (!session) {
       return res.status(401).end("Unauthorized");
     }
 
-    const { teamId, id: docId } = req.query as { teamId: string; id: string };
+    const { teamId, id: skillId } = req.query as { teamId: string; id: string };
 
     const userId = (session.user as CustomUser).id;
 
     try {
-      const { document } = await getTeamWithUsersAndDocument({
+      const { skill } = await getTeamWithUsersAndSkills({
         teamId,
         userId,
-        docId,
+        skillId,
         options: {
           include: {
-            // Get the latest primary version of the document
-            versions: {
-              where: { isPrimary: true },
-              orderBy: { createdAt: "desc" },
-              take: 1,
-            },
+            // // Get the latest primary version of the document
+            // versions: {
+            //   // where: { isPrimary: true },
+            //   orderBy: { createdAt: "desc" },
+            //   take: 1,
+            // },
           },
         },
       });
@@ -47,27 +47,27 @@ export default async function handle(
       //   return res.status(401).end("Unauthorized to access this document");
       // }
 
-      return res.status(200).json(document);
+      return res.status(200).json(skill);
     } catch (error) {
       errorhandler(error, res);
     }
   } else if (req.method === "PUT") {
-    // PUT /api/teams/:teamId/document/:id
+    // PUT /api/teams/:teamId/skills/:id
     const session = await getServerSession(req, res, authOptions);
     if (!session) {
       res.status(401).end("Unauthorized");
       return;
     }
     const userId = (session.user as CustomUser).id;
-    const { teamId, id: docId } = req.query as { teamId: string; id: string };
+    const { teamId, id: skillId } = req.query as { teamId: string; id: string };
     const { folderId, currentPathName } = req.body as {
       folderId: string;
       currentPathName: string;
     };
 
-    const document = await prisma.document.update({
+    const skill = await prisma.skill.update({
       where: {
-        id: docId,
+        id: skillId,
         teamId: teamId,
         team: {
           users: {
@@ -79,14 +79,10 @@ export default async function handle(
         },
       },
       data: {
-        folderId: folderId,
+        // folderId: folderId,
       },
       select: {
-        folder: {
-          select: {
-            path: true,
-          },
-        },
+
       },
     });
 
@@ -95,8 +91,8 @@ export default async function handle(
     }
 
     return res.status(200).json({
-      message: "Document moved successfully",
-      newPath: document.folder?.path,
+      message: "Skill updated successfully",
+      newPath: 'TODO: remove',
       oldPath: currentPathName,
     });
   } else if (req.method === "DELETE") {

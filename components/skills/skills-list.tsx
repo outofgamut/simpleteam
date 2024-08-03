@@ -12,7 +12,7 @@ import {
   DataroomFolderWithCount,
 } from "@/lib/swr/use-dataroom";
 import { FolderWithCount } from "@/lib/swr/use-documents";
-import { DocumentWithLinksAndLinkCountAndViewCount } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, SkillWithTags } from "@/lib/types";
 
 import DataroomDocumentCard from "../datarooms/dataroom-document-card";
 import { EmptySkills } from "./empty-skills";
@@ -21,15 +21,14 @@ import SkillCard from "./skill-card";
 
 export function SkillsList({
   folders,
-  documents,
+  skills,
   teamInfo,
   folderPathName,
   dataroomId,
 }: {
   folders: FolderWithCount[] | DataroomFolderWithCount[] | undefined;
-  documents:
-  | DocumentWithLinksAndLinkCountAndViewCount[]
-  | DataroomFolderDocument[]
+  skills:
+  | SkillWithTags[]
   | undefined;
   teamInfo: TeamContextType | null;
   folderPathName?: string[];
@@ -106,27 +105,17 @@ export function SkillsList({
 
             {/* Skills list */}
             <ul role="list" className="space-y-4">
-              {documents
-                ? documents.map((document) => {
-                  if (dataroomId) {
-                    return (
-                      <DataroomDocumentCard
-                        key={document.id}
-                        document={document as DataroomFolderDocument}
-                        teamInfo={teamInfo}
-                      />
-                    );
-                  } else {
-                    return (
-                      <SkillCard
-                        key={document.id}
-                        document={
-                          document as DocumentWithLinksAndLinkCountAndViewCount
-                        }
-                        teamInfo={teamInfo}
-                      />
-                    );
-                  }
+              {skills
+                ? skills.map((skill) => {
+                  return (
+                    <SkillCard
+                      key={skill.id}
+                      skill={
+                        skill as SkillWithTags
+                      }
+                      teamInfo={teamInfo}
+                    />
+                  );
                 })
                 : Array.from({ length: 3 }).map((_, i) => (
                   <li
@@ -146,7 +135,7 @@ export function SkillsList({
                 ))}
             </ul>
 
-            {documents && documents.length === 0 && (
+            {skills && skills.length === 0 && (
               <div className="flex items-center justify-center">
                 <EmptySkills />
               </div>

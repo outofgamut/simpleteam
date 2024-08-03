@@ -14,11 +14,11 @@ import { Button } from "@/components/ui/button";
 import LoadingSpinner from "@/components/ui/loading-spinner";
 import VisitorsTable from "@/components/visitors/visitors-table";
 
-import { useDocument, useDocumentLinks } from "@/lib/swr/use-document";
+import { useSkill } from "@/lib/swr/use-skill";
+import SkillHeader from "@/components/skills/skill-header";
 
 export default function SkillPage() {
-    const { document: prismaDocument, primaryVersion, error } = useDocument();
-    const { links } = useDocumentLinks();
+    const { skill, error } = useSkill();
     const teamInfo = useTeam();
 
     const [isLinkSheetOpen, setIsLinkSheetOpen] = useState<boolean>(false);
@@ -30,12 +30,11 @@ export default function SkillPage() {
     return (
         <AppLayout>
             <main className="relative mx-2 mb-10 mt-4 space-y-8 overflow-hidden px-1 sm:mx-3 md:mx-5 md:mt-5 lg:mx-7 lg:mt-8 xl:mx-10">
-                {prismaDocument && primaryVersion ? (
+                {skill ? (
                     <>
                         {/* Action Header */}
-                        <DocumentHeader
-                            primaryVersion={primaryVersion}
-                            prismaDocument={prismaDocument}
+                        <SkillHeader
+                            skill={skill}
                             teamId={teamInfo?.currentTeam?.id!}
                             actions={[
                                 <Button
@@ -64,27 +63,27 @@ export default function SkillPage() {
             /> */}
 
                         {/* Stats */}
-                        <StatsComponent
+                        {/* <StatsComponent
                             documentId={prismaDocument.id}
                             numPages={primaryVersion.numPages!}
-                        />
+                        /> */}
 
                         {/* Links */}
-                        <LinksTable
+                        {/* <LinksTable
                             links={links}
                             targetType={"DOCUMENT"}
                             primaryVersion={primaryVersion}
-                        />
+                        /> */}
 
                         {/* Visitors */}
-                        <VisitorsTable numPages={primaryVersion.numPages!} />
+                        {/* <VisitorsTable numPages={primaryVersion.numPages!} /> */}
 
-                        <LinkSheet
+                        {/* <LinkSheet
                             isOpen={isLinkSheetOpen}
                             linkType="DOCUMENT_LINK"
                             setIsOpen={setIsLinkSheetOpen}
                             existingLinks={links}
-                        />
+                        /> */}
                     </>
                 ) : (
                     <div className="flex h-screen items-center justify-center">

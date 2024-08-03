@@ -87,7 +87,7 @@ export default function Skills() {
                 <Separator className="mb-5 bg-gray-200 dark:bg-gray-800" />
 
                 <SkillsList
-                    documents={documents}
+                    skills={skills}
                     folders={folders}
                     teamInfo={teamInfo}
                 />

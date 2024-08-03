@@ -11,6 +11,7 @@ import {
   FolderInputIcon,
   Layers2Icon,
   MoreVertical,
+  PocketKnifeIcon,
   TrashIcon,
 } from "lucide-react";
 import { useTheme } from "next-themes";
@@ -31,18 +32,18 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { DocumentWithLinksAndLinkCountAndViewCount } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, SkillWithTags } from "@/lib/types";
 import { nFormatter, timeAgo } from "@/lib/utils";
 import { useCopyToClipboard } from "@/lib/utils/use-copy-to-clipboard";
 
-type DocumentsCardProps = {
-  document: DocumentWithLinksAndLinkCountAndViewCount;
+type SkillCardProps = {
+  skill: SkillWithTags;
   teamInfo: TeamContextType | null;
 };
-export default function DocumentsCard({
-  document: prismaDocument,
+export default function SkillCard({
+  skill,
   teamInfo,
-}: DocumentsCardProps) {
+}: SkillCardProps) {
   const router = useRouter();
   const { theme, systemTheme } = useTheme();
   const isLight =
@@ -144,7 +145,7 @@ export default function DocumentsCard({
 
     toast.promise(
       fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/documents/${prismaDocument.id}/duplicate`,
+        `/api/teams/${teamInfo?.currentTeam?.id}/documents/${skill.id}/duplicate`,
         { method: "POST" },
       ).then(() => {
         mutate(`/api/teams/${teamInfo?.currentTeam?.id}/documents`);
@@ -165,26 +166,17 @@ export default function DocumentsCard({
       <li className="group/row relative flex items-center justify-between rounded-lg border-0 p-3 ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 hover:dark:ring-gray-500 sm:p-4">
         <div className="flex min-w-0 shrink items-center space-x-2 sm:space-x-4">
           <div className="mx-0.5 flex w-8 items-center justify-center text-center sm:mx-1">
-            {prismaDocument.type === "notion" ? (
-              <NotionIcon className="h-8 w-8" />
-            ) : (
-              <Image
-                src={`/_icons/${prismaDocument.type}${isLight ? "-light" : ""}.svg`}
-                alt="File icon"
-                width={50}
-                height={50}
-              />
-            )}
+            <PocketKnifeIcon className="h-8 w-8" />
           </div>
 
           <div className="flex-col">
             <div className="flex items-center">
               <h2 className="min-w-0 max-w-[150px] truncate text-sm font-semibold leading-6 text-foreground sm:max-w-md">
                 <Link
-                  href={`/documents/${prismaDocument.id}`}
+                  href={`/skills/${skill.id}`}
                   className="w-full truncate"
                 >
-                  <span>{prismaDocument.name}</span>
+                  <span>{skill.name}</span>
                   <span className="absolute inset-0" />
                 </Link>
               </h2>
@@ -192,7 +184,7 @@ export default function DocumentsCard({
                 <button
                   className="group z-10 rounded-md bg-gray-200 p-1 transition-all duration-75 hover:scale-105 hover:bg-emerald-100 active:scale-95 dark:bg-gray-700 hover:dark:bg-emerald-200"
                   onClick={() =>
-                    handleCopyToClipboard(prismaDocument.links[0].id)
+                    alert('This feature is not implemented yet.')
                   }
                   title="Copy to clipboard"
                 >
@@ -205,18 +197,13 @@ export default function DocumentsCard({
               </div>
             </div>
             <div className="mt-1 flex items-center space-x-1 text-xs leading-5 text-muted-foreground">
-              <p className="truncate">{timeAgo(prismaDocument.createdAt)}</p>
+              <p className="truncate">{timeAgo(skill.createdAt)}</p>
               <p>•</p>
               <p className="truncate">
-                {prismaDocument._count.links}{" "}
-                {prismaDocument._count.links === 1 ? "Link" : "Links"}
+                Tags (Todo)
+                {/* {prismaDocument._count.links}{" "}
+                {prismaDocument._count.links === 1 ? "Tag" : "Tags"} */}
               </p>
-              {prismaDocument._count.versions > 1 ? (
-                <>
-                  <p>•</p>
-                  <p className="truncate">{`${prismaDocument._count.versions} Versions`}</p>
-                </>
-              ) : null}
             </div>
           </div>
         </div>
@@ -226,13 +213,14 @@ export default function DocumentsCard({
             onClick={(e) => {
               e.stopPropagation();
             }}
-            href={`/documents/${prismaDocument.id}`}
+            href={`/skills/${skill.id}`}
             className="z-10 flex items-center space-x-1 rounded-md bg-gray-200 px-1.5 py-0.5 transition-all duration-75 hover:scale-105 active:scale-100 dark:bg-gray-700 sm:px-2"
           >
             <BarChart className="h-3 w-3 text-muted-foreground sm:h-4 sm:w-4" />
             <p className="whitespace-nowrap text-xs text-muted-foreground sm:text-sm">
-              {nFormatter(prismaDocument._count.views)}
-              <span className="ml-1 hidden sm:inline-block">views</span>
+              {/* {nFormatter(prismaDocument._count.views)}
+              <span className="ml-1 hidden sm:inline-block">views</span> */}
+              TODO (Views)
             </p>
           </Link>
 
@@ -255,14 +243,14 @@ export default function DocumentsCard({
               </DropdownMenuItem>
               <DropdownMenuSeparator />
               <DropdownMenuItem
-                onClick={(event) => handleButtonClick(event, prismaDocument.id)}
+                onClick={(event) => handleButtonClick(event, skill.id)}
                 className="text-destructive duration-200 focus:bg-destructive focus:text-destructive-foreground"
               >
                 {isFirstClick ? (
                   "Really delete?"
                 ) : (
                   <>
-                    <TrashIcon className="mr-2 h-4 w-4" /> Delete document
+                    <TrashIcon className="mr-2 h-4 w-4" /> Delete skill
                   </>
                 )}
               </DropdownMenuItem>
