@@ -12,9 +12,8 @@ import {
   DataroomFolderWithCount,
 } from "@/lib/swr/use-dataroom";
 import { FolderWithCount } from "@/lib/swr/use-documents";
-import { DocumentWithLinksAndLinkCountAndViewCount, SkillWithTags } from "@/lib/types";
+import { SkillWithTags } from "@/lib/types";
 
-import DataroomDocumentCard from "../datarooms/dataroom-document-card";
 import { EmptySkills } from "./empty-skills";
 import FolderCard from "../documents/folder-card";
 import SkillCard from "./skill-card";

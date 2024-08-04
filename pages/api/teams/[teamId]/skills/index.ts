@@ -1,16 +1,11 @@
 import { NextApiRequest, NextApiResponse } from "next";
 
-import { client } from "@/trigger";
-import { DocumentStorageType } from "@prisma/client";
 import { getServerSession } from "next-auth/next";
-import { parsePageId } from "notion-utils";
 
 import { errorhandler } from "@/lib/errorHandler";
-import notion from "@/lib/notion";
 import prisma from "@/lib/prisma";
 import { getTeamWithUsersAndDocument, getTeamWithUsersAndSkills } from "@/lib/team/helper";
 import { CustomUser } from "@/lib/types";
-import { getExtension, log } from "@/lib/utils";
 
 import { authOptions } from "../../../auth/[...nextauth]";
 
@@ -95,7 +90,7 @@ export default async function handle(
         },
       });
 
-      return res.status(201).json(document);
+      return res.status(201).json(skill);
     } catch (error) {
       log({
         message: `Failed to create skill. \n\n*teamId*: _${teamId}_, \n\n ${error}`,

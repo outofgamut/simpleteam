@@ -49,6 +49,7 @@ export function AddSkillModal({
   const [isOpen, setIsOpen] = useState<boolean | undefined>(undefined);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
   const [skillName, setSkillName] = useState<string | null>(null);
+  const [skillDescription, setSkillDescription] = useState<string | null>(null);
   const teamInfo = useTeam();
 
   const teamId = teamInfo?.currentTeam?.id as string;
@@ -115,25 +116,25 @@ export function AddSkillModal({
       if (response) {
         const document = await response.json();
 
-        if (isDataroom && dataroomId) {
-          await addDocumentToDataroom({
-            documentId: document.id,
-            folderPathName: currentFolderPath?.join("/"),
-          });
+        // if (isDataroom && dataroomId) {
+        //   await addDocumentToDataroom({
+        //     documentId: document.id,
+        //     folderPathName: currentFolderPath?.join("/"),
+        //   });
 
-          plausible("documentUploaded");
-          analytics.capture("Document Added", {
-            documentId: document.id,
-            name: document.name,
-            numPages: document.numPages,
-            path: router.asPath,
-            type: document.type,
-            teamId: teamId,
-            dataroomId: dataroomId,
-          });
+        //   plausible("documentUploaded");
+        //   analytics.capture("Document Added", {
+        //     documentId: document.id,
+        //     name: document.name,
+        //     numPages: document.numPages,
+        //     path: router.asPath,
+        //     type: document.type,
+        //     teamId: teamId,
+        //     dataroomId: dataroomId,
+        //   });
 
-          return;
-        }
+        //   return;
+        // }
 
         if (!newVersion) {
           // copy the link to the clipboard
@@ -189,61 +190,6 @@ export function AddSkillModal({
     }
   };
 
-  const addDocumentToDataroom = async ({
-    documentId,
-    folderPathName,
-  }: {
-    documentId: string;
-    folderPathName?: string;
-  }) => {
-    try {
-      const response = await fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/datarooms/${dataroomId}/documents`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            documentId: documentId,
-            folderPathName: folderPathName,
-          }),
-        },
-      );
-
-      if (!response.ok) {
-        const { message } = await response.json();
-        toast.error(message);
-        return;
-      }
-
-      mutate(
-        `/api/teams/${teamInfo?.currentTeam?.id}/datarooms/${dataroomId}/documents`,
-      );
-      mutate(
-        `/api/teams/${teamInfo?.currentTeam?.id}/datarooms/${dataroomId}/folders/documents/${folderPathName}`,
-      );
-
-      toast.success("Document added to dataroom successfully! 🎉");
-    } catch (error) {
-      toast.error("Error adding document to dataroom.");
-      console.error(
-        "An error occurred while adding document to the dataroom: ",
-        error,
-      );
-    }
-  };
-
-  const createNotionFileName = () => {
-    // Extract Notion file name from the URL
-    const urlSegments = (skillName as string).split("/")[3];
-    // Remove the last hyphen along with the Notion ID
-    const extractName = urlSegments.replace(/-([^/-]+)$/, "");
-    const notionFileName = extractName.replaceAll("-", " ") || "Notion Link";
-
-    return notionFileName;
-  };
-
   const handleSkillAdd = async (
     event: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
@@ -267,7 +213,7 @@ export function AddSkillModal({
           },
           body: JSON.stringify({
             name: skillName,
-            description: 'No description yet',
+            description: skillDescription,
           }),
         },
       );
@@ -276,11 +222,8 @@ export function AddSkillModal({
         const skill = await response.json();
 
         if (!newVersion) {
-          // copy the link to the clipboard
-          copyToClipboard(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/view/${document.links[0].id}`,
-            "Skill added! Redirecting to skill page...",
-          );
+          toast.success("Skill added! Redirecting to skill page...");
+
 
           // track the event
           plausible("documentUploaded");
@@ -313,112 +256,6 @@ export function AddSkillModal({
     }
   };
 
-  const handleNotionUpload = async (
-    event: FormEvent<HTMLFormElement>,
-  ): Promise<void> => {
-    event.preventDefault();
-    const validateNotionPageURL = parsePageId(skillName);
-    // Check if it's a valid URL or not by Regx
-    const isValidURL =
-      /^(https?:\/\/)?([a-zA-Z0-9-]+\.){1,}[a-zA-Z]{2,}([a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]+)?$/;
-
-    // Check if the field is empty or not
-    if (!skillName) {
-      toast.error("Please enter a Notion link to proceed.");
-      return; // prevent form from submitting
-    }
-    if (validateNotionPageURL === null || !isValidURL.test(skillName)) {
-      toast.error("Please enter a valid Notion link to proceed.");
-      return;
-    }
-
-    try {
-      setUploading(true);
-
-      const response = await fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/documents`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            name: createNotionFileName(),
-            url: skillName,
-            numPages: 1,
-            type: "notion",
-          }),
-        },
-      );
-
-      if (response) {
-        const document = await response.json();
-
-        if (isDataroom && dataroomId) {
-          await addDocumentToDataroom({
-            documentId: document.id,
-            folderPathName: currentFolderPath?.join("/"),
-          });
-
-          plausible("documentUploaded");
-          plausible("notionDocumentUploaded");
-          analytics.capture("Document Added", {
-            documentId: document.id,
-            name: document.name,
-            numPages: document.numPages,
-            path: router.asPath,
-            type: "notion",
-            teamId: teamId,
-            dataroomId: dataroomId,
-          });
-
-          return;
-        }
-
-        if (!newVersion) {
-          // copy the link to the clipboard
-          copyToClipboard(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/view/${document.links[0].id}`,
-            "Notion Page processed and link copied to clipboard. Redirecting to document page...",
-          );
-
-          // track the event
-          plausible("documentUploaded");
-          plausible("notionDocumentUploaded");
-          analytics.capture("Document Added", {
-            documentId: document.id,
-            name: document.name,
-            fileSize: null,
-            path: router.asPath,
-            type: "notion",
-            teamId: teamId,
-          });
-          analytics.capture("Link Added", {
-            linkId: document.links[0].id,
-            documentId: document.id,
-            customDomain: null,
-            teamId: teamId,
-          });
-
-          // redirect to the document page
-          router.push("/documents/" + document.id);
-        }
-      }
-    } catch (error) {
-      setUploading(false);
-      toast.error(
-        "Oops! Can't access the Notion page. Please double-check it's set to 'Public'.",
-      );
-      console.error(
-        "An error occurred while processing the Notion link: ",
-        error,
-      );
-    } finally {
-      setUploading(false);
-      setIsOpen(false);
-    }
-  };
-
   const clearModelStates = () => {
     currentFile !== null && setCurrentFile(null);
     skillName !== null && setSkillName(null);
@@ -432,18 +269,18 @@ export function AddSkillModal({
         className="border-none bg-transparent text-foreground shadow-none"
         isDocumentDialog
       >
-        <Tabs defaultValue="manual">
+        <Tabs defaultValue="single">
           {!newVersion ? (
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="manual">Manual</TabsTrigger>
-              <TabsTrigger value="notion">AI Wizard</TabsTrigger>
+              <TabsTrigger value="single">Single</TabsTrigger>
+              <TabsTrigger value="bulk">Bulk</TabsTrigger>
             </TabsList>
           ) : (
             <TabsList className="grid w-full grid-cols-1">
-              <TabsTrigger value="manual">Manual</TabsTrigger>
+              <TabsTrigger value="single">Manual</TabsTrigger>
             </TabsList>
           )}
-          <TabsContent value="manual">
+          <TabsContent value="bulk">
             <Card>
               <CardHeader className="space-y-3">
                 <CardTitle>
@@ -502,10 +339,10 @@ export function AddSkillModal({
             </Card>
           </TabsContent>
           {!newVersion && (
-            <TabsContent value="notion">
+            <TabsContent value="single">
               <Card>
                 <CardHeader className="space-y-3">
-                  <CardTitle>Add a Skill</CardTitle>
+                  <CardTitle>Add a skill</CardTitle>
                   <CardDescription>
                     After you add a skill, it will be available for your
                     team to use.
@@ -532,6 +369,20 @@ export function AddSkillModal({
                       <small className="text-xs text-muted-foreground">
                         Skill names must be unique.
                       </small>
+                    </div>
+                    <div className="space-y-1 pb-8">
+                      <Label htmlFor="skill-name">Description</Label>
+                      <div className="mt-2">
+                        <input
+                          type="text"
+                          name="skill-description"
+                          id="skill-description"
+                          placeholder="Description"
+                          className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
+                          value={skillDescription || ""}
+                          onChange={(e) => setSkillDescription(e.target.value)}
+                        />
+                      </div>
                     </div>
                     <div className="flex justify-center">
                       <Button

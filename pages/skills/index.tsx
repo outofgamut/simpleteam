@@ -14,7 +14,6 @@ import { SkillsList } from "@/components/skills/skills-list";
 import { AddSkillModal } from "@/components/skills/add-skill-modal";
 
 export default function Skills() {
-    const { documents } = useDocuments();
     const { skills } = useSkills();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
