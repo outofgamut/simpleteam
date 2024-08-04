@@ -6,6 +6,7 @@ import { errorhandler } from "@/lib/errorHandler";
 import prisma from "@/lib/prisma";
 import { getTeamWithUsersAndDocument, getTeamWithUsersAndSkills } from "@/lib/team/helper";
 import { CustomUser } from "@/lib/types";
+import { log } from "@/lib/utils";
 
 import { authOptions } from "../../../auth/[...nextauth]";
 
