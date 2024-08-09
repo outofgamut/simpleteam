@@ -105,11 +105,11 @@ export default function Home() {
 
         <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
           <div className="pt-24">
-            <h1 className="text-balance font-semibold text-6xl md:text-8xl">
-              Team management for skills workers
+            <h1 className="text-balance font-semibold text-6xl md:text-8xl tracking-tight">
+              Team management for the modern consulting firm.
             </h1>
             <p className="mt-8 max-w-3xl text-balance text-2xl">
-              Simpleteam is a modern performance and growth management platform for professional services firms
+              Simpleteam reimagines people management for firms who care about their people.
             </p>
             <div className="space-x-2 pt-8">
               <Link

@@ -25,6 +25,9 @@ import { CartesianGrid, XAxis, Bar, BarChart, Line, LineChart } from "recharts"
 import { ChartTooltipContent, ChartTooltip, ChartContainer } from "@/components/ui/chart"
 import AppLayout from "@/components/layouts/app"
 import { CalendarIcon, ClipboardIcon, DatabaseIcon, InfoIcon } from "lucide-react"
+import UserActivityChart from "@/components/charts/user-activity-chart"
+import { GetServerSideProps } from "next"
+import { generateChartData } from "@/lib/utils/generate-chart-data"
 
 const BlackOnPrimaryBgContainer = ({
     children,
@@ -32,17 +35,24 @@ const BlackOnPrimaryBgContainer = ({
     children: React.ReactNode;
 }) => {
     return (
-        <div className="bg-primary rounded-full w-8 h-8 flex items-center justify-center text-primary-foreground">
+        <div className="bg-tremor-background-subtle rounded-full w-8 h-8 flex items-center justify-center foreground">
             {children}
         </div>
     );
 }
 
-export default function Discover() {
+export const getServerSideProps: GetServerSideProps = async () => {
+    const chartData = generateChartData();
+    return {
+        props: {
+            chartData,
+        },
+    };
+};
+
+export default function Discover({ chartData }: { chartData: any }) {
     return (
         <AppLayout>
-
-
             <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6">
                 <div className="text-2xl font-bold">Discover</div>
                 <DropdownMenu>
@@ -65,8 +75,8 @@ export default function Discover() {
             <main className="p-4 sm:mx-4 sm:mt-4 grid gap-8">
                 <section>
                     <div className="flex items-center justify-between">
-                        <h2 className="text-2xl font-bold">Recent Skills Updates</h2>
-                        <Link href="#" className="text-primary hover:underline" prefetch={false}>
+                        <h2 className="text-2xl font-bold">Trending Skill Updates</h2>
+                        <Link href="#" className="hover:underline" prefetch={false}>
                             View all
                         </Link>
                     </div>
@@ -144,7 +154,7 @@ export default function Discover() {
                 <section>
                     <div className="flex items-center justify-between">
                         <h2 className="text-2xl font-bold">Popular Roles</h2>
-                        <Link href="#" className="text-primary hover:underline" prefetch={false}>
+                        <Link href="#" className="hover:underline" prefetch={false}>
                             View all
                         </Link>
                     </div>
@@ -254,9 +264,15 @@ export default function Discover() {
                     </div>
                 </section>
                 <section>
+                    <h2 className="text-2xl font-bold">Skills Distribution</h2>
+                    <div className="mt-4">
+                        <UserActivityChart chartData={chartData} />
+                    </div>
+                </section>
+                <section>
                     <div className="flex items-center justify-between">
                         <h2 className="text-2xl font-bold">Skills Distribution</h2>
-                        <Link href="#" className="text-primary hover:underline" prefetch={false}>
+                        <Link href="#" className="hover:underline" prefetch={false}>
                             View all
                         </Link>
                     </div>
@@ -274,11 +290,12 @@ export default function Discover() {
                                 <CardTitle>Skills Histogram</CardTitle>
                             </CardHeader>
                             <CardContent>
-                                <BarchartChart className="w-full aspect-[4/3]" />
+                                <LinechartChart className="w-full aspect-[4/3]" />
                             </CardContent>
                         </Card>
                     </div>
                 </section>
+
             </main>
         </AppLayout >
     )
