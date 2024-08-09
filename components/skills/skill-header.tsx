@@ -14,7 +14,7 @@ import { mutate } from "swr";
 import FileUp from "@/components/shared/icons/file-up";
 import MoreVertical from "@/components/shared/icons/more-vertical";
 import NotionIcon from "@/components/shared/icons/notion";
-import SimpleteamSparkle from "@/components/shared/icons/papermark-sparkle";
+import SimpleteamSparkle from "@/components/shared/icons/simpleteam-sparkle";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,

@@ -13,7 +13,7 @@ import {
   HardDrive as ServerIcon,
 } from "lucide-react";
 
-import SimpleteamSparkle from "@/components/shared/icons/papermark-sparkle";
+import SimpleteamSparkle from "@/components/shared/icons/simpleteam-sparkle";
 import ChatPage from "@/components/web/assistant/public-chat";
 import Footer from "@/components/web/footer";
 import Navbar from "@/components/web/navbar";
