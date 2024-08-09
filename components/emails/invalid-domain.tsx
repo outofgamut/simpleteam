@@ -13,6 +13,7 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
+import { BRAND_SETTINGS } from "@/lib/constants";
 
 export default function InvalidDomain({
   domain = "simpleteam.co",
@@ -58,7 +59,7 @@ export default function InvalidDomain({
               </Button>
             </Section>
             <Text className="text-sm leading-6 text-black">
-              If you do not want to keep this domain on Papermark, you can{" "}
+              If you do not want to keep this domain on {BRAND_SETTINGS.productName}, you can{" "}
               <Link
                 href={`https://www.simpleteam.co/settings/domains`}
                 className="font-medium text-blue-600 no-underline"

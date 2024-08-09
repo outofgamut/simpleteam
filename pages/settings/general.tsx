@@ -12,6 +12,7 @@ import { SettingsHeader } from "@/components/settings/settings-header";
 import Passkey from "@/components/shared/icons/passkey";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
+import { BRAND_SETTINGS } from "@/lib/constants";
 
 export default function General() {
   const teamInfo = useTeam();
@@ -59,7 +60,7 @@ export default function General() {
         <div className="space-y-6">
           <Form
             title="Team Name"
-            description="This is the name of your team on Papermark."
+            description={`This is the name of your team on ${BRAND_SETTINGS.productName}.`}
             inputAttrs={{
               name: "name",
               defaultValue: teamInfo?.currentTeam?.name,

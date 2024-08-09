@@ -1,3 +1,11 @@
+export const BRAND_SETTINGS = {
+  productName: "Simpleteam",
+  description: "Document sharing infrastructure for the modern web",
+  url: "https://simpleteam.co",
+  image: "https://simpleteam.co/images/logo.png",
+  founderFirstName: "John",
+};
+
 export const FADE_IN_ANIMATION_SETTINGS = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },

@@ -13,7 +13,7 @@ import {
   HardDrive as ServerIcon,
 } from "lucide-react";
 
-import PapermarkSparkle from "@/components/shared/icons/papermark-sparkle";
+import SimpleteamSparkle from "@/components/shared/icons/papermark-sparkle";
 import ChatPage from "@/components/web/assistant/public-chat";
 import Footer from "@/components/web/footer";
 import Navbar from "@/components/web/navbar";
@@ -197,7 +197,7 @@ export default function Home() {
             <div className="mx-auto max-w-2xl py-8 sm:py-12 lg:py-24 ">
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
                 <div className="relative flex items-center rounded-full px-2 py-1 text-sm leading-6 text-black ring-1 ring-black/10 hover:ring-white/20 dark:text-white dark:ring-white/10">
-                  <PapermarkSparkle className="mr-1 h-4 w-4" />
+                  <SimpleteamSparkle className="mr-1 h-4 w-4" />
                   Simpleteam AI
                 </div>
               </div>

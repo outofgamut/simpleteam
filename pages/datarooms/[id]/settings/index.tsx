@@ -11,6 +11,7 @@ import { NavMenu } from "@/components/navigation-menu";
 import { Form } from "@/components/ui/form";
 
 import { useDataroom } from "@/lib/swr/use-dataroom";
+import { BRAND_SETTINGS } from "@/lib/constants";
 
 export default function Settings() {
   const { dataroom } = useDataroom();
@@ -78,7 +79,7 @@ export default function Settings() {
           <div className="grid gap-6">
             <Form
               title="Dataroom Name"
-              description="This is the name of your data room on Papermark."
+              description={`This is the name of your data room on ${BRAND_SETTINGS.productName}.`}
               inputAttrs={{
                 name: "name",
                 defaultValue: dataroom.name,

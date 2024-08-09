@@ -14,7 +14,7 @@ import { mutate } from "swr";
 import FileUp from "@/components/shared/icons/file-up";
 import MoreVertical from "@/components/shared/icons/more-vertical";
 import NotionIcon from "@/components/shared/icons/notion";
-import PapermarkSparkle from "@/components/shared/icons/papermark-sparkle";
+import SimpleteamSparkle from "@/components/shared/icons/papermark-sparkle";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -356,7 +356,7 @@ export default function DocumentHeader({
               onClick={() => activateOrRedirectAssistant(prismaDocument)}
               title="Open AI Assistant"
             >
-              <PapermarkSparkle className="h-5 w-5" />
+              <SimpleteamSparkle className="h-5 w-5" />
             </Button>
           )}
 
@@ -415,7 +415,7 @@ export default function DocumentHeader({
                 <DropdownMenuItem
                   onClick={() => activateOrRedirectAssistant(prismaDocument)}
                 >
-                  <PapermarkSparkle className="mr-2 h-4 w-4" />
+                  <SimpleteamSparkle className="mr-2 h-4 w-4" />
                   Open AI Assistant
                 </DropdownMenuItem>
               )}

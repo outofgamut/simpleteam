@@ -12,6 +12,7 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
+import { BRAND_SETTINGS } from "@/lib/constants";
 
 export default function ViewedDocument({
   documentId = "123",
@@ -46,12 +47,12 @@ export default function ViewedDocument({
             </Text>
             <Text className="text-sm leading-6 text-black">
               You can get the detailed engagement insights like time-spent per
-              page and total duration for this document on Papermark.
+              page and total duration for this document on {BRAND_SETTINGS.productName}.
             </Text>
             <Section className="my-8 text-center">
               <Button
                 className="rounded bg-black text-center text-xs font-semibold text-white no-underline"
-                href={`https://www.simpleteam.co/documents/${documentId}`}
+                href={`${BRAND_SETTINGS.url}/documents/${documentId}`}
                 style={{ padding: "12px 20px" }}
               >
                 See my document insights
