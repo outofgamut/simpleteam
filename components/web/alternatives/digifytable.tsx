@@ -4,7 +4,7 @@ interface ToolFeature {
 }
 
 const tools: ToolFeature[] = [
-    {
+  {
     name: "Papermark",
     features: {
       unlimitedDocuments: "Yes",
@@ -33,7 +33,7 @@ const tools: ToolFeature[] = [
       selfhosted: "No",
     },
   },
-    {
+  {
     name: "Intralinks",
     features: {
       unlimitedDocuments: "No",
@@ -47,7 +47,7 @@ const tools: ToolFeature[] = [
       selfhosted: "No",
     },
   },
-    {
+  {
     name: "FirmRoom",
     features: {
       unlimitedDocuments: "Yes",
@@ -187,13 +187,13 @@ export default function ComparisonTable() {
             <table className="min-w-full divide-y divide-gray-300">
               <thead>
                 <tr>
-                  <th className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                  <th className="px-2 py-2 text-left text-sm font-semibold text-gray-900">
                     Feature
                   </th>
                   {tools.map((tool) => (
                     <th
                       key={tool.name}
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       {tool.name}
                     </th>
@@ -203,7 +203,7 @@ export default function ComparisonTable() {
               <tbody className="divide-y divide-gray-200 bg-white">
                 {featuresList.map((feature) => (
                   <tr key={feature}>
-                    <td className="px-3 py-4 text-sm text-gray-900">
+                    <td className="px-2 py-4 text-sm text-gray-900">
                       {featureDisplayNames[feature]}
                       {feature === "unlimitedDocuments" && (
                         <div className="text-xs text-gray-400">
@@ -219,11 +219,10 @@ export default function ComparisonTable() {
                     {tools.map((tool) => (
                       <td
                         key={tool.name}
-                        className={`px-3 py-4 text-sm  ${
-                          tool.name === "Papermark"
-                            ? "bg-green-50 font-semibold text-green-700"
-                            : ""
-                        }`} // Consistent text color, conditional background color
+                        className={`px-2 py-4 text-sm  ${tool.name === "Papermark"
+                          ? "bg-green-50 font-semibold text-green-700"
+                          : ""
+                          }`} // Consistent text color, conditional background color
                       >
                         {tool.features[feature]}
                       </td>

@@ -44,7 +44,7 @@ export default function Section() {
                 Send via Simpleteam = Share your personality
               </h1>
               <ul role="list" className="mt-8 space-y-2 text-gray-600">
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <span>
                     <strong className="font-semibold text-gray-900">
                       Open Source
@@ -52,7 +52,7 @@ export default function Section() {
                     Host it yourself
                   </span>
                 </li>
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <span>
                     <strong className="font-semibold text-gray-900">
                       Custom domain
@@ -60,7 +60,7 @@ export default function Section() {
                     No more docsending you in the crowd
                   </span>
                 </li>
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <span>
                     <strong className="font-semibold text-gray-900">
                       Feedback
@@ -68,7 +68,7 @@ export default function Section() {
                     For each slide
                   </span>
                 </li>
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <span>
                     <strong className="font-semibold text-gray-900">
                       Analytics
@@ -77,7 +77,7 @@ export default function Section() {
                   </span>
                 </li>
 
-                <li className="flex gap-x-3">
+                <li className="flex gap-x-2">
                   <span>
                     <strong className="font-semibold text-gray-900">
                       Free

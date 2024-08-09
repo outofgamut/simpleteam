@@ -228,8 +228,8 @@ export default function Branding() {
                           />
                           <div
                             className={`${dragActive
-                                ? "cursor-copy border-2 border-black bg-gray-50 opacity-100"
-                                : ""
+                              ? "cursor-copy border-2 border-black bg-gray-50 opacity-100"
+                              : ""
                               } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${logo
                                 ? "opacity-0 group-hover:opacity-100"
                                 : "group-hover:bg-gray-50"
@@ -278,7 +278,7 @@ export default function Branding() {
                             </PopoverContent>
                           </Popover>
                           <HexColorInput
-                            className="flex h-9 w-full rounded-md border-0 bg-background px-3 py-2 text-sm shadow-sm ring-1 ring-muted-foreground placeholder:text-muted-foreground focus:border-0 focus:ring-1 focus:ring-gray-300"
+                            className="flex h-9 w-full rounded-md border-0 bg-background px-2 py-2 text-sm shadow-sm ring-1 ring-muted-foreground placeholder:text-muted-foreground focus:border-0 focus:ring-1 focus:ring-gray-300"
                             color={brandColor}
                             onChange={setBrandColor}
                             prefixed

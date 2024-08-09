@@ -17,14 +17,14 @@ export default function Section2() {
           <div className="mt-10 flex items-center justify-center gap-x-6">
             <Link
               href="/login"
-              className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+              className="rounded-md bg-black px-2.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
             >
               Start now
             </Link>
             <Link
               target="_blank"
               rel="noopener noreferrer"
-              className="flex  items-center rounded-md px-3.5 py-2.5 text-sm font-semibold text-black hover:text-gray-800 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
+              className="flex  items-center rounded-md px-2.5 py-2.5 text-sm font-semibold text-black hover:text-gray-800 hover:shadow-md focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400"
               href="https://github.com/mfts/papermark"
             >
               <GitHubIcon className="mr-2 h-5 w-5" /> Star on GitHub

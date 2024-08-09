@@ -144,7 +144,7 @@ export default function VisitorsTable({ numPages }: { numPages: number }) {
                                         key="feedback"
                                       >
                                         {view.feedbackResponse.data.answer ===
-                                        "yes" ? (
+                                          "yes" ? (
                                           <ThumbsUpIcon className="h-4 w-4 text-gray-500 hover:text-gray-600" />
                                         ) : (
                                           <ThumbsDownIcon className="h-4 w-4 text-gray-500 hover:text-gray-600" />
@@ -235,7 +235,7 @@ export default function VisitorsTable({ numPages }: { numPages: number }) {
                 <TableRow className="">
                   <TableCell colSpan={5} className="text-left sm:text-center">
                     <div className="flex flex-col items-start justify-center gap-1 sm:flex-row sm:items-center">
-                      <span className="flex items-center gap-x-1">
+                      <span className="flex items-center gap-x-2">
                         <AlertTriangleIcon className="inline-block h-4 w-4 text-yellow-500" />
                         Some older visits may not be shown because your document
                         has more than 20 views.{" "}
@@ -288,7 +288,7 @@ export default function VisitorsTable({ numPages }: { numPages: number }) {
             </PaginationItem>
 
             {views?.totalViews &&
-            currentPage !== Math.ceil(views?.totalViews / 10) ? (
+              currentPage !== Math.ceil(views?.totalViews / 10) ? (
               <PaginationItem>
                 <PaginationLink
                   onClick={() =>

@@ -24,7 +24,7 @@ export const DataroomHeader = ({
           {description}
         </p> */}
       </div>
-      <div className="flex items-center gap-x-1">
+      <div className="flex items-center gap-x-2">
         {actionRows.map((row, i) => (
           <ul
             key={i.toString()}

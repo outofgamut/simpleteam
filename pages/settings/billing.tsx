@@ -234,7 +234,7 @@ export default function Billing() {
                                   setToggleProYear(!toggleProYear)
                                 }
                               />
-                              <div className="mb-1 flex items-center gap-x-1 text-sm">
+                              <div className="mb-1 flex items-center gap-x-2 text-sm">
                                 <span
                                   className={cn(
                                     toggleProYear
@@ -282,7 +282,7 @@ export default function Billing() {
                                   setToggleBusinessYear(!toggleBusinessYear)
                                 }
                               />
-                              <div className="mb-1 flex items-center gap-x-1 text-sm">
+                              <div className="mb-1 flex items-center gap-x-2 text-sm">
                                 <span
                                   className={cn(
                                     toggleBusinessYear
@@ -330,7 +330,7 @@ export default function Billing() {
                             </div>
                           ) : null}
                         </div>
-                        <p className="mt-6 flex items-baseline gap-x-1">
+                        <p className="mt-6 flex items-baseline gap-x-2">
                           <span
                             className="text-balance text-4xl font-medium text-foreground"
                             style={{ fontVariantNumeric: "tabular-nums" }}
@@ -365,7 +365,7 @@ export default function Billing() {
                         >
                           <li>{tier.featureIntro}</li>
                           {tier.features.map((feature) => (
-                            <li key={feature} className="flex gap-x-3">
+                            <li key={feature} className="flex gap-x-2">
                               <CheckIcon
                                 className="h-6 w-5 flex-none text-[#fb7a00]"
                                 aria-hidden="true"
@@ -473,7 +473,7 @@ export default function Billing() {
                         Self-hosted and advanced document infrastructure for
                         your company.
                       </p>
-                      <p className="mt-6 flex items-baseline gap-x-1">
+                      <p className="mt-6 flex items-baseline gap-x-2">
                         <span className="text-balance text-4xl font-medium text-foreground">
                           Custom
                         </span>
@@ -483,7 +483,7 @@ export default function Billing() {
                         className="mt-8 grid grid-cols-1 gap-y-3 text-sm leading-6 text-gray-600 dark:text-muted-foreground sm:grid-cols-2 md:grid-cols-3"
                       >
                         {enterpriseFeatures.map((feature) => (
-                          <li key={feature} className="flex gap-x-3">
+                          <li key={feature} className="flex gap-x-2">
                             <CheckIcon
                               className="h-6 w-5 flex-none text-[#fb7a00]"
                               aria-hidden="true"

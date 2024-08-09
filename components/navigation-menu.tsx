@@ -67,7 +67,7 @@ const NavItem: React.FC<Props["navigation"][0]> = ({
       <Link
         href={href}
         className={cn(
-          "text-content-subtle hover:bg-background-subtle -mx-3 flex items-center gap-1 rounded-lg px-3 py-2 text-sm font-medium hover:bg-muted hover:text-primary",
+          "text-content-subtle hover:bg-background-subtle -mx-3 flex items-center gap-1 rounded-lg px-2 py-2 text-sm font-medium hover:bg-muted hover:text-primary",
           {
             "text-primary": active,
           },

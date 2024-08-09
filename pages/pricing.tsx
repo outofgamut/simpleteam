@@ -235,7 +235,7 @@ export default function PricingPage() {
                           </div>
                         ) : null}
                       </div>
-                      <p className="mt-6 flex items-baseline gap-x-1">
+                      <p className="mt-6 flex items-baseline gap-x-2">
                         <span
                           className="text-balance text-4xl font-medium text-gray-900"
                           style={{ fontVariantNumeric: "tabular-nums" }}
@@ -260,7 +260,7 @@ export default function PricingPage() {
                       >
                         <li>{tier.featureIntro}</li>
                         {tier.features.map((feature) => (
-                          <li key={feature} className="flex gap-x-3">
+                          <li key={feature} className="flex gap-x-2">
                             <CheckIcon
                               className="h-6 w-5 flex-none text-[#fb7a00]"
                               aria-hidden="true"

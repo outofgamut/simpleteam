@@ -164,31 +164,31 @@ export default function Dashboard({ data }: any) {
                   <tr>
                     <th
                       scope="col"
-                      className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
+                      className="py-2 pl-4 pr-3 text-left text-sm font-semibold text-gray-900 sm:pl-6"
                     >
                       Name
                     </th>
                     <th
                       scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       Stage
                     </th>
                     <th
                       scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       Location
                     </th>
                     <th
                       scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       Sector
                     </th>
                     <th
                       scope="col"
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       Fund details
                     </th>
@@ -259,16 +259,16 @@ export default function Dashboard({ data }: any) {
                           </div>
                         </div>
                       </td>
-                      <td className="col-span-1 row-start-2 whitespace-nowrap px-3 text-sm font-bold text-gray-500 md:px-2 md:py-3 md:font-normal">
+                      <td className="col-span-1 row-start-2 whitespace-nowrap px-2 text-sm font-bold text-gray-500 md:px-2 md:py-3 md:font-normal">
                         {investor.round ? investor.round : "Unknown"}
                       </td>
-                      <td className="col-span-3 whitespace-nowrap px-3 text-sm text-gray-500 md:mt-0 md:px-2 md:py-3">
+                      <td className="col-span-3 whitespace-nowrap px-2 text-sm text-gray-500 md:mt-0 md:px-2 md:py-3">
                         {investor.location ? investor.location : "Unknown"}
                       </td>
-                      <td className="col-span-3 w-40 truncate px-3 text-sm text-gray-500 md:max-w-xs md:px-2 md:py-3">
+                      <td className="col-span-3 w-40 truncate px-2 text-sm text-gray-500 md:max-w-xs md:px-2 md:py-3">
                         {investor.sector ? investor.sector : "Unknown"}
                       </td>
-                      <td className="col-span-3 w-40 truncate px-3 text-sm text-gray-500 md:max-w-xs md:px-2 md:py-3">
+                      <td className="col-span-3 w-40 truncate px-2 text-sm text-gray-500 md:max-w-xs md:px-2 md:py-3">
                         <a
                           href={`/investors/${encodeURIComponent(investor.slug)}`}
                         >

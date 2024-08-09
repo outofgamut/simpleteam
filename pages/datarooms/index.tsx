@@ -48,11 +48,11 @@ export default function DataroomsPage() {
               Manage your datarooms
             </p>
           </div>
-          <div className="flex items-center gap-x-1">
+          <div className="flex items-center gap-x-2">
             {isBusiness && !canCreateUnlimitedDatarooms ? (
               <UpgradePlanModal clickedPlan="Data Rooms" trigger="datarooms">
                 <Button
-                  className="group flex flex-1 items-center justify-start gap-x-3 px-3 text-left"
+                  className="group flex flex-1 items-center justify-start gap-x-2 px-2 text-left"
                   title="Add New Document"
                 >
                   <span>Upgrade to Create Dataroom</span>
@@ -68,7 +68,7 @@ export default function DataroomsPage() {
                 </div>
                 <UpgradePlanModal clickedPlan="Business" trigger="datarooms">
                   <Button
-                    className="group flex flex-1 items-center justify-start gap-x-3 px-3 text-left"
+                    className="group flex flex-1 items-center justify-start gap-x-2 px-2 text-left"
                     title="Add New Document"
                   >
                     <span>Upgrade to Create Dataroom</span>
@@ -78,7 +78,7 @@ export default function DataroomsPage() {
             ) : isBusiness || isDatarooms ? (
               <AddDataroomModal>
                 <Button
-                  className="group flex flex-1 items-center justify-start gap-x-3 px-3 text-left"
+                  className="group flex flex-1 items-center justify-start gap-x-2 px-2 text-left"
                   title="Add New Document"
                 >
                   <PlusIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
@@ -88,7 +88,7 @@ export default function DataroomsPage() {
             ) : (
               <DataroomTrialModal>
                 <Button
-                  className="group flex flex-1 items-center justify-start gap-x-3 px-3 text-left"
+                  className="group flex flex-1 items-center justify-start gap-x-2 px-2 text-left"
                   title="Add New Document"
                 >
                   <span>Start Data Room Trial</span>

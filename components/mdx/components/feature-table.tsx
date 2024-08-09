@@ -25,7 +25,7 @@ export const Table: React.FC<TableProps> = ({ columns, rows }) => {
                 {columns.map((column) => (
                   <th
                     key={column.key}
-                    className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                    className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                   >
                     {column.header}
                   </th>
@@ -38,7 +38,7 @@ export const Table: React.FC<TableProps> = ({ columns, rows }) => {
                   {columns.map((column) => (
                     <td
                       key={column.key}
-                      className="px-3 py-4 text-sm text-gray-900"
+                      className="px-2 py-4 text-sm text-gray-900"
                     >
                       {row[column.key]}
                     </td>

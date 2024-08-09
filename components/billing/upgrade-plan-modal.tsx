@@ -219,7 +219,7 @@ export function UpgradePlanModal({
                   <motion.div
                     key={i}
                     variants={STAGGER_CHILD_VARIANTS}
-                    className="flex items-center gap-x-3 text-sm text-muted-foreground"
+                    className="flex items-center gap-x-2 text-sm text-muted-foreground"
                   >
                     <CheckIcon
                       className="h-5 w-5 flex-none text-[#fb7a00]"

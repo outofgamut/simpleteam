@@ -56,7 +56,7 @@ export default async function AlternativePage({
               height={50}
             />
           </div>
-          {/* <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-black ring-black/10  hover:ring-white/20">
+          {/* <div className="relative rounded-full px-2 py-1 text-sm leading-6 text-black ring-black/10  hover:ring-white/20">
             Free {alternative.name} alternative
           </div> */}
           <h1 className="text-balance text-6xl">{alternative.title}</h1>
@@ -121,42 +121,42 @@ export default async function AlternativePage({
                       from $0
                     </p>
                     <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-500">
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <CheckIcon
                           className="h-6 w-6 text-green-500"
                           aria-hidden="true"
                         />
                         Open Source & Self-hosted
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <CheckIcon
                           className="h-6 w-6 text-green-500"
                           aria-hidden="true"
                         />
                         Analytics for each page
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <CheckIcon
                           className="h-6 w-6 text-green-500"
                           aria-hidden="true"
                         />
                         Custom branding
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <CheckIcon
                           className="h-6 w-6 text-green-500"
                           aria-hidden="true"
                         />
                         Custom domains
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <CheckIcon
                           className="h-6 w-6 text-green-500"
                           aria-hidden="true"
                         />
                         Team access
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <CheckIcon
                           className="h-6 w-6 text-green-500"
                           aria-hidden="true"
@@ -199,42 +199,42 @@ export default async function AlternativePage({
                       {alternative.price}
                     </p>
                     <ul className="mt-8 space-y-3 text-sm leading-6 text-gray-500">
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <XIcon
                           className="h-6 w-6 text-red-500"
                           aria-hidden="true"
                         />
                         {alternative.feature1}
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <XIcon
                           className="h-6 w-6 text-red-500"
                           aria-hidden="true"
                         />
                         {alternative.feature2}
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <XIcon
                           className="h-6 w-6 text-red-500"
                           aria-hidden="true"
                         />
                         {alternative.feature3}
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <XIcon
                           className="h-6 w-6 text-red-500"
                           aria-hidden="true"
                         />
                         {alternative.feature4}
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <XIcon
                           className="h-6 w-6 text-red-500"
                           aria-hidden="true"
                         />
                         {alternative.feature5}
                       </li>
-                      <li className="flex items-center gap-x-3">
+                      <li className="flex items-center gap-x-2">
                         <XIcon
                           className="h-6 w-6 text-red-500"
                           aria-hidden="true"

@@ -290,20 +290,17 @@ export default function DataroomBrandPage() {
                         }}
                       />
                       <div
-                        className={`${
-                          dragActive
+                        className={`${dragActive
                             ? "cursor-copy border-2 border-black bg-gray-50 opacity-100"
                             : ""
-                        } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${
-                          logo
+                          } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${logo
                             ? "opacity-0 group-hover:opacity-100"
                             : "group-hover:bg-gray-50"
-                        }`}
+                          }`}
                       >
                         <PlusIcon
-                          className={`${
-                            dragActive ? "scale-110" : "scale-100"
-                          } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
+                          className={`${dragActive ? "scale-110" : "scale-100"
+                            } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
                         />
                         <span className="sr-only">OG image upload</span>
                       </div>
@@ -400,20 +397,17 @@ export default function DataroomBrandPage() {
                         }}
                       />
                       <div
-                        className={`${
-                          dragActive
+                        className={`${dragActive
                             ? "cursor-copy border-2 border-black bg-gray-50 opacity-100"
                             : ""
-                        } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${
-                          banner
+                          } absolute z-[3] flex h-full w-full flex-col items-center justify-center rounded-md bg-white transition-all ${banner
                             ? "opacity-0 group-hover:opacity-100"
                             : "group-hover:bg-gray-50"
-                        }`}
+                          }`}
                       >
                         <PlusIcon
-                          className={`${
-                            dragActive ? "scale-110" : "scale-100"
-                          } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
+                          className={`${dragActive ? "scale-110" : "scale-100"
+                            } h-7 w-7 text-gray-500 transition-all duration-75 group-hover:scale-110 group-active:scale-95`}
                         />
                         <span className="sr-only">OG image upload</span>
                       </div>
@@ -456,7 +450,7 @@ export default function DataroomBrandPage() {
                         </PopoverContent>
                       </Popover>
                       <HexColorInput
-                        className="flex h-9 w-full rounded-md border-0 bg-background px-3 py-2 text-sm shadow-sm ring-1 ring-muted-foreground placeholder:text-muted-foreground focus:border-0 focus:ring-1 focus:ring-gray-300"
+                        className="flex h-9 w-full rounded-md border-0 bg-background px-2 py-2 text-sm shadow-sm ring-1 ring-muted-foreground placeholder:text-muted-foreground focus:border-0 focus:ring-1 focus:ring-gray-300"
                         color={brandColor}
                         onChange={setBrandColor}
                         prefixed

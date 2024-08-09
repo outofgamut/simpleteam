@@ -31,14 +31,14 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
   return (
     <div className="flex items-center justify-between space-x-2">
       {status === "loading" ? (
-        <div className="flex w-full items-center gap-x-3 rounded-md p-2">
+        <div className="flex w-full items-center gap-x-2 rounded-md p-2">
           <Skeleton className="h-8 w-8 rounded-full" />
           {isSize && <Skeleton className="h-7 w-[90%]" />}
         </div>
       ) : (
         <DropdownMenu>
           <DropdownMenuTrigger asChild className="w-full">
-            <div className="group flex w-full items-center rounded-full text-sm font-semibold leading-6 text-foreground hover:bg-gray-200 hover:dark:bg-secondary lg:gap-x-3 lg:rounded-md lg:p-2">
+            <div className="group flex w-full items-center rounded-full text-sm font-semibold leading-6 text-foreground hover:bg-gray-200 hover:dark:bg-secondary lg:gap-x-2 lg:rounded-md lg:p-2">
               {session?.user?.image ? (
                 <Image
                   className="h-7 w-7 rounded-full bg-secondary"
@@ -70,7 +70,7 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
           <DropdownMenuContent className="mr-2 px-0 pb-2 lg:mr-0 lg:w-[240px] xl:w-[270px]">
             {session ? (
               <>
-                <DropdownMenuLabel className="mt-2 truncate !py-[3px] px-3 text-sm text-muted-foreground">
+                <DropdownMenuLabel className="mt-2 truncate !py-[3px] px-2 text-sm text-muted-foreground">
                   {session?.user?.email}
                 </DropdownMenuLabel>
                 <DropdownMenuSeparator className="!my-2" />
@@ -78,7 +78,7 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
 
                 <a
                   href="mailto:support@simpleteam.co"
-                  className="my-1 flex items-center px-3 py-2 text-sm duration-200 hover:bg-gray-200 dark:hover:bg-muted"
+                  className="my-1 flex items-center px-2 py-2 text-sm duration-200 hover:bg-gray-200 dark:hover:bg-muted"
                 >
                   <HelpCircle className="mr-2 h-4 w-4" />
                   Need Help?
@@ -90,7 +90,7 @@ const ProfileMenu = ({ className, size }: ProfileMenuProps) => {
                       callbackUrl: `${window.location.origin}`,
                     })
                   }
-                  className="flex items-center px-3 py-2 text-sm duration-200 hover:bg-gray-200 dark:hover:bg-muted"
+                  className="flex items-center px-2 py-2 text-sm duration-200 hover:bg-gray-200 dark:hover:bg-muted"
                   href={""}
                 >
                   <LogOut className="mr-2 h-4 w-4" />

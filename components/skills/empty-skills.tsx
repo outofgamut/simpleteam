@@ -19,7 +19,7 @@ export function EmptySkills() {
       {/* <div className="mt-6">
         <AddDocumentModal>
           <Button
-            className="w-full flex gap-x-3 items-center justify-center px-3"
+            className="w-full flex gap-x-2 items-center justify-center px-2"
             title="Add New Document"
           >
             <PlusIcon className="h-5 w-5 shrink-0" aria-hidden="true" />

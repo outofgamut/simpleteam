@@ -8,7 +8,7 @@ export default function Example() {
       <div className="relative isolate px-6  lg:px-8">
         <div className="mx-auto max-w-2xl pt-24 sm:pt-32 lg:pt-48">
           <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-            <div className="relative rounded-full px-3 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+            <div className="relative rounded-full px-2 py-1 text-sm leading-6 text-gray-600 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
               4-8 Dec |{" "}
               <span className="font-semibold text-black">
                 things will get busy
@@ -23,7 +23,7 @@ export default function Example() {
               <a
                 href="https://x.com/papermarkio"
                 target="_blank"
-                className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                className="rounded-md bg-black px-2.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-800 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
               >
                 Follow live updates
               </a>

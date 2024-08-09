@@ -72,7 +72,7 @@ export default async function InvestorPage({
                 />
               </div> */}
               <div className="relative my-4 inline-block rounded-full ">
-                <span className="text-balance rounded-full border border-green-200 bg-green-100 px-3 py-1 text-sm leading-6 text-green-600">
+                <span className="text-balance rounded-full border border-green-200 bg-green-100 px-2 py-1 text-sm leading-6 text-green-600">
                   Active
                 </span>
               </div>
@@ -108,7 +108,7 @@ export default async function InvestorPage({
                       <p className="mt-4 text-balance text-sm leading-6 text-gray-500">
                         Investor stage information
                       </p>
-                      <p className="mt-6 flex items-baseline gap-x-1">
+                      <p className="mt-6 flex items-baseline gap-x-2">
                         <span className="text-balance text-4xl font-medium text-gray-800">
                           {investor.round}
                         </span>
@@ -142,7 +142,7 @@ export default async function InvestorPage({
                       <p className="mt-4 text-balance text-sm leading-6 text-gray-500">
                         Investor primarily location but not limited
                       </p>
-                      <p className="mt-6 flex items-baseline gap-x-1">
+                      <p className="mt-6 flex items-baseline gap-x-2">
                         <span className="text-balance text-4xl font-medium text-gray-800">
                           {investor.location}
                         </span>
@@ -177,7 +177,7 @@ export default async function InvestorPage({
                       <p className="mt-4 text-balance text-sm leading-6 text-gray-500">
                         Sectors primarily invested in
                       </p>
-                      <p className="mt-6 flex items-baseline gap-x-1">
+                      <p className="mt-6 flex items-baseline gap-x-2">
                         <span className="text-balance text-4xl font-medium text-gray-800">
                           {investor.sector}
                         </span>

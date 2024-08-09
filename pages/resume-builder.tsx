@@ -196,7 +196,7 @@ export default function Home() {
           <div className="mx-auto max-w-7xl px-6 lg:px-8">
             <div className="mx-auto max-w-2xl py-8 sm:py-12 lg:py-24 ">
               <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                <div className="relative flex items-center rounded-full px-3 py-1 text-sm leading-6 text-black ring-1 ring-black/10 hover:ring-white/20 dark:text-white dark:ring-white/10">
+                <div className="relative flex items-center rounded-full px-2 py-1 text-sm leading-6 text-black ring-1 ring-black/10 hover:ring-white/20 dark:text-white dark:ring-white/10">
                   <PapermarkSparkle className="mr-1 h-4 w-4" />
                   Simpleteam AI
                 </div>
@@ -211,7 +211,7 @@ export default function Home() {
 
                 <div className="mt-10 flex items-center justify-center gap-x-6">
                   <button
-                    className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 dark:bg-white dark:text-black"
+                    className="rounded-md bg-black px-2.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-400 focus:outline-none focus:ring-2 focus:ring-indigo-400 focus:ring-offset-2 dark:bg-white dark:text-black"
                     onClick={scrollDown}
                   >
                     Chat with our pitchdeck ↓
@@ -225,7 +225,7 @@ export default function Home() {
             </div>
             <div className="mt-10 flex items-center justify-center gap-x-6">
               <Link
-                className="rounded-md bg-black px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 dark:bg-white dark:text-black"
+                className="rounded-md bg-black px-2.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-gray-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400 dark:bg-white dark:text-black"
                 href="/login"
                 target="_blank"
               >
@@ -236,7 +236,7 @@ export default function Home() {
             {/* Pricing section */}
             <div className="relative isolate mt-32  px-6 sm:mt-36 lg:px-8">
               <div
-                className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-36 blur-3xl"
+                className="absolute inset-x-0 -top-3 -z-10 transform-gpu overflow-hidden px-26 blur-3xl"
                 aria-hidden="true"
               >
                 <div
@@ -316,7 +316,7 @@ export default function Home() {
                       )}
                     >
                       {tier.features.map((feature) => (
-                        <li key={feature} className="flex gap-x-3">
+                        <li key={feature} className="flex gap-x-2">
                           {feature}
                         </li>
                       ))}
@@ -328,7 +328,7 @@ export default function Home() {
                         tier.featured
                           ? "bg-black text-white shadow-sm hover:bg-gray-500 focus:ring-2 focus:ring-indigo-500 dark:bg-white dark:text-black"
                           : "text-transparent ring-1 ring-inset ring-transparent focus:ring-2 focus:ring-indigo-600",
-                        "mt-8 block rounded-md px-3.5 py-2.5 text-center text-sm font-semibold",
+                        "mt-8 block rounded-md px-2.5 py-2.5 text-center text-sm font-semibold",
                       )}
                     >
                       Use Simpleteam AI

@@ -159,13 +159,13 @@ export default function ComparisonTable() {
             <table className="min-w-full divide-y divide-gray-300 border border-gray-300">
               <thead>
                 <tr>
-                  <th className="text-balance px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                  <th className="text-balance px-2 py-2 text-left text-sm font-semibold text-gray-900">
                     Data Room Feature
                   </th>
                   {offerings.map((tool) => (
                     <th
                       key={tool.name}
-                      className="text-balance px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="text-balance px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       {tool.name}
                     </th>
@@ -175,13 +175,13 @@ export default function ComparisonTable() {
               <tbody className="divide-y divide-gray-200 border border-gray-300 bg-white">
                 {featuresList.map((feature) => (
                   <tr key={feature}>
-                    <td className="text-balance border border-gray-300 px-3 py-4 text-sm font-semibold text-gray-900">
+                    <td className="text-balance border border-gray-300 px-2 py-4 text-sm font-semibold text-gray-900">
                       {featureDisplayNames[feature]}
                     </td>
                     {offerings.map((tool) => (
                       <td
                         key={tool.name}
-                        className={`px-3 py-4 text-sm ${tool.name === "Simpleteam"
+                        className={`px-2 py-4 text-sm ${tool.name === "Simpleteam"
                           ? "text-balance bg-green-50 font-semibold text-green-700"
                           : ""
                           }`} // Consistent text color, conditional background color

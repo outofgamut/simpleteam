@@ -48,10 +48,10 @@ export default function DocumentTreePage() {
               </Button>
             </AddDocumentModal>
           </div> */}
-          <div className="flex items-center gap-x-1">
+          <div className="flex items-center gap-x-2">
             <AddDocumentModal>
               <Button
-                className="group flex flex-1 items-center justify-start gap-x-3 px-3 text-left"
+                className="group flex flex-1 items-center justify-start gap-x-2 px-2 text-left"
                 title="Add New Document"
               >
                 <PlusIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
@@ -75,13 +75,13 @@ export default function DocumentTreePage() {
 
         <section className="mb-2 flex items-center gap-x-2">
           {folders && folders.length > 0 ? (
-            <p className="flex items-center gap-x-1 text-sm text-gray-400">
+            <p className="flex items-center gap-x-2 text-sm text-gray-400">
               <FolderIcon className="h-4 w-4" />
               <span>{folders.length} folders</span>
             </p>
           ) : null}
           {documents && documents.length > 0 ? (
-            <p className="flex items-center gap-x-1 text-sm text-gray-400">
+            <p className="flex items-center gap-x-2 text-sm text-gray-400">
               <FileIcon className="h-4 w-4" />
               <span>{documents.length} documents</span>
             </p>

@@ -15,505 +15,505 @@ const featureGroups: {
     };
   }[];
 }[] = [
-  {
-    name: "Document Analytics and Tracking",
-    features: [
-      {
-        name: "Unlimited views recorded",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+    {
+      name: "Document Analytics and Tracking",
+      features: [
+        {
+          name: "Unlimited views recorded",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Time spent on each page",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Time spent on each page",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Real time feedback",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Real time feedback",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Document versioning tracking",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Document versioning tracking",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Viewer location tracking",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Viewer location tracking",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Exclude internal visits",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Exclude internal visits",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Unlimited view history",
-        id: "feature-user",
-        tiers: {
-          free: "up to 20 last views",
-          pro: "up to 1000 last views",
-          business: true,
-          enterprise: true,
+        {
+          name: "Unlimited view history",
+          id: "feature-user",
+          tiers: {
+            free: "up to 20 last views",
+            pro: "up to 1000 last views",
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-    ],
-  },
-  {
-    name: "Link Settings",
-    features: [
-      {
-        name: "Capturing email to view",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+      ],
+    },
+    {
+      name: "Link Settings",
+      features: [
+        {
+          name: "Capturing email to view",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Receive email notifications",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Receive email notifications",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
 
-      {
-        name: "Password protection",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Password protection",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Expiration date",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Expiration date",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Allow/block document downloading",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Allow/block document downloading",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Email verification",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Email verification",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Allow/block specified users",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Allow/block specified users",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Screenshot protection",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Screenshot protection",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-    ],
-  },
+      ],
+    },
 
-  {
-    name: "Data Rooms and Documents",
-    features: [
-      {
-        name: "Unlimited documents",
-        id: "feature-user",
-        tiers: {
-          free: "10 documents",
-          pro: "100 documents",
-          business: true,
-          enterprise: true,
+    {
+      name: "Data Rooms and Documents",
+      features: [
+        {
+          name: "Unlimited documents",
+          id: "feature-user",
+          tiers: {
+            free: "10 documents",
+            pro: "100 documents",
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Unlimited folders",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: "on first level",
-          business: true,
-          enterprise: true,
+        {
+          name: "Unlimited folders",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: "on first level",
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Unlimited data rooms",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: "1 data room (ability to add)",
-          enterprise: true,
+        {
+          name: "Unlimited data rooms",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: "1 data room (ability to add)",
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Custom domain for Data Rooms",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: true,
+        {
+          name: "Custom domain for Data Rooms",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Bulk upload",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "Bulk upload",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-      {
-        name: "User groups permissions",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: true,
+        {
+          name: "User groups permissions",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Unlimited users",
-        id: "feature-user",
-        tiers: {
-          free: "1 user",
-          pro: "2 users",
-          business: "3 users",
-          enterprise: "5 users",
+        {
+          name: "Unlimited users",
+          id: "feature-user",
+          tiers: {
+            free: "1 user",
+            pro: "2 users",
+            business: "3 users",
+            enterprise: "5 users",
+          },
         },
-      },
 
-      {
-        name: "Self-hosted",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "Self-hosted",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-    ],
-  },
-  {
-    name: "Custom branding",
-    features: [
-      {
-        name: "Custom slug",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: true,
-          business: true,
-          enterprise: true,
+      ],
+    },
+    {
+      name: "Custom branding",
+      features: [
+        {
+          name: "Custom slug",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Remove Simpleteam branding",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Remove Simpleteam branding",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Custom logo",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Custom logo",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Custom colors",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Custom colors",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Custom domain for documents",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Custom domain for documents",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
 
-      {
-        name: "Custom social media cards",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Custom social media cards",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Custom Q&A page",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Custom Q&A page",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
 
-      {
-        name: "Custom dataroom banners",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Custom dataroom banners",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Custom domain for data rooms",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: true,
+        {
+          name: "Custom domain for data rooms",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Full white-label",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "Full white-label",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-      {
-        name: "SSO",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "SSO",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-    ],
-  },
-  {
-    name: "Other",
-    features: [
-      {
-        name: "Notion documents integrations",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+      ],
+    },
+    {
+      name: "Other",
+      features: [
+        {
+          name: "Notion documents integrations",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Reactions",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Reactions",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "AI-Document Assistant",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "AI-Document Assistant",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Forms",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "Forms",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
 
-      {
-        name: "Communication within document",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "Communication within document",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-    ],
-  },
-  {
-    name: "Support",
-    features: [
-      {
-        name: "Documentation",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+      ],
+    },
+    {
+      name: "Support",
+      features: [
+        {
+          name: "Documentation",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Email support",
-        id: "feature-user",
-        tiers: {
-          free: true,
-          pro: true,
-          business: true,
-          enterprise: true,
+        {
+          name: "Email support",
+          id: "feature-user",
+          tiers: {
+            free: true,
+            pro: true,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "Migration from other document platform ",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: true,
+        {
+          name: "Migration from other document platform ",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: true,
+          },
         },
-      },
 
-      {
-        name: "48h support",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: true,
-          enterprise: true,
+        {
+          name: "48h support",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: true,
+            enterprise: true,
+          },
         },
-      },
-      {
-        name: "24h support",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: true,
+        {
+          name: "24h support",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: true,
+          },
         },
-      },
 
-      {
-        name: "Support with self-hosting",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "Support with self-hosting",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-      {
-        name: "Custom features support",
-        id: "feature-user",
-        tiers: {
-          free: false,
-          pro: false,
-          business: false,
-          enterprise: "Enterprise",
+        {
+          name: "Custom features support",
+          id: "feature-user",
+          tiers: {
+            free: false,
+            pro: false,
+            business: false,
+            enterprise: "Enterprise",
+          },
         },
-      },
-    ],
-  },
-];
+      ],
+    },
+  ];
 
 export function PricingComparison() {
   const renderFeatureName = (feature: string | boolean) => {
@@ -568,14 +568,14 @@ export function PricingComparison() {
           <ul className="col-[span_16_/_span_16] grid grid-cols-16 overflow-hidden">
             <li className="col-span-4 list-none border-r border-black bg-white px-6 py-4 text-sm"></li>
             <li className="col-span-3 list-none border-r border-black bg-white px-6 py-4 text-sm hover:bg-black hover:text-white">
-              <Link href="/login" className="group flex items-center gap-x-1">
+              <Link href="/login" className="group flex items-center gap-x-2">
                 Start sharing <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </li>
             <li className="col-span-3 list-none border-r border-black bg-white px-6 py-4 text-sm hover:bg-black hover:text-white">
               <Link
                 href="/login?next=/settings/billing"
-                className="group flex items-center gap-x-1"
+                className="group flex items-center gap-x-2"
               >
                 Choose Pro <ArrowRightIcon className="h-4 w-4" />
               </Link>
@@ -583,7 +583,7 @@ export function PricingComparison() {
             <li className="col-span-3 list-none border-r border-black bg-white px-6 py-4 text-sm hover:bg-primary ">
               <Link
                 href="/login?next=/settings/billing"
-                className="group flex items-center gap-x-1"
+                className="group flex items-center gap-x-2"
               >
                 Choose Business <ArrowRightIcon className="h-4 w-4" />
               </Link>
@@ -592,7 +592,7 @@ export function PricingComparison() {
               <Link
                 href="/login?next=/settings/billing"
                 target="_blank"
-                className="group flex items-center gap-x-1"
+                className="group flex items-center gap-x-2"
               >
                 Create Data Rooms <ArrowRightIcon className="h-4 w-4" />
               </Link>

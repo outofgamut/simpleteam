@@ -176,10 +176,10 @@ export default function DocumentHeader({
     try {
       const response = await fetch(
         "/api/teams/" +
-          teamId +
-          "/documents/" +
-          prismaDocument.id +
-          "/change-orientation",
+        teamId +
+        "/documents/" +
+        prismaDocument.id +
+        "/change-orientation",
         {
           method: "POST",
           headers: {
@@ -301,7 +301,7 @@ export default function DocumentHeader({
 
         <div className="mt-1 flex flex-col lg:mt-0">
           <h2
-            className="rounded-md border border-transparent px-1 py-0.5 text-lg font-semibold tracking-tight text-foreground duration-200 hover:cursor-text hover:border hover:border-border focus-visible:text-lg lg:px-3 lg:py-1 lg:text-xl lg:focus-visible:text-xl xl:text-2xl"
+            className="rounded-md border border-transparent px-1 py-0.5 text-lg font-semibold tracking-tight text-foreground duration-200 hover:cursor-text hover:border hover:border-border focus-visible:text-lg lg:px-2 lg:py-1 lg:text-xl lg:focus-visible:text-xl xl:text-2xl"
             ref={nameRef}
             contentEditable={true}
             onFocus={() => setIsEditingName(true)}
@@ -360,7 +360,7 @@ export default function DocumentHeader({
             </Button>
           )}
 
-        <div className="flex items-center gap-x-1">
+        <div className="flex items-center gap-x-2">
           {actionRows.map((row, i) => (
             <ul
               key={i.toString()}

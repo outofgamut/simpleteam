@@ -249,7 +249,7 @@ export default function LinksTable({
                           <TableCell className="flex max-w-[250px] items-center gap-x-2 sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px]">
                             <div
                               className={cn(
-                                `group/cell relative flex w-full items-center gap-x-4 overflow-hidden truncate rounded-sm px-3 py-1.5 text-center text-secondary-foreground transition-all group-hover/row:ring-1 group-hover/row:ring-gray-400 group-hover/row:dark:ring-gray-100 md:py-1`,
+                                `group/cell relative flex w-full items-center gap-x-4 overflow-hidden truncate rounded-sm px-2 py-1.5 text-center text-secondary-foreground transition-all group-hover/row:ring-1 group-hover/row:ring-gray-400 group-hover/row:dark:ring-gray-100 md:py-1`,
                                 link.domainId && hasFreePlan
                                   ? "bg-destructive hover:bg-red-700 hover:dark:bg-red-200"
                                   : "bg-secondary hover:bg-emerald-700 hover:dark:bg-emerald-200",
@@ -257,8 +257,8 @@ export default function LinksTable({
                             >
                               {/* Progress bar */}
                               {primaryVersion &&
-                              primaryVersion.type === "pdf" &&
-                              !primaryVersion.hasPages ? (
+                                primaryVersion.type === "pdf" &&
+                                !primaryVersion.hasPages ? (
                                 <ProcessStatusBar
                                   documentVersionId={primaryVersion.id}
                                   className="absolute bottom-0 left-0 right-0 top-0 z-20 flex h-full items-center gap-x-8"
@@ -337,7 +337,7 @@ export default function LinksTable({
                                   </span>
                                 </p>
                                 {Number(nFormatter(link._count.views)) > 0 &&
-                                targetType !== "DATAROOM" ? (
+                                  targetType !== "DATAROOM" ? (
                                   <ChevronDown className="chevron h-4 w-4 shrink-0 text-muted-foreground transition-transform duration-200" />
                                 ) : null}
                               </div>
@@ -440,7 +440,7 @@ export default function LinksTable({
                 <Button
                   variant="secondary"
                   size="sm"
-                  className="mx-auto mt-4 flex h-8 items-center justify-center gap-x-1 text-gray-400 [&[data-state=open]>svg.chevron]:rotate-180"
+                  className="mx-auto mt-4 flex h-8 items-center justify-center gap-x-2 text-gray-400 [&[data-state=open]>svg.chevron]:rotate-180"
                 >
                   {archivedLinksCount} Archived Links
                   <ChevronDown className="chevron h-4 w-4 text-gray-400 transition-transform duration-200" />
@@ -474,7 +474,7 @@ export default function LinksTable({
                                   {link.name || "No link name"}
                                 </TableCell>
                                 <TableCell className="max-w-[250px] sm:min-w-[300px] md:min-w-[400px] lg:min-w-[450px]">
-                                  <div className="flex items-center gap-x-4 whitespace-nowrap rounded-sm bg-secondary px-3 py-1.5 text-xs text-secondary-foreground sm:py-1 sm:text-sm">
+                                  <div className="flex items-center gap-x-4 whitespace-nowrap rounded-sm bg-secondary px-2 py-1.5 text-xs text-secondary-foreground sm:py-1 sm:text-sm">
                                     {link.domainId
                                       ? `https://${link.domainSlug}/${link.slug}`
                                       : `https://${process.env.NEXT_PUBLIC_ROOT_DOMAIN}/view/${link.id}`}
@@ -529,8 +529,8 @@ export default function LinksTable({
                                           handleArchiveLink(
                                             link.id,
                                             link.documentId ??
-                                              link.dataroomId ??
-                                              "",
+                                            link.dataroomId ??
+                                            "",
                                             link.isArchived,
                                           )
                                         }

@@ -93,13 +93,13 @@ export default function ComparisonTable() {
             <table className="min-w-full divide-y divide-gray-300">
               <thead>
                 <tr>
-                  <th className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900">
+                  <th className="px-2 py-2 text-left text-sm font-semibold text-gray-900">
                     Feature
                   </th>
                   {tools.map((tool) => (
                     <th
                       key={tool.name}
-                      className="px-3 py-3.5 text-left text-sm font-semibold text-gray-900"
+                      className="px-2 py-2 text-left text-sm font-semibold text-gray-900"
                     >
                       {tool.name}
                     </th>
@@ -109,15 +109,14 @@ export default function ComparisonTable() {
               <tbody className="divide-y divide-gray-200 bg-white">
                 {featuresList.map((feature) => (
                   <tr key={feature}>
-                    <td className="px-3 py-4 text-sm text-gray-900">
+                    <td className="px-2 py-4 text-sm text-gray-900">
                       {featureDisplayNames[feature]}
                     </td>
                     {tools.map((tool) => (
                       <td
                         key={tool.name}
-                        className={`px-3 py-4 text-sm text-gray-500 ${
-                          tool.name === "Papermark" ? "bg-green-100" : ""
-                        }`}
+                        className={`px-2 py-4 text-sm text-gray-500 ${tool.name === "Papermark" ? "bg-green-100" : ""
+                          }`}
                       >
                         {tool.features[feature]}
                       </td>
