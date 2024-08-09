@@ -7,7 +7,7 @@ interface OfferingFeature {
 
 const offerings: OfferingFeature[] = [
   {
-    name: "Papermark",
+    name: "Simpleteam",
     features: {
       docs: true,
       folders: true,

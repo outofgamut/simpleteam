@@ -12,7 +12,7 @@ export function StatusWidget() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const response = await getStatus("papermark");
+        const response = await getStatus("simpleteam");
 
         if (response) {
           setStatus(response.status);

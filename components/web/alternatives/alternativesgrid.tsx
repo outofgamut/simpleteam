@@ -1,6 +1,6 @@
 const files = [
   {
-    title: "Papermark",
+    title: "Simpleteam",
     size: "Open Source Docsend alternative",
     source: "https://www.simpleteam.co/_static/meta-image.png",
     link: "/login",

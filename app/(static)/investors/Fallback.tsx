@@ -149,7 +149,7 @@ export const FallbackInvestors = async ({
                                   src={PapermarkPImg}
                                   width={18}
                                   height={18}
-                                  alt="Papermark"
+                                  alt="Simpleteam"
                                   className="block rounded-full ring-1 ring-gray-300"
                                 />
                               </Link>

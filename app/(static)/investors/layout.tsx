@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     title: data.title,
     description: data.description,
     url: data.url,
-    siteName: "Papermark",
+    siteName: "Simpleteam",
     images: [
       {
         url: "/_static/investor-meta.png",

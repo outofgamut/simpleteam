@@ -5,7 +5,7 @@ interface ToolFeature {
 
 const tools: ToolFeature[] = [
   {
-    name: "Papermark",
+    name: "Simpleteam",
     features: {
       Description: "Founder friendly document sharing platform ",
       PitchDeck: "Yes",
@@ -115,7 +115,7 @@ export default function ComparisonTable() {
                     {tools.map((tool) => (
                       <td
                         key={tool.name}
-                        className={`px-2 py-4 text-sm text-gray-500 ${tool.name === "Papermark" ? "bg-green-100" : ""
+                        className={`px-2 py-4 text-sm text-gray-500 ${tool.name === "Simpleteam" ? "bg-green-100" : ""
                           }`}
                       >
                         {tool.features[feature]}

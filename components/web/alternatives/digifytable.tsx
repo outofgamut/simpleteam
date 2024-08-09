@@ -5,7 +5,7 @@ interface ToolFeature {
 
 const tools: ToolFeature[] = [
   {
-    name: "Papermark",
+    name: "Simpleteam",
     features: {
       unlimitedDocuments: "Yes",
       unlimitedDataRooms: "Yes",
@@ -219,7 +219,7 @@ export default function ComparisonTable() {
                     {tools.map((tool) => (
                       <td
                         key={tool.name}
-                        className={`px-2 py-4 text-sm  ${tool.name === "Papermark"
+                        className={`px-2 py-4 text-sm  ${tool.name === "Simpleteam"
                           ? "bg-green-50 font-semibold text-green-700"
                           : ""
                           }`} // Consistent text color, conditional background color

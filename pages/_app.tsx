@@ -58,7 +58,7 @@ export default function App({
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:site" content="@papermarkio" />
         <meta name="twitter:creator" content="@papermarkio" />
-        <meta name="twitter:title" content="Papermark" key="tw-title" />
+        <meta name="twitter:title" content="Simpleteam" key="tw-title" />
         <meta
           name="twitter:description"
           content="Simpleteam is an open-source document sharing alternative to DocSend with built-in analytics."

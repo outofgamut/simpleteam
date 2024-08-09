@@ -90,7 +90,7 @@ const DeckPage = () => {
   // useEffect(() => {
   //   // Example usage
   //   const exampleData = JSON.stringify({
-  //     company: "Papermark",
+  //     company: "Simpleteam",
   //     email: "test@test.com",
   //     description:
   //       "Simpleteam is a platform that helps you create and share beautiful pitch decks.",
