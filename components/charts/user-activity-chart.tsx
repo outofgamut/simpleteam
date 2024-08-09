@@ -56,7 +56,7 @@ const UserActivityChart = ({ chartData }: UserActivityChartProps) => {
             updates: chartData.reduce((acc: any, curr: any) => acc + curr.updates, 0),
             qualifications: chartData.reduce((acc: any, curr: any) => acc + curr.qualifications, 0),
         }),
-        []
+        [chartData]
     )
 
     return (
@@ -65,7 +65,7 @@ const UserActivityChart = ({ chartData }: UserActivityChartProps) => {
                 <div className="flex flex-1 flex-col justify-center gap-1 px-6 py-5 sm:py-6">
                     <CardTitle>Skills Activity</CardTitle>
                     <CardDescription>
-                        Showing skills updates for the last 3 months
+                        Showing team skills activity for the last 3 months
                     </CardDescription>
                 </div>
                 <div className="flex">

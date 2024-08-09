@@ -50,35 +50,50 @@ export const getServerSideProps: GetServerSideProps = async () => {
     };
 };
 
+const BackFromNowPicker = () => {
+    return (
+        <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+                <Button variant="outline" size="sm" className="gap-1">
+                    <CalendarIcon className="h-4 w-4" />
+                    <span>Last 30 days</span>
+                </Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent align="end">
+                <DropdownMenuLabel>Time Period</DropdownMenuLabel>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem>Last 7 days</DropdownMenuItem>
+                <DropdownMenuItem>Last 30 days</DropdownMenuItem>
+                <DropdownMenuItem>Last 90 days</DropdownMenuItem>
+                <DropdownMenuItem>Last 1 year</DropdownMenuItem>
+            </DropdownMenuContent>
+        </DropdownMenu>
+    )
+};
+
 export default function Discover({ chartData }: { chartData: any }) {
     return (
         <AppLayout>
-            <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-6">
-                <div className="text-2xl font-bold">Discover</div>
-                <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                        <Button variant="outline" size="sm" className="gap-1">
-                            <CalendarIcon className="h-4 w-4" />
-                            <span>Last 30 days</span>
-                        </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                        <DropdownMenuLabel>Time Period</DropdownMenuLabel>
-                        <DropdownMenuSeparator />
-                        <DropdownMenuItem>Last 7 days</DropdownMenuItem>
-                        <DropdownMenuItem>Last 30 days</DropdownMenuItem>
-                        <DropdownMenuItem>Last 90 days</DropdownMenuItem>
-                        <DropdownMenuItem>Last 1 year</DropdownMenuItem>
-                    </DropdownMenuContent>
-                </DropdownMenu>
+            <header className="flex items-center justify-between px-4 py-4 md:px-8 md:py-8">
+                <div className="space-y-1">
+                    <h2 className="text-xl font-semibold tracking-tight text-foreground sm:text-2xl">
+                        Discover
+                    </h2>
+                    <p className="text-xs text-muted-foreground sm:text-sm">
+                        View the latest trends and activities for your team.
+                    </p>
+                </div>
             </header>
             <main className="p-4 sm:mx-4 sm:mt-4 grid gap-8">
                 <section>
                     <div className="flex items-center justify-between">
                         <h2 className="text-2xl font-bold">Trending Skill Updates</h2>
-                        <Link href="#" className="hover:underline" prefetch={false}>
-                            View all
-                        </Link>
+                        <div className="flex items-center gap-2">
+                            <BackFromNowPicker />
+                            {/* <Link href="#" className="hover:underline" prefetch={false}>
+                                View all
+                            </Link> */}
+                        </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
                         <Card>
