@@ -9,11 +9,53 @@ import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
 import useDocuments, { useRootFolders } from "@/lib/swr/use-documents";
+import { PeopleList } from "@/components/people/people-list";
 
 export default function People() {
     const { documents } = useDocuments();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
+
+    interface PeopleResponse {
+        id: string;
+        firstName: string;
+        lastName: string;
+        email: string;
+        title: string;
+        roles: string[];
+        skills: string[];
+    }
+
+    const people: PeopleResponse[] = [
+        {
+            id: "1",
+            firstName: "John",
+            lastName: "Doe",
+            email: "johndoe@company.com",
+            title: "Senior Associate",
+            roles: ["Software Engineer", "Product Manager"],
+            skills: ["React", "Node.js", "GraphQL"],
+        },
+        {
+            id: "2",
+            firstName: "Jane",
+            lastName: "Doe",
+            email: "",
+            title: "Lead Associate",
+            roles: ["Data Analyst", "Product Manager"],
+            skills: ["React", "Node.js", "GraphQL"],
+        },
+        {
+            id: "3",
+            firstName: "Alice",
+            lastName: "Smith",
+            email: "",
+            title: "Senior Associate",
+            roles: ["Software Engineer", "Product Manager"],
+            skills: ["Java", "Node.js", "Angular"],
+        }
+
+    ]
 
     return (
         <AppLayout>
@@ -82,8 +124,9 @@ export default function People() {
 
                 <Separator className="mb-5 bg-gray-200 dark:bg-gray-800" />
 
-                <DocumentsList
+                <PeopleList
                     documents={documents}
+                    people={people}
                     folders={folders}
                     teamInfo={teamInfo}
                 />

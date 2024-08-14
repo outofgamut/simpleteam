@@ -31,6 +31,19 @@ export interface DocumentWithLinksAndLinkCountAndViewCount extends Document {
   links: Link[];
 }
 
+export interface PeopleWithSkillsAndRoles {
+  user: {
+    id: string;
+    firstName: string;
+    lastName: string;
+    title: string;
+    name: string;
+    email: string;
+  };
+  skills: string[];
+  roles: string[];
+}
+
 export interface SkillWithTags extends Skill {
   // TODO LATER
 }
