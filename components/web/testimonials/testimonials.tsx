@@ -16,7 +16,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "This looks awesome!! Incredible work for an MVP – love how the link was automatically copied to clipboard when it's created! 🤩",
+    body: "This looks awesome!! Incredible work for an MVP – love how roles can be auto-suggested! 🤩",
     author: {
       name: "Steven Tey",
       handle: "steventey",
@@ -27,7 +27,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "looks so good! gonna have to steal that upload component 😍 congrats & thanks for the great idea 😄",
+    body: "loving all of the new features coming out! 😍 keep it up",
     author: {
       name: "alana goyal",
       handle: "alanaagoyal",
@@ -38,7 +38,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "Currently getting a lot of use out of .@mfts0's \"papermark\" project! I'm looking to see how he implemented Resend/React Email into his NextAuth stack.",
+    body: "Currently getting a lot of use out of the \"Simpleteam\" product! I'm loving the simple approach toward a complex problem.",
     author: {
       name: "Lukas Lunzmann",
       handle: "lucaslunzmann",
@@ -49,10 +49,10 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "We self-host Simpleteam at Rubric Labs for doc-sharing. Brilliantly-simple alternative to Docsend. Features are well-executed, so I can't wait to try new stuff!",
+    body: "We use Simpleteam at Pariveda for skills management. Brilliantly-simple alternative to self-managed solutions. Features are well-executed, so I can't wait to try new stuff!",
     author: {
-      name: "Ted Spare",
-      handle: "TedSpare",
+      name: "Brian Orrell",
+      handle: "borrell",
       imageUrl:
         "https://www.simpleteam.co/_static/testimonials/mike.jpg",
       link: "https://www.producthunt.com/products/papermark-2#papermark-3",
@@ -60,10 +60,10 @@ const testimonials = [
     producthunt: true,
   },
   {
-    body: "True builders listen to their users and build what they need. Thanks @papermarkio for solving a big pain point. DocSend monopoly will end soon!",
+    body: "True builders listen to their users and build what they need. Thanks @simpleteamco for solving a big pain point. Skills-wise monopoly will end soon!",
     author: {
-      name: "Jaski",
-      handle: "Jas_Jaski",
+      name: "Jas Jaski",
+      handle: "jaski",
       imageUrl: "https://www.simpleteam.co/_static/testimonials/lori.webp",
       link: "https://twitter.com/Jas_Jaski/status/1731957497487868390",
     },
