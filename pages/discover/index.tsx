@@ -28,6 +28,7 @@ import { CalendarIcon, ClipboardIcon, DatabaseIcon, InfoIcon } from "lucide-reac
 import UserActivityChart from "@/components/charts/user-activity-chart"
 import { GetServerSideProps } from "next"
 import { generateChartData } from "@/lib/utils/generate-chart-data"
+import { use } from "react"
 
 const BlackOnPrimaryBgContainer = ({
     children,
@@ -71,6 +72,100 @@ const BackFromNowPicker = () => {
     )
 };
 
+const skillTrends = [
+    {
+        name: "React.js",
+        description: "Increased usage by 25% in the last month",
+        icon: CodeIcon,
+        userUpdates: 15,
+    },
+    {
+        name: "Python",
+        description: "New skill added by 15 users this week",
+        icon: CodeIcon,
+        userUpdates: 14,
+    },
+    {
+        name: "SQL",
+        description: "Increased usage by 12% in the last quarter",
+        icon: DatabaseIcon,
+        userUpdates: 11,
+    },
+    {
+        name: "Figma",
+        description: "New skill added by 8 users this week",
+        icon: ClipboardIcon,
+        userUpdates: 8,
+    },
+];
+
+const topRoles = [
+    {
+        name: "Software Engineer",
+        skillRequirements: [
+            {
+                skill: "Frontend",
+                level: 1,
+            },
+            {
+                skill: "Backend",
+                level: 1,
+            },
+            {
+                skill: "Data Modeling",
+                level: 1,
+            },
+            {
+                skill: "DevOps",
+                level: 1,
+            },
+            {
+                skill: "Agile",
+                level: 1,
+            }
+        ]
+    },
+    {
+        name: "Product Manager",
+        skillRequirements: [
+            {
+                skill: "Agile",
+                level: 1,
+            },
+            {
+                skill: "Figma",
+                level: 1,
+            },
+            {
+                skill: "Google Analytics",
+                level: 1,
+            }
+        ]
+    },
+    {
+        name: "Data Analyst",
+        skillRequirements: [
+            {
+                skill: "SQL",
+                level: 2,
+            },
+            {
+                skill: "Power BI",
+                level: 1,
+            },
+            {
+                skill: "Python",
+                level: 1,
+            },
+            {
+                skill: "Google Analytics",
+                level: 1,
+            }
+        ]
+    },
+];
+
+
 export default function Discover({ chartData }: { chartData: any }) {
     return (
         <AppLayout>
@@ -96,85 +191,65 @@ export default function Discover({ chartData }: { chartData: any }) {
                         </div>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 mt-4">
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>React.js</CardTitle>
-                                <CardDescription>Increased usage by 25% in the last month</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex items-center gap-2">
-                                    <BlackOnPrimaryBgContainer>
-                                        <CodeIcon className="w-5 h-5" />
-                                    </BlackOnPrimaryBgContainer>
-                                    <div>
-                                        <div className="font-medium">React.js</div>
-                                        <div className="text-sm text-muted-foreground">Frontend framework</div>
+                        {skillTrends.map((skill) => (
+                            <Card key={skill.name}>
+                                <CardHeader>
+                                    <CardTitle>{skill.name}</CardTitle>
+                                    <CardDescription>Added or updated by {skill.userUpdates} people.</CardDescription>
+                                </CardHeader>
+                                {/* <CardContent>
+                                    <div className="flex items-center gap-2">
+                                        <BlackOnPrimaryBgContainer>
+                                            <skill.icon className="w-5 h-5" />
+                                        </BlackOnPrimaryBgContainer>
+                                        <div>
+                                            <div className="font-medium">{skill.name}</div>
+                                            <div className="text-sm text-muted-foreground">Frontend framework</div>
+                                        </div>
                                     </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Python</CardTitle>
-                                <CardDescription>New skill added by 15 users this week</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex items-center gap-2">
-                                    <BlackOnPrimaryBgContainer>
-                                        <CodeIcon className="w-5 h-5" />
-                                    </BlackOnPrimaryBgContainer>
-                                    <div>
-                                        <div className="font-medium">Python</div>
-                                        <div className="text-sm text-muted-foreground">Programming language</div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>SQL</CardTitle>
-                                <CardDescription>Increased usage by 12% in the last quarter</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex items-center gap-2">
-                                    <BlackOnPrimaryBgContainer>
-                                        <DatabaseIcon className="w-5 h-5" />
-                                    </BlackOnPrimaryBgContainer>
-                                    <div>
-                                        <div className="font-medium">SQL</div>
-                                        <div className="text-sm text-muted-foreground">Query language</div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
-                        <Card>
-                            <CardHeader>
-                                <CardTitle>Figma</CardTitle>
-                                <CardDescription>New skill added by 8 users this week</CardDescription>
-                            </CardHeader>
-                            <CardContent>
-                                <div className="flex items-center gap-2">
-                                    <BlackOnPrimaryBgContainer>
-                                        <TypeIcon className="w-5 h-5" />
-                                    </BlackOnPrimaryBgContainer>
-                                    <div>
-                                        <div className="font-medium">Figma</div>
-                                        <div className="text-sm text-muted-foreground">Design tool</div>
-                                    </div>
-                                </div>
-                            </CardContent>
-                        </Card>
+                                </CardContent> */}
+                            </Card>
+                        ))}
                     </div>
                 </section>
                 <section>
                     <div className="flex items-center justify-between">
-                        <h2 className="text-2xl font-bold">Popular Roles</h2>
+                        <h2 className="text-2xl font-bold">Top Roles</h2>
                         <Link href="#" className="hover:underline" prefetch={false}>
                             View all
                         </Link>
                     </div>
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mt-4">
-                        <Card>
+                        {topRoles.
+                            map((role) => (
+                                <Card key={role.name}>
+                                    <CardHeader>
+                                        <CardTitle>{role.name}</CardTitle>
+                                    </CardHeader>
+                                    <CardContent>
+                                        {role.skillRequirements
+                                            .slice(0, 3)
+                                            .map((skill, i) => (
+                                                <div key={i} className="flex items-center justify-between gap-2 mt-2">
+                                                    {/* <BlackOnPrimaryBgContainer>
+                                                <CodeIcon className="w-5 h-5" />
+                                            </BlackOnPrimaryBgContainer> */}
+                                                    <div className="font-medium">{skill.skill}</div>
+                                                    <div className="text-sm text-muted-foreground">Level {skill.level}</div>
+                                                </div>
+                                            ))}
+                                        {role.skillRequirements.length > 3 && (
+                                            <div className="mt-2">
+                                                <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
+                                                    + {role.skillRequirements.length - 3} more
+                                                </Link>
+                                            </div>
+                                        )}
+                                    </CardContent>
+                                </Card>
+                            ))}
+                    </div>
+                    {/* <Card>
                             <CardHeader>
                                 <CardTitle>Software Engineer</CardTitle>
                             </CardHeader>
@@ -275,8 +350,8 @@ export default function Discover({ chartData }: { chartData: any }) {
                                     </div>
                                 </div>
                             </CardContent>
-                        </Card>
-                    </div>
+                        </Card> */}
+                    {/* </div> */}
                 </section>
                 <section>
                     <h2 className="text-2xl font-bold">Skills Distribution</h2>
