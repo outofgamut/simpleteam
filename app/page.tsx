@@ -162,7 +162,7 @@ export default function Home() {
         <div className="mt-24 w-full overflow-x-hidden bg-gray-50">
           <div className="mx-auto w-full max-w-7xl px-4 md:px-8">
             <h2 className="text-balance pb-20 pt-20 text-4xl">
-              Share your documents, securely.{" "}
+              Manage your team, with ease.{" "}
               <span className="text-gray-500">
                 {/* Fine-tune access control. Receive real-time page analytics.
                 Customize the experience with your brand and domain. Papermark

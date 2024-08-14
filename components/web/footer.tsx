@@ -19,24 +19,24 @@ const navigation = {
     { name: "Privacy Policy", href: "/privacy" },
     { name: "Terms of Service", href: "/terms" },
     { name: "Blog", href: "/blog" },
-    { name: "Launch Week 2023", href: "/launch-week" },
+    // { name: "Launch Week 2023", href: "/launch-week" },
   ],
   tools: [
     { name: "Open Source Friends", href: "/oss-friends" },
     { name: "Investor Database (7k+)", href: "/investors" },
-    {
-      name: "YC Application GPT",
-      href: "https://chat.openai.com/g/g-LYDRCiZB9-yc-application-gpt",
-    },
-    {
-      name: "FindVC GPT",
-      href: "https://chat.openai.com/g/g-G5orSgI31-findvc",
-    },
+    // {
+    //   name: "YC Application GPT",
+    //   href: "https://chat.openai.com/g/g-LYDRCiZB9-yc-application-gpt",
+    // },
+    // {
+    //   name: "FindVC GPT",
+    //   href: "https://chat.openai.com/g/g-G5orSgI31-findvc",
+    // },
 
-    {
-      name: "AI Pitch Deck Generator",
-      href: "https://deck.simpleteam.co",
-    },
+    // {
+    //   name: "AI Pitch Deck Generator",
+    //   href: "https://deck.simpleteam.co",
+    // },
   ],
   alternatives: [
     { name: "AssessTeam", href: "/alternatives/assessteam" },
@@ -44,14 +44,14 @@ const navigation = {
     { name: "15five", href: "/alternatives/15five" },
     { name: "Lattice", href: "/alternatives/lattice" },
     { name: "Leapsome", href: "/alternatives/leapsome" },
-    {
-      name: "DocSend Alternatives",
-      href: "/docsend-alternatives",
-    },
-    {
-      name: "Digify Alternatives",
-      href: "/digify-alternatives",
-    },
+    // {
+    //   name: "DocSend Alternatives",
+    //   href: "/docsend-alternatives",
+    // },
+    // {
+    //   name: "Digify Alternatives",
+    //   href: "/digify-alternatives",
+    // },
   ],
   social: [
     {
@@ -74,29 +74,29 @@ const navigation = {
   ],
   cases: [
     {
-      name: "Fundraising",
+      name: "Staffing",
       href: "/solutions/open-source-fundraising-software",
     },
     {
-      name: "Document tracking",
+      name: "Growth and development",
       href: "/solutions/free-document-tracking-software",
     },
     {
-      name: "Legal document sharing",
+      name: "Trend Analysis",
       href: "/solutions/legal-documents-sharing-platform",
     },
-    {
-      name: "Open source document sharing",
-      href: "/solutions/open-source-document-sharing-platform",
-    },
-    {
-      name: "Investor update software",
-      href: "/solutions/investor-update-software",
-    },
-    {
-      name: "Pitch deck sharing",
-      href: "/solutions/pitch-deck-sharing-sofware",
-    },
+    // {
+    //   name: "Open source document sharing",
+    //   href: "/solutions/open-source-document-sharing-platform",
+    // },
+    // {
+    //   name: "Investor update software",
+    //   href: "/solutions/investor-update-software",
+    // },
+    // {
+    //   name: "Pitch deck sharing",
+    //   href: "/solutions/pitch-deck-sharing-sofware",
+    // },
   ],
   room: [
     {
@@ -123,23 +123,23 @@ const navigation = {
   ],
   support: [
     { name: "Help Center", href: "/help" },
-    {
-      name: "Create shareable link",
-      href: "/help/article/create-link-to-document",
-    },
-    {
-      name: "Link permissions",
-      href: "/help/article/link-settings",
-    },
+    // {
+    //   name: "Create shareable link",
+    //   href: "/help/article/create-link-to-document",
+    // },
+    // {
+    //   name: "Link permissions",
+    //   href: "/help/article/link-settings",
+    // },
     {
       name: "Custom domain",
       href: "/help/article/how-to-add-custom-domain-to-link",
     },
-    { name: "Document versions", href: "/help/article/document-versions" },
-    {
-      name: "Track time on document",
-      href: "/help/article/built-in-page-by-page-analytics",
-    },
+    // { name: "Document versions", href: "/help/article/document-versions" },
+    // {
+    //   name: "Track time on document",
+    //   href: "/help/article/built-in-page-by-page-analytics",
+    // },
   ],
   more: [
     {
@@ -269,7 +269,7 @@ export default function Footer() {
                 </ul>
               </div>
             </div>
-            <div className="md:grid md:grid-cols-2 md:gap-8">
+            {/* <div className="md:grid md:grid-cols-2 md:gap-8">
               <div>
                 <h3 className="font-semibold leading-6 text-black">Tools</h3>
                 <ul role="list" className="mt-6 space-y-4">
@@ -303,7 +303,7 @@ export default function Footer() {
                   ))}
                 </ul>
               </div>
-            </div>
+            </div> */}
             <div className="md:grid md:grid-cols-2 md:gap-8">
               <div className="mt-10 md:mt-0">
                 <h3 className="font-semibold leading-6 text-black">
@@ -323,7 +323,7 @@ export default function Footer() {
                 </ul>
               </div>
 
-              <div className="mt-10 md:mt-0">
+              {/* <div className="mt-10 md:mt-0">
                 <h3 className="font-semibold leading-6 text-black">
                   Read more
                 </h3>
@@ -339,7 +339,7 @@ export default function Footer() {
                     </li>
                   ))}
                 </ul>
-              </div>
+              </div> */}
               <div className="md:grid md:grid-cols-2 md:gap-8"></div>
             </div>
           </div>
