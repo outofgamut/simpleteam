@@ -277,7 +277,7 @@ export default function SkillHeader({
           <button
             className="hidden md:flex"
             onClick={changeDocumentOrientation}
-            title={`Change document orientation to landscape`}
+            title={`Request employee skill updates`}
           >
             <PortraitLandscape
               className={cn(

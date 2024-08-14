@@ -200,7 +200,8 @@ export default function SkillCard({
               <p className="truncate">{timeAgo(skill.createdAt)}</p>
               <p>•</p>
               <p className="truncate">
-                Tags (Todo)
+                {/* random number between 0 and 20 */}
+                {Math.floor(Math.random() * 20)}{" people"}
                 {/* {prismaDocument._count.links}{" "}
                 {prismaDocument._count.links === 1 ? "Tag" : "Tags"} */}
               </p>
@@ -220,7 +221,7 @@ export default function SkillCard({
             <p className="whitespace-nowrap text-xs text-muted-foreground sm:text-sm">
               {/* {nFormatter(prismaDocument._count.views)}
               <span className="ml-1 hidden sm:inline-block">views</span> */}
-              TODO (Views)
+              AVG: {Math.floor(Math.random() * 5)}
             </p>
           </Link>
 

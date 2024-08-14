@@ -240,7 +240,7 @@ export default function Discover({ chartData }: { chartData: any }) {
                                             ))}
                                         {role.skillRequirements.length > 3 && (
                                             <div className="mt-2">
-                                                <Link href="#" className="text-muted-foreground hover:underline" prefetch={false}>
+                                                <Link href="#" className="text-muted-foreground text-sm hover:underline" prefetch={false}>
                                                     + {role.skillRequirements.length - 3} more
                                                 </Link>
                                             </div>
