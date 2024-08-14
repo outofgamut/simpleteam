@@ -133,19 +133,19 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
         !router.pathname.includes("datarooms"),
       disabled: false,
     },
-    {
-      name: "Datarooms",
-      href: "/datarooms",
-      icon: ServerIcon,
-      current: router.pathname.includes("datarooms"),
-      active: false,
-      disabled:
-        userPlan === "business" ||
-          userPlan === "datarooms" ||
-          userTrial === "drtrial"
-          ? false
-          : true,
-    },
+    // {
+    //   name: "Datarooms",
+    //   href: "/datarooms",
+    //   icon: ServerIcon,
+    //   current: router.pathname.includes("datarooms"),
+    //   active: false,
+    //   disabled:
+    //     userPlan === "business" ||
+    //       userPlan === "datarooms" ||
+    //       userTrial === "drtrial"
+    //       ? false
+    //       : true,
+    // },
     {
       name: "Branding",
       href: "/settings/branding",
@@ -248,13 +248,13 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
                   userPlan !== "business" &&
                   userPlan !== "datarooms" &&
                   userTrial !== "drtrial" &&
-                  item.name === "Datarooms"
+                  item.name === "Branding"
                 ) {
                   return (
                     <UpgradePlanModal
                       key={item.name}
                       clickedPlan={"Business"}
-                      trigger={"datarooms"}
+                      trigger={"branding"}
                     >
                       <div className="group flex w-full items-center gap-x-2 rounded-md px-2 py-2 text-sm leading-6 text-muted-foreground hover:bg-transparent">
                         <item.icon
@@ -266,6 +266,28 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
                     </UpgradePlanModal>
                   );
                 }
+                // if (
+                //   userPlan !== "business" &&
+                //   userPlan !== "datarooms" &&
+                //   userTrial !== "drtrial" &&
+                //   item.name === "Datarooms"
+                // ) {
+                //   return (
+                //     <UpgradePlanModal
+                //       key={item.name}
+                //       clickedPlan={"Business"}
+                //       trigger={"datarooms"}
+                //     >
+                //       <div className="group flex w-full items-center gap-x-2 rounded-md px-2 py-2 text-sm leading-6 text-muted-foreground hover:bg-transparent">
+                //         <item.icon
+                //           className="h-5 w-5 shrink-0"
+                //           aria-hidden="true"
+                //         />
+                //         {item.name}
+                //       </div>
+                //     </UpgradePlanModal>
+                //   );
+                // }
                 return (
                   <button
                     key={item.name}
