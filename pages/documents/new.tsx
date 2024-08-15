@@ -42,7 +42,7 @@ export default function DocumentNew() {
 
             <Button
               variant={"link"}
-              onClick={() => router.push("/documents")}
+              onClick={() => router.push("/discover")}
               className="absolute right-2 top-10 z-40 p-2 text-muted-foreground sm:right-10"
             >
               Skip to dashboard

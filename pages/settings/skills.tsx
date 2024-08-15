@@ -12,7 +12,9 @@ import { SettingsHeader } from "@/components/settings/settings-header";
 import Passkey from "@/components/shared/icons/passkey";
 import { Button } from "@/components/ui/button";
 import { Form } from "@/components/ui/form";
-import { BRAND_SETTINGS } from "@/lib/constants";
+import { BRAND_SETTINGS, STAGGER_CHILD_VARIANTS } from "@/lib/constants";
+import { CheckCircleIcon, GraduationCapIcon, SignalIcon, SignalMediumIcon, ThumbsUpIcon, Users2Icon } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Skills() {
   const teamInfo = useTeam();
@@ -54,10 +56,53 @@ export default function Skills() {
             <h3 className="text-2xl font-semibold tracking-tight text-foreground">
               Skills
             </h3>
-            <p className="text-sm text-muted-foreground">Manage your team</p>
+            <p className="text-sm text-muted-foreground">Manage how your team records skills</p>
           </div>
         </div>
         <div className="space-y-6">
+          <motion.div
+            variants={STAGGER_CHILD_VARIANTS}
+            className="grid w-full text-center grid-cols-1 divide-y divide-border rounded-md border border-border text-foreground md:grid-cols-3 md:divide-x"
+          >
+            <button
+              onClick={() =>
+                alert("This feature is not available yet. Please check back later.")
+              }
+              className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+            >
+              <ThumbsUpIcon className="pointer-events-none h-auto w-12 sm:w-12" />
+              <div className="space-y-2">
+                <p className="font-bold">Yes/No</p>
+                <p className="text-sm text-muted-foreground">You either have a skill or do not.</p>
+              </div>
+            </button>
+            <button
+              onClick={() =>
+                alert("This feature is not available yet. Please check back later.")
+              }
+              className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+            >
+              <SignalMediumIcon className="pointer-events-none h-auto w-12 sm:w-12" />
+              <div className="space-y-2">
+                <p className="font-bold">Lichert (1-3)</p>
+                <p className="text-sm text-muted-foreground">Attributed skills are given a level from 1 to 3.</p>
+              </div>
+            </button>
+            <button
+              onClick={() =>
+                alert("This feature is not available yet. Please check back later.")
+              }
+              className="flex min-h-[200px] flex-col items-center justify-center space-y-5 overflow-hidden p-5 transition-colors hover:bg-gray-200 hover:dark:bg-gray-800 md:p-10"
+            >
+              <SignalIcon className="pointer-events-none h-auto w-12 sm:w-12" />
+              <div className="space-y-2">
+                <p className="font-bold">Lichert (1-5)</p>
+                <p className="text-sm text-muted-foreground">Attributed skills are given a level from 1 to 5.</p>
+              </div>            </button>
+          </motion.div>
+          <p>TODO: Let people create their own skills?</p>
+          <p>TODO: Enforce that skills only be added in the context of experience (vs randomly)</p>
+          <p>TODO: Customize lichert skill labels?</p>
           <Form
             title="Skills Measurement"
             description={`The method in which people's skills are measured on ${BRAND_SETTINGS.productName}.`}
