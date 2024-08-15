@@ -96,7 +96,7 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       name: "Discover",
       href: "/discover",
       icon: TelescopeIcon,
-      current: router.pathname.includes("discover"),
+      current: router.pathname.startsWith("/discover"),
       active: false,
       disabled: false,
     },
@@ -104,7 +104,7 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       name: "People",
       href: "/people",
       icon: UsersIcon,
-      current: router.pathname.includes("people"),
+      current: router.pathname.startsWith("/people"),
       active: false,
       disabled: false,
     },
@@ -112,7 +112,7 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       name: "Skills",
       href: "/skills",
       icon: PocketKnifeIcon,
-      current: router.pathname.includes("skills"),
+      current: router.pathname.startsWith("/skills"),
       active: false,
       disabled: false,
     },
@@ -120,17 +120,17 @@ export const SidebarComponent = ({ className }: { className?: string }) => {
       name: "Documents",
       href: "/documents",
       icon:
-        router.pathname.includes("documents") &&
-          !router.pathname.includes("datarooms")
+        router.pathname.startsWith("/documents") &&
+          !router.pathname.includes("/datarooms")
           ? FolderOpenIcon
           : FolderLucideIcon,
       current:
-        router.pathname.includes("documents") &&
-        !router.pathname.includes("tree") &&
-        !router.pathname.includes("datarooms"),
+        router.pathname.startsWith("/documents") &&
+        !router.pathname.includes("/tree") &&
+        !router.pathname.includes("/datarooms"),
       active:
-        router.pathname.includes("documents") &&
-        !router.pathname.includes("datarooms"),
+        router.pathname.startsWith("/documents") &&
+        !router.pathname.includes("/datarooms"),
       disabled: false,
     },
     // {
