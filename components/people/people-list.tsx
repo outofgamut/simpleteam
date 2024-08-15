@@ -12,7 +12,7 @@ import {
   DataroomFolderWithCount,
 } from "@/lib/swr/use-dataroom";
 import { FolderWithCount } from "@/lib/swr/use-documents";
-import { DocumentWithLinksAndLinkCountAndViewCount } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, PeopleWithSkillsAndRoles } from "@/lib/types";
 
 import DataroomDocumentCard from "../datarooms/dataroom-document-card";
 import DocumentCard from "./people-card";
@@ -28,7 +28,7 @@ export function PeopleList({
   dataroomId,
 }: {
   folders: FolderWithCount[] | DataroomFolderWithCount[] | undefined;
-  people: any[] | DocumentWithLinksAndLinkCountAndViewCount[] | undefined;
+  people: any[] | PeopleWithSkillsAndRoles[] | undefined;
   documents:
   | DocumentWithLinksAndLinkCountAndViewCount[]
   | DataroomFolderDocument[]
@@ -77,27 +77,17 @@ export function PeopleList({
 
             {/* Documents list */}
             <ul role="list" className="space-y-4">
-              {documents
-                ? documents.map((document) => {
-                  if (dataroomId) {
-                    return (
-                      <DataroomDocumentCard
-                        key={document.id}
-                        document={document as DataroomFolderDocument}
-                        teamInfo={teamInfo}
-                      />
-                    );
-                  } else {
-                    return (
-                      <PersonCard
-                        key={document.id}
-                        document={
-                          document as DocumentWithLinksAndLinkCountAndViewCount
-                        }
-                        teamInfo={teamInfo}
-                      />
-                    );
-                  }
+              {people
+                ? people.map((person) => {
+                  return (
+                    <PersonCard
+                      key={person.id}
+                      person={
+                        person as PeopleWithSkillsAndRoles
+                      }
+                      teamInfo={teamInfo}
+                    />
+                  );
                 })
                 : Array.from({ length: 3 }).map((_, i) => (
                   <li

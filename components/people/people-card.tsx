@@ -34,13 +34,15 @@ import {
 import { DocumentWithLinksAndLinkCountAndViewCount, PeopleWithSkillsAndRoles } from "@/lib/types";
 import { nFormatter, timeAgo } from "@/lib/utils";
 import { useCopyToClipboard } from "@/lib/utils/use-copy-to-clipboard";
+import { Avatar } from "@radix-ui/react-avatar";
+import { AvatarFallback, AvatarImage } from "../ui/avatar";
 
 type PersonCardProps = {
-  document: DocumentWithLinksAndLinkCountAndViewCount;
+  person: PeopleWithSkillsAndRoles;
   teamInfo: TeamContextType | null;
 };
 export default function PersonCard({
-  document: prismaDocument,
+  person,
   teamInfo,
 }: PersonCardProps) {
   const router = useRouter();
@@ -146,7 +148,7 @@ export default function PersonCard({
 
     toast.promise(
       fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/documents/${prismaDocument.id}/duplicate`,
+        `/api/teams/${teamInfo?.currentTeam?.id}/documents/${person.id}/duplicate`,
         { method: "POST" },
       ).then(() => {
         mutate(`/api/teams/${teamInfo?.currentTeam?.id}/documents`);
@@ -164,128 +166,127 @@ export default function PersonCard({
 
   return (
     <>
-      <li className="group/row relative flex items-center justify-between rounded-lg border-0 p-3 ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 hover:dark:ring-gray-500 sm:p-4">
-        <div className="flex min-w-0 shrink items-center space-x-2 sm:space-x-4">
-          <div className="mx-0.5 flex w-8 items-center justify-center text-center sm:mx-1">
-            {prismaDocument.type === "notion" ? (
-              <NotionIcon className="h-8 w-8" />
-            ) : (
-              <Image
-                src={`/_icons/${prismaDocument.type}${isLight ? "-light" : ""}.svg`}
-                alt="File icon"
-                width={50}
-                height={50}
-              />
-            )}
-          </div>
-
-          <div className="flex-col">
-            <div className="flex items-center">
-              <h2 className="min-w-0 max-w-[150px] truncate text-sm font-semibold leading-6 text-foreground sm:max-w-md">
-                <Link
-                  href={`/documents/${prismaDocument.id}`}
-                  className="w-full truncate"
-                >
-                  <span>{prismaDocument.name}</span>
-                  <span className="absolute inset-0" />
-                </Link>
-              </h2>
-              <div className="ml-2 flex">
-                <button
-                  className="group z-10 rounded-md bg-gray-200 p-1 transition-all duration-75 hover:scale-105 hover:bg-emerald-100 active:scale-95 dark:bg-gray-700 hover:dark:bg-emerald-200"
-                  onClick={() =>
-                    handleCopyToClipboard(prismaDocument.links[0].id)
-                  }
-                  title="Copy to clipboard"
-                >
-                  {isCopied ? (
-                    <Check className="size-3 text-muted-foreground group-hover:text-emerald-700" />
-                  ) : (
-                    <Copy className="size-3 text-muted-foreground group-hover:text-emerald-700" />
-                  )}
-                </button>
-              </div>
+      {person ? (
+        <li className="group/row relative flex items-center justify-between rounded-lg border-0 p-3 ring-1 ring-gray-200 transition-all hover:bg-secondary hover:ring-gray-300 dark:bg-secondary dark:ring-gray-700 hover:dark:ring-gray-500 sm:p-4">
+          <div className="flex min-w-0 shrink items-center space-x-2 sm:space-x-4">
+            <div className="mx-0.5 flex w-8 items-center justify-center text-center sm:mx-1">
+              <Avatar>
+                <AvatarImage src={`https://ui-avatars.com/api/?name=${person.firstName}+${person.lastName}&background=random&bold=true`} />
+                <AvatarFallback>{person.firstName[0] + person.lastName[0]}</AvatarFallback>
+              </Avatar>
             </div>
-            <div className="mt-1 flex items-center space-x-1 text-xs leading-5 text-muted-foreground">
-              <p className="truncate">{timeAgo(prismaDocument.createdAt)}</p>
-              <p>•</p>
-              <p className="truncate">
-                {prismaDocument._count.links}{" "}
-                {prismaDocument._count.links === 1 ? "Link" : "Links"}
-              </p>
-              {prismaDocument._count.versions > 1 ? (
+
+            <div className="flex-col">
+              <div className="flex items-center">
+                <h2 className="min-w-0 max-w-[150px] truncate text-sm font-semibold leading-6 text-foreground sm:max-w-md">
+                  <Link
+                    href={`/people/${person.id}`}
+                    className="w-full truncate"
+                  >
+                    <span>{person.firstName} {person.lastName}</span>
+                    <span className="absolute inset-0" />
+                  </Link>
+                </h2>
+                <div className="ml-2 flex">
+                  <button
+                    className="group z-10 rounded-md bg-gray-200 p-1 transition-all duration-75 hover:scale-105 hover:bg-emerald-100 active:scale-95 dark:bg-gray-700 hover:dark:bg-emerald-200"
+                    onClick={() =>
+                      // handleCopyToClipboard(person.links[0].id)
+                      alert('todo')
+                    }
+                    title="Copy to clipboard"
+                  >
+                    {isCopied ? (
+                      <Check className="size-3 text-muted-foreground group-hover:text-emerald-700" />
+                    ) : (
+                      <Copy className="size-3 text-muted-foreground group-hover:text-emerald-700" />
+                    )}
+                  </button>
+                </div>
+              </div>
+              <div className="mt-1 flex items-center space-x-1 text-xs leading-5 text-muted-foreground">
+                {/* <p className="truncate">{timeAgo(person.createdAt)}</p> */}
+                <p>•</p>
+                {/* <p className="truncate">
+                {person._count.links}{" "}
+                {person._count.links === 1 ? "Link" : "Links"}
+              </p> */}
+                {/* {person._count.versions > 1 ? (
                 <>
                   <p>•</p>
-                  <p className="truncate">{`${prismaDocument._count.versions} Versions`}</p>
+                  <p className="truncate">{`${person._count.versions} Versions`}</p>
                 </>
-              ) : null}
+              ) : null} */}
+              </div>
             </div>
           </div>
-        </div>
 
-        <div className="flex flex-row space-x-2">
-          <Link
-            onClick={(e) => {
-              e.stopPropagation();
-            }}
-            href={`/documents/${prismaDocument.id}`}
-            className="z-10 flex items-center space-x-1 rounded-md bg-gray-200 px-1.5 py-0.5 transition-all duration-75 hover:scale-105 active:scale-100 dark:bg-gray-700 sm:px-2"
-          >
-            <BarChart className="h-3 w-3 text-muted-foreground sm:h-4 sm:w-4" />
-            <p className="whitespace-nowrap text-xs text-muted-foreground sm:text-sm">
-              {nFormatter(prismaDocument._count.views)}
-              <span className="ml-1 hidden sm:inline-block">views</span>
-            </p>
-          </Link>
+          <div className="flex flex-row space-x-2">
+            <Link
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+              href={`/people/${person.id}`}
+              className="z-10 flex items-center space-x-1 rounded-md bg-gray-200 px-1.5 py-0.5 transition-all duration-75 hover:scale-105 active:scale-100 dark:bg-gray-700 sm:px-2"
+            >
+              <BarChart className="h-3 w-3 text-muted-foreground sm:h-4 sm:w-4" />
+              <p className="whitespace-nowrap text-xs text-muted-foreground sm:text-sm">
+                {/* {nFormatter(person._count.views)} */}
+                <span className="ml-1 hidden sm:inline-block">views</span>
+              </p>
+            </Link>
 
-          <DropdownMenu open={menuOpen} onOpenChange={handleMenuStateChange}>
-            <DropdownMenuTrigger asChild>
-              <Button
-                // size="icon"
-                variant="outline"
-                className="z-10 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
-              >
-                <span className="sr-only">Open menu</span>
-                <MoreVertical className="h-4 w-4" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" ref={dropdownRef}>
-              <DropdownMenuLabel>Actions</DropdownMenuLabel>
-              <DropdownMenuItem onClick={() => setMoveFolderOpen(true)}>
-                <FolderInputIcon className="mr-2 h-4 w-4" />
-                Move to folder
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={(e) => handleDuplicateDocument(e)}>
-                <Layers2Icon className="mr-2 h-4 w-4" />
-                Duplicate document
-              </DropdownMenuItem>
-              <DropdownMenuItem onClick={() => setAddDataroomOpen(true)}>
-                <BetweenHorizontalStartIcon className="mr-2 h-4 w-4" />
-                Add to dataroom
-              </DropdownMenuItem>
-              <DropdownMenuSeparator />
-              <DropdownMenuItem
-                onClick={(event) => handleButtonClick(event, prismaDocument.id)}
-                className="text-destructive duration-200 focus:bg-destructive focus:text-destructive-foreground"
-              >
-                {isFirstClick ? (
-                  "Really delete?"
-                ) : (
-                  <>
-                    <TrashIcon className="mr-2 h-4 w-4" /> Delete document
-                  </>
-                )}
-              </DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
-        </div>
-      </li>
+            <DropdownMenu open={menuOpen} onOpenChange={handleMenuStateChange}>
+              <DropdownMenuTrigger asChild>
+                <Button
+                  // size="icon"
+                  variant="outline"
+                  className="z-10 h-8 w-8 border-gray-200 bg-transparent p-0 hover:bg-gray-200 dark:border-gray-700 hover:dark:bg-gray-700 lg:h-9 lg:w-9"
+                >
+                  <span className="sr-only">Open menu</span>
+                  <MoreVertical className="h-4 w-4" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end" ref={dropdownRef}>
+                <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                <DropdownMenuItem onClick={() => setMoveFolderOpen(true)}>
+                  <FolderInputIcon className="mr-2 h-4 w-4" />
+                  Move to folder
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={(e) => handleDuplicateDocument(e)}>
+                  <Layers2Icon className="mr-2 h-4 w-4" />
+                  Duplicate document
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => setAddDataroomOpen(true)}>
+                  <BetweenHorizontalStartIcon className="mr-2 h-4 w-4" />
+                  Add to dataroom
+                </DropdownMenuItem>
+                <DropdownMenuSeparator />
+                <DropdownMenuItem
+                  onClick={(event) => handleButtonClick(event, person.id)}
+                  className="text-destructive duration-200 focus:bg-destructive focus:text-destructive-foreground"
+                >
+                  {isFirstClick ? (
+                    "Really delete?"
+                  ) : (
+                    <>
+                      <TrashIcon className="mr-2 h-4 w-4" /> Delete document
+                    </>
+                  )}
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          </div>
+        </li>
+      ) : (
+        <p>No person...</p>
+      )}
       {/* {moveFolderOpen ? (
         <MoveToFolderModal
           open={moveFolderOpen}
           setOpen={setMoveFolderOpen}
-          documentId={prismaDocument.id}
-          documentName={prismaDocument.name}
+          documentId={person.id}
+          documentName={person.name}
         />
       ) : null}
 
@@ -293,10 +294,11 @@ export default function PersonCard({
         <AddToDataroomModal
           open={addDataroomOpen}
           setOpen={setAddDataroomOpen}
-          documentId={prismaDocument.id}
-          documentName={prismaDocument.name}
+          documentId={person.id}
+          documentName={person.name}
         />
       ) : null} */}
+
     </>
   );
 }

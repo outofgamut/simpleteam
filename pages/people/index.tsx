@@ -10,25 +10,17 @@ import { Separator } from "@/components/ui/separator";
 
 import useDocuments, { useRootFolders } from "@/lib/swr/use-documents";
 import { PeopleList } from "@/components/people/people-list";
+import { PeopleWithSkillsAndRoles } from "@/lib/types";
+import { AddPersonModal } from "@/components/people/add-person-modal";
 
 export default function People() {
     const { documents } = useDocuments();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
 
-    interface PeopleResponse {
-        id: string;
-        firstName: string;
-        lastName: string;
-        email: string;
-        title: string;
-        roles: string[];
-        skills: string[];
-    }
-
-    const people: PeopleResponse[] = [
+    const people: PeopleWithSkillsAndRoles[] = [
         {
-            id: "1",
+            id: "clzetg0ax000n12j3f09s3b0l",
             firstName: "John",
             lastName: "Doe",
             email: "johndoe@company.com",
@@ -37,7 +29,7 @@ export default function People() {
             skills: ["React", "Node.js", "GraphQL"],
         },
         {
-            id: "2",
+            id: "clzetdiou000l12j3yvwbb4rc",
             firstName: "Jane",
             lastName: "Doe",
             email: "",
@@ -46,7 +38,7 @@ export default function People() {
             skills: ["React", "Node.js", "GraphQL"],
         },
         {
-            id: "3",
+            id: "clzen3mxk000h12j3rp782c6i",
             firstName: "Alice",
             lastName: "Smith",
             email: "",
@@ -82,42 +74,24 @@ export default function People() {
               </Button>
             </AddDocumentModal> */}
                     <div className="flex items-center gap-x-2">
-                        <AddDocumentModal>
+                        <AddPersonModal>
                             <Button
                                 className="group flex flex-1 items-center justify-start gap-x-2 px-2 text-left"
-                                title="Add New Document"
+                                title="Add Person"
                             >
                                 <PlusIcon className="h-5 w-5 shrink-0" aria-hidden="true" />
-                                <span>Add New Document</span>
+                                <span>Add Person</span>
                             </Button>
-                        </AddDocumentModal>
-                        <AddFolderModal>
-                            <Button
-                                size="icon"
-                                variant="outline"
-                                className="border-gray-500 bg-gray-50 hover:bg-gray-200 dark:bg-black hover:dark:bg-muted"
-                            >
-                                <FolderPlusIcon
-                                    className="h-5 w-5 shrink-0"
-                                    aria-hidden="true"
-                                />
-                            </Button>
-                        </AddFolderModal>
+                        </AddPersonModal>
                     </div>
                     {/* </div> */}
                 </section>
 
                 <section className="mb-2 flex items-center gap-x-2">
-                    {folders && folders.length > 0 ? (
-                        <p className="flex items-center gap-x-2 text-sm text-gray-400">
-                            <FolderIcon className="h-4 w-4" />
-                            <span>{folders.length} folders</span>
-                        </p>
-                    ) : null}
                     {documents && documents.length > 0 ? (
                         <p className="flex items-center gap-x-2 text-sm text-gray-400">
                             <FileIcon className="h-4 w-4" />
-                            <span>{documents.length} documents</span>
+                            <span>{documents.length} people</span>
                         </p>
                     ) : null}
                 </section>
