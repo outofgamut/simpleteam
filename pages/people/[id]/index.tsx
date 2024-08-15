@@ -10,11 +10,12 @@ import LoadingSpinner from "@/components/ui/loading-spinner";
 
 import SkillHeader from "@/components/skills/skill-header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { ArrowLeftIcon } from "lucide-react";
+import { ArrowLeftIcon, BriefcaseIcon, CalendarIcon, CodeIcon, StarIcon, UsersIcon } from "lucide-react";
 import Link from "next/link";
 import { Separator } from "@/components/ui/separator";
 import { usePerson } from "@/lib/swr/use-person";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 
 export default function PersonPage() {
     const { person, error } = usePerson();
@@ -131,7 +132,156 @@ export default function PersonPage() {
                             </TabsList>
 
                             <TabsContent value="overview">
-                                <div className="grid grid-cols-1 gap-8">
+                                <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 py-4 md:py-6 lg:py-8">
+                                    <div className="col-span-1 lg:col-span-2">
+                                        <section className="space-y-6">
+                                            <h2 className="text-2xl font-bold">Experiences</h2>
+                                            <div className="grid gap-4">
+                                                <Card>
+                                                    <CardHeader>
+                                                        <CardTitle>
+                                                            <Link href="#" className="font-semibold hover:underline" prefetch={false}>
+                                                                Senior Software Engineer
+                                                            </Link>
+                                                        </CardTitle>
+                                                    </CardHeader>
+                                                    <CardContent className="grid gap-2 text-muted-foreground">
+                                                        <div className="flex items-center gap-2">
+                                                            <CalendarIcon className="h-4 w-4" />
+                                                            <span>Jan 2022 - Present</span>
+                                                        </div>
+                                                        <p>
+                                                            Responsible for designing and developing scalable and maintainable web applications using React,
+                                                            Node.js, and PostgreSQL. Collaborated with cross-functional teams to deliver high-quality software
+                                                            solutions.
+                                                        </p>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardHeader>
+                                                        <CardTitle>
+                                                            <Link href="#" className="font-semibold hover:underline" prefetch={false}>
+                                                                Frontend Developer Intern
+                                                            </Link>
+                                                        </CardTitle>
+                                                    </CardHeader>
+                                                    <CardContent className="grid gap-2 text-muted-foreground">
+                                                        <div className="flex items-center gap-2">
+                                                            <CalendarIcon className="h-4 w-4" />
+                                                            <span>Jun 2021 - Aug 2021</span>
+                                                        </div>
+                                                        <p>
+                                                            Worked on building responsive and interactive user interfaces using HTML, CSS, and JavaScript. Gained
+                                                            experience in version control, task automation, and collaborative development.
+                                                        </p>
+                                                    </CardContent>
+                                                </Card>
+                                            </div>
+                                        </section>
+                                        <section className="space-y-6">
+                                            <h2 className="text-2xl font-bold">Accounts</h2>
+                                            <div className="grid gap-4">
+                                                <Card>
+                                                    <CardContent className="flex items-center gap-4">
+                                                        <img
+                                                            src="/placeholder.svg"
+                                                            width={48}
+                                                            height={48}
+                                                            alt="Company Logo"
+                                                            className="rounded-md"
+                                                            style={{ aspectRatio: "48/48", objectFit: "cover" }}
+                                                        />
+                                                        <div className="flex-1">
+                                                            <div className="font-semibold">Acme Inc</div>
+                                                            <div className="text-muted-foreground">1,234 hours worked</div>
+                                                        </div>
+                                                    </CardContent>
+                                                </Card>
+                                                <Card>
+                                                    <CardContent className="flex items-center gap-4">
+                                                        <img
+                                                            src="/placeholder.svg"
+                                                            width={48}
+                                                            height={48}
+                                                            alt="Company Logo"
+                                                            className="rounded-md"
+                                                            style={{ aspectRatio: "48/48", objectFit: "cover" }}
+                                                        />
+                                                        <div className="flex-1">
+                                                            <div className="font-semibold">Globex Corporation</div>
+                                                            <div className="text-muted-foreground">789 hours worked</div>
+                                                        </div>
+                                                    </CardContent>
+                                                </Card>
+                                            </div>
+                                        </section>
+                                    </div>
+                                    <div className="col-span-1 lg:col-span-1">
+                                        <section className="space-y-6">
+                                            <h2 className="text-2xl font-bold">Skills</h2>
+                                            <div className="grid gap-2">
+                                                <div className="flex items-center justify-between">
+                                                    <div>React</div>
+                                                    <div className="flex items-center gap-1">
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-muted stroke-muted-foreground" />
+                                                        <StarIcon className="h-4 w-4 fill-muted stroke-muted-foreground" />
+                                                    </div>
+                                                </div>
+                                                <div className="flex items-center justify-between">
+                                                    <div>Node.js</div>
+                                                    <div className="flex items-center gap-1">
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-muted stroke-muted-foreground" />
+                                                    </div>
+                                                </div>
+                                                <div className="flex items-center justify-between">
+                                                    <div>PostgreSQL</div>
+                                                    <div className="flex items-center gap-1">
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-muted stroke-muted-foreground" />
+                                                        <StarIcon className="h-4 w-4 fill-muted stroke-muted-foreground" />
+                                                    </div>
+                                                </div>
+                                                <div className="flex items-center justify-between">
+                                                    <div>Git</div>
+                                                    <div className="flex items-center gap-1">
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                        <StarIcon className="h-4 w-4 fill-primary" />
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                        <section className="space-y-6">
+                                            <h2 className="text-2xl font-bold">Roles</h2>
+                                            <div className="grid gap-2">
+                                                <div className="flex items-center gap-2">
+                                                    <UsersIcon className="h-5 w-5 text-muted-foreground" />
+                                                    <div>Software Engineer</div>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <BriefcaseIcon className="h-5 w-5 text-muted-foreground" />
+                                                    <div>Frontend Developer</div>
+                                                </div>
+                                                <div className="flex items-center gap-2">
+                                                    <CodeIcon className="h-5 w-5 text-muted-foreground" />
+                                                    <div>Full-Stack Developer</div>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    </div>
+                                </div>
+                                {/* <div className="grid grid-cols-1 gap-8">
                                     <div className="grid gap-4">
                                         <div>
                                             <h1 className="text-xl font-bold">Skill Description</h1>
@@ -201,7 +351,7 @@ export default function PersonPage() {
                                             ))}
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                             </TabsContent>
                             <TabsContent value="documents">
                                 <p>Saved resumes can go here. Or other project artifacts (e.g., design assets)</p>
