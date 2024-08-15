@@ -27,6 +27,11 @@ export function SettingsHeader() {
             segment: "people",
           },
           {
+            label: "Skills",
+            href: `/settings/skills`,
+            segment: "skills",
+          },
+          {
             label: "Domains",
             href: `/settings/domains`,
             segment: "domains",
