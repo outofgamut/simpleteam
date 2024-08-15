@@ -12,10 +12,11 @@ import SkillHeader from "@/components/skills/skill-header";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { ArrowLeftIcon, BriefcaseIcon, CalendarIcon, CodeIcon, StarIcon, UsersIcon } from "lucide-react";
 import Link from "next/link";
-import { Separator } from "@/components/ui/separator";
 import { usePerson } from "@/lib/swr/use-person";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { nFormatter } from "@/lib/utils";
+import PersonHeader from "@/components/people/person-header";
 
 export default function PersonPage() {
     const { person, error } = usePerson();
@@ -23,77 +24,35 @@ export default function PersonPage() {
 
     const [isLinkSheetOpen, setIsLinkSheetOpen] = useState<boolean>(false);
 
-    const mockSkill = {
-        people: [
+    const mockPerson = {
+        id: "clzetg0ax000n12j3f09s3b0l",
+        firstName: "John",
+        lastName: "Doe",
+        email: "",
+        title: "Senior Associate",
+        roles: ["Software Engineer", "Product Manager"],
+        skills: ["React", "Node.js", "GraphQL"],
+        accountHours: [
             {
-                name: "John Doe",
-                firstName: "John",
-                lastName: "Doe",
-                level: "Advanced",
+                id: "clzetg0ax000n12j3f09s3b0l",
+                account: {
+                    id: "clzetg0ax000n12j3f09s3b0l",
+                    name: "Toyota",
+                    domain: "toyota.com",
+                },
+                hours: 1234,
             },
             {
-                name: "Jane Smith",
-                firstName: "Jane",
-                lastName: "Smith",
-                level: "Intermediate",
-            },
-            {
-                firstName: "Bob",
-                lastName: "Johnson",
-                name: "Bob Johnson",
-                level: "Beginner",
-            },
-            {
-                firstName: "Sarah",
-                lastName: "Lee",
-                name: "Sarah Lee",
-                level: "Advanced",
-            },
-        ],
-        roles: [
-            {
-                name: "Front-End Developer",
-                description: "Responsible for building the user interface and interactive elements of a website or web application.",
-            },
-            {
-                name: "Full-Stack Developer",
-                description: "Develops both the front-end and back-end components of a web application, ensuring seamless integration.",
-            },
-            {
-                name: "Web Application Developer",
-                description: "Builds and maintains web-based applications, focusing on both the client-side and server-side components.",
+                id: "clzetg0ax000n12j3f09s3b0m",
+                account: {
+                    id: "clzetg0ax000n12j3f09s3b0m",
+                    name: "Associa",
+                    domain: "associaonline.com",
+                },
+                hours: 789,
             },
         ],
-        levels: [
-            {
-                name: "Beginner",
-                description: "Fundamental understanding of JavaScript syntax and basic programming concepts. Able to write simple scripts and follow tutorials.",
-            },
-            {
-                name: "Intermediate",
-                description: "Proficient in JavaScript, able to build interactive web pages and applications. Understanding of DOM manipulation, event handling, and asynchronous programming.",
-            },
-            {
-                name: "Advanced",
-                description: "Extensive knowledge of JavaScript, including modern frameworks and libraries. Able to architect complex web applications, optimize performance, and contribute to open-source projects.",
-            },
-        ],
-        tags: [
-            {
-                id: "2",
-                name: "/technology/web",
-            },
-            {
-                id: "3",
-                name: "/technology",
-            },
-            {
-                id: "4",
-                name: "/employees/developers",
-            },
-        ],
-
-    };
+    }
 
     if (error && error.status === 404) {
         return <ErrorPage statusCode={404} />;
@@ -104,14 +63,14 @@ export default function PersonPage() {
             <main className="relative mx-2 mb-10 mt-4 space-y-8 overflow-hidden px-1 sm:mx-3 md:mx-5 md:mt-5 lg:mx-7 lg:mt-8 xl:mx-10">
                 {person ? (
                     <div className="pb-12">
-                        {/* Action Header */}
-                        {/* add a return to skills link */}
-                        <Link href="/people" className="flex items-center gap-2 text-muted-foreground">
-                            <ArrowLeftIcon className="h-5 w-5" />
-                            <span>Return to People</span>
-                        </Link>
+                        <div className="flex items-center gap-4 mb-4">
+                            <Link href="/people" className="flex items-center gap-2 text-muted-foreground">
+                                <ArrowLeftIcon className="h-5 w-5" />
+                                <span>Return to People</span>
+                            </Link>
+                        </div>
 
-                        <SkillHeader
+                        <PersonHeader
                             skill={person}
                             teamId={teamInfo?.currentTeam?.id!}
                             actions={[
@@ -133,7 +92,7 @@ export default function PersonPage() {
 
                             <TabsContent value="overview">
                                 <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3 py-4 md:py-6 lg:py-8">
-                                    <div className="col-span-1 lg:col-span-2">
+                                    <div className="col-span-1 lg:col-span-2 flex-col space-y-8">
                                         <section className="space-y-6">
                                             <h2 className="text-2xl font-bold">Experiences</h2>
                                             <div className="grid gap-4">
@@ -180,43 +139,32 @@ export default function PersonPage() {
                                         </section>
                                         <section className="space-y-6">
                                             <h2 className="text-2xl font-bold">Accounts</h2>
-                                            <div className="grid gap-4">
-                                                <Card>
-                                                    <CardContent className="flex items-center gap-4">
-                                                        <img
-                                                            src="/placeholder.svg"
-                                                            width={48}
-                                                            height={48}
-                                                            alt="Company Logo"
-                                                            className="rounded-md"
-                                                            style={{ aspectRatio: "48/48", objectFit: "cover" }}
-                                                        />
-                                                        <div className="flex-1">
-                                                            <div className="font-semibold">Acme Inc</div>
-                                                            <div className="text-muted-foreground">1,234 hours worked</div>
-                                                        </div>
-                                                    </CardContent>
-                                                </Card>
-                                                <Card>
-                                                    <CardContent className="flex items-center gap-4">
-                                                        <img
-                                                            src="/placeholder.svg"
-                                                            width={48}
-                                                            height={48}
-                                                            alt="Company Logo"
-                                                            className="rounded-md"
-                                                            style={{ aspectRatio: "48/48", objectFit: "cover" }}
-                                                        />
-                                                        <div className="flex-1">
-                                                            <div className="font-semibold">Globex Corporation</div>
-                                                            <div className="text-muted-foreground">789 hours worked</div>
-                                                        </div>
-                                                    </CardContent>
-                                                </Card>
+                                            <div className="flex-col space-y-4">
+                                                {mockPerson.accountHours.map((accountHour: any) => (
+                                                    <div key={accountHour.id}>
+                                                        <Card >
+                                                            <CardContent className="flex items-center p-4 gap-4">
+                                                                <img
+                                                                    src={`https://logo.clearbit.com/${accountHour.account.domain}`}
+                                                                    width={48}
+                                                                    height={48}
+                                                                    alt="Company Logo"
+                                                                    className="rounded-md"
+                                                                    style={{ aspectRatio: "48/48", objectFit: "cover" }}
+                                                                />
+                                                                <div className="flex-1">
+                                                                    <div className="font-semibold">{accountHour.account.name}</div>
+                                                                    <div className="text-muted-foreground">{nFormatter(accountHour.hours)} hours worked</div>
+                                                                </div>
+                                                            </CardContent>
+                                                        </Card>
+                                                    </div>
+                                                ))}
+
                                             </div>
                                         </section>
                                     </div>
-                                    <div className="col-span-1 lg:col-span-1">
+                                    <div className="col-span-1 lg:col-span-1 flex-col space-y-8">
                                         <section className="space-y-6">
                                             <h2 className="text-2xl font-bold">Skills</h2>
                                             <div className="grid gap-2">

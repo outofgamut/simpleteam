@@ -27,7 +27,7 @@ export default function App({
   return (
     <>
       <Head>
-        <title>Simpleteam | The Open Source DocSend Alternative</title>
+        <title>Simpleteam | Modern Team Management</title>
         <meta name="theme-color" content="#000000" />
         <meta
           name="description"
@@ -36,7 +36,7 @@ export default function App({
         />
         <meta
           property="og:title"
-          content="Simpleteam | The Open Source DocSend Alternative"
+          content="Simpleteam | Modern Team Management"
           key="og-title"
         />
         <meta

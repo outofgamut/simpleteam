@@ -13,7 +13,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
       <Head>
-        <title>Simpleteam | The Open Source DocSend Alternative</title>
+        <title>Simpleteam | Modern Team Management</title>
       </Head>
       <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
         <main className={inter.className}>

@@ -349,7 +349,7 @@ export const convertThreadMessagesToMessages = (
 };
 
 export function constructMetadata({
-  title = "Simpleteam | The Open Source DocSend Alternative",
+  title = "Simpleteam | Modern Team Management",
   description = "Simpleteam is an open-source document sharing alternative to DocSend with built-in engagement analytics and 100% white-labeling.",
   image = "https://www.simpleteam.co/_static/meta-image.png",
   favicon = "/favicon.ico",

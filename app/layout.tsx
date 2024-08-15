@@ -10,7 +10,7 @@ const inter = Inter({ subsets: ["latin"] });
 const data = {
   description:
     "Simpleteam is an open-source document sharing infrastructure. Free alternative to Docsend with custom domain. Manage secure document sharing with real-time analytics.",
-  title: "Simpleteam | The Open Source DocSend Alternative",
+  title: "Simpleteam | Modern Team Management",
   url: "/",
 };
 
