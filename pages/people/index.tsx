@@ -12,9 +12,11 @@ import useDocuments, { useRootFolders } from "@/lib/swr/use-documents";
 import { PeopleList } from "@/components/people/people-list";
 import { PeopleWithSkillsAndRoles } from "@/lib/types";
 import { AddPersonModal } from "@/components/people/add-person-modal";
+import useMemberships from "@/lib/swr/use-memberships";
 
 export default function People() {
     const { documents } = useDocuments();
+    const { memberships } = useMemberships();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
 
@@ -97,6 +99,22 @@ export default function People() {
                 </section>
 
                 <Separator className="mb-5 bg-gray-200 dark:bg-gray-800" />
+
+                {memberships?.map((membership) => (
+                    <div key={membership.id} className="flex items-center gap-x-2 mb-2">
+                        <div className="flex items-center gap-x-2">
+                            <div className="flex flex-col">
+                                <p className="text-sm font-semibold text-foreground">
+                                    {membership.userId}
+                                </p>
+                                <p className="text-xs text-muted-foreground">
+                                    {membership.teamId}
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                ))}
 
                 <PeopleList
                     documents={documents}
