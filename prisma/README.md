@@ -26,17 +26,26 @@ npm install -g prisma
 - Create a new migration folder
 
 ```bash
-mkdir -p prisma/migrations/20240408000000_add_model
+mkdir -p prisma/migrations/20240816000000_fix_user_team_relationships
 ```
 
 - Generate the migration
 
 ```bash
-prisma migrate diff --from-migrations prisma/migrations --to-schema-datamodel prisma/schema.prisma --shadow-database-url "postgresql://postgres.{SENSITIVE_PASSWORD}@aws-0-us-west-1.pooler.supabase.com:5432/postgres" --script > prisma/migrations/20240815000000_add_organization_memberships/migration.sql
+prisma migrate diff --from-migrations prisma/migrations --to-schema-datamodel prisma/schema.prisma --shadow-database-url "postgresql://postgres.{SENSITIVE_PASSWORD}@aws-0-us-west-1.pooler.supabase.com:5432/postgres" --script > prisma/migrations/20240816000000_fix_user_team_relationships/migration.sql
 ```
 
 - Apply the migration
 
 ```bash
-prisma migrate resolve --applied 20240408000000_add_model
+prisma migrate resolve --applied 20240816000000_fix_user_team_relationships
 ```
+
+- Regenerate Prisma Client:
+After applying the migration, you need to regenerate the Prisma Client to reflect the new schema changes:
+
+```bash
+npx prisma generate
+```
+
+This command updates the generated Prisma Client code, including any new models.
