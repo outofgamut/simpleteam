@@ -20,7 +20,7 @@ export default async function handle(
     // POST /api/teams/:teamId/invite
     const session = await getServerSession(req, res, authOptions);
     if (!session) {
-      return res.status(401).end("Unauhorized");
+      return res.status(401).end("Unauthorized");
     }
 
     const { teamId } = req.query as { teamId: string };

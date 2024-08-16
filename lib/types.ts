@@ -265,3 +265,24 @@ export interface OrganizationMembership {
   createdAt: number;
   updatedAt: number;
 }
+
+export interface User {
+  id: string;
+  name: string | null;
+  email: string;
+  emailVerified: string; // Assuming this is an ISO 8601 date string
+  image: string | null;
+  createdAt: string; // Assuming this is an ISO 8601 date string
+  plan: string;
+  stripeId: string | null;
+  subscriptionId: string | null;
+  startsAt: string | null; // Assuming this is an ISO 8601 date string
+  endsAt: string | null; // Assuming this is an ISO 8601 date string
+}
+
+export interface OrganizationUser {
+  role: 'ADMIN' | 'MANAGER' | 'MEMBER'; // Adjust the roles as necessary
+  userId: string;
+  teamId: string;
+  user?: User; // Nested User object
+}

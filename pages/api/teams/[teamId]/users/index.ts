@@ -12,7 +12,7 @@ export default async function handle(
     res: NextApiResponse,
 ) {
     if (req.method === "GET") {
-        // GET /api/teams/:teamId/memberships
+        // GET /api/teams/:teamId/users
         const session = await getServerSession(req, res, authOptions);
         if (!session) {
             return res.status(401).end("Unauthorized");
@@ -34,23 +34,26 @@ export default async function handle(
             }
 
             // get current members for the team
-            const members = await prisma.organizationMembership.findMany({
+            const users = await prisma.userTeam.findMany({
                 where: {
                     teamId: teamId,
                 },
+                include: {
+                    user: true,
+                },
             });
 
-            if (!members) {
+            if (!users) {
                 return res.status(404).json("No members found for this team");
             }
 
-            res.status(200).json(members);
+            res.status(200).json(users);
             return;
         } catch (error) {
             errorhandler(error, res);
         }
     } else if (req.method === "DELETE") {
-        // DELETE /api/teams/:teamId/memberships
+        // DELETE /api/teams/:teamId/users
         const session = await getServerSession(req, res, authOptions);
         if (!session) {
             return res.status(401).end("Unauthorized");

@@ -12,7 +12,7 @@ import {
   DataroomFolderWithCount,
 } from "@/lib/swr/use-dataroom";
 import { FolderWithCount } from "@/lib/swr/use-documents";
-import { DocumentWithLinksAndLinkCountAndViewCount, PeopleWithSkillsAndRoles } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, OrganizationUser, PeopleWithSkillsAndRoles } from "@/lib/types";
 
 import DataroomDocumentCard from "../datarooms/dataroom-document-card";
 import DocumentCard from "./people-card";
@@ -21,18 +21,13 @@ import PersonCard from "./people-card";
 
 export function PeopleList({
   folders,
-  documents,
   people,
   teamInfo,
   folderPathName,
   dataroomId,
 }: {
   folders: FolderWithCount[] | DataroomFolderWithCount[] | undefined;
-  people: any[] | PeopleWithSkillsAndRoles[] | undefined;
-  documents:
-  | DocumentWithLinksAndLinkCountAndViewCount[]
-  | DataroomFolderDocument[]
-  | undefined;
+  people: any[] | OrganizationUser[] | undefined;
   teamInfo: TeamContextType | null;
   folderPathName?: string[];
   dataroomId?: string;
@@ -78,12 +73,12 @@ export function PeopleList({
             {/* Documents list */}
             <ul role="list" className="space-y-4">
               {people
-                ? people.map((person) => {
+                ? people.map((person: OrganizationUser) => {
                   return (
                     <PersonCard
-                      key={person.id}
+                      key={person.userId}
                       person={
-                        person as PeopleWithSkillsAndRoles
+                        person as OrganizationUser
                       }
                       teamInfo={teamInfo}
                     />
@@ -107,7 +102,7 @@ export function PeopleList({
                 ))}
             </ul>
 
-            {documents && documents.length === 0 && (
+            {people && people.length === 0 && (
               <div className="flex items-center justify-center">
                 <EmptyPeople />
               </div>

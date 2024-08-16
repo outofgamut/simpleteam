@@ -17,7 +17,7 @@ export default async function handle(
     // PUT /api/teams/:teamId/invitations/resend
     const session = await getServerSession(req, res, authOptions);
     if (!session) {
-      res.status(401).end("Unauhorized");
+      res.status(401).end("Unauthorized");
       return;
     }
 

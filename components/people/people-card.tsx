@@ -31,14 +31,14 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { DocumentWithLinksAndLinkCountAndViewCount, PeopleWithSkillsAndRoles } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, OrganizationUser } from "@/lib/types";
 import { nFormatter, timeAgo } from "@/lib/utils";
 import { useCopyToClipboard } from "@/lib/utils/use-copy-to-clipboard";
 import { Avatar } from "@radix-ui/react-avatar";
 import { AvatarFallback, AvatarImage } from "../ui/avatar";
 
 type PersonCardProps = {
-  person: PeopleWithSkillsAndRoles;
+  person: OrganizationUser;
   teamInfo: TeamContextType | null;
 };
 export default function PersonCard({
@@ -148,7 +148,7 @@ export default function PersonCard({
 
     toast.promise(
       fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/documents/${person.id}/duplicate`,
+        `/api/teams/${teamInfo?.currentTeam?.id}/documents/${person.userId}/duplicate`,
         { method: "POST" },
       ).then(() => {
         mutate(`/api/teams/${teamInfo?.currentTeam?.id}/documents`);
@@ -171,8 +171,13 @@ export default function PersonCard({
           <div className="flex min-w-0 shrink items-center space-x-2 sm:space-x-4">
             <div className="mx-0.5 flex w-8 items-center justify-center text-center sm:mx-1">
               <Avatar>
-                <AvatarImage src={`https://ui-avatars.com/api/?name=${person.firstName}+${person.lastName}&background=random&bold=true`} />
-                <AvatarFallback>{person.firstName[0] + person.lastName[0]}</AvatarFallback>
+                <AvatarImage src={`https://ui-avatars.com/api/?name=${person.user?.name}&background=random&bold=true`} />
+                {
+                  person.user?.name ? (
+                    <AvatarFallback>{person.user?.name[0]}</AvatarFallback>
+                  )
+                    : null
+                }
               </Avatar>
             </div>
 
@@ -180,10 +185,10 @@ export default function PersonCard({
               <div className="flex items-center">
                 <h2 className="min-w-0 max-w-[150px] truncate text-sm font-semibold leading-6 text-foreground sm:max-w-md">
                   <Link
-                    href={`/people/${person.id}`}
+                    href={`/people/${person.user?.id}`}
                     className="w-full truncate"
                   >
-                    <span>{person.firstName} {person.lastName}</span>
+                    <span>{person.user?.email}</span>
                     <span className="absolute inset-0" />
                   </Link>
                 </h2>
@@ -226,7 +231,7 @@ export default function PersonCard({
               onClick={(e) => {
                 e.stopPropagation();
               }}
-              href={`/people/${person.id}`}
+              href={`/people/${person.userId}`}
               className="z-10 flex items-center space-x-1 rounded-md bg-gray-200 px-1.5 py-0.5 transition-all duration-75 hover:scale-105 active:scale-100 dark:bg-gray-700 sm:px-2"
             >
               <BarChart className="h-3 w-3 text-muted-foreground sm:h-4 sm:w-4" />
@@ -263,7 +268,7 @@ export default function PersonCard({
                 </DropdownMenuItem>
                 <DropdownMenuSeparator />
                 <DropdownMenuItem
-                  onClick={(event) => handleButtonClick(event, person.id)}
+                  onClick={(event) => handleButtonClick(event, person.userId)}
                   className="text-destructive duration-200 focus:bg-destructive focus:text-destructive-foreground"
                 >
                   {isFirstClick ? (

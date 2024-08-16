@@ -16,7 +16,7 @@ export default async function handle(
     // POST /api/teams/:teamId/datarooms/:id/users
     const session = await getServerSession(req, res, authOptions);
     if (!session) {
-      return res.status(401).end("Unauhorized");
+      return res.status(401).end("Unauthorized");
     }
 
     const { teamId, id: dataroomId } = req.query as {

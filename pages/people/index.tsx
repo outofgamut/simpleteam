@@ -13,43 +13,43 @@ import { PeopleList } from "@/components/people/people-list";
 import { PeopleWithSkillsAndRoles } from "@/lib/types";
 import { AddPersonModal } from "@/components/people/add-person-modal";
 import useMemberships from "@/lib/swr/use-memberships";
+import { useUsers } from "@/lib/swr/use-users";
 
 export default function People() {
-    const { documents } = useDocuments();
-    const { memberships } = useMemberships();
+    const { users } = useUsers();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
 
-    const people: PeopleWithSkillsAndRoles[] = [
-        {
-            id: "clzetg0ax000n12j3f09s3b0l",
-            firstName: "John",
-            lastName: "Doe",
-            email: "johndoe@company.com",
-            title: "Senior Associate",
-            roles: ["Software Engineer", "Product Manager"],
-            skills: ["React", "Node.js", "GraphQL"],
-        },
-        {
-            id: "clzetdiou000l12j3yvwbb4rc",
-            firstName: "Jane",
-            lastName: "Doe",
-            email: "",
-            title: "Lead Associate",
-            roles: ["Data Analyst", "Product Manager"],
-            skills: ["React", "Node.js", "GraphQL"],
-        },
-        {
-            id: "clzen3mxk000h12j3rp782c6i",
-            firstName: "Alice",
-            lastName: "Smith",
-            email: "",
-            title: "Senior Associate",
-            roles: ["Software Engineer", "Product Manager"],
-            skills: ["Java", "Node.js", "Angular"],
-        }
+    // const people: PeopleWithSkillsAndRoles[] = [
+    //     {
+    //         id: "clzetg0ax000n12j3f09s3b0l",
+    //         firstName: "John",
+    //         lastName: "Doe",
+    //         email: "johndoe@company.com",
+    //         title: "Senior Associate",
+    //         roles: ["Software Engineer", "Product Manager"],
+    //         skills: ["React", "Node.js", "GraphQL"],
+    //     },
+    //     {
+    //         id: "clzetdiou000l12j3yvwbb4rc",
+    //         firstName: "Jane",
+    //         lastName: "Doe",
+    //         email: "",
+    //         title: "Lead Associate",
+    //         roles: ["Data Analyst", "Product Manager"],
+    //         skills: ["React", "Node.js", "GraphQL"],
+    //     },
+    //     {
+    //         id: "clzen3mxk000h12j3rp782c6i",
+    //         firstName: "Alice",
+    //         lastName: "Smith",
+    //         email: "",
+    //         title: "Senior Associate",
+    //         roles: ["Software Engineer", "Product Manager"],
+    //         skills: ["Java", "Node.js", "Angular"],
+    //     }
 
-    ]
+    // ]
 
     return (
         <AppLayout>
@@ -90,35 +90,20 @@ export default function People() {
                 </section>
 
                 <section className="mb-2 flex items-center gap-x-2">
-                    {documents && documents.length > 0 ? (
+                    {users && users.length > 0 ? (
                         <p className="flex items-center gap-x-2 text-sm text-gray-400">
                             <FileIcon className="h-4 w-4" />
-                            <span>{documents.length} people</span>
+                            <span>{users.length} users</span>
                         </p>
                     ) : null}
                 </section>
 
                 <Separator className="mb-5 bg-gray-200 dark:bg-gray-800" />
 
-                {memberships?.map((membership) => (
-                    <div key={membership.id} className="flex items-center gap-x-2 mb-2">
-                        <div className="flex items-center gap-x-2">
-                            <div className="flex flex-col">
-                                <p className="text-sm font-semibold text-foreground">
-                                    {membership.userId}
-                                </p>
-                                <p className="text-xs text-muted-foreground">
-                                    {membership.teamId}
-                                </p>
-                            </div>
-                        </div>
 
-                    </div>
-                ))}
 
                 <PeopleList
-                    documents={documents}
-                    people={people}
+                    people={users}
                     folders={folders}
                     teamInfo={teamInfo}
                 />
