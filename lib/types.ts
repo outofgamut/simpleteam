@@ -255,3 +255,13 @@ export interface TeamDetail {
     userId: string;
   }[];
 }
+
+
+export interface OrganizationMembership {
+  id: string;
+  userId?: string | null;  // userId is optional or can be null
+  teamId: string;
+  role: 'ADMIN' | 'MANAGER' | 'MEMBER';
+  createdAt: number;
+  updatedAt: number;
+}
