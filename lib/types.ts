@@ -264,6 +264,7 @@ export interface OrganizationMembership {
   role: 'ADMIN' | 'MANAGER' | 'MEMBER';
   createdAt: number;
   updatedAt: number;
+  user?: User; // Nested User object
 }
 
 export interface User {

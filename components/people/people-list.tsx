@@ -12,12 +12,13 @@ import {
   DataroomFolderWithCount,
 } from "@/lib/swr/use-dataroom";
 import { FolderWithCount } from "@/lib/swr/use-documents";
-import { DocumentWithLinksAndLinkCountAndViewCount, OrganizationUser, PeopleWithSkillsAndRoles } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, OrganizationMembership, OrganizationUser, PeopleWithSkillsAndRoles } from "@/lib/types";
 
 import DataroomDocumentCard from "../datarooms/dataroom-document-card";
 import DocumentCard from "./people-card";
 import { EmptyPeople } from "./empty-people";
 import PersonCard from "./people-card";
+import MembershipCard from "./member-card";
 
 export function PeopleList({
   folders,
@@ -27,7 +28,7 @@ export function PeopleList({
   dataroomId,
 }: {
   folders: FolderWithCount[] | DataroomFolderWithCount[] | undefined;
-  people: any[] | OrganizationUser[] | undefined;
+  people: any[] | OrganizationMembership[] | undefined;
   teamInfo: TeamContextType | null;
   folderPathName?: string[];
   dataroomId?: string;
@@ -73,12 +74,12 @@ export function PeopleList({
             {/* Documents list */}
             <ul role="list" className="space-y-4">
               {people
-                ? people.map((person: OrganizationUser) => {
+                ? people.map((person: OrganizationMembership) => {
                   return (
-                    <PersonCard
+                    <MembershipCard
                       key={person.userId}
-                      person={
-                        person as OrganizationUser
+                      membership={
+                        person as OrganizationMembership
                       }
                       teamInfo={teamInfo}
                     />

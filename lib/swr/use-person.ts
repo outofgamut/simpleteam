@@ -19,7 +19,7 @@ export function usePerson() {
   const { data: person, error } = useSWR<SkillWithTags>(
     teamInfo?.currentTeam?.id &&
     id &&
-    `/api/teams/${teamInfo?.currentTeam?.id}/skills/${encodeURIComponent(
+    `/api/teams/${teamInfo?.currentTeam?.id}/memberships/${encodeURIComponent(
       id,
     )}`,
     fetcher,

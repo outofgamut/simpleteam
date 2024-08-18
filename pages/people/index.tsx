@@ -17,6 +17,7 @@ import { useUsers } from "@/lib/swr/use-users";
 
 export default function People() {
     const { users } = useUsers();
+    const { memberships } = useMemberships();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
 
@@ -103,7 +104,7 @@ export default function People() {
 
 
                 <PeopleList
-                    people={users}
+                    people={memberships}
                     folders={folders}
                     teamInfo={teamInfo}
                 />

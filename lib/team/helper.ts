@@ -101,6 +101,33 @@ export async function getTeamWithUsersAndDocument({
   return { team, document };
 }
 
+// addd a function to get a team member (team = organization)
+export async function getTeamMember({
+  teamId,
+  memberId,
+}: {
+  teamId: string;
+  memberId: string;
+}) {
+  const teamMember = await prisma.organizationMembership.findFirst({
+    where: {
+      teamId,
+      id: memberId,
+    },
+    include: {
+      user: {
+        select: {
+          id: true,
+          name: true,
+          email: true,
+        },
+      },
+    },
+  });
+
+  return { teamMember };
+}
+
 export async function getTeamWithUsersAndSkills({
   teamId,
   userId,
