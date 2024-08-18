@@ -5,6 +5,7 @@ const nextConfig = {
   images: {
     minimumCacheTTL: 2592000, // 30 days
     remotePatterns: prepareRemotePatterns(),
+    dangerouslyAllowSVG: true,
   },
   transpilePackages: ["@trigger.dev/react"],
   skipTrailingSlashRedirect: true,
@@ -56,6 +57,8 @@ function prepareRemotePatterns() {
     },
     // also blog images
     { protocol: "https", hostname: "dev-to-uploads.s3.amazonaws.com" },
+    // ui-avatar
+    { protocol: "https", hostname: "ui-avatars.com" }
   ];
 
   if (process.env.NEXT_PRIVATE_UPLOAD_DISTRIBUTION_HOST) {
