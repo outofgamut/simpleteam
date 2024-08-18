@@ -259,6 +259,7 @@ export interface TeamDetail {
 
 export interface OrganizationMembership {
   id: string;
+  name?: string | null;
   userId?: string | null;  // userId is optional or can be null
   teamId: string;
   role: 'ADMIN' | 'MANAGER' | 'MEMBER';

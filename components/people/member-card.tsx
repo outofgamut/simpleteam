@@ -171,10 +171,10 @@ export default function MembershipCard({
           <div className="flex min-w-0 shrink items-center space-x-2 sm:space-x-4">
             <div className="mx-0.5 flex w-8 items-center justify-center text-center sm:mx-1">
               <Avatar>
-                <AvatarImage src={`https://ui-avatars.com/api/?name=${membership.user?.name}&background=random&bold=true`} />
+                <AvatarImage src={`https://ui-avatars.com/api/?name=${membership.name}&background=random&bold=true`} />
                 {
-                  membership.user?.name ? (
-                    <AvatarFallback>{membership.user?.name[0]}</AvatarFallback>
+                  membership?.name ? (
+                    <AvatarFallback>{membership.name[0]}</AvatarFallback>
                   )
                     : null
                 }
@@ -188,6 +188,7 @@ export default function MembershipCard({
                     href={`/people/${membership.id}`}
                     className="w-full truncate"
                   >
+                    <span>{membership.name}</span>
                     <span>{membership.user?.email}</span>
                     <span className="absolute inset-0" />
                   </Link>

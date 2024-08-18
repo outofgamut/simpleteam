@@ -81,10 +81,10 @@ export default async function handle(
             // Save data to the database
             const membership = await prisma.organizationMembership.create({
                 data: {
-                    // name: name,
                     // description: description,
                     // ownerId: (session.user as CustomUser).id,
                     teamId: teamId,
+                    name: name,
                 },
             });
 
