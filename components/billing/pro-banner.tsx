@@ -40,7 +40,7 @@ export default function ProBanner({
         <span className="text-sm font-bold">✨ Simpleteam Business ✨</span>
       </div>
       <p className="my-4 text-sm">
-        Join to unlock custom branding, domains, team members, and data rooms.
+        Join to unlock custom branding, domains, team members, and smart match.
       </p>
       <div className="flex">
         <UpgradePlanModal clickedPlan={"Business"} trigger={"pro_banner"}>

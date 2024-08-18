@@ -5,7 +5,7 @@ import { View } from "@prisma/client";
 import useSWR from "swr";
 import useSWRImmutable from "swr/immutable";
 
-import { DocumentWithVersion, LinkWithViews, SkillWithTags } from "@/lib/types";
+import { DocumentWithVersion, LinkWithViews, OrganizationMembership, SkillWithTags } from "@/lib/types";
 import { fetcher } from "@/lib/utils";
 
 export function usePerson() {
@@ -16,7 +16,7 @@ export function usePerson() {
     id: string;
   };
 
-  const { data: person, error } = useSWR<SkillWithTags>(
+  const { data: person, error } = useSWR<OrganizationMembership>(
     teamInfo?.currentTeam?.id &&
     id &&
     `/api/teams/${teamInfo?.currentTeam?.id}/memberships/${encodeURIComponent(

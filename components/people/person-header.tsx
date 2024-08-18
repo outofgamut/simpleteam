@@ -26,7 +26,7 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 
-import { DocumentWithLinksAndLinkCountAndViewCount } from "@/lib/types";
+import { DocumentWithLinksAndLinkCountAndViewCount, OrganizationMembership } from "@/lib/types";
 import { cn, getExtension } from "@/lib/utils";
 
 import PortraitLandscape from "../shared/icons/portrait-landscape";
@@ -35,11 +35,11 @@ import { AddDocumentModal } from "../documents/add-document-modal";
 import { random } from "nanoid";
 
 export default function PersonHeader({
-  skill,
+  membership,
   teamId,
   actions,
 }: {
-  skill: Skill;
+  membership: OrganizationMembership;
   teamId: string;
   actions?: React.ReactNode[];
 }) {
@@ -50,6 +50,7 @@ export default function PersonHeader({
     theme === "light" || (theme === "system" && systemTheme === "light");
 
   const [isEditingName, setIsEditingName] = useState<boolean>(false);
+  const [useHeadshot, setUseHeadshot] = useState<boolean>(false);
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [isFirstClick, setIsFirstClick] = useState<boolean>(false);
   const [orientationLoading, setOrientationLoading] = useState<boolean>(false);
@@ -86,9 +87,9 @@ export default function PersonHeader({
     if (nameRef.current && isEditingName) {
       const newName = nameRef.current.innerText;
 
-      if (newName !== skill!.name) {
+      if (newName !== membership!.name) {
         const response = await fetch(
-          `/api/teams/${teamId}/documents/${skill!.id}/update-name`,
+          `/api/teams/${teamId}/documents/${membership!.id}/update-name`,
           {
             method: "POST",
             headers: {
@@ -264,14 +265,16 @@ export default function PersonHeader({
     <header className="!mb-16 flex items-start justify-between gap-x-8">
       <div className="flex items-start space-x-4">
         <Image
-          src="https://pbs.twimg.com/profile_images/655136278514528256/_UDzfU3V_400x400.jpg"
+          src={useHeadshot
+            ? `https://pbs.twimg.com/profile_images/655136278514528256/_UDzfU3V_400x400.jpg`
+            : `https://ui-avatars.com/api/?name=${membership.name}&background=random&bold=true`}
           alt="Person's headshot"
           width={128}
           height={128}
           className="rounded-full"
         />
         <div className="mt-1 flex flex-col lg:mt-0 space-y-2">
-          <h2 className="font-bold text-4xl">Brian Orrell</h2>
+          <h2 className="font-bold text-4xl">{membership.name}</h2>
           <div className="flex space-x-2">
             <PhoneIcon className="h-4 w-4" />
             <MailIcon className="h-4 w-4" />
@@ -424,7 +427,7 @@ export default function PersonHeader({
 
             <DropdownMenuItem
               className="text-destructive focus:bg-destructive focus:text-destructive-foreground"
-              onClick={(event) => handleButtonClick(event, skill.id)}
+              onClick={(event) => handleButtonClick(event, membership.id)}
             >
               <TrashIcon className="mr-2 h-4 w-4" />
               {isFirstClick ? "Really delete?" : "Delete skill"}

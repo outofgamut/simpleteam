@@ -71,7 +71,7 @@ export default function PersonPage() {
                         </div>
 
                         <PersonHeader
-                            skill={person}
+                            membership={person}
                             teamId={teamInfo?.currentTeam?.id!}
                             actions={[
                                 <Button
