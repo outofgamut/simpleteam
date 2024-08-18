@@ -35,14 +35,16 @@ export default function Testimonials() {
                     <div className="p-8 border-t">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          Simpleteam team listens to their users. Thanks for
-                          solving a big pain. DocSend monopoly will end soon!
+                          Simpleteam truly understands the needs of consulting firms.
+                          Their platform has transformed how we manage and track our
+                          team&apos;s skills, making it easier to match the right
+                          consultants with the right projects. The days of inefficient resource management are over!
                         </p>
                       </blockquote>
                       <figcaption className="mt-4">
                         <div className="font-semibold">Jaski</div>
                         <div className="text-sm text-gray-500">
-                          Founder, Townhall Network (web3)
+                          Founder, (Private Consulting Firm)
                         </div>
                       </figcaption>
                     </div>
@@ -63,14 +65,16 @@ export default function Testimonials() {
                     <div className="p-8 border-t">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          We actively use Simpleteam to create many links and
-                          track analytics for our branded data room!
+                          Simpleteam has become our go-to tool for organizing and tracking
+                          our consultants&apos; skills. The platform&apos;s ability to manage
+                          skills data and analytics has significantly improved our project outcomes.
+                          It&apos;s a game-changer for consulting firms like ours!
                         </p>
                       </blockquote>
                       <figcaption className="mt-4">
                         <div className="font-semibold">Vatanyuta</div>
                         <div className="text-sm text-gray-500">
-                          Manager, Banyan Property
+                          Manager, (Private Consulting Firm)
                         </div>
                       </figcaption>
                     </div>
@@ -88,14 +92,16 @@ export default function Testimonials() {
                     <div className="p-8 border-t">
                       <blockquote className="text-lg text-gray-700">
                         <p>
-                          Our transition to Simpleteam was smooth. We love the
-                          product and data rooms with custom domains.
+                          Switching to Simpleteam was seamless, and it&apos;s now an indispensable
+                          part of our operations. We can efficiently manage our team&apos;s skills
+                          and ensure that our consultants are always ready to meet client needs.
+                          The custom branding and domains are just icing on the cake!
                         </p>
                       </blockquote>
                       <figcaption className="mt-4">
                         <div className="font-semibold">Alex</div>
                         <div className="text-sm text-gray-500">
-                          Partner at VC Fund
+                          Partner at (Private Consulting Firm)
                         </div>
                       </figcaption>
                     </div>
