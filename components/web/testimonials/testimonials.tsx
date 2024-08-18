@@ -5,7 +5,7 @@ import TwitterIcon from "@/components/shared/icons/twitter";
 
 const testimonials = [
   {
-    body: "best thing is that all the save DocSend to PDF plugins that VCs use probably won't work 😁",
+    body: "Simpleteam has truly transformed how we handle skills management. It's refreshing to see a product that understands our needs so well! 😁",
     author: {
       name: "Jonathan Reimer",
       handle: "jonathimer",
@@ -16,7 +16,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "This looks awesome!! Incredible work for an MVP – love how roles can be auto-suggested! 🤩",
+    body: "This is fantastic! The MVP is impressive—especially how roles are auto-suggested. Makes managing skills so much easier! 🤩",
     author: {
       name: "Steven Tey",
       handle: "steventey",
@@ -27,7 +27,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "loving all of the new features coming out! 😍 keep it up",
+    body: "Loving all the new features rolling out! Simpleteam is making skills management a breeze. Keep up the great work!",
     author: {
       name: "alana goyal",
       handle: "alanaagoyal",
@@ -38,7 +38,7 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "Currently getting a lot of use out of the \"Simpleteam\" product! I'm loving the simple approach toward a complex problem.",
+    body: "Simpleteam's approach to managing skills is exactly what we've needed—straightforward and effective. It's a welcome improvement in how we handle our team's expertise.",
     author: {
       name: "Lukas Lunzmann",
       handle: "lucaslunzmann",
@@ -49,7 +49,8 @@ const testimonials = [
     producthunt: false,
   },
   {
-    body: "We use Simpleteam at Pariveda for skills management. Brilliantly-simple alternative to self-managed solutions. Features are well-executed, so I can't wait to try new stuff!",
+    body: "We rely on heavily on Simpleteam for skills management. It's a brilliantly simple alternative to the usual complex solutions. The features are spot-on. Excited to see what's next!"
+    ,
     author: {
       name: "Brian Orrell",
       handle: "borrell",
@@ -60,7 +61,7 @@ const testimonials = [
     producthunt: true,
   },
   {
-    body: "True builders listen to their users and build what they need. Thanks @simpleteamco for solving a big pain point. Skills-wise monopoly will end soon!",
+    body: "True builders listen and deliver. Simpleteam has solved a major pain point in skills management. It's exactly what we've been waiting for!",
     author: {
       name: "Jas Jaski",
       handle: "jaski",

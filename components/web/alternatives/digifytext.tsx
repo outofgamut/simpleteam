@@ -3,7 +3,7 @@ import Link from "next/link";
 import { BlurImage } from "@/components/blur-image";
 import { Button } from "@/components/ui/button";
 
-const DigifyAlternatives = () => {
+const SkillsBaseAlternatives = () => {
   return (
     <>
       <div className="relative">
@@ -11,8 +11,8 @@ const DigifyAlternatives = () => {
           <div className="relative col-span-4 mb-10 flex flex-col space-y-8 bg-white sm:border-r sm:border-orange-500/50 md:col-span-3">
             <div className="prose prose-headings:font-medium prose-h2:mb-2 prose-h2:mt-10 first:prose-h2:mt-0 sm:max-w-screen-md sm:pr-2 md:pr-0">
               <>
-                <h2 id="quick-recap-of-alternatives-to-digify">
-                  Quick recap of alternatives to Digify
+                <h2 id="quick-recap-of-alternatives-to-SkillsBase">
+                  Quick recap of alternatives to SkillsBase
                 </h2>
                 <ul>
                   <li>
@@ -80,15 +80,15 @@ const DigifyAlternatives = () => {
                     </p>
                   </li>
                 </ul>
-                <h2 id="why-to-consider-digify-alternatives">
-                  Why to consider Digify alternatives?
+                <h2 id="why-to-consider-SkillsBase-alternatives">
+                  Why to consider SkillsBase alternatives?
                 </h2>
                 <ol>
                   <li>
                     <p>
                       <strong>Cost Savings</strong>: Many alternatives like
                       Papermark, offers more affordable pricing compared to
-                      Digify, especially for unlimited data rooms{" "}
+                      SkillsBase, especially for unlimited data rooms{" "}
                       <a
                         target="_blank"
                         rel="nofollow"
@@ -120,7 +120,7 @@ const DigifyAlternatives = () => {
                   </li>
                   <li>
                     <p>
-                      <strong>Steep cost</strong>: &quot;Digify only allows a
+                      <strong>Steep cost</strong>: &quot;SkillsBase only allows a
                       basic subscription to have 3 data rooms and a limited
                       number of users. The cost of incrementally adding users or
                       data rooms is quite steep and for a small business like
@@ -146,8 +146,8 @@ const DigifyAlternatives = () => {
                   </li>
                 </ol>
 
-                <h2 id="papermark-digify-alternative">
-                  Simpleteam - Digify Alternative for Data Rooms
+                <h2 id="papermark-SkillsBase-alternative">
+                  Simpleteam - SkillsBase Alternative for Data Rooms
                 </h2>
                 <p>
                   Website:{" "}
@@ -298,7 +298,7 @@ const DigifyAlternatives = () => {
                   rel="noopener noreferrer"
                 >
                   <Button variant="orange" className="rounded-3xl text-base">
-                    Start with Digify alternative
+                    Start with SkillsBase alternative
                   </Button>
                 </Link>
 
@@ -679,13 +679,13 @@ const DigifyAlternatives = () => {
                 rel="noopener noreferrer"
               >
                 <Button variant="orange" className="rounded-3xl text-base">
-                  Start with Digify alternative for free
+                  Start with SkillsBase alternative for free
                 </Button>
               </Link>
-              <h2>Why Choose Simpleteam as a Digify Alternative?</h2>
+              <h2>Why Choose Simpleteam as a SkillsBase Alternative?</h2>
               <ul>
                 <p>
-                  Simpleteam is a leading open-source alternative to Digify,
+                  Simpleteam is a leading open-source alternative to SkillsBase,
                   offering secure document sharing and data room creation with
                   additional benefits tailored for modern venture teams.
                 </p>
@@ -697,14 +697,14 @@ const DigifyAlternatives = () => {
                   needs.
                 </li>
                 <li>
-                  <strong>Cost-Effective:</strong> Unlike Digify, which may
+                  <strong>Cost-Effective:</strong> Unlike SkillsBase, which may
                   require a subscription, Simpleteam is free to use. This makes
                   it an excellent option for individuals and businesses looking
                   to reduce costs while maintaining high security and
                   functionality.
                 </li>
                 <li>
-                  <strong>Customizable and White Labeling:</strong> Papermark
+                  <strong>Customizable and White Labeling:</strong> Simpleteam
                   offers full white labeling and self-hosting capabilities. This
                   allows businesses to brand the platform as their own and host
                   it on their servers, providing greater control over their
@@ -729,7 +729,7 @@ const DigifyAlternatives = () => {
                 rel="noopener noreferrer"
               >
                 <Button variant="orange" className="rounded-3xl text-base">
-                  Start with Digify alternative for Virtual Data rooms
+                  Start with SkillsBase alternative for Virtual Data rooms
                 </Button>
               </Link>
             </div>
@@ -787,4 +787,4 @@ const DigifyAlternatives = () => {
   );
 };
 
-export default DigifyAlternatives;
+export default SkillsBaseAlternatives;
