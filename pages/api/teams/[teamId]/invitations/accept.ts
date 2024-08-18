@@ -7,6 +7,7 @@ import { identifyUser, trackAnalytics } from "@/lib/analytics";
 import { errorhandler } from "@/lib/errorHandler";
 import prisma from "@/lib/prisma";
 import { CustomUser } from "@/lib/types";
+import { APP_SETTINGS } from "@/lib/constants";
 
 export default async function handle(
   req: NextApiRequest,
@@ -35,7 +36,7 @@ export default async function handle(
 
       if (userTeam) {
         // User is already in the team
-        return res.redirect(`/documents`);
+        return res.redirect(APP_SETTINGS.homeRoute);
       }
 
       const invitation = await prisma.invitation.findUnique({
@@ -86,7 +87,7 @@ export default async function handle(
         },
       });
 
-      return res.redirect(`/documents`);
+      return res.redirect(APP_SETTINGS.homeRoute);
     } catch (error) {
       errorhandler(error, res);
     }

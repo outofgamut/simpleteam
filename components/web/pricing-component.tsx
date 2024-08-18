@@ -227,7 +227,7 @@ const featureGroups: {
             free: false,
             pro: false,
             business: false,
-            enterprise: "Enterprise",
+            enterprise: true,
           },
         },
         {
@@ -258,7 +258,7 @@ const featureGroups: {
             free: false,
             pro: false,
             business: false,
-            enterprise: "Enterprise",
+            enterprise: true,
           },
         },
       ],
@@ -365,7 +365,7 @@ const featureGroups: {
             free: false,
             pro: false,
             business: false,
-            enterprise: "Enterprise",
+            enterprise: true,
           },
         },
         {
@@ -375,7 +375,7 @@ const featureGroups: {
             free: false,
             pro: false,
             business: false,
-            enterprise: "Enterprise",
+            enterprise: true,
           },
         },
       ],
@@ -431,7 +431,7 @@ const featureGroups: {
             free: false,
             pro: false,
             business: false,
-            enterprise: "Enterprise",
+            enterprise: true,
           },
         },
       ],
@@ -490,17 +490,6 @@ const featureGroups: {
             enterprise: true,
           },
         },
-
-        {
-          name: "Support with self-hosting",
-          id: "feature-user",
-          tiers: {
-            free: false,
-            pro: false,
-            business: false,
-            enterprise: "Enterprise",
-          },
-        },
         {
           name: "Custom features support",
           id: "feature-user",
@@ -508,7 +497,7 @@ const featureGroups: {
             free: false,
             pro: false,
             business: false,
-            enterprise: "Enterprise",
+            enterprise: true,
           },
         },
       ],
@@ -560,7 +549,7 @@ export function PricingComparison() {
               Business
             </li>
             <li className="col-span-3 list-none border-r-0 p-6 text-xl leading-8">
-              Data Rooms
+              Enterprise
             </li>
           </ul>
         </div>
@@ -594,7 +583,7 @@ export function PricingComparison() {
                 target="_blank"
                 className="group flex items-center gap-x-2"
               >
-                Create Data Rooms <ArrowRightIcon className="h-4 w-4" />
+                Choose Enterprise <ArrowRightIcon className="h-4 w-4" />
               </Link>
             </li>
           </ul>

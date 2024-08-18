@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 import { signIn } from "next-auth/react";
 
 import { useAnalytics } from "@/lib/analytics";
-import { STAGGER_CHILD_VARIANTS } from "@/lib/constants";
+import { APP_SETTINGS, STAGGER_CHILD_VARIANTS } from "@/lib/constants";
 
 import { timeFormatter } from "../charts/utils";
 import { Button } from "../ui/button";
@@ -134,7 +134,7 @@ export default function ViewDurationSummary({
         <motion.div variants={STAGGER_CHILD_VARIANTS}>
           <div className="flex flex-col items-center justify-center space-y-3 px-4 py-6 pt-8 text-center sm:px-16">
             <div className="text-balance text-2xl font-semibold text-gray-800">
-              Start sharing documents and data rooms securely
+              Start managing your team skills and experience easily
             </div>
           </div>
           <form
@@ -145,7 +145,8 @@ export default function ViewDurationSummary({
               signIn("email", {
                 email: email,
                 redirect: false,
-                callbackUrl: `/documents`,
+                // callbackUrl: `/documents`,
+                callbackUrl: APP_SETTINGS.homeRoute,
               }).then((res) => {
                 if (res?.ok && !res?.error) {
                   setEmail("");

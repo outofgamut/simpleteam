@@ -20,6 +20,7 @@ import { Modal } from "@/components/ui/modal";
 
 import { useAnalytics } from "@/lib/analytics";
 import { useMediaQuery } from "@/lib/utils/use-media-query";
+import { APP_SETTINGS } from "@/lib/constants";
 
 function DeleteTeamModal({
   showDeleteTeamModal,
@@ -53,7 +54,7 @@ function DeleteTeamModal({
           });
           await mutate("/api/teams");
           console.log("teamsCount", teamsCount);
-          teamsCount > 1 ? router.push("/documents") : signOut();
+          teamsCount > 1 ? router.push(APP_SETTINGS.homeRoute) : signOut();
           resolve(null);
         } else {
           setDeleting(false);

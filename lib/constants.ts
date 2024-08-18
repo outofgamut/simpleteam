@@ -6,6 +6,10 @@ export const BRAND_SETTINGS = {
   founderFirstName: "John",
 };
 
+export const APP_SETTINGS = {
+  homeRoute: "/discover",
+}
+
 export const FADE_IN_ANIMATION_SETTINGS = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },

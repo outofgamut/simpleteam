@@ -17,6 +17,7 @@ import {
 } from "@/components/ui/dialog";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { APP_SETTINGS } from "@/lib/constants";
 
 export function AddTeamModal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -49,7 +50,7 @@ export function AddTeamModal({ children }: { children: React.ReactNode }) {
     }
 
     toast.success("Team created successfully!");
-    router.push("/documents");
+    router.push(APP_SETTINGS.homeRoute);
     setLoading(false);
   };
 
@@ -88,7 +89,7 @@ export function AddTeamModal({ children }: { children: React.ReactNode }) {
               type="submit"
               className="w-full lg:w-1/2"
               loading={loading}
-              // disabled={uploading || !currentFile}
+            // disabled={uploading || !currentFile}
             >
               {loading ? "Creating..." : "Create"}
               {/* {uploading ? "Uploading..." : "Upload Document"} */}

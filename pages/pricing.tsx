@@ -47,8 +47,8 @@ const tiers: {
       description: "The essentials to start sharing documents securely.",
       featureIntro: "What's included:",
       features: [
-        "1 user",
-        "Unlimited links",
+        "Up to 20 people",
+        "Unlimited skills",
         "Page-by-page analytics",
         "30-day analytics retention",
         "Document sharing controls",
@@ -61,14 +61,14 @@ const tiers: {
       mostPopular: false,
     },
     {
-      name: "Professional",
+      name: "Professional (Plus)",
       id: "tier-pro",
       href: "/login",
-      price: { monthly: "$39", annually: "$25" },
+      price: { monthly: "$2", annually: "$20" },
       description: "The branded experience for your documents.",
       featureIntro: "Everything in Free, plus:",
       features: [
-        "2 users included",
+        "Unlimited people",
         "Custom branding",
         "1-year analytics retention",
         "Folder organization",
@@ -80,21 +80,18 @@ const tiers: {
       mostPopular: false,
     },
     {
-      name: "Business",
+      name: "Business (Pro)",
       id: "tier-business",
       href: "/login",
-      price: { monthly: "$79", annually: "$45" },
+      price: { monthly: "$3", annually: "$30" },
       description: "The one for more control, data room, and multi-file sharing.",
       featureIntro: "Everything in Pro, plus:",
       features: [
-        "3 users included",
-        "1 dataroom",
         "Custom domain for documents",
         "Advanced link controls",
         "Multi-file sharing",
-        "Unlimited documents",
         "Unlimited subfolder levels",
-        "Large file uploads",
+        "Bulk upload tools",
         "48h priority support",
       ],
       bgColor: "#fb7a00",
@@ -102,6 +99,27 @@ const tiers: {
       textColor: "#black",
       buttonText: "Choose Business",
       mostPopular: true,
+    },
+    {
+      name: "Enterprise",
+      id: "tier-enterprise",
+      href: "/login",
+      price: { monthly: "$79", annually: "$45" },
+      description: "The one for more control, data room, and multi-file sharing.",
+      featureIntro: "Everything in Business, plus:",
+      features: [
+        "3 users included",
+        "Custom domain",
+        "Unlimited skills",
+        "Unlimited subfolder levels",
+        "Large file uploads",
+        "48h priority support",
+      ],
+      bgColor: "#fb7a00",
+      borderColor: "#fb7a00",
+      textColor: "#black",
+      buttonText: "Contact Us",
+      mostPopular: false,
     }
   ];
 
@@ -168,7 +186,7 @@ export default function PricingPage() {
         </div>
         <div className="bg-white py-16">
           <div className="mx-auto max-w-7xl px-4 md:px-8">
-            <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black md:grid-cols-2 xl:grid-cols-3">
+            <div className="isolate grid grid-cols-1 overflow-hidden rounded-xl border border-black md:grid-cols-2 xl:grid-cols-4">
               {tiers.map((tier) => (
                 <div
                   key={tier.id}
@@ -235,7 +253,7 @@ export default function PricingPage() {
                           </div>
                         ) : null}
                       </div>
-                      <p className="mt-6 flex items-baseline gap-x-2">
+                      <p className="mt-6 flex items-end gap-x-2">
                         <span
                           className="text-balance text-4xl font-medium text-gray-900"
                           style={{ fontVariantNumeric: "tabular-nums" }}
@@ -248,7 +266,7 @@ export default function PricingPage() {
                           }
                         </span>
                         <span className="text-sm">
-                          {toggleYear ? "/ year" : "/ month"}
+                          per person <br /> per {toggleYear ? "year" : "month"}
                         </span>
                       </p>
                       <p className="mt-6 text-balance text-sm leading-6 text-gray-600">

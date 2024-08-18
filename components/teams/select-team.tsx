@@ -14,6 +14,7 @@ import {
 
 import { Team } from "@/lib/types";
 import { cn } from "@/lib/utils";
+import { APP_SETTINGS } from "@/lib/constants";
 
 const SelectTeam = ({ teams, currentTeam, isLoading }: TeamContextType) => {
   const router = useRouter();
@@ -22,7 +23,7 @@ const SelectTeam = ({ teams, currentTeam, isLoading }: TeamContextType) => {
   const switchTeam = (team: Team) => {
     localStorage.setItem("currentTeamId", team.id);
     userTeam?.setCurrentTeam(team);
-    router.push("/documents");
+    router.push(APP_SETTINGS.homeRoute);
   };
 
   return (

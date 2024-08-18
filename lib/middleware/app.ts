@@ -1,6 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 
 import { getToken } from "next-auth/jwt";
+import { APP_SETTINGS } from "../constants";
 
 export default async function AppMiddleware(req: NextRequest) {
   const url = req.nextUrl;
@@ -37,7 +38,7 @@ export default async function AppMiddleware(req: NextRequest) {
 
   // AUTHENTICATED if the path is /login, redirect to "/documents"
   if (token?.email && path === "/login") {
-    const nextPath = url.searchParams.get("next") || "/documents"; // Default redirection to "/documents" if no next parameter
+    const nextPath = url.searchParams.get("next") || APP_SETTINGS.homeRoute; // Default redirection to "/documents" if no next parameter
     return NextResponse.redirect(
       new URL(decodeURIComponent(nextPath), req.url),
     );

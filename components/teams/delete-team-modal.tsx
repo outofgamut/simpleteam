@@ -20,6 +20,7 @@ import {
 import { Button } from "../ui/button";
 import { Input } from "../ui/input";
 import { Label } from "../ui/label";
+import { APP_SETTINGS } from "@/lib/constants";
 
 export function DeleteTeamModal({ children }: { children: React.ReactNode }) {
   const router = useRouter();
@@ -59,7 +60,7 @@ export function DeleteTeamModal({ children }: { children: React.ReactNode }) {
     await mutate("/api/teams");
     setLoading(false);
     toast.success("Team deleted successfully!");
-    router.push("/documents");
+    router.push(APP_SETTINGS.homeRoute);
   };
 
   return (
@@ -105,7 +106,7 @@ export function DeleteTeamModal({ children }: { children: React.ReactNode }) {
               variant={"destructive"}
               className="w-full lg:w-1/2"
               loading={loading}
-              // disabled={uploading || !currentFile}
+            // disabled={uploading || !currentFile}
             >
               {loading ? "Deleting..." : "Delete Team"}
               {/* {uploading ? "Uploading..." : "Upload Document"} */}

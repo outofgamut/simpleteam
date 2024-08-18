@@ -31,6 +31,7 @@ import useLimits from "@/lib/swr/use-limits";
 import { useGetTeam } from "@/lib/swr/use-team";
 import { useTeams } from "@/lib/swr/use-teams";
 import { CustomUser } from "@/lib/types";
+import { APP_SETTINGS } from "@/lib/constants";
 
 export default function Billing() {
   const [isTeamMemberInviteModalOpen, setTeamMemberInviteModalOpen] =
@@ -127,9 +128,9 @@ export default function Billing() {
 
     setLeavingUserId("");
     if (isCurrentUser(userId)) {
-      toast.success(`Successfully leaved team ${teamInfo?.currentTeam?.name}`);
+      toast.success(`Successfully left team ${teamInfo?.currentTeam?.name}`);
       teamInfo?.setCurrentTeam({ id: teams![0].id });
-      router.push("/documents");
+      router.push(APP_SETTINGS.homeRoute);
       return;
     }
 
@@ -225,7 +226,7 @@ export default function Billing() {
                 </p>
               </div>
               {userPlan !== "free" &&
-              (limits === null || (limits && limits.users >= numUsers)) ? (
+                (limits === null || (limits && limits.users >= numUsers)) ? (
                 <AddTeamMembers
                   open={isTeamMemberInviteModalOpen}
                   setOpen={setTeamMemberInviteModalOpen}
@@ -312,7 +313,7 @@ export default function Billing() {
                           </DropdownMenuItem>
                         )}
                         {isCurrentUserAdmin() &&
-                        !isCurrentUser(member.userId) ? (
+                          !isCurrentUser(member.userId) ? (
                           <>
                             <DropdownMenuItem
                               onClick={() =>
