@@ -91,17 +91,15 @@ export default function People() {
                 </section>
 
                 <section className="mb-2 flex items-center gap-x-2">
-                    {users && users.length > 0 ? (
+                    {memberships && memberships.length > 0 ? (
                         <p className="flex items-center gap-x-2 text-sm text-gray-400">
                             <FileIcon className="h-4 w-4" />
-                            <span>{users.length} users</span>
+                            <span>{memberships.length} people</span>
                         </p>
                     ) : null}
                 </section>
 
                 <Separator className="mb-5 bg-gray-200 dark:bg-gray-800" />
-
-
 
                 <PeopleList
                     people={memberships}

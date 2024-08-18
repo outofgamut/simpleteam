@@ -48,7 +48,7 @@ export function AddPersonModal({
   const [uploading, setUploading] = useState<boolean>(false);
   const [isOpen, setIsOpen] = useState<boolean | undefined>(undefined);
   const [currentFile, setCurrentFile] = useState<File | null>(null);
-  const [notionLink, setNotionLink] = useState<string | null>(null);
+  const [name, setName] = useState<string | null>(null);
   const teamInfo = useTeam();
 
   const teamId = teamInfo?.currentTeam?.id as string;
@@ -115,25 +115,25 @@ export function AddPersonModal({
       if (response) {
         const document = await response.json();
 
-        if (isDataroom && dataroomId) {
-          await addDocumentToDataroom({
-            documentId: document.id,
-            folderPathName: currentFolderPath?.join("/"),
-          });
+        // if (isDataroom && dataroomId) {
+        //   await addDocumentToDataroom({
+        //     documentId: document.id,
+        //     folderPathName: currentFolderPath?.join("/"),
+        //   });
 
-          plausible("documentUploaded");
-          analytics.capture("Document Added", {
-            documentId: document.id,
-            name: document.name,
-            numPages: document.numPages,
-            path: router.asPath,
-            type: document.type,
-            teamId: teamId,
-            dataroomId: dataroomId,
-          });
+        //   plausible("documentUploaded");
+        //   analytics.capture("Document Added", {
+        //     documentId: document.id,
+        //     name: document.name,
+        //     numPages: document.numPages,
+        //     path: router.asPath,
+        //     type: document.type,
+        //     teamId: teamId,
+        //     dataroomId: dataroomId,
+        //   });
 
-          return;
-        }
+        //   return;
+        // }
 
         if (!newVersion) {
           // copy the link to the clipboard
@@ -189,156 +189,60 @@ export function AddPersonModal({
     }
   };
 
-  const addDocumentToDataroom = async ({
-    documentId,
-    folderPathName,
-  }: {
-    documentId: string;
-    folderPathName?: string;
-  }) => {
-    try {
-      const response = await fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/datarooms/${dataroomId}/documents`,
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            documentId: documentId,
-            folderPathName: folderPathName,
-          }),
-        },
-      );
-
-      if (!response.ok) {
-        const { message } = await response.json();
-        toast.error(message);
-        return;
-      }
-
-      mutate(
-        `/api/teams/${teamInfo?.currentTeam?.id}/datarooms/${dataroomId}/documents`,
-      );
-      mutate(
-        `/api/teams/${teamInfo?.currentTeam?.id}/datarooms/${dataroomId}/folders/documents/${folderPathName}`,
-      );
-
-      toast.success("Document added to dataroom successfully! 🎉");
-    } catch (error) {
-      toast.error("Error adding document to dataroom.");
-      console.error(
-        "An error occurred while adding document to the dataroom: ",
-        error,
-      );
-    }
-  };
-
-  const createNotionFileName = () => {
-    // Extract Notion file name from the URL
-    const urlSegments = (notionLink as string).split("/")[3];
-    // Remove the last hyphen along with the Notion ID
-    const extractName = urlSegments.replace(/-([^/-]+)$/, "");
-    const notionFileName = extractName.replaceAll("-", " ") || "Notion Link";
-
-    return notionFileName;
-  };
-
-  const handleNotionUpload = async (
+  const handlePersonAdd = async (
     event: FormEvent<HTMLFormElement>,
   ): Promise<void> => {
     event.preventDefault();
-    const validateNotionPageURL = parsePageId(notionLink);
-    // Check if it's a valid URL or not by Regx
-    const isValidURL =
-      /^(https?:\/\/)?([a-zA-Z0-9-]+\.){1,}[a-zA-Z]{2,}([a-zA-Z0-9-._~:/?#[\]@!$&'()*+,;=]+)?$/;
 
     // Check if the field is empty or not
-    if (!notionLink) {
-      toast.error("Please enter a Notion link to proceed.");
+    if (!name) {
+      toast.error("Please enter a valid name to proceed.");
       return; // prevent form from submitting
-    }
-    if (validateNotionPageURL === null || !isValidURL.test(notionLink)) {
-      toast.error("Please enter a valid Notion link to proceed.");
-      return;
     }
 
     try {
       setUploading(true);
 
       const response = await fetch(
-        `/api/teams/${teamInfo?.currentTeam?.id}/documents`,
+        `/api/teams/${teamInfo?.currentTeam?.id}/memberships`,
         {
           method: "POST",
           headers: {
             "Content-Type": "application/json",
           },
           body: JSON.stringify({
-            name: createNotionFileName(),
-            url: notionLink,
-            numPages: 1,
-            type: "notion",
+            name: name,
           }),
         },
       );
 
       if (response) {
-        const document = await response.json();
-
-        if (isDataroom && dataroomId) {
-          await addDocumentToDataroom({
-            documentId: document.id,
-            folderPathName: currentFolderPath?.join("/"),
-          });
-
-          plausible("documentUploaded");
-          plausible("notionDocumentUploaded");
-          analytics.capture("Document Added", {
-            documentId: document.id,
-            name: document.name,
-            numPages: document.numPages,
-            path: router.asPath,
-            type: "notion",
-            teamId: teamId,
-            dataroomId: dataroomId,
-          });
-
-          return;
-        }
+        const person = await response.json();
 
         if (!newVersion) {
-          // copy the link to the clipboard
-          copyToClipboard(
-            `${process.env.NEXT_PUBLIC_BASE_URL}/view/${document.links[0].id}`,
-            "Notion Page processed and link copied to clipboard. Redirecting to document page...",
-          );
+          toast.success("Person added! Redirecting to profile page...");
+
 
           // track the event
           plausible("documentUploaded");
           plausible("notionDocumentUploaded");
-          analytics.capture("Document Added", {
-            documentId: document.id,
-            name: document.name,
+          analytics.capture("Person Added", {
+            documentId: person.id,
+            name: person.name,
             fileSize: null,
             path: router.asPath,
             type: "notion",
             teamId: teamId,
           });
-          analytics.capture("Link Added", {
-            linkId: document.links[0].id,
-            documentId: document.id,
-            customDomain: null,
-            teamId: teamId,
-          });
 
           // redirect to the document page
-          router.push("/documents/" + document.id);
+          router.push("/people/" + person.id);
         }
       }
     } catch (error) {
       setUploading(false);
       toast.error(
-        "Oops! Can't access the Notion page. Please double-check it's set to 'Public'.",
+        "Oops! Can't access the Skill page. Please double-check it's set to 'Public'.",
       );
       console.error(
         "An error occurred while processing the Notion link: ",
@@ -352,7 +256,7 @@ export function AddPersonModal({
 
   const clearModelStates = () => {
     currentFile !== null && setCurrentFile(null);
-    notionLink !== null && setNotionLink(null);
+    name !== null && setName(null);
     setIsOpen(!isOpen);
   };
 
@@ -363,22 +267,22 @@ export function AddPersonModal({
         className="border-none bg-transparent text-foreground shadow-none"
         isDocumentDialog
       >
-        <Tabs defaultValue="document">
+        <Tabs defaultValue="single">
           {!newVersion ? (
             <TabsList className="grid w-full grid-cols-2">
-              <TabsTrigger value="document">Document</TabsTrigger>
-              <TabsTrigger value="notion">Notion Page</TabsTrigger>
+              <TabsTrigger value="single">Single</TabsTrigger>
+              <TabsTrigger value="bulk">Bulk</TabsTrigger>
             </TabsList>
           ) : (
             <TabsList className="grid w-full grid-cols-1">
-              <TabsTrigger value="document">Document</TabsTrigger>
+              <TabsTrigger value="single">Manual</TabsTrigger>
             </TabsList>
           )}
-          <TabsContent value="document">
+          <TabsContent value="bulk">
             <Card>
               <CardHeader className="space-y-3">
                 <CardTitle>
-                  {newVersion ? `Upload a new version` : `Share a document`}
+                  {newVersion ? `Upload a new version` : `Add a new team member`}
                 </CardTitle>
                 <CardDescription>
                   {newVersion
@@ -414,7 +318,7 @@ export function AddPersonModal({
                         clearModelStates();
                       }}
                     >
-                      Want to upload multiple files?
+                      Want to upload multiple skills?
                     </button>
                   </div>
 
@@ -433,47 +337,41 @@ export function AddPersonModal({
             </Card>
           </TabsContent>
           {!newVersion && (
-            <TabsContent value="notion">
+            <TabsContent value="single">
               <Card>
                 <CardHeader className="space-y-3">
-                  <CardTitle>Share a Notion Page</CardTitle>
+                  <CardTitle>Add a person</CardTitle>
                   <CardDescription>
-                    After you submit the Notion link, a shareable link will be
-                    generated and copied to your clipboard. Just like with a PDF
-                    document.
+                    After you add a person, they will be available to search for, and add skills and experiences for.
                   </CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-2">
                   <form
-                    encType="multipart/form-data"
-                    onSubmit={handleNotionUpload}
+                    onSubmit={handlePersonAdd}
                     className="flex flex-col"
                   >
                     <div className="space-y-1 pb-8">
-                      <Label htmlFor="notion-link">Notion Page Link</Label>
+                      <Label htmlFor="first-name">Full Name</Label>
                       <div className="mt-2">
                         <input
                           type="text"
-                          name="notion-link"
-                          id="notion-link"
-                          placeholder="notion.site/..."
+                          name="full-name"
+                          id="full-name"
+                          placeholder="Full name..."
                           className="flex w-full rounded-md border-0 bg-background py-1.5 text-foreground shadow-sm ring-1 ring-inset ring-input placeholder:text-muted-foreground focus:ring-2 focus:ring-inset focus:ring-gray-400 sm:text-sm sm:leading-6"
-                          value={notionLink || ""}
-                          onChange={(e) => setNotionLink(e.target.value)}
+                          value={name || ""}
+                          onChange={(e) => setName(e.target.value)}
                         />
                       </div>
-                      <small className="text-xs text-muted-foreground">
-                        Your Notion page needs to be shared publicly.
-                      </small>
                     </div>
                     <div className="flex justify-center">
                       <Button
                         type="submit"
                         className="w-full lg:w-1/2"
-                        disabled={uploading || !notionLink}
+                        disabled={uploading || !name}
                         loading={uploading}
                       >
-                        {uploading ? "Saving..." : "Save Notion Link"}
+                        {uploading ? "Saving..." : "Add Person"}
                       </Button>
                     </div>
                   </form>

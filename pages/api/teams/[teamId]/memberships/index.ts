@@ -6,6 +6,8 @@ import { getServerSession } from "next-auth";
 import { errorhandler } from "@/lib/errorHandler";
 import prisma from "@/lib/prisma";
 import { CustomUser, OrganizationMembership } from "@/lib/types";
+import { log } from "@/lib/utils";
+import { getTeamWithUsersAndDocument } from "@/lib/team/helper";
 
 export default async function handle(
     req: NextApiRequest,
@@ -49,41 +51,54 @@ export default async function handle(
         } catch (error) {
             errorhandler(error, res);
         }
-    } else if (req.method === "DELETE") {
-        // DELETE /api/teams/:teamId/memberships
+    } else if (req.method === "POST") {
+        // POST /api/teams/:teamId/skills
         const session = await getServerSession(req, res, authOptions);
         if (!session) {
-            return res.status(401).end("Unauthorized");
+            res.status(401).end("Unauthorized");
+            return;
         }
 
         const { teamId } = req.query as { teamId: string };
 
-        const { id } = req.body as { id: string };
+        const userId = (session.user as CustomUser).id;
+
+        // Assuming data is an object with `name` and `description` properties
+        const {
+            name,
+            description,
+        } = req.body as {
+            name: string;
+            description?: string;
+        };
 
         try {
-            // check if currentUser is part of the team with the teamId
-            const userTeam = await prisma.userTeam.findFirst({
-                where: {
-                    teamId,
-                    userId: (session.user as CustomUser).id,
+            await getTeamWithUsersAndDocument({
+                teamId,
+                userId,
+            });
+
+            // Save data to the database
+            const membership = await prisma.organizationMembership.create({
+                data: {
+                    // name: name,
+                    // description: description,
+                    // ownerId: (session.user as CustomUser).id,
+                    teamId: teamId,
                 },
             });
 
-            if (!userTeam) {
-                return res.status(403).json("You are not part of this team");
-            }
-
-            // delete organization membership
-            await prisma.organizationMembership.delete({
-                where: {
-                    id: id,
-                }
-            });
-
-            res.status(204).end();
-            return;
+            return res.status(201).json(membership);
         } catch (error) {
+            log({
+                message: `Failed to create membership. \n\n*teamId*: _${teamId}_, \n\n ${error}`,
+                type: "error",
+            });
             errorhandler(error, res);
         }
+    } else {
+        // We only allow GET and POST requests
+        res.setHeader("Allow", ["GET", "POST"]);
+        return res.status(405).end(`Method ${req.method} Not Allowed`);
     }
 }
