@@ -13,6 +13,7 @@ import {
   Tailwind,
   Text,
 } from "@react-email/components";
+import { APP_SETTINGS } from "@/lib/constants";
 
 interface WelcomeEmailProps {
   name: string | null | undefined;
@@ -86,7 +87,7 @@ const WelcomeEmail = ({ name }: WelcomeEmailProps) => {
                   </li>
                   <li>
                     Have a call to talk enterprise{" "}
-                    <Link href="https://cal.com/marcseitz/papermark" target="_blank">
+                    <Link href={APP_SETTINGS.bookDemoLink} target="_blank">
                       Book
                     </Link>
                   </li>

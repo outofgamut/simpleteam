@@ -13,6 +13,7 @@ import Navbar from "@/components/web/navbar";
 import { PricingComparison } from "@/components/web/pricing-component";
 
 import { cn } from "@/lib/utils";
+import { APP_SETTINGS } from "@/lib/constants";
 
 const frequencies: {
   value: "monthly" | "annually";
@@ -155,7 +156,7 @@ export default function PricingPage() {
             </p> */}
             {/* <div className="pt-8 space-x-2">
               <Link
-                href="https://cal.com/marcseitz/papermark"
+                href={APP_SETTINGS.bookDemoLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -338,7 +339,7 @@ export default function PricingPage() {
                   </Button>
                 </Link>
                 <Link
-                  href="https://cal.com/marcseitz/papermark"
+                  href={APP_SETTINGS.bookDemoLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >

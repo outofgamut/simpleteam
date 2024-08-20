@@ -17,6 +17,7 @@ import { Switch } from "@/components/ui/switch";
 import { useAnalytics } from "@/lib/analytics";
 import { usePlan } from "@/lib/swr/use-billing";
 import { cn } from "@/lib/utils";
+import { APP_SETTINGS } from "@/lib/constants";
 
 const frequencies: {
   value: "monthly" | "annually";
@@ -496,7 +497,7 @@ export default function Billing() {
                   </div>
                   <div className="p-6">
                     <Link
-                      href="https://cal.com/marcseitz/papermark"
+                      href={APP_SETTINGS.bookDemoLink}
                       target="_blank"
                     >
                       <Button className="rounded-3xl">Talk to us</Button>

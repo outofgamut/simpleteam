@@ -20,6 +20,7 @@ import Navbar from "@/components/web/navbar";
 import Testimonials from "@/components/web/testimonials/testimonials2";
 import { cn } from "@/lib/utils";
 import { it } from "node:test";
+import { APP_SETTINGS } from "@/lib/constants";
 
 const features = [
   {
@@ -113,7 +114,7 @@ export default function Home() {
             </p>
             <div className="space-x-2 pt-8">
               <Link
-                href="https://cal.com/marcseitz/papermark"
+                href={APP_SETTINGS.bookDemoLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -244,7 +245,7 @@ export default function Home() {
             </h2>
             <div className="space-x-2 pt-8">
               <Link
-                href="https://cal.com/marcseitz/papermark"
+                href={APP_SETTINGS.bookDemoLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >

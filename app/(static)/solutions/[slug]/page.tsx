@@ -10,6 +10,7 @@ import Testimonials from "@/components/web/testimonials/testimonials";
 
 import { getPage, getPages } from "@/lib/content/page";
 import { constructMetadata } from "@/lib/utils";
+import { APP_SETTINGS } from "@/lib/constants";
 
 export async function generateStaticParams() {
   const pages = await getPages();
@@ -63,7 +64,7 @@ export default async function PagePage({
                   </Button>
                 </Link>
                 <Link
-                  href="https://cal.com/marcseitz/papermark"
+                  href={APP_SETTINGS.bookDemoLink}
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -225,7 +226,7 @@ export default async function PagePage({
                 </Button>
               </Link>
               <Link
-                href="https://cal.com/marcseitz/papermark"
+                href={APP_SETTINGS.bookDemoLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -276,7 +277,7 @@ export default async function PagePage({
           <h2 className="text-balance text-4xl">{page.cta}</h2>
           <div className="space-x-2 pt-8">
             <Link
-              href="https://cal.com/marcseitz/papermark"
+              href={APP_SETTINGS.bookDemoLink}
               target="_blank"
               rel="noopener noreferrer"
             >

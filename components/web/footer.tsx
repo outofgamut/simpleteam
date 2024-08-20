@@ -179,9 +179,9 @@ export default function Footer() {
               alt="Simpleteam Logo"
             />
             <p className="leading-6 text-gray-500">
-              AI-first platform for managing knowledge workers and skills.
+              Modern team management for services firms. A Simplefield company.
             </p>
-            <div className="flex space-x-2">
+            {/* <div className="flex space-x-2">
               {navigation.social.map((item) => (
                 <a
                   key={item.name}
@@ -194,7 +194,7 @@ export default function Footer() {
                   <item.icon />
                 </a>
               ))}
-            </div>
+            </div> */}
             <div className="w-fit">
               <StatusWidget />
             </div>

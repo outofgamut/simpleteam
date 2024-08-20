@@ -8,6 +8,7 @@ export const BRAND_SETTINGS = {
 
 export const APP_SETTINGS = {
   homeRoute: "/discover",
+  bookDemoLink: "https://cal.com/simpleteam"
 }
 
 export const FADE_IN_ANIMATION_SETTINGS = {

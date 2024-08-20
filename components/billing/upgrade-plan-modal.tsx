@@ -10,7 +10,7 @@ import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 import { useAnalytics } from "@/lib/analytics";
-import { STAGGER_CHILD_VARIANTS } from "@/lib/constants";
+import { APP_SETTINGS, STAGGER_CHILD_VARIANTS } from "@/lib/constants";
 import { getStripe } from "@/lib/stripe/client";
 import { PLANS } from "@/lib/stripe/utils";
 import { capitalize } from "@/lib/utils";
@@ -276,7 +276,7 @@ export function UpgradePlanModal({
                 </DataroomTrialModal>
               ) : (
                 <a
-                  href="https://cal.com/marcseitz/papermark"
+                  href={APP_SETTINGS.bookDemoLink}
                   target="_blank"
                   className="text-center text-xs text-muted-foreground underline-offset-4 transition-all hover:text-gray-800 hover:underline hover:dark:text-muted-foreground/80"
                 >

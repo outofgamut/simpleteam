@@ -8,6 +8,7 @@ import DataRoom from "@/components/web/dataroom-component";
 import Footer from "@/components/web/footer";
 import Navbar from "@/components/web/navbar";
 import Testimonials from "@/components/web/testimonials/testimonials2";
+import { APP_SETTINGS } from "@/lib/constants";
 
 const features = [
   "Personalized skill development plans",
@@ -91,7 +92,7 @@ export default function Home() {
                       </Button>
                     </Link>
                     <Link
-                      href="https://cal.com/marcseitz/papermark"
+                      href={APP_SETTINGS.bookDemoLink}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -133,7 +134,7 @@ export default function Home() {
                         </Button>
                       </Link>
                       <Link
-                        href="https://cal.com/marcseitz/papermark"
+                        href={APP_SETTINGS.bookDemoLink}
                         target="_blank"
                         rel="noopener noreferrer"
                       >
@@ -330,7 +331,7 @@ export default function Home() {
             </h2>
             <div className="space-x-2 pt-8">
               <Link
-                href="https://cal.com/marcseitz/papermark"
+                href={APP_SETTINGS.bookDemoLink}
                 target="_blank"
                 rel="noopener noreferrer"
               >
