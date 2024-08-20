@@ -63,8 +63,9 @@ export default function Login() {
                   setEmailButtonText("Email sent - check your inbox!");
                   toast.success("Email sent - check your inbox!");
                 } else {
-                  setEmailButtonText("Error sending email - try again?");
-                  toast.error("Error sending email - try again?");
+                  setEmailButtonText("Error signing in - try again?");
+                  // show error message from nextauth callback
+                  toast.error(res?.error || "Error sending email - try again?");
                 }
                 setIsLoginWithEmail(false);
               });

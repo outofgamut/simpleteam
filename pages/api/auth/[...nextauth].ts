@@ -104,6 +104,23 @@ export const authOptions: NextAuthOptions = {
       };
       return session;
     },
+    async signIn({ user }) {
+      const request = await prisma.earlyAccessRequest.findUnique({
+        where: { email: user.email ?? '' },
+      });
+
+      if (request && request.status === "APPROVED") {
+        return true;
+      } else if (!request) {
+        throw new Error("No early access request found for this email.");
+      } else if (request.status === "PENDING") {
+        throw new Error("Your early access request is still pending approval.");
+      } else if (request.status === "DENIED") {
+        throw new Error("Your early access request has been denied.");
+      }
+
+      return false;
+    },
   },
   events: {
     async createUser(message) {
@@ -124,6 +141,15 @@ export const authOptions: NextAuthOptions = {
       await sendWelcomeEmail(params);
     },
     async signIn(message) {
+
+      const request = await prisma.earlyAccessRequest.findUnique({
+        where: { email: message.user.email ?? "bypassearlyaccess@email.com" },
+      });
+
+      if (request && request.status === "APPROVED") {
+        return true;
+      }
+
       await identifyUser(message.user.email ?? message.user.id);
       await trackAnalytics({
         event: "User Signed In",
