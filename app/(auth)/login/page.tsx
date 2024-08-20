@@ -6,7 +6,7 @@ import { useParams } from "next/navigation";
 import { useState } from "react";
 
 import { signInWithPasskey } from "@teamhanko/passkeys-next-auth-provider/client";
-import { Loader } from "lucide-react";
+import { Loader, RocketIcon } from "lucide-react";
 import { signIn } from "next-auth/react";
 import { toast } from "sonner";
 
@@ -16,6 +16,8 @@ import Passkey from "@/components/shared/icons/passkey";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
+import { RequestAccessModal } from "@/components/early-access-requests/request-access-modal";
 
 export default function Login() {
   const { next } = useParams as { next?: string };
@@ -45,8 +47,21 @@ export default function Login() {
               </span>
             </Link>
             <h3 className="text-balance text-sm text-gray-800 ">
-              Share documents. Not attachments.
+              Manage team skills and experiences with ease.
             </h3>
+            <Alert className="text-left">
+              <RocketIcon className="h-4 w-4" />
+              <AlertTitle>We&apos;re currently in private beta</AlertTitle>
+              <AlertDescription>
+                Don&apos;t have access yet?
+                {" "}
+                <RequestAccessModal>
+                  <Link href="" className="underline">
+                    Sign up here
+                  </Link>
+                </RequestAccessModal>
+              </AlertDescription>
+            </Alert>
           </div>
           <form
             className="flex flex-col gap-4 px-4 pt-8 sm:px-16"
@@ -151,7 +166,7 @@ export default function Login() {
               )}
               <span>Continue with LinkedIn</span>
             </Button>
-            <Button
+            {/* <Button
               onClick={() =>
                 signInWithPasskey({
                   tenantId: process.env.NEXT_PUBLIC_HANKO_TENANT_ID as string,
@@ -162,7 +177,7 @@ export default function Login() {
             >
               <Passkey className="h-4 w-4 " />
               <span>Continue with a passkey</span>
-            </Button>
+            </Button> */}
           </div>
           <p className=" mt-10 w-full max-w-md px-4 text-xs text-muted-foreground sm:px-16">
             By clicking continue, you acknowledge that you have read and agree
@@ -198,8 +213,8 @@ export default function Login() {
                 <blockquote className="text-l text-balance leading-8 text-gray-100 sm:text-xl sm:leading-9">
                   <p>
                     True builders listen to their users and build what they
-                    need. Thanks Simpleteam team for solving a big pain point.
-                    DocSend monopoly will end soon!
+                    need. Thanks Simpleteam solved a major pain point for us.
+                    We have so much valuable information for our team now.
                   </p>
                 </blockquote>
                 <figcaption className="mt-4">
@@ -207,7 +222,7 @@ export default function Login() {
                     Lori
                   </div>
                   <div className="text-balance text-gray-400 ">
-                    Founder, Townhall Network
+                    Founder, Private Consulting Firm
                   </div>
                 </figcaption>
               </div>
