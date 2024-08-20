@@ -140,22 +140,6 @@ export const authOptions: NextAuthOptions = {
 
       await sendWelcomeEmail(params);
     },
-    async signIn(message) {
-
-      const request = await prisma.earlyAccessRequest.findUnique({
-        where: { email: message.user.email ?? "bypassearlyaccess@email.com" },
-      });
-
-      if (request && request.status === "APPROVED") {
-        return true;
-      }
-
-      await identifyUser(message.user.email ?? message.user.id);
-      await trackAnalytics({
-        event: "User Signed In",
-        email: message.user.email,
-      });
-    },
   },
 };
 
