@@ -1,6 +1,6 @@
 <div align="center">
   <h1 align="center">Simpleteam</h1>
-  <h3>The open-source DocSend alternative.</h3>
+  <h3>The modern SkillsBase alternative.</h3>
 
 <a target="_blank" href="https://www.producthunt.com/posts/papermark-3?utm_source=badge-top-post-badge&amp;utm_medium=badge&amp;utm_souce=badge-papermark"><img src="https://api.producthunt.com/widgets/embed-image/v1/top-post-badge.svg?post_id=411605&amp;theme=light&amp;period=daily" alt="Simpleteam - The open-source DocSend alternative | Product Hunt" style="width:250px;height:40px"></a>
 
