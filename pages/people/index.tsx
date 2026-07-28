@@ -1,11 +1,14 @@
+import { useMemo, useState } from "react";
+
 import { useTeam } from "@/context/team-context";
-import { FileIcon, FolderIcon, FolderPlusIcon, PlusIcon } from "lucide-react";
+import { FolderIcon, FolderPlusIcon, PlusIcon, SearchIcon, UsersIcon } from "lucide-react";
 
 import { AddDocumentModal } from "@/components/documents/add-document-modal";
 import { DocumentsList } from "@/components/documents/documents-list";
 import { AddFolderModal } from "@/components/folders/add-folder-modal";
 import AppLayout from "@/components/layouts/app";
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Separator } from "@/components/ui/separator";
 
 import useDocuments, { useRootFolders } from "@/lib/swr/use-documents";
@@ -14,12 +17,19 @@ import { PeopleWithSkillsAndRoles } from "@/lib/types";
 import { AddPersonModal } from "@/components/people/add-person-modal";
 import useMemberships from "@/lib/swr/use-memberships";
 import { useUsers } from "@/lib/swr/use-users";
+import { searchPeople } from "@/lib/search/people";
 
 export default function People() {
     const { users } = useUsers();
     const { memberships } = useMemberships();
     const { folders } = useRootFolders();
     const teamInfo = useTeam();
+    const [query, setQuery] = useState("");
+
+    const filteredPeople = useMemo(
+        () => (memberships ? searchPeople(memberships, query) : undefined),
+        [memberships, query],
+    );
 
     // const people: PeopleWithSkillsAndRoles[] = [
     //     {
@@ -90,11 +100,25 @@ export default function People() {
                     {/* </div> */}
                 </section>
 
-                <section className="mb-2 flex items-center gap-x-2">
+                <section className="mb-2 flex flex-wrap items-center justify-between gap-2">
+                    <div className="relative w-full sm:max-w-xs">
+                        <SearchIcon className="absolute left-2.5 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
+                        <Input
+                            type="search"
+                            placeholder="Search people by name, email, or skill..."
+                            value={query}
+                            onChange={(e) => setQuery(e.target.value)}
+                            className="pl-8"
+                        />
+                    </div>
                     {memberships && memberships.length > 0 ? (
                         <p className="flex items-center gap-x-2 text-sm text-gray-400">
-                            <FileIcon className="h-4 w-4" />
-                            <span>{memberships.length} people</span>
+                            <UsersIcon className="h-4 w-4" />
+                            <span>
+                                {query
+                                    ? `${filteredPeople?.length ?? 0} of ${memberships.length} people`
+                                    : `${memberships.length} people`}
+                            </span>
                         </p>
                     ) : null}
                 </section>
@@ -102,9 +126,10 @@ export default function People() {
                 <Separator className="mb-5 bg-gray-200 dark:bg-gray-800" />
 
                 <PeopleList
-                    people={memberships}
+                    people={filteredPeople}
                     folders={folders}
                     teamInfo={teamInfo}
+                    searchQuery={query}
                 />
             </main>
         </AppLayout>

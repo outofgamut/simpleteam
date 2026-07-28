@@ -266,6 +266,7 @@ export interface OrganizationMembership {
   createdAt: number;
   updatedAt: number;
   user?: User; // Nested User object
+  skills?: { id: string; level: number; skill: { name: string } }[];
 }
 
 export interface User {

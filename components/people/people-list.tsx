@@ -26,12 +26,14 @@ export function PeopleList({
   teamInfo,
   folderPathName,
   dataroomId,
+  searchQuery,
 }: {
   folders: FolderWithCount[] | DataroomFolderWithCount[] | undefined;
   people: any[] | OrganizationMembership[] | undefined;
   teamInfo: TeamContextType | null;
   folderPathName?: string[];
   dataroomId?: string;
+  searchQuery?: string;
 }) {
   const [uploads, setUploads] = useState<
     { fileName: string; progress: number; documentId?: string }[]
@@ -77,7 +79,7 @@ export function PeopleList({
                 ? people.map((person: OrganizationMembership) => {
                   return (
                     <MembershipCard
-                      key={person.userId}
+                      key={person.id}
                       membership={
                         person as OrganizationMembership
                       }
@@ -105,7 +107,13 @@ export function PeopleList({
 
             {people && people.length === 0 && (
               <div className="flex items-center justify-center">
-                <EmptyPeople />
+                {searchQuery?.trim() ? (
+                  <p className="py-10 text-sm text-muted-foreground">
+                    No people match &ldquo;{searchQuery}&rdquo;
+                  </p>
+                ) : (
+                  <EmptyPeople />
+                )}
               </div>
             )}
           </div>

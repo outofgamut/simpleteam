@@ -40,11 +40,28 @@ export default async function handle(
                 where: {
                     teamId: teamId,
                 },
+                include: {
+                    user: {
+                        select: {
+                            name: true,
+                            email: true,
+                            image: true,
+                        },
+                    },
+                    skills: {
+                        include: {
+                            skill: {
+                                select: {
+                                    name: true,
+                                },
+                            },
+                        },
+                    },
+                },
+                orderBy: {
+                    createdAt: "asc",
+                },
             });
-
-            if (!members) {
-                return res.status(404).json("No members found for this team");
-            }
 
             res.status(200).json(members);
             return;
